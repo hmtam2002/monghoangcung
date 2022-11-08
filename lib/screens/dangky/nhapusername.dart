@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:monghoangcung/screens/dangky/nhappassword.dart';
 
-class dangky extends StatelessWidget {
-  const dangky({super.key});
+// ignore: camel_case_types
+class nhapusername extends StatelessWidget {
+  const nhapusername({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(20),
+      padding: const EdgeInsets.all(20),
       width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).size.height,
       decoration: const BoxDecoration(
@@ -16,7 +17,7 @@ class dangky extends StatelessWidget {
         fit: BoxFit.cover,
       )),
       child: Container(
-        padding: EdgeInsets.all(15),
+        padding: const EdgeInsets.all(15),
         decoration: BoxDecoration(
           color: Colors.white.withOpacity(0.8),
           borderRadius: BorderRadius.circular(50),
@@ -25,11 +26,12 @@ class dangky extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Image(
+            const Image(
               image: AssetImage('assets/Logo.png'),
+              fit: BoxFit.cover,
             ),
-            Text('Tên của bạn là gì'),
-            TextField(
+            const Text('Tên của bạn là gì'),
+            const TextField(
               style: TextStyle(
                 color: Colors.grey,
               ),

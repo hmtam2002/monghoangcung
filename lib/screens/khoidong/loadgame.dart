@@ -19,6 +19,8 @@ class loadgame extends StatelessWidget {
         children: const [
           Image(
             image: AssetImage('assets/Logo.png'),
+            // width: MediaQuery.of(context).size.width * 9 / 10,
+            fit: BoxFit.cover,
           ),
         ],
       ),
