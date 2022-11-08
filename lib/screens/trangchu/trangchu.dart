@@ -41,7 +41,7 @@ class _trangchuState extends State<trangchu> {
             padding: const EdgeInsets.fromLTRB(0, 60, 0, 10),
             child: ElevatedButton(
               onPressed: () {},
-              child: const Text('Bắt đầu'),
+              child: const Text('Chơi đơn'),
             ),
           ),
           ElevatedButton(

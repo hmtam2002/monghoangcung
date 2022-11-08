@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:monghoangcung/screens/dangnhap/dangnhapthanhcong.dart';
-import 'package:monghoangcung/screens/dangnhap/nhapmatkhau.dart';
+import 'package:monghoangcung/screens/caidat/caidat.dart';
 
 void main() {
   runApp(const MyApp());
@@ -32,7 +31,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: dangnhapthanhcong(),
+      body: caidat(),
     );
   }
 }
