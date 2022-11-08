@@ -6,7 +6,7 @@ class dienthongtin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(20),
+      padding: const EdgeInsets.all(20),
       width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).size.height,
       decoration: const BoxDecoration(
@@ -15,17 +15,22 @@ class dienthongtin extends StatelessWidget {
         fit: BoxFit.cover,
       )),
       child: Container(
-        padding: EdgeInsets.all(15),
+        padding: const EdgeInsets.all(15),
         decoration: BoxDecoration(
           color: Colors.white.withOpacity(0.8),
           borderRadius: BorderRadius.circular(50),
         ),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text('Nhập thông tin'),
-            TextField(
+            const Text(
+              'Nhập thông tin',
+              style: TextStyle(
+                fontSize: 30,
+              ),
+            ),
+            const TextField(
               style: TextStyle(
                 color: Colors.grey,
               ),
@@ -38,13 +43,13 @@ class dienthongtin extends StatelessWidget {
                   ),
                 ),
                 border: OutlineInputBorder(),
-                hintText: "Nhập username",
+                hintText: "Tên tài khoản",
                 hintStyle: TextStyle(
                   color: Colors.grey,
                 ),
               ),
             ),
-            TextField(
+            const TextField(
               style: TextStyle(
                 color: Colors.grey,
               ),
@@ -57,13 +62,13 @@ class dienthongtin extends StatelessWidget {
                   ),
                 ),
                 border: OutlineInputBorder(),
-                hintText: "Nhập username",
+                hintText: "Email",
                 hintStyle: TextStyle(
                   color: Colors.grey,
                 ),
               ),
             ),
-            TextField(
+            const TextField(
               style: TextStyle(
                 color: Colors.grey,
               ),
@@ -76,13 +81,13 @@ class dienthongtin extends StatelessWidget {
                   ),
                 ),
                 border: OutlineInputBorder(),
-                hintText: "Nhập username",
+                hintText: "Ngày sinh",
                 hintStyle: TextStyle(
                   color: Colors.grey,
                 ),
               ),
             ),
-            TextField(
+            const TextField(
               style: TextStyle(
                 color: Colors.grey,
               ),
@@ -95,7 +100,7 @@ class dienthongtin extends StatelessWidget {
                   ),
                 ),
                 border: OutlineInputBorder(),
-                hintText: "Nhập username",
+                hintText: "Số điện thoại",
                 hintStyle: TextStyle(
                   color: Colors.grey,
                 ),
