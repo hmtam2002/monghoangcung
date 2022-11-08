@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class thanhcong extends StatelessWidget {
-  const thanhcong({super.key});
+class dangkythanhcong extends StatelessWidget {
+  const dangkythanhcong({super.key});
 
   @override
   Widget build(BuildContext context) {
