@@ -55,7 +55,7 @@ class nhapusername extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const dangky1(),
+                    builder: (context) => const nhappassword(),
                   ),
                 );
               },

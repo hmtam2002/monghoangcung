@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 
-class dangky1 extends StatelessWidget {
-  const dangky1({super.key});
+// ignore: camel_case_types
+class nhappassword extends StatelessWidget {
+  const nhappassword({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(20),
+      padding: const EdgeInsets.all(20),
       width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).size.height,
       decoration: const BoxDecoration(
@@ -15,7 +16,7 @@ class dangky1 extends StatelessWidget {
         fit: BoxFit.cover,
       )),
       child: Container(
-        padding: EdgeInsets.all(15),
+        padding: const EdgeInsets.all(15),
         decoration: BoxDecoration(
           color: Colors.white.withOpacity(0.8),
           borderRadius: BorderRadius.circular(50),
@@ -24,12 +25,12 @@ class dangky1 extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Image(
+            const Image(
               image: AssetImage('assets/Logo.png'),
               fit: BoxFit.cover,
             ),
-            Text('Tạo một mật khẩu mới'),
-            TextField(
+            const Text('Tạo một mật khẩu mới'),
+            const TextField(
               style: TextStyle(
                 color: Colors.grey,
               ),
@@ -42,7 +43,7 @@ class dangky1 extends StatelessWidget {
                   ),
                 ),
                 border: OutlineInputBorder(),
-                hintText: "Nhập password",
+                hintText: "Nhập mật khẩu",
                 hintStyle: TextStyle(
                   color: Colors.grey,
                 ),
