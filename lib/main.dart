@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:monghoangcung/screens/dangky/nhappassword.dart';
-import 'package:monghoangcung/screens/dangky/nhapusername.dart';
+import 'package:monghoangcung/screens/dangky/dienthongtin.dart';
 
 void main() {
   runApp(const MyApp());
@@ -32,7 +31,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: nhappassword(),
+      body: dienthongtin(),
     );
   }
 }
