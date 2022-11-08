@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class dangky1 extends StatelessWidget {
-  const dangky1({super.key});
+class nhapmatkhau extends StatelessWidget {
+  const nhapmatkhau({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,12 +24,20 @@ class dangky1 extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Image(
+            const Image(
               image: AssetImage('assets/Logo.png'),
               fit: BoxFit.cover,
             ),
-            Text('Tạo một mật khẩu mới'),
-            TextField(
+            const Padding(
+              padding: EdgeInsets.all(8.0),
+              child: Text(
+                'Nhập mật khẩu',
+                style: TextStyle(
+                  fontSize: 20,
+                ),
+              ),
+            ),
+            const TextField(
               style: TextStyle(
                 color: Colors.grey,
               ),
@@ -42,7 +50,7 @@ class dangky1 extends StatelessWidget {
                   ),
                 ),
                 border: OutlineInputBorder(),
-                hintText: "Nhập password",
+                hintText: "Mật khẩu",
                 hintStyle: TextStyle(
                   color: Colors.grey,
                 ),
