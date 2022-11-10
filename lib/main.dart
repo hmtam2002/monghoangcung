@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:monghoangcung/screens/khoidong/loadgame.dart';
+
+import 'package:monghoangcung/screens/trangchu/trangchu.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: loadgame(),
+      home: trangchu(),
     );
-  }a
+  }
 }
