@@ -37,7 +37,7 @@ class _trangcanhanState extends State<trangcanhan> {
                           builder: (context) => const trangchu()));
                 },
                 child: Icon(
-                  Icons.home,
+                  Icons.home_rounded,
                   color: Colors.brown.withOpacity(0.8),
                   size: 50,
                 ),
@@ -58,8 +58,8 @@ class _trangcanhanState extends State<trangcanhan> {
             ),
             child: Row(
               children: [
-                Container(
-                  padding: EdgeInsets.only(right: 10),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
                   child: Icon(
                     Icons.account_circle,
                     size: 60,
@@ -69,32 +69,23 @@ class _trangcanhanState extends State<trangcanhan> {
                 Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Container(
-                      padding: EdgeInsets.all(5),
-                      child: Text(
-                        'Username',
-                        style: TextStyle(
-                          fontSize: 26,
-                        ),
+                  children: const [
+                    Text(
+                      'Username',
+                      style: TextStyle(
+                        fontSize: 26,
                       ),
                     ),
-                    Container(
-                      padding: EdgeInsets.all(5),
-                      child: Text(
-                        'SDT',
-                        style: TextStyle(
-                          fontSize: 16,
-                        ),
+                    Text(
+                      'SDT',
+                      style: TextStyle(
+                        fontSize: 16,
                       ),
                     ),
-                    Container(
-                      padding: EdgeInsets.all(5),
-                      child: Text(
-                        'Email',
-                        style: TextStyle(
-                          fontSize: 16,
-                        ),
+                    Text(
+                      'Email',
+                      style: TextStyle(
+                        fontSize: 16,
                       ),
                     ),
                   ],

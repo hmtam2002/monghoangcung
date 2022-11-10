@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:monghoangcung/constants.dart';
 import 'package:monghoangcung/screens/trangcanhan/trangcanhan.dart';
 
 class trangchu extends StatefulWidget {
@@ -13,7 +12,7 @@ class _trangchuState extends State<trangchu> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(20),
+      padding: const EdgeInsets.fromLTRB(20, 20, 20, 100),
       width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).size.height,
       decoration: const BoxDecoration(
@@ -22,7 +21,7 @@ class _trangchuState extends State<trangchu> {
         fit: BoxFit.cover,
       )),
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Row(
@@ -56,54 +55,64 @@ class _trangchuState extends State<trangchu> {
               ),
             ],
           ),
-          Container(
-            child: Image(
-              image: AssetImage('assets/Logo.png'),
-            ),
+          const Image(
+            image: AssetImage('assets/Logo.png'),
           ),
-          Container(
-            height: 50,
-            width: 200,
-            margin: EdgeInsets.fromLTRB(0, 20, 0, 20),
-            child: ElevatedButton(
-              onPressed: () {},
-              child: const Text(
-                'Chơi đơn',
-                style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black87),
+          Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: SizedBox(
+                  height: 50,
+                  width: 200,
+                  // margin: EdgeInsets.fromLTRB(0, 20, 0, 20),
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    child: const Text(
+                      'Chơi đơn',
+                      style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black87),
+                    ),
+                    style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all<Color>(
+                            Colors.white.withOpacity(0.5)),
+                        shape:
+                            MaterialStateProperty.all<RoundedRectangleBorder>(
+                          RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20)),
+                        )),
+                  ),
+                ),
               ),
-              style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all<Color>(
-                      Colors.white.withOpacity(0.5)),
-                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                    RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20)),
-                  )),
-            ),
-          ),
-          Container(
-            height: 50,
-            width: 200,
-            margin: EdgeInsets.fromLTRB(0, 20, 0, 20),
-            child: ElevatedButton(
-              onPressed: () {},
-              child: const Text(
-                'Chơi đối kháng',
-                style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black87),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  height: 50,
+                  width: 200,
+                  // margin: EdgeInsets.fromLTRB(0, 20, 0, 20),
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    child: const Text(
+                      'Chơi đối kháng',
+                      style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black87),
+                    ),
+                    style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all<Color>(
+                            Colors.white.withOpacity(0.5)),
+                        shape:
+                            MaterialStateProperty.all<RoundedRectangleBorder>(
+                          RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20)),
+                        )),
+                  ),
+                ),
               ),
-              style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all<Color>(
-                      Colors.white.withOpacity(0.5)),
-                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                    RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20)),
-                  )),
-            ),
+            ],
           ),
         ],
       ),
