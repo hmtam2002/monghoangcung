@@ -76,7 +76,7 @@ class _trangchuState extends State<trangchu> {
               ),
               style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all<Color>(
-                      Colors.white.withOpacity(0.5)),
+                      Colors.white.withOpacity(0.7)),
                   shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                     RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20)),
