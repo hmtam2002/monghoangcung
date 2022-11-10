@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:monghoangcung/screens/caidat/caidat.dart';
+import 'package:monghoangcung/screens/chinhsuathongtin/chinhsuathongtin.dart';
 import 'package:monghoangcung/screens/trangcanhan/trangcanhan.dart';
 
 import 'package:monghoangcung/screens/trangchu/trangchu.dart';
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: trangchu(),
+      home: EditInfo(),
     );
   }
 }

@@ -19,6 +19,7 @@ class _EditInfoState extends State<EditInfo> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Container(
+      padding: const EdgeInsets.all(15),
       width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).size.height,
       decoration: const BoxDecoration(
@@ -31,7 +32,7 @@ class _EditInfoState extends State<EditInfo> {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
               TextButton(
                 onPressed: () {
@@ -41,7 +42,7 @@ class _EditInfoState extends State<EditInfo> {
                           builder: (context) => const trangchu()));
                 },
                 child: Icon(
-                  Icons.home,
+                  Icons.home_rounded,
                   color: Colors.brown.withOpacity(0.8),
                   size: 50,
                 ),
