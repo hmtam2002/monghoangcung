@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../trangchu/trangchu.dart';
+
 class caidat extends StatefulWidget {
   const caidat({super.key});
 
@@ -19,16 +21,44 @@ class _caidatState extends State<caidat> {
         fit: BoxFit.cover,
       )),
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          const Padding(
-            padding: EdgeInsets.all(8.0),
-            child: Text(
-              'Cài đặt',
-              style: TextStyle(
-                fontSize: 16,
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              TextButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const trangchu()));
+                },
+                child: Icon(
+                  Icons.home,
+                  color: Colors.brown.withOpacity(0.8),
+                  size: 50,
+                ),
               ),
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                'Cài Đặt',
+                style: TextStyle(
+                    fontSize: 30,
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold),
+              )
+            ],
+          ),
+          Opacity(
+            opacity: 0.0,
+            child: Container(
+              width: MediaQuery.of(context).size.width * 9 / 10,
+              height: MediaQuery.of(context).size.height / 4,
             ),
           ),
           Container(
@@ -41,7 +71,7 @@ class _caidatState extends State<caidat> {
             // child: SlideTransition(
             //   child: Text('âm lượng'),
             // ),
-          )
+          ),
         ],
       ),
     );
