@@ -12,7 +12,7 @@ class _trangchuState extends State<trangchu> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.fromLTRB(20, 20, 20, 100),
+      padding: const EdgeInsets.all(20),
       width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).size.height,
       decoration: const BoxDecoration(
@@ -21,7 +21,7 @@ class _trangchuState extends State<trangchu> {
         fit: BoxFit.cover,
       )),
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Row(
@@ -60,56 +60,48 @@ class _trangchuState extends State<trangchu> {
           ),
           Column(
             children: [
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: SizedBox(
-                  height: 50,
-                  width: 200,
-                  // margin: EdgeInsets.fromLTRB(0, 20, 0, 20),
-                  child: ElevatedButton(
-                    onPressed: () {},
-                    child: const Text(
-                      'Chơi đơn',
-                      style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black87),
-                    ),
-                    style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all<Color>(
-                            Colors.white.withOpacity(0.5)),
-                        shape:
-                            MaterialStateProperty.all<RoundedRectangleBorder>(
-                          RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20)),
-                        )),
+              Container(
+                height: 50,
+                width: 200,
+                margin: EdgeInsets.fromLTRB(0, 20, 0, 20),
+                child: ElevatedButton(
+                  onPressed: () {},
+                  child: const Text(
+                    'Chơi đơn',
+                    style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black87),
                   ),
+                  style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all<Color>(
+                          Colors.white.withOpacity(0.65)),
+                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                        RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20)),
+                      )),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  height: 50,
-                  width: 200,
-                  // margin: EdgeInsets.fromLTRB(0, 20, 0, 20),
-                  child: ElevatedButton(
-                    onPressed: () {},
-                    child: const Text(
-                      'Chơi đối kháng',
-                      style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black87),
-                    ),
-                    style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all<Color>(
-                            Colors.white.withOpacity(0.5)),
-                        shape:
-                            MaterialStateProperty.all<RoundedRectangleBorder>(
-                          RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20)),
-                        )),
+              Container(
+                height: 50,
+                width: 200,
+                margin: EdgeInsets.fromLTRB(0, 20, 0, 20),
+                child: ElevatedButton(
+                  onPressed: () {},
+                  child: const Text(
+                    'Chơi đối kháng',
+                    style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black87),
                   ),
+                  style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all<Color>(
+                          Colors.white.withOpacity(0.5)),
+                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                        RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20)),
+                      )),
                 ),
               ),
             ],

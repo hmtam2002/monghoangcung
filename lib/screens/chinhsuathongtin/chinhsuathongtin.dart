@@ -55,17 +55,13 @@ class _EditInfoState extends State<EditInfo> {
               size: MediaQuery.of(context).size.width / 4,
             ),
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                'CẬP NHẬT THÔNG TIN ',
-                style: TextStyle(
-                    fontSize: 30,
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold),
-              )
-            ],
+          Padding(padding: EdgeInsets.all(20)),
+          Text(
+            'CẬP NHẬT THÔNG TIN',
+            style: TextStyle(
+                fontSize: 25,
+                color: Colors.black87,
+                fontWeight: FontWeight.bold),
           ),
           Container(
             width: MediaQuery.of(context).size.width * 9 / 10,
