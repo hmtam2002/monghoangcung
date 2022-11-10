@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:monghoangcung/screens/caidat/caidat.dart';
+import 'package:monghoangcung/screens/chinhsuathongtin/chinhsuathongtin.dart';
 import 'package:monghoangcung/screens/trangchu/trangchu.dart';
 
 class trangcanhan extends StatefulWidget {
@@ -106,7 +107,10 @@ class _trangcanhanState extends State<trangcanhan> {
             width: MediaQuery.of(context).size.width * 9 / 10,
             margin: EdgeInsets.fromLTRB(0, 10, 0, 10),
             child: ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const EditInfo()));
+              },
               child: const Text(
                 'Chỉnh sửa thông tin',
                 style: TextStyle(

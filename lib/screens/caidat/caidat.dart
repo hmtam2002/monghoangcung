@@ -10,6 +10,8 @@ class caidat extends StatefulWidget {
 }
 
 class _caidatState extends State<caidat> {
+  bool valuefirst = false;
+  bool valuesecond = false;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -60,17 +62,6 @@ class _caidatState extends State<caidat> {
               width: MediaQuery.of(context).size.width * 9 / 10,
               height: MediaQuery.of(context).size.height / 4,
             ),
-          ),
-          Container(
-            width: MediaQuery.of(context).size.width * 9 / 10,
-            height: MediaQuery.of(context).size.height / 4,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
-              color: Colors.white.withOpacity(0.8),
-            ),
-            // child: SlideTransition(
-            //   child: Text('âm lượng'),
-            // ),
           ),
         ],
       ),
