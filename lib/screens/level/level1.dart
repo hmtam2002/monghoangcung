@@ -1,21 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:monghoangcung/screens/choidon/choidon.dart';
-import 'package:monghoangcung/screens/chonlevel/chonlevel2.dart';
-import 'package:monghoangcung/screens/level/level1.dart';
 
 import '../trangchu/trangchu.dart';
 
-class Chooselv extends StatefulWidget {
-  const Chooselv({super.key});
+class level_1 extends StatefulWidget {
+  const level_1({super.key});
 
   @override
-  State<Chooselv> createState() => _ChooselvState();
+  State<level_1> createState() => _level_1State();
 }
 
-class _ChooselvState extends State<Chooselv> {
+class _level_1State extends State<level_1> {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Scaffold(
+        body: Container(
       width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).size.height,
       decoration: const BoxDecoration(
@@ -43,13 +41,26 @@ class _ChooselvState extends State<Chooselv> {
                   size: 50,
                 ),
               ),
+              TextButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const trangchu()));
+                },
+                child: Icon(
+                  Icons.settings,
+                  color: Colors.brown.withOpacity(0.8),
+                  size: 50,
+                ),
+              ),
             ],
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                'Chọn Level',
+                'Câu 1 ',
                 style: TextStyle(
                     fontSize: 30,
                     color: Colors.black,
@@ -57,29 +68,31 @@ class _ChooselvState extends State<Chooselv> {
               )
             ],
           ),
-          Opacity(
-            opacity: 0.0,
-            child: Container(
-              width: MediaQuery.of(context).size.width * 9 / 10,
-              height: MediaQuery.of(context).size.height / 4,
-            ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                padding: EdgeInsets.all(20),
+                width: MediaQuery.of(context).size.width * 8 / 10,
+                height: MediaQuery.of(context).size.height / 4,
+                child: Text(
+                  'CÂU HỎI 1 :' + 'Who are you ?',
+                  style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+                ),
+              ),
+            ],
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
                 height: 70,
-                width: 70,
+                width: MediaQuery.of(context).size.width / 2 - 40,
                 margin: EdgeInsets.all(20),
                 child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const level_1()));
-                  },
+                  onPressed: () {},
                   child: const Text(
-                    '1',
+                    'I am is Vy',
                     style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
@@ -96,34 +109,12 @@ class _ChooselvState extends State<Chooselv> {
               ),
               Container(
                 height: 70,
-                width: 70,
+                width: MediaQuery.of(context).size.width / 2 - 40,
                 margin: EdgeInsets.all(20),
                 child: ElevatedButton(
                   onPressed: () {},
                   child: const Text(
-                    '2',
-                    style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black87),
-                  ),
-                  style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all<Color>(
-                          Colors.white.withOpacity(0.8)),
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                        RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20)),
-                      )),
-                ),
-              ),
-              Container(
-                height: 70,
-                width: 70,
-                margin: EdgeInsets.all(20),
-                child: ElevatedButton(
-                  onPressed: () {},
-                  child: const Text(
-                    '3',
+                    'My name is Vy',
                     style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
@@ -145,12 +136,12 @@ class _ChooselvState extends State<Chooselv> {
             children: [
               Container(
                 height: 70,
-                width: 70,
+                width: MediaQuery.of(context).size.width / 2 - 40,
                 margin: EdgeInsets.all(20),
                 child: ElevatedButton(
                   onPressed: () {},
                   child: const Text(
-                    '4',
+                    'She is Vy',
                     style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
@@ -167,34 +158,12 @@ class _ChooselvState extends State<Chooselv> {
               ),
               Container(
                 height: 70,
-                width: 70,
+                width: MediaQuery.of(context).size.width / 2 - 40,
                 margin: EdgeInsets.all(20),
                 child: ElevatedButton(
                   onPressed: () {},
                   child: const Text(
-                    '5',
-                    style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black87),
-                  ),
-                  style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all<Color>(
-                          Colors.white.withOpacity(0.8)),
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                        RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20)),
-                      )),
-                ),
-              ),
-              Container(
-                height: 70,
-                width: 70,
-                margin: EdgeInsets.all(20),
-                child: ElevatedButton(
-                  onPressed: () {},
-                  child: const Text(
-                    '6',
+                    'I is Vy',
                     style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
@@ -219,36 +188,9 @@ class _ChooselvState extends State<Chooselv> {
                 width: 150,
                 margin: EdgeInsets.all(10),
                 child: ElevatedButton(
-                  onPressed: null,
+                  onPressed: () {},
                   child: const Text(
-                    'Quay lại',
-                    style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black87),
-                  ),
-                  style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all<Color>(
-                          Colors.blue.withOpacity(0.2)),
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                        RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20)),
-                      )),
-                ),
-              ),
-              Container(
-                height: 50,
-                width: 150,
-                margin: EdgeInsets.all(10),
-                child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const Chooselv2()));
-                  },
-                  child: const Text(
-                    'Tiếp theo',
+                    'Trả lời',
                     style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
@@ -267,6 +209,6 @@ class _ChooselvState extends State<Chooselv> {
           )
         ],
       ),
-    );
+    ));
   }
 }
