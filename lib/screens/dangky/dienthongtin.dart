@@ -6,7 +6,8 @@ class dienthongtin extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Scaffold(
+        body: Container(
       padding: const EdgeInsets.all(20),
       width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).size.height,
@@ -119,6 +120,6 @@ class dienthongtin extends StatelessWidget {
           ],
         ),
       ),
-    );
+    ));
   }
 }
