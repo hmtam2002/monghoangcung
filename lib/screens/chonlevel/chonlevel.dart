@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:monghoangcung/constants.dart';
 import 'package:monghoangcung/screens/choidon/choidon.dart';
 import 'package:monghoangcung/screens/chonlevel/chonlevel2.dart';
 import 'package:monghoangcung/screens/level/level1.dart';
@@ -19,9 +20,9 @@ class _ChooselvState extends State<Chooselv> {
       body: Container(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
-        decoration: const BoxDecoration(
+        decoration: BoxDecoration(
             image: DecorationImage(
-          image: AssetImage('assets/a.png'),
+          image: image2,
           fit: BoxFit.cover,
         )),
         child: Column(
