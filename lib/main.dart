@@ -1,9 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:monghoangcung/screens/chinhsuathongtin/chinhsuathongtin.dart';
-import 'package:monghoangcung/screens/choidon/choidon.dart';
-import 'package:monghoangcung/screens/chonlevel/chonlevel.dart';
-import 'package:monghoangcung/screens/chonlevel/chonlevel2.dart';
-import 'package:monghoangcung/screens/dangky/nhapusername.dart';
 
 import 'package:monghoangcung/screens/trangchu/trangchu.dart';
 
@@ -21,11 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-<<<<<<< Updated upstream
-      home: nhapusername(),
-=======
       home: trangchu(),
->>>>>>> Stashed changes
     );
   }
 }
