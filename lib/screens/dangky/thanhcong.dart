@@ -5,7 +5,8 @@ class dangkythanhcong extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Scaffold(
+        body: Container(
       width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).size.height,
       decoration: const BoxDecoration(
@@ -22,6 +23,6 @@ class dangkythanhcong extends StatelessWidget {
           ),
         ],
       ),
-    );
+    ));
   }
 }

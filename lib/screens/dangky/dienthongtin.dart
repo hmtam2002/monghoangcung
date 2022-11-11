@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:monghoangcung/screens/dangky/thanhcong.dart';
 
 class dienthongtin extends StatelessWidget {
   const dienthongtin({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Scaffold(
+        body: Container(
       padding: const EdgeInsets.all(20),
       width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).size.height,
@@ -107,12 +109,17 @@ class dienthongtin extends StatelessWidget {
               ),
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const dangkythanhcong()));
+              },
               child: const Text('Đăng ký'),
             ),
           ],
         ),
       ),
-    );
+    ));
   }
 }
