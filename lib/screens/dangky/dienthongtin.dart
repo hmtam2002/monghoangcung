@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:monghoangcung/screens/dangky/thanhcong.dart';
 
 class dienthongtin extends StatelessWidget {
   const dienthongtin({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        body: Container(
+    return Container(
       padding: const EdgeInsets.all(20),
       width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).size.height,
@@ -31,90 +29,85 @@ class dienthongtin extends StatelessWidget {
               style: TextStyle(
                 fontSize: 30,
               ),
-            ),
-            const TextField(
-              style: TextStyle(
-                color: Colors.grey,
-              ),
-              decoration: InputDecoration(
-                enabledBorder: OutlineInputBorder(
-                  // borderRadius: BorderRadius.circular(10),
-                  borderSide: BorderSide(
-                    width: 3,
+              const TextField(
+                style: TextStyle(
+                  color: Colors.grey,
+                ),
+                decoration: InputDecoration(
+                  enabledBorder: OutlineInputBorder(
+                    // borderRadius: BorderRadius.circular(10),
+                    borderSide: BorderSide(
+                      width: 3,
+                      color: Colors.grey,
+                    ),
+                  ),
+                  border: OutlineInputBorder(),
+                  hintText: "Tên tài khoản",
+                  hintStyle: TextStyle(
                     color: Colors.grey,
                   ),
                 ),
-                border: OutlineInputBorder(),
-                hintText: "Tên tài khoản",
-                hintStyle: TextStyle(
+              ),
+              const TextField(
+                style: TextStyle(
                   color: Colors.grey,
                 ),
-              ),
-            ),
-            const TextField(
-              style: TextStyle(
-                color: Colors.grey,
-              ),
-              decoration: InputDecoration(
-                enabledBorder: OutlineInputBorder(
-                  // borderRadius: BorderRadius.circular(10),
-                  borderSide: BorderSide(
-                    width: 3,
+                decoration: InputDecoration(
+                  enabledBorder: OutlineInputBorder(
+                    // borderRadius: BorderRadius.circular(10),
+                    borderSide: BorderSide(
+                      width: 3,
+                      color: Colors.grey,
+                    ),
+                  ),
+                  border: OutlineInputBorder(),
+                  hintText: "Email",
+                  hintStyle: TextStyle(
                     color: Colors.grey,
                   ),
                 ),
-                border: OutlineInputBorder(),
-                hintText: "Email",
-                hintStyle: TextStyle(
+              ),
+              const TextField(
+                style: TextStyle(
                   color: Colors.grey,
                 ),
-              ),
-            ),
-            const TextField(
-              style: TextStyle(
-                color: Colors.grey,
-              ),
-              decoration: InputDecoration(
-                enabledBorder: OutlineInputBorder(
-                  // borderRadius: BorderRadius.circular(10),
-                  borderSide: BorderSide(
-                    width: 3,
+                decoration: InputDecoration(
+                  enabledBorder: OutlineInputBorder(
+                    // borderRadius: BorderRadius.circular(10),
+                    borderSide: BorderSide(
+                      width: 3,
+                      color: Colors.grey,
+                    ),
+                  ),
+                  border: OutlineInputBorder(),
+                  hintText: "Ngày sinh",
+                  hintStyle: TextStyle(
                     color: Colors.grey,
                   ),
                 ),
-                border: OutlineInputBorder(),
-                hintText: "Ngày sinh",
-                hintStyle: TextStyle(
+              ),
+              const TextField(
+                style: TextStyle(
                   color: Colors.grey,
                 ),
-              ),
-            ),
-            const TextField(
-              style: TextStyle(
-                color: Colors.grey,
-              ),
-              decoration: InputDecoration(
-                enabledBorder: OutlineInputBorder(
-                  // borderRadius: BorderRadius.circular(10),
-                  borderSide: BorderSide(
-                    width: 3,
+                decoration: InputDecoration(
+                  enabledBorder: OutlineInputBorder(
+                    // borderRadius: BorderRadius.circular(10),
+                    borderSide: BorderSide(
+                      width: 3,
+                      color: Colors.grey,
+                    ),
+                  ),
+                  border: OutlineInputBorder(),
+                  hintText: "Số điện thoại",
+                  hintStyle: TextStyle(
                     color: Colors.grey,
                   ),
-                ),
-                border: OutlineInputBorder(),
-                hintText: "Số điện thoại",
-                hintStyle: TextStyle(
-                  color: Colors.grey,
                 ),
               ),
             ),
             ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const dangkythanhcong()));
-              },
+              onPressed: () {},
               child: const Text('Đăng ký'),
             ),
           ],

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:monghoangcung/screens/dangnhap/dangnhapthanhcong.dart';
 
 class nhapmatkhau extends StatelessWidget {
   const nhapmatkhau({super.key});
@@ -57,7 +58,12 @@ class nhapmatkhau extends StatelessWidget {
               ),
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const dangnhapthanhcong()));
+              },
               child: const Text('Tiếp theo'),
             ),
           ],
