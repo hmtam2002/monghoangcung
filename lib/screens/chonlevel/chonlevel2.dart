@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:monghoangcung/screens/chonlevel/chonlevel2.dart';
+import 'package:monghoangcung/screens/chonlevel/chonlevel.dart';
 
 import '../trangchu/trangchu.dart';
 
-class Chooselv extends StatefulWidget {
-  const Chooselv({super.key});
+class Chooselv2 extends StatefulWidget {
+  const Chooselv2({super.key});
 
   @override
-  State<Chooselv> createState() => _ChooselvState();
+  State<Chooselv2> createState() => _Chooselv2State();
 }
 
-class _ChooselvState extends State<Chooselv> {
+class _Chooselv2State extends State<Chooselv2> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -72,7 +72,7 @@ class _ChooselvState extends State<Chooselv> {
                 child: ElevatedButton(
                   onPressed: () {},
                   child: const Text(
-                    '1',
+                    '7',
                     style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
@@ -94,7 +94,7 @@ class _ChooselvState extends State<Chooselv> {
                 child: ElevatedButton(
                   onPressed: () {},
                   child: const Text(
-                    '2',
+                    '8',
                     style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
@@ -116,7 +116,7 @@ class _ChooselvState extends State<Chooselv> {
                 child: ElevatedButton(
                   onPressed: () {},
                   child: const Text(
-                    '3',
+                    '9',
                     style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
@@ -143,7 +143,7 @@ class _ChooselvState extends State<Chooselv> {
                 child: ElevatedButton(
                   onPressed: () {},
                   child: const Text(
-                    '4',
+                    '10',
                     style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
@@ -165,7 +165,7 @@ class _ChooselvState extends State<Chooselv> {
                 child: ElevatedButton(
                   onPressed: () {},
                   child: const Text(
-                    '5',
+                    '11',
                     style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
@@ -187,7 +187,7 @@ class _ChooselvState extends State<Chooselv> {
                 child: ElevatedButton(
                   onPressed: () {},
                   child: const Text(
-                    '6',
+                    '12',
                     style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
@@ -207,28 +207,6 @@ class _ChooselvState extends State<Chooselv> {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Container(
-                height: 50,
-                width: 150,
-                margin: EdgeInsets.all(10),
-                child: ElevatedButton(
-                  onPressed: null,
-                  child: const Text(
-                    'Quay lại',
-                    style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black87),
-                  ),
-                  style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all<Color>(
-                          Colors.blue.withOpacity(0.2)),
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                        RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20)),
-                      )),
-                ),
-              ),
               Container(
                 height: 50,
                 width: 150,
@@ -238,8 +216,30 @@ class _ChooselvState extends State<Chooselv> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const Chooselv2()));
+                            builder: (context) => const Chooselv()));
                   },
+                  child: const Text(
+                    'Quay lại',
+                    style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black87),
+                  ),
+                  style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all<Color>(
+                          Colors.blue.withOpacity(0.8)),
+                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                        RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20)),
+                      )),
+                ),
+              ),
+              Container(
+                height: 50,
+                width: 150,
+                margin: EdgeInsets.all(10),
+                child: ElevatedButton(
+                  onPressed: () {},
                   child: const Text(
                     'Tiếp theo',
                     style: TextStyle(
