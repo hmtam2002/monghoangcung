@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:monghoangcung/screens/chonlevel/chonlevel.dart';
 import 'package:monghoangcung/screens/trangcanhan/trangcanhan.dart';
 
 class trangchu extends StatefulWidget {
@@ -65,7 +66,12 @@ class _trangchuState extends State<trangchu> {
                 width: 200,
                 margin: EdgeInsets.fromLTRB(0, 20, 0, 20),
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const Chooselv()));
+                  },
                   child: const Text(
                     'Chơi đơn',
                     style: TextStyle(
