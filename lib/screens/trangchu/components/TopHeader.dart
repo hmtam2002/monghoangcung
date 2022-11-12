@@ -28,7 +28,7 @@ class TopHeader extends StatelessWidget {
                 MaterialPageRoute(builder: (context) => const trangcanhan()));
           },
           child: Icon(
-            Icons.menu,
+            Icons.menu_rounded,
             color: Colors.brown.withOpacity(0.8),
             size: 50,
           ),
