@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:monghoangcung/screens/choidoikhang/choidoikhang.dart';
 import 'package:monghoangcung/screens/chonlevel/chonlevel.dart';
-import 'package:monghoangcung/screens/trangcanhan/trangcanhan.dart';
 
+import '../trangcanhan/cacnut.dart';
 import 'components/TopHeader.dart';
 
+// ignore: camel_case_types
 class trangchu extends StatefulWidget {
   const trangchu({super.key});
 
@@ -34,66 +36,22 @@ class _trangchuState extends State<trangchu> {
             ),
             Column(
               children: [
-                const cacnut(title: 'Chơi đơn'),
-                Container(
-                  height: 50,
-                  width: 200,
-                  margin: EdgeInsets.fromLTRB(0, 20, 0, 20),
-                  child: ElevatedButton(
-                    onPressed: () {},
-                    child: const Text(
-                      'Chơi đối kháng',
-                      style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black87),
-                    ),
-                    style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all<Color>(
-                            Colors.white.withOpacity(0.5)),
-                        shape:
-                            MaterialStateProperty.all<RoundedRectangleBorder>(
-                          RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20)),
-                        )),
+                cacnut(
+                  title: 'Chơi đơn',
+                  tap: MaterialPageRoute(
+                    builder: (context) => const Chooselv(),
+                  ),
+                ),
+                // ignore: prefer_const_constructors
+                cacnut(
+                  title: 'Chơi đối kháng',
+                  tap: MaterialPageRoute(
+                    builder: (context) => const choidoikhang(),
                   ),
                 ),
               ],
             ),
           ],
-        ),
-      ),
-    );
-  }
-}
-
-class cacnut extends StatelessWidget {
-  const cacnut({
-    Key? key,
-    required this.title,
-  }) : super(key: key);
-  final String title;
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 50,
-      width: 200,
-      margin: EdgeInsets.fromLTRB(0, 20, 0, 20),
-      child: ElevatedButton(
-        onPressed: () {
-          Navigator.push(context,
-              MaterialPageRoute(builder: (context) => const Chooselv()));
-        },
-        style: ButtonStyle(
-            backgroundColor: MaterialStateProperty.all<Color>(
-                Colors.white.withOpacity(0.65)),
-            shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-            )),
-        child: Text(
-          title,
-          style: const TextStyle(
-              fontSize: 20, fontWeight: FontWeight.bold, color: Colors.black87),
         ),
       ),
     );
