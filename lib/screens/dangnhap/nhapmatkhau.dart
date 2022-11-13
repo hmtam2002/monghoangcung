@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:monghoangcung/components/nen_game.dart';
 import 'package:monghoangcung/screens/dangnhap/dangnhapthanhcong.dart';
 
 class nhapmatkhau extends StatelessWidget {
@@ -6,15 +7,7 @@ class nhapmatkhau extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.all(20),
-      width: MediaQuery.of(context).size.width,
-      height: MediaQuery.of(context).size.height,
-      decoration: const BoxDecoration(
-          image: DecorationImage(
-        image: AssetImage('assets/a.png'),
-        fit: BoxFit.cover,
-      )),
+    return nen_game(
       child: Container(
         padding: EdgeInsets.all(15),
         decoration: BoxDecoration(

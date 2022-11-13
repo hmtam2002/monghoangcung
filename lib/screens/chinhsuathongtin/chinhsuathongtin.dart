@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:monghoangcung/components/nen_game.dart';
 
 import '../trangchu/trangchu.dart';
 
@@ -16,16 +17,7 @@ class _EditInfoState extends State<EditInfo> {
   String? _num = '';
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        body: Container(
-      padding: const EdgeInsets.all(10),
-      width: MediaQuery.of(context).size.width,
-      height: MediaQuery.of(context).size.height,
-      decoration: const BoxDecoration(
-          image: DecorationImage(
-        image: AssetImage('assets/a.png'),
-        fit: BoxFit.cover,
-      )),
+    return nen_game(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -151,7 +143,7 @@ class _EditInfoState extends State<EditInfo> {
           )
         ],
       ),
-    ));
+    );
   }
 }
 
