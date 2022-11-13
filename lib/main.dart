@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:monghoangcung/screens/dangky/3_dienthongtin.dart';
+import 'package:monghoangcung/screens/dangky/dienthongtin/3_dienthongtin.dart';
 
 void main() {
   runApp(const MyApp());

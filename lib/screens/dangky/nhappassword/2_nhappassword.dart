@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:monghoangcung/components/nen_game.dart';
 import 'package:monghoangcung/constants.dart';
-import 'package:monghoangcung/screens/dangky/3_dienthongtin.dart';
+import 'package:monghoangcung/screens/dangky/dienthongtin/3_dienthongtin.dart';
 import 'package:monghoangcung/screens/dangky/components/khungnhapthongtin.dart';
 import 'package:monghoangcung/screens/dangky/components/nutnhapdangnhap.dart';
 

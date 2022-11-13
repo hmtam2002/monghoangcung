@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:monghoangcung/components/nen_game.dart';
-import 'package:monghoangcung/screens/dangky/4_thanhcong.dart';
+import 'package:monghoangcung/screens/dangnhap/dangnhapthanhcong.dart';
+
+import '../components/nutnhapdangnhap.dart';
+import 'components/o_nhap_thong_tin.dart';
 
 class dienthongtin extends StatelessWidget {
   const dienthongtin({super.key});
@@ -17,7 +20,7 @@ class dienthongtin extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: const [
+          children: [
             Text(
               'Nhập thông tin',
               style: TextStyle(
@@ -29,37 +32,11 @@ class dienthongtin extends StatelessWidget {
             o_nhap_thong_tin(hintext: 'Ngày sinh'),
             o_nhap_thong_tin(hintext: 'Số điện thoại'),
             o_nhap_thong_tin(hintext: 'Đăng ký'),
+            nut_an_dangnhap(
+                press: MaterialPageRoute(
+              builder: (context) => const dangnhapthanhcong(),
+            ))
           ],
-        ),
-      ),
-    );
-  }
-}
-
-class o_nhap_thong_tin extends StatelessWidget {
-  const o_nhap_thong_tin({
-    Key? key,
-    required this.hintext,
-  }) : super(key: key);
-  final String hintext;
-  @override
-  Widget build(BuildContext context) {
-    return TextField(
-      style: const TextStyle(
-        color: Colors.grey,
-      ),
-      decoration: InputDecoration(
-        enabledBorder: const OutlineInputBorder(
-          // borderRadius: BorderRadius.circular(10),
-          borderSide: BorderSide(
-            width: 3,
-            color: Colors.grey,
-          ),
-        ),
-        border: const OutlineInputBorder(),
-        hintText: hintext,
-        hintStyle: const TextStyle(
-          color: Colors.grey,
         ),
       ),
     );
