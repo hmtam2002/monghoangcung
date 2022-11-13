@@ -28,8 +28,9 @@ class nut_an_dangnhap extends StatelessWidget {
           );
         },
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: const [
-            Expanded(child: Text('Tiếp theo')),
+            Text('Tiếp theo'),
             Icon(Icons.arrow_forward),
           ],
         ),

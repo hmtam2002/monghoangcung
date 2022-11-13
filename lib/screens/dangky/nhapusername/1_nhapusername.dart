@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:monghoangcung/components/nen_game.dart';
 import 'package:monghoangcung/constants.dart';
-import 'package:monghoangcung/screens/dangky/2_nhappassword.dart';
+import 'package:monghoangcung/screens/dangky/nhappassword/2_nhappassword.dart';
 
+import '../components/khungnhapthongtin.dart';
 import 'components/nhapthongtinbatdau.dart';
 import 'components/nutnhapdangnhap.dart';
 
@@ -34,14 +35,8 @@ class nhapusername extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: kDefaultPadding),
-                const nhapthongtin_bandau(
-                  child: TextField(
-                    decoration: InputDecoration(
-                      icon: Icon(Icons.person),
-                      hintText: 'Tên của bạn',
-                      border: InputBorder.none,
-                    ),
-                  ),
+                khungnhapthongtin(
+                  text: 'Tên của bạn',
                 ),
                 const SizedBox(height: kDefaultPadding),
                 nut_an_dangnhap(
