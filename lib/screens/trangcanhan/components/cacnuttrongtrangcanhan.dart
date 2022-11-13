@@ -6,8 +6,10 @@ class cacnuttrongtrangcanhan extends StatelessWidget {
   const cacnuttrongtrangcanhan({
     Key? key,
     required this.noidung,
+    required this.press,
   }) : super(key: key);
   final String noidung;
+  final MaterialPageRoute press;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -16,8 +18,7 @@ class cacnuttrongtrangcanhan extends StatelessWidget {
       margin: EdgeInsets.fromLTRB(0, 10, 0, 10),
       child: ElevatedButton(
         onPressed: () {
-          Navigator.push(context,
-              MaterialPageRoute(builder: (context) => const EditInfo()));
+          Navigator.push(context, press);
         },
         style: ButtonStyle(
             backgroundColor:

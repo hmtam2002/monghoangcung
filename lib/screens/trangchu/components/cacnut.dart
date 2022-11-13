@@ -15,8 +15,8 @@ class cacnut extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Container(
-      width: size.width * 0.5,
-      height: size.height * 0.045,
+      width: size.width * 0.7,
+      // height: size.height * 0.045,
       child: ElevatedButton(
         onPressed: () {
           Navigator.push(context, press);

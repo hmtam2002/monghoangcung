@@ -13,7 +13,7 @@ class nut_an_dangnhap extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Container(
-      width: size.width * 0.6,
+      width: size.width * 0.8,
       height: 40,
       child: ElevatedButton(
         style: ButtonStyle(

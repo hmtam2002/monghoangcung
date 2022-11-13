@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:monghoangcung/screens/caidat/caidat.dart';
 import 'package:monghoangcung/screens/chinhsuathongtin/chinhsuathongtin.dart';
+import 'package:monghoangcung/screens/naptien/naptien.dart';
+import 'package:monghoangcung/screens/nhanthu/nhanthu.dart';
 import 'package:monghoangcung/screens/trangchu/trangchu.dart';
+import 'package:monghoangcung/screens/trogiup/trogiup.dart';
+import 'package:monghoangcung/screens/xemxephang/xemxephang.dart';
 
 import 'components/cacnuttrongtrangcanhan.dart';
 
@@ -99,13 +103,33 @@ class _trangcanhanState extends State<trangcanhan> {
                   ],
                 ),
               ),
-              cacnuttrongtrangcanhan(noidung: 'Chỉnh sửa thông tin'),
-              cacnuttrongtrangcanhan(noidung: 'Xem xếp hạng'),
-              cacnuttrongtrangcanhan(noidung: 'Trợ giúp'),
-              cacnuttrongtrangcanhan(noidung: 'Phản hồi'),
-              cacnuttrongtrangcanhan(noidung: 'Nhận thư'),
-              cacnuttrongtrangcanhan(noidung: 'Nạp tiền'),
-              cacnuttrongtrangcanhan(noidung: 'Cài đặt'),
+              cacnuttrongtrangcanhan(
+                noidung: 'Chỉnh sửa thông tin',
+                press:
+                    MaterialPageRoute(builder: (context) => const EditInfo()),
+              ),
+              cacnuttrongtrangcanhan(
+                noidung: 'Xem xếp hạng',
+                press:
+                    MaterialPageRoute(builder: (context) => const xemxephang()),
+              ),
+              cacnuttrongtrangcanhan(
+                noidung: 'Trợ giúp',
+                press: MaterialPageRoute(builder: (context) => const trogiup()),
+              ),
+              cacnuttrongtrangcanhan(
+                noidung: 'Nhận thư',
+                press:
+                    MaterialPageRoute(builder: (context) => const nhan_thu()),
+              ),
+              cacnuttrongtrangcanhan(
+                noidung: 'Nạp tiền',
+                press: MaterialPageRoute(builder: (context) => const naptien()),
+              ),
+              cacnuttrongtrangcanhan(
+                noidung: 'Cài đặt',
+                press: MaterialPageRoute(builder: (context) => const caidat()),
+              ),
             ],
           ),
         ),

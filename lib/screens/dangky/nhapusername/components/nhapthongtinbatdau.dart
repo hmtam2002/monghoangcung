@@ -10,7 +10,7 @@ class nhapthongtin_bandau extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Container(
-      width: size.width * 0.6,
+      width: size.width * 0.8,
       padding: EdgeInsets.symmetric(
         horizontal: 20,
         vertical: 5,
