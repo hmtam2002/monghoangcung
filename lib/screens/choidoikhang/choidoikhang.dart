@@ -18,7 +18,7 @@ class choidoikhang extends StatelessWidget {
         width: double.infinity,
         height: double.infinity,
         decoration: BoxDecoration(
-          image: DecorationImage(image: image2, fit: BoxFit.cover),
+          image: DecorationImage(image: nen_game_image, fit: BoxFit.cover),
         ),
         child: Column(
           children: [

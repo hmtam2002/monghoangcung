@@ -14,5 +14,7 @@ const kPrimatigradient = LinearGradient(
 const double kDefaultPadding = 20;
 
 //image
-AssetImage image = const AssetImage('assets/Logo.png');
-AssetImage image2 = const AssetImage('assets/a.png');
+// ignore: non_constant_identifier_names
+AssetImage logo_game = const AssetImage('assets/Logo.png');
+// ignore: non_constant_identifier_names
+AssetImage nen_game_image = const AssetImage('assets/a.png');
