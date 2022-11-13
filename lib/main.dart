@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:monghoangcung/screens/choidoikhang/choidoikhang.dart';
-import 'package:monghoangcung/screens/chonlevel/chonlevel.dart';
-import 'package:monghoangcung/screens/level/level1.dart';
-import 'package:monghoangcung/screens/naptien/naptien.dart';
-import 'package:monghoangcung/screens/trangchu/trangchu.dart';
+import 'package:monghoangcung/screens/dangky/nhapusername/1_nhapusername.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const level_1(),
+      home: const nhapusername(),
     );
   }
 }

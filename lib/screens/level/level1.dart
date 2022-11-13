@@ -172,12 +172,13 @@ class _level_1State extends State<level_1> {
             child: ElevatedButton(
               onPressed: () {},
               style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all<Color>(
-                      Colors.blue.withOpacity(0.8)),
-                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                    RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20)),
-                  )),
+                backgroundColor: MaterialStateProperty.all<Color>(
+                    Colors.blue.withOpacity(0.8)),
+                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                  RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20)),
+                ),
+              ),
               child: const Text(
                 'Trả lời',
                 style: TextStyle(

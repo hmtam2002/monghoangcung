@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:monghoangcung/screens/dangky/thanhcong.dart';
+import 'package:monghoangcung/screens/dangky/4_thanhcong.dart';
 
 class dienthongtin extends StatelessWidget {
   const dienthongtin({super.key});

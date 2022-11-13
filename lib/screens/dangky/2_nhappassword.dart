@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:monghoangcung/screens/dangky/dienthongtin.dart';
+import 'package:monghoangcung/screens/dangky/3_dienthongtin.dart';
 
 // ignore: camel_case_types
 class nhappassword extends StatelessWidget {
