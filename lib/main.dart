@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:monghoangcung/screens/choidoikhang/choidoikhang.dart';
+import 'package:monghoangcung/screens/naptien/naptien.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const choidoikhang(),
+      home: const naptien(),
     );
   }
 }
