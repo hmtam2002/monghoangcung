@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:monghoangcung/constants.dart';
 import 'package:monghoangcung/screens/caidat/caidat.dart';
 import 'package:monghoangcung/screens/chinhsuathongtin/chinhsuathongtin.dart';
+import 'package:monghoangcung/screens/dangky/nhapusername/1_nhapusername.dart';
 import 'package:monghoangcung/screens/naptien/naptien.dart';
 import 'package:monghoangcung/screens/nhanthu/nhanthu.dart';
 import 'package:monghoangcung/screens/trangchu/trangchu.dart';
@@ -22,7 +24,11 @@ class _trangcanhanState extends State<trangcanhan> {
     return Scaffold(
       body: Container(
         //ảnh nền
-        padding: EdgeInsets.all(20),
+        padding: const EdgeInsets.only(
+          top: kDefaultPadding,
+          left: kDefaultPadding,
+          right: kDefaultPadding,
+        ),
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
         decoration: const BoxDecoration(
@@ -44,10 +50,21 @@ class _trangcanhanState extends State<trangcanhan> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const trangchu()));
+                            builder: (context) => trangchu(),
+                          ));
                     },
                     child: Icon(
                       Icons.home_rounded,
+                      color: Colors.brown.withOpacity(0.8),
+                      size: 50,
+                    ),
+                  ),
+                  TextButton(
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                    child: Icon(
+                      Icons.clear,
                       color: Colors.brown.withOpacity(0.8),
                       size: 50,
                     ),
@@ -128,7 +145,12 @@ class _trangcanhanState extends State<trangcanhan> {
               ),
               cacnuttrongtrangcanhan(
                 noidung: 'Cài đặt',
-                press: MaterialPageRoute(builder: (context) => const caidat()),
+                press: MaterialPageRoute(builder: (context) => const cai_dat()),
+              ),
+              cacnuttrongtrangcanhan(
+                noidung: 'Đăng ký',
+                press: MaterialPageRoute(
+                    builder: (context) => const nhapusername()),
               ),
             ],
           ),

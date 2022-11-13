@@ -11,7 +11,10 @@ class naptien extends StatelessWidget {
       child: Column(
         children: [
           TopHeader(),
-          Text('Nạp tiền'),
+          Text(
+            'Nạp tiền',
+            style: TextStyle(fontSize: 30),
+          ),
         ],
       ),
     );

@@ -4,6 +4,7 @@ import 'package:monghoangcung/constants.dart';
 import 'package:monghoangcung/screens/choidoikhang/choidoikhang.dart';
 import 'package:monghoangcung/screens/choidon/choidon.dart';
 import 'package:monghoangcung/screens/chonlevel/chonlevel.dart';
+import 'package:monghoangcung/screens/phongcho/phongcho.dart';
 
 import 'components/cacnut.dart';
 import 'components/TopHeader.dart';
@@ -49,7 +50,7 @@ class _trangchuState extends State<trangchu> {
                 cacnut(
                   text: 'Chơi đối kháng',
                   press: MaterialPageRoute(
-                    builder: (context) => const choidoikhang(),
+                    builder: (context) => const phongcho(),
                   ),
                 ),
                 const SizedBox(

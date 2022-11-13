@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../trangchu/trangchu.dart';
-import '../trangcanhan/trangcanhan.dart';
 
 class EditInfo extends StatefulWidget {
   const EditInfo({super.key});

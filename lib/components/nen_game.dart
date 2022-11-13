@@ -12,7 +12,11 @@ class nen_game extends StatelessWidget {
       body: Container(
         width: double.infinity,
         height: size.height,
-        padding: EdgeInsets.all(kDefaultPadding),
+        padding: const EdgeInsets.only(
+          top: kDefaultPadding,
+          left: kDefaultPadding,
+          right: kDefaultPadding,
+        ),
         decoration: BoxDecoration(
           image: DecorationImage(
             image: nen_game_image,
