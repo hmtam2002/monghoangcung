@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:monghoangcung/components/nen_game.dart';
+import 'package:monghoangcung/constants.dart';
 import 'package:monghoangcung/screens/choidoikhang/choidoikhang.dart';
+import 'package:monghoangcung/screens/choidon/choidon.dart';
 import 'package:monghoangcung/screens/chonlevel/chonlevel.dart';
 
-import '../trangcanhan/cacnut.dart';
+import 'components/cacnut.dart';
 import 'components/TopHeader.dart';
 
 // ignore: camel_case_types
@@ -16,43 +19,46 @@ class trangchu extends StatefulWidget {
 class _trangchuState extends State<trangchu> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        padding: const EdgeInsets.all(20),
-        width: MediaQuery.of(context).size.width,
-        height: MediaQuery.of(context).size.height,
-        decoration: const BoxDecoration(
-            image: DecorationImage(
-          image: AssetImage('assets/a.png'),
-          fit: BoxFit.cover,
-        )),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            const TopHeader(),
-            const Image(
+    return nen_game(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          const TopHeader(),
+          const Expanded(
+            flex: 1,
+            child: Image(
               image: AssetImage('assets/Logo.png'),
             ),
-            Column(
+          ),
+          Expanded(
+            flex: 1,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisSize: MainAxisSize.min,
               children: [
                 cacnut(
-                  title: 'Chơi đơn',
-                  tap: MaterialPageRoute(
+                  text: 'Chơi đơn',
+                  press: MaterialPageRoute(
                     builder: (context) => const Chooselv(),
                   ),
                 ),
-                // ignore: prefer_const_constructors
+                const SizedBox(
+                  height: kDefaultPadding,
+                ),
                 cacnut(
-                  title: 'Chơi đối kháng',
-                  tap: MaterialPageRoute(
+                  text: 'Chơi đối kháng',
+                  press: MaterialPageRoute(
                     builder: (context) => const choidoikhang(),
                   ),
                 ),
+                const SizedBox(
+                  height: kDefaultPadding * 2,
+                ),
               ],
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

@@ -1,25 +1,25 @@
 import 'package:flutter/material.dart';
 
-import '../chonlevel/chonlevel.dart';
+import '../../chonlevel/chonlevel.dart';
 
 // ignore: camel_case_types
 class cacnut extends StatelessWidget {
   const cacnut({
     Key? key,
-    required this.title,
-    required this.tap,
+    required this.text,
+    required this.press,
   }) : super(key: key);
-  final String title;
-  final MaterialPageRoute tap;
+  final String text;
+  final MaterialPageRoute press;
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Container(
-      height: 50,
-      width: 200,
-      margin: const EdgeInsets.fromLTRB(0, 20, 0, 20),
+      width: size.width * 0.5,
+      height: size.height * 0.045,
       child: ElevatedButton(
         onPressed: () {
-          Navigator.push(context, tap);
+          Navigator.push(context, press);
         },
         style: ButtonStyle(
             backgroundColor: MaterialStateProperty.all<Color>(
@@ -28,7 +28,7 @@ class cacnut extends StatelessWidget {
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
             )),
         child: Text(
-          title,
+          text,
           style: const TextStyle(
               fontSize: 20, fontWeight: FontWeight.bold, color: Colors.black87),
         ),
