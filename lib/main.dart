@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:monghoangcung/screens/choidoikhang/choidoikhang.dart';
 import 'package:monghoangcung/screens/chonlevel/chonlevel.dart';
+import 'package:monghoangcung/screens/level/level1.dart';
 import 'package:monghoangcung/screens/naptien/naptien.dart';
 import 'package:monghoangcung/screens/trangchu/trangchu.dart';
 
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const Chooselv(),
+      home: const level_1(),
     );
   }
 }
