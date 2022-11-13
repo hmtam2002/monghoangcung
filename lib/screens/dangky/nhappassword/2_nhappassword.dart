@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:monghoangcung/components/nen_game.dart';
+import 'package:monghoangcung/constants.dart';
 import 'package:monghoangcung/screens/dangky/3_dienthongtin.dart';
 import 'package:monghoangcung/screens/dangky/components/khungnhapthongtin.dart';
+import 'package:monghoangcung/screens/dangky/components/nutnhapdangnhap.dart';
 
 // ignore: camel_case_types
 class nhappassword extends StatelessWidget {
@@ -13,20 +15,32 @@ class nhappassword extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          const Image(
-            image: AssetImage('assets/Logo.png'),
-            fit: BoxFit.cover,
+          const Expanded(
+            child: Image(
+              image: AssetImage('assets/Logo.png'),
+              fit: BoxFit.cover,
+            ),
           ),
-          const Text('Tạo một mật khẩu mới'),
-          khungnhapthongtin(text: 'Mật khẩu của bạn'),
-          ElevatedButton(
-            onPressed: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const dienthongtin()));
-            },
-            child: const Text('Tiếp theo'),
+          Expanded(
+            child: Column(
+              children: [
+                const Text(
+                  'Tạo một mật khẩu mới',
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                SizedBox(height: kDefaultPadding),
+                khungnhapthongtin(text: 'Mật khẩu của bạn'),
+                SizedBox(height: kDefaultPadding),
+                nut_an_dangnhap(
+                    press: MaterialPageRoute(
+                  builder: (context) => const dienthongtin(),
+                )),
+              ],
+            ),
           ),
         ],
       ),

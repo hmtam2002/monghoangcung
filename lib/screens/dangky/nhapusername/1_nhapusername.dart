@@ -5,7 +5,7 @@ import 'package:monghoangcung/screens/dangky/nhappassword/2_nhappassword.dart';
 
 import '../components/khungnhapthongtin.dart';
 import 'components/nhapthongtinbatdau.dart';
-import 'components/nutnhapdangnhap.dart';
+import '../components/nutnhapdangnhap.dart';
 
 class nhapusername extends StatelessWidget {
   const nhapusername({super.key});

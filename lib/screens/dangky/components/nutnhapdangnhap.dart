@@ -5,8 +5,10 @@ class nut_an_dangnhap extends StatelessWidget {
   const nut_an_dangnhap({
     Key? key,
     required this.press,
+    this.text = 'Tiếp theo',
   }) : super(key: key);
   final MaterialPageRoute press;
+  final String text;
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;

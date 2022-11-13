@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:monghoangcung/components/nen_game.dart';
 import 'package:monghoangcung/screens/dangky/4_thanhcong.dart';
 
 class dienthongtin extends StatelessWidget {
@@ -6,16 +7,7 @@ class dienthongtin extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        body: Container(
-      padding: const EdgeInsets.all(20),
-      width: MediaQuery.of(context).size.width,
-      height: MediaQuery.of(context).size.height,
-      decoration: const BoxDecoration(
-          image: DecorationImage(
-        image: AssetImage('assets/a.png'),
-        fit: BoxFit.cover,
-      )),
+    return nen_game(
       child: Container(
         padding: const EdgeInsets.all(15),
         decoration: BoxDecoration(
@@ -120,6 +112,6 @@ class dienthongtin extends StatelessWidget {
           ],
         ),
       ),
-    ));
+    );
   }
 }

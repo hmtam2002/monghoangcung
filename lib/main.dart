@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:monghoangcung/screens/dangky/nhappassword/2_nhappassword.dart';
-import 'package:monghoangcung/screens/dangky/nhapusername/1_nhapusername.dart';
+import 'package:monghoangcung/screens/dangky/3_dienthongtin.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const nhappassword(),
+      home: const dienthongtin(),
     );
   }
 }
