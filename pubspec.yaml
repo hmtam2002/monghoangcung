@@ -39,6 +39,8 @@ dependencies:
   flutter_svg: ^1.1.6
   websafe_svg: ^2.1.2+7
   get: ^4.6.5
+  momo_vn: ^2.0.2
+  fluttertoast: ^8.1.1
 
 dev_dependencies:
   flutter_test:
