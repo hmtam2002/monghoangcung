@@ -16,7 +16,7 @@ class dangnhapthanhcong extends StatelessWidget {
             Navigator.push(context,
                 MaterialPageRoute(builder: (context) => const trangchu()));
           },
-          child: Image(
+          child: const Image(
             image: AssetImage('assets/logo/Logo2.png'),
           ),
         ),
