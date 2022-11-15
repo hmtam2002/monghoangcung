@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:monghoangcung/components/nen_game.dart';
-
-import '../trangchu/trangchu.dart';
+import 'package:monghoangcung/screens/trangchu/components/TopHeader.dart';
+import 'components/avartar.dart';
+import 'components/textview.dart';
+import 'components/avartar.dart';
 
 class EditInfo extends StatefulWidget {
   const EditInfo({super.key});
@@ -22,30 +24,8 @@ class _EditInfoState extends State<EditInfo> {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              TextButton(
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const trangchu()));
-                },
-                child: Icon(
-                  Icons.home_rounded,
-                  color: Colors.brown.withOpacity(0.8),
-                  size: 50,
-                ),
-              ),
-            ],
-          ),
-          Container(
-            child: Icon(
-              Icons.account_box_sharp,
-              size: MediaQuery.of(context).size.width / 4,
-            ),
-          ),
+          const TopHeader(),
+          const avartar(),
           Padding(padding: EdgeInsets.all(20)),
           Text(
             'CẬP NHẬT THÔNG TIN',
@@ -54,46 +34,17 @@ class _EditInfoState extends State<EditInfo> {
                 color: Colors.black87,
                 fontWeight: FontWeight.bold),
           ),
-          Container(
-            width: MediaQuery.of(context).size.width * 9 / 10,
-            padding: EdgeInsets.all(20),
-            child: TextField(
-              controller: _username,
-              keyboardType: TextInputType.text,
-              decoration: InputDecoration(
-                filled: true,
-                fillColor: Colors.white54,
-                border:
-                    OutlineInputBorder(borderRadius: BorderRadius.circular(20)),
-                hintText: 'Username',
-              ),
-            ),
+          textview(
+            username: _username,
+            text: 'username',
           ),
-          Container(
-            width: MediaQuery.of(context).size.width * 9 / 10,
-            padding: EdgeInsets.all(20),
-            child: TextField(
-              controller: _email,
-              decoration: InputDecoration(
-                  filled: true,
-                  fillColor: Colors.white54,
-                  border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(20)),
-                  hintText: 'Email'),
-            ),
+          textview(
+            username: _email,
+            text: 'email',
           ),
-          Container(
-            width: MediaQuery.of(context).size.width * 9 / 10,
-            padding: EdgeInsets.all(20),
-            child: TextField(
-              controller: _phonenumber,
-              decoration: InputDecoration(
-                  filled: true,
-                  fillColor: Colors.white54,
-                  border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(20)),
-                  hintText: 'SDT'),
-            ),
+          textview(
+            username: _phonenumber,
+            text: 'phonenumber',
           ),
           Container(
             height: 50,
@@ -105,7 +56,7 @@ class _EditInfoState extends State<EditInfo> {
                   _num = 'Cập nhật thành công ';
                 });
               },
-              child: const Text(
+              child: Text(
                 'Cập Nhật',
                 style: TextStyle(
                     fontSize: 20,
@@ -145,18 +96,4 @@ class _EditInfoState extends State<EditInfo> {
       ),
     );
   }
-}
-
-class info {
-  info({
-    required this.username,
-    required this.email,
-    required this.phonenumber,
-  });
-  String username;
-  String phonenumber;
-  String email;
-  static List<info> lstImgInfo = [
-    info(username: 'username', email: 'email', phonenumber: 'phonenumber')
-  ];
 }
