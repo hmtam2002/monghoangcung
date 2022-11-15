@@ -3,6 +3,7 @@ import 'package:monghoangcung/constants.dart';
 import 'package:monghoangcung/screens/caidat/caidat.dart';
 import 'package:monghoangcung/screens/chinhsuathongtin/chinhsuathongtin.dart';
 import 'package:monghoangcung/screens/dangky/nhapusername/1_nhapusername.dart';
+import 'package:monghoangcung/screens/dangnhap/nhapmatkhau.dart';
 import 'package:monghoangcung/screens/naptien/naptien.dart';
 import 'package:monghoangcung/screens/nhanthu/nhanthu.dart';
 import 'package:monghoangcung/screens/trangchu/trangchu.dart';
@@ -151,6 +152,11 @@ class _trangcanhanState extends State<trangcanhan> {
                 noidung: 'Đăng ký',
                 press: MaterialPageRoute(
                     builder: (context) => const nhapusername()),
+              ),
+              cacnuttrongtrangcanhan(
+                noidung: 'Đăng Nhập',
+                press: MaterialPageRoute(
+                    builder: (context) => const nhapmatkhau()),
               ),
             ],
           ),

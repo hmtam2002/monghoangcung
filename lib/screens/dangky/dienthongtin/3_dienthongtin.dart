@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:monghoangcung/components/nen_game.dart';
+import 'package:monghoangcung/screens/dangky/4_thanhcong.dart';
 import 'package:monghoangcung/screens/dangnhap/dangnhapthanhcong.dart';
 
 import '../components/nutnhapdangnhap.dart';
@@ -34,7 +35,7 @@ class dienthongtin extends StatelessWidget {
             o_nhap_thong_tin(hintext: 'Đăng ký'),
             nut_an_dangnhap(
                 press: MaterialPageRoute(
-              builder: (context) => const dangnhapthanhcong(),
+              builder: (context) => const dangkythanhcong(),
             ))
           ],
         ),

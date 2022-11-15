@@ -9,39 +9,16 @@ class dangkythanhcong extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return nen_game(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Image(
+      child: Center(
+        child: InkWell(
+          onTap: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => const trangchu()));
+          },
+          child: Image(
             image: AssetImage('assets/logo/Logo1.png'),
           ),
-          Container(
-            height: 50,
-            width: 150,
-            margin: EdgeInsets.all(10),
-            child: ElevatedButton(
-              onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => const trangchu()));
-              },
-              child: const Text(
-                'Tiếp theo',
-                style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black87),
-              ),
-              style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all<Color>(
-                      Colors.blue.withOpacity(0.8)),
-                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                    RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20)),
-                  )),
-            ),
-          ),
-        ],
+        ),
       ),
     );
   }
