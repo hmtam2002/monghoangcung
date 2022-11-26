@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:monghoangcung/screens/dangky/4_thanhcong.dart';
+import 'package:monghoangcung/screens/trangcanhan/trangcanhan.dart';
 
 //khởi tạo cho firebase chạy 1 lần
 // Future<void> main(List<String> agrs) async {
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const dangkythanhcong(),
+      home: const trangcanhan(),
     );
   }
 }
