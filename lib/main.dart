@@ -1,10 +1,10 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:monghoangcung/screens/dangky/4_thanhcong.dart';
-import 'package:monghoangcung/screens/dangnhap/dangnhapthanhcong.dart';
-import 'package:monghoangcung/screens/khoidong/loadgame.dart';
-import 'package:monghoangcung/screens/trangchu/trangchu.dart';
 
-void main() {
+Future<void> main(List<String> agrs) async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
