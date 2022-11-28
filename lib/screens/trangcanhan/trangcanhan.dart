@@ -20,60 +20,32 @@ class trangcanhan extends StatefulWidget {
   State<trangcanhan> createState() => _trangcanhanState();
 }
 
+// ignore: camel_case_types
 class _trangcanhanState extends State<trangcanhan> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        //ảnh nền
-        padding: const EdgeInsets.only(
-          top: kDefaultPadding,
-          left: kDefaultPadding,
-          right: kDefaultPadding,
-        ),
-        width: MediaQuery.of(context).size.width,
-        height: MediaQuery.of(context).size.height,
-        decoration: const BoxDecoration(
-            image: DecorationImage(
-          image: AssetImage('assets/a.png'),
-          fit: BoxFit.cover,
-        )),
-        child: Column(
-          //nội dung
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                TextButton(
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const trangchu(),
-                        ));
-                  },
-                  child: Icon(
-                    Icons.home_rounded,
-                    color: Colors.brown.withOpacity(0.8),
-                    size: 50,
-                  ),
-                ),
-                TextButton(
-                  onPressed: () {
-                    Navigator.pop(context);
-                  },
-                  child: Icon(
-                    Icons.clear,
-                    color: Colors.brown.withOpacity(0.8),
-                    size: 50,
-                  ),
-                ),
-              ],
-            ),
-            Container(
-              child: SingleChildScrollView(
+      body: SingleChildScrollView(
+        child: Container(
+          //ảnh nền
+          padding: const EdgeInsets.only(
+            top: kDefaultPadding,
+            left: kDefaultPadding,
+            right: kDefaultPadding,
+          ),
+          width: MediaQuery.of(context).size.width,
+          height: MediaQuery.of(context).size.height,
+          decoration: const BoxDecoration(
+              image: DecorationImage(
+            image: AssetImage('assets/a.png'),
+            fit: BoxFit.cover,
+          )),
+          child: Column(
+            //nội dung
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Container(
                 child: Column(
                   children: [
                     const gioithieuthongtin(),
@@ -120,8 +92,37 @@ class _trangcanhanState extends State<trangcanhan> {
                   ],
                 ),
               ),
-            ),
-          ],
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  TextButton(
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const trangchu(),
+                          ));
+                    },
+                    child: Icon(
+                      Icons.home_rounded,
+                      color: Colors.brown.withOpacity(0.8),
+                      size: 50,
+                    ),
+                  ),
+                  TextButton(
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                    child: Icon(
+                      Icons.clear,
+                      color: Colors.brown.withOpacity(0.8),
+                      size: 50,
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );

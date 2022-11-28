@@ -11,7 +11,6 @@ class TopHeader extends StatelessWidget {
       children: [
         TextButton(
           onPressed: () {
-            Navigator.pop(context),
             Navigator.push(context,
                 MaterialPageRoute(builder: (context) => const trangcanhan()));
           },
