@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:monghoangcung/screens/trangcanhan/trangcanhan.dart';
+import 'package:monghoangcung/screens/trangchu/trangchu.dart';
 
 //khởi tạo cho firebase chạy 1 lần
 // Future<void> main(List<String> agrs) async {
@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const trangcanhan(),
+      home: const trangchu(),
     );
   }
 }
