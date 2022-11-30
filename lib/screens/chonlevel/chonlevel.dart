@@ -26,7 +26,24 @@ class _ChooselvState extends State<Chooselv> {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          TopHeader(),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              TextButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const trangchu()));
+                },
+                child: Icon(
+                  Icons.home,
+                  color: Colors.brown.withOpacity(0.8),
+                  size: 50,
+                ),
+              ),
+            ],
+          ),
           Text(
             'Chọn Level',
             style: TextStyle(
