@@ -73,52 +73,50 @@ class _trangcanhanState extends State<trangcanhan> {
               ],
             ),
             Container(
-              child: SingleChildScrollView(
-                child: Column(
-                  children: [
-                    const gioithieuthongtin(),
-                    cacnuttrongtrangcanhan(
-                      noidung: 'Chỉnh sửa thông tin',
-                      press: MaterialPageRoute(
-                          builder: (context) => const EditInfo()),
-                    ),
-                    cacnuttrongtrangcanhan(
-                      noidung: 'Xem xếp hạng',
-                      press: MaterialPageRoute(
-                          builder: (context) => const xemxephang()),
-                    ),
-                    cacnuttrongtrangcanhan(
-                      noidung: 'Trợ giúp',
-                      press: MaterialPageRoute(
-                          builder: (context) => const trogiup()),
-                    ),
-                    cacnuttrongtrangcanhan(
-                      noidung: 'Nhận thư',
-                      press: MaterialPageRoute(
-                          builder: (context) => const nhan_thu()),
-                    ),
-                    cacnuttrongtrangcanhan(
-                      noidung: 'Nạp tiền',
-                      press: MaterialPageRoute(
-                          builder: (context) => const naptien()),
-                    ),
-                    cacnuttrongtrangcanhan(
-                      noidung: 'Cài đặt',
-                      press: MaterialPageRoute(
-                          builder: (context) => const cai_dat()),
-                    ),
-                    cacnuttrongtrangcanhan(
-                      noidung: 'Đăng ký',
-                      press: MaterialPageRoute(
-                          builder: (context) => const nhapusername()),
-                    ),
-                    cacnuttrongtrangcanhan(
-                      noidung: 'Đăng Nhập',
-                      press: MaterialPageRoute(
-                          builder: (context) => const nhapmatkhau()),
-                    ),
-                  ],
-                ),
+              child: Column(
+                children: [
+                  const gioithieuthongtin(),
+                  cacnuttrongtrangcanhan(
+                    noidung: 'Chỉnh sửa thông tin',
+                    press: MaterialPageRoute(
+                        builder: (context) => const EditInfo()),
+                  ),
+                  cacnuttrongtrangcanhan(
+                    noidung: 'Xem xếp hạng',
+                    press: MaterialPageRoute(
+                        builder: (context) => const xemxephang()),
+                  ),
+                  cacnuttrongtrangcanhan(
+                    noidung: 'Trợ giúp',
+                    press: MaterialPageRoute(
+                        builder: (context) => const trogiup()),
+                  ),
+                  cacnuttrongtrangcanhan(
+                    noidung: 'Nhận thư',
+                    press: MaterialPageRoute(
+                        builder: (context) => const nhan_thu()),
+                  ),
+                  cacnuttrongtrangcanhan(
+                    noidung: 'Nạp tiền',
+                    press: MaterialPageRoute(
+                        builder: (context) => const naptien()),
+                  ),
+                  cacnuttrongtrangcanhan(
+                    noidung: 'Cài đặt',
+                    press: MaterialPageRoute(
+                        builder: (context) => const cai_dat()),
+                  ),
+                  cacnuttrongtrangcanhan(
+                    noidung: 'Đăng ký',
+                    press: MaterialPageRoute(
+                        builder: (context) => const nhapusername()),
+                  ),
+                  cacnuttrongtrangcanhan(
+                    noidung: 'Đăng Nhập',
+                    press: MaterialPageRoute(
+                        builder: (context) => const nhapmatkhau()),
+                  ),
+                ],
               ),
             ),
           ],

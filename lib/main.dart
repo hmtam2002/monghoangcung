@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:monghoangcung/screens/trangcanhan/trangcanhan.dart';
 import 'package:flutter/services.dart';
 import 'package:monghoangcung/screens/trangchu/trangchu.dart';
 //khởi tạo cho firebase chạy 1 lần
@@ -18,7 +17,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
-
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
