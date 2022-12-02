@@ -37,7 +37,7 @@ class _ChooselvState extends State<Chooselv> {
                           builder: (context) => const trangchu()));
                 },
                 child: Icon(
-                  Icons.home,
+                  Icons.arrow_back_outlined,
                   color: Colors.brown.withOpacity(0.8),
                   size: 50,
                 ),
