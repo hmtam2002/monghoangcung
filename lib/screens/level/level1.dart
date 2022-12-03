@@ -12,6 +12,14 @@ class level_1 extends StatefulWidget {
 }
 
 class _level_1State extends State<level_1> {
+  bool button = true;
+
+  Color button1color = Colors.white.withOpacity(0.8);
+  Color button2color = Colors.white.withOpacity(0.8);
+  Color button3color = Colors.white.withOpacity(0.8);
+  Color button4color = Colors.white.withOpacity(0.8);
+  int point = 0;
+
   @override
   Widget build(BuildContext context) {
     return nen_game(
@@ -59,6 +67,15 @@ class _level_1State extends State<level_1> {
             'Who are you ?',
             style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
           ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Text(
+                "Điểm : " + point.toString(),
+                style: TextStyle(fontSize: 30),
+              ),
+            ],
+          ),
           const SizedBox(height: kDefaultPadding * 6),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -67,10 +84,18 @@ class _level_1State extends State<level_1> {
                 child: SizedBox(
                   height: 70,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: button
+                        ? () {
+                            setState(() {
+                              button = false;
+                              button1color = Colors.red;
+                              point += 0;
+                            });
+                          }
+                        : null,
                     style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all<Color>(
-                            Colors.white.withOpacity(0.8)),
+                        backgroundColor:
+                            MaterialStateProperty.all<Color>(button1color),
                         shape:
                             MaterialStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(
@@ -91,10 +116,18 @@ class _level_1State extends State<level_1> {
                 child: SizedBox(
                   height: 70,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: button
+                        ? () {
+                            setState(() {
+                              button = false;
+                              button2color = Colors.green;
+                              point += 100;
+                            });
+                          }
+                        : null,
                     style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all<Color>(
-                            Colors.white.withOpacity(0.8)),
+                        backgroundColor:
+                            MaterialStateProperty.all<Color>(button2color),
                         shape:
                             MaterialStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(
@@ -120,10 +153,18 @@ class _level_1State extends State<level_1> {
                 child: SizedBox(
                   height: 70,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: button
+                        ? () {
+                            setState(() {
+                              button = false;
+                              button3color = Colors.red;
+                              point += 0;
+                            });
+                          }
+                        : null,
                     style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all<Color>(
-                            Colors.white.withOpacity(0.8)),
+                        backgroundColor:
+                            MaterialStateProperty.all<Color>(button3color),
                         shape:
                             MaterialStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(
@@ -144,10 +185,18 @@ class _level_1State extends State<level_1> {
                 child: SizedBox(
                   height: 70,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: button
+                        ? () {
+                            setState(() {
+                              button = false;
+                              button4color = Colors.red;
+                              point += 0;
+                            });
+                          }
+                        : null,
                     style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all<Color>(
-                            Colors.white.withOpacity(0.8)),
+                        backgroundColor:
+                            MaterialStateProperty.all<Color>(button4color),
                         shape:
                             MaterialStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(
@@ -180,7 +229,7 @@ class _level_1State extends State<level_1> {
                 ),
               ),
               child: const Text(
-                'Trả lời',
+                'Tiếp theo',
                 style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,

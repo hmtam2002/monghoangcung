@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:monghoangcung/screens/level/level1.dart';
 import 'package:monghoangcung/screens/trangchu/trangchu.dart';
 //khởi tạo cho firebase chạy 1 lần
 // Future<void> main(List<String> agrs) async {
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const trangchu(),
+      home: const level_1(),
     );
   }
 }
