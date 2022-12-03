@@ -1,26 +1,25 @@
+import 'package:flutter/src/widgets/container.dart';
+import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/material.dart';
 import 'package:monghoangcung/components/nen_game.dart';
 import 'package:monghoangcung/constants.dart';
 
 import '../trangchu/trangchu.dart';
-import 'cau2.dart';
 
-class level_1 extends StatefulWidget {
-  const level_1({super.key});
+class Lv1_cau2 extends StatefulWidget {
+  const Lv1_cau2({super.key});
 
   @override
-  State<level_1> createState() => _level_1State();
+  State<Lv1_cau2> createState() => _Lv1_cau2State();
 }
 
-class _level_1State extends State<level_1> {
+class _Lv1_cau2State extends State<Lv1_cau2> {
   bool button = true;
-
   Color button1color = Colors.white.withOpacity(0.8);
   Color button2color = Colors.white.withOpacity(0.8);
   Color button3color = Colors.white.withOpacity(0.8);
   Color button4color = Colors.white.withOpacity(0.8);
   int point = 0;
-
   @override
   Widget build(BuildContext context) {
     return nen_game(
