@@ -3,6 +3,7 @@ import 'package:monghoangcung/components/nen_game.dart';
 import 'package:monghoangcung/screens/trangchu/components/TopHeader.dart';
 
 import '../../constants.dart';
+import '../trangchu/trangchu.dart';
 import 'components/goi_y.dart';
 import 'components/noidungcauhoi.dart';
 import 'components/row_title.dart';
@@ -18,7 +19,24 @@ class choidoikhang extends StatelessWidget {
       child: Column(
         children: [
           // ignore: prefer_const_constructors
-          TopHeader(),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              TextButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const trangchu()));
+                },
+                child: Icon(
+                  Icons.arrow_back_outlined,
+                  color: Colors.brown.withOpacity(0.8),
+                  size: 50,
+                ),
+              ),
+            ],
+          ),
           const Text('Đối kháng'),
           const row_title(),
           const noidungcauhoi(),
@@ -32,7 +50,6 @@ class choidoikhang extends StatelessWidget {
               cautraloi_item(text: 'b'),
               cautraloi_item(text: 'c'),
               cautraloi_item(text: 'd'),
-              cautraloi_item(text: 'e'),
             ],
           )
         ],
