@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:monghoangcung/screens/chinhsuathongtin/components/avartar.dart';
 import 'package:monghoangcung/screens/phongcho/phongcho.dart';
 
 import '../../components/nen_game.dart';
@@ -48,12 +49,23 @@ class _SreachPlayerState extends State<SreachPlayer> {
           const SizedBox(
             height: kDefaultPadding * 10,
           ),
-          Row(
+          Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: [Container()],
+                children: [
+                  Container(
+                      padding: EdgeInsets.all(20),
+                      child: CircleAvatar(
+                        backgroundImage: AssetImage('assets/1.jpg'),
+                      )),
+                  Container(
+                      padding: EdgeInsets.all(20),
+                      child: CircleAvatar(
+                        backgroundImage: AssetImage('assets/2.jpg'),
+                      ))
+                ],
               ),
               cacnut(
                 text: 'Hủy',

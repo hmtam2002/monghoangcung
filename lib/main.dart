@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:monghoangcung/screens/choidoikhang/timtran.dart';
 import 'package:monghoangcung/screens/chonlevel/chonlevel.dart';
 import 'package:monghoangcung/screens/level/level1.dart';
 import 'package:monghoangcung/screens/trangchu/trangchu.dart';
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const trangchu(),
+      home: const SreachPlayer(),
     );
   }
 }
