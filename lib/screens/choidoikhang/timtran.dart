@@ -1,7 +1,7 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:monghoangcung/screens/chinhsuathongtin/components/avartar.dart';
+import 'package:lottie/lottie.dart';
+
 import 'package:monghoangcung/screens/phongcho/phongcho.dart';
 
 import '../../components/nen_game.dart';
@@ -10,14 +10,9 @@ import '../trangchu/components/cacnut.dart';
 import '../trangchu/trangchu.dart';
 import 'choidoikhang.dart';
 
-class SreachPlayer extends StatefulWidget {
+class SreachPlayer extends StatelessWidget {
   const SreachPlayer({super.key});
 
-  @override
-  State<SreachPlayer> createState() => _SreachPlayerState();
-}
-
-class _SreachPlayerState extends State<SreachPlayer> {
   @override
   Widget build(BuildContext context) {
     return nen_game(
@@ -43,7 +38,7 @@ class _SreachPlayerState extends State<SreachPlayer> {
             ],
           ),
           Text(
-            'Đấu đối kháng',
+            'Tìm đối thủ',
             style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
           ),
           const SizedBox(
@@ -56,14 +51,24 @@ class _SreachPlayerState extends State<SreachPlayer> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
-                      padding: EdgeInsets.all(20),
+                      padding: EdgeInsets.all(10),
+                      width: MediaQuery.of(context).size.width / 3 - 20,
+                      height: MediaQuery.of(context).size.width / 3 - 20,
                       child: CircleAvatar(
                         backgroundImage: AssetImage('assets/1.jpg'),
                       )),
                   Container(
-                      padding: EdgeInsets.all(20),
+                    padding: EdgeInsets.all(10),
+                    width: MediaQuery.of(context).size.width / 3 - 20,
+                    child: Lottie.network(
+                        "https://assets2.lottiefiles.com/packages/lf20_xvqam5qh.json"),
+                  ),
+                  Container(
+                      padding: EdgeInsets.all(10),
+                      width: MediaQuery.of(context).size.width / 3 - 20,
+                      height: MediaQuery.of(context).size.width / 3 - 20,
                       child: CircleAvatar(
-                        backgroundImage: AssetImage('assets/2.jpg'),
+                        backgroundImage: AssetImage('assets/1.jpg'),
                       ))
                 ],
               ),
