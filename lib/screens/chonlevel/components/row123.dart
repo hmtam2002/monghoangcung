@@ -2,10 +2,23 @@ import 'package:flutter/material.dart';
 
 import '../../level/level1.dart';
 
-class row123 extends StatelessWidget {
-  const row123({
+class row123 extends StatefulWidget {
+  row123({
     Key? key,
   }) : super(key: key);
+
+  @override
+  State<row123> createState() => _row123State();
+}
+
+class _row123State extends State<row123> {
+  Color color1 = Colors.white.withOpacity(0.4);
+
+  Color color2 = Colors.white.withOpacity(0.4);
+
+  bool i1 = false;
+
+  bool i2 = false;
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +55,13 @@ class row123 extends StatelessWidget {
           width: 70,
           margin: EdgeInsets.all(20),
           child: ElevatedButton(
-            onPressed: () {},
+            onPressed: i1
+                ? () {
+                    setState(() {
+                      color1 = Colors.white.withOpacity(0.8);
+                    });
+                  }
+                : null,
             child: const Text(
               '2',
               style: TextStyle(
@@ -51,8 +70,7 @@ class row123 extends StatelessWidget {
                   color: Colors.black87),
             ),
             style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all<Color>(
-                    Colors.white.withOpacity(0.8)),
+                backgroundColor: MaterialStateProperty.all<Color>(color1),
                 shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                   RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20)),
@@ -64,7 +82,13 @@ class row123 extends StatelessWidget {
           width: 70,
           margin: EdgeInsets.all(20),
           child: ElevatedButton(
-            onPressed: () {},
+            onPressed: i2
+                ? () {
+                    setState(() {
+                      color1 = Colors.white.withOpacity(0.8);
+                    });
+                  }
+                : null,
             child: const Text(
               '3',
               style: TextStyle(
@@ -73,8 +97,7 @@ class row123 extends StatelessWidget {
                   color: Colors.black87),
             ),
             style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all<Color>(
-                    Colors.white.withOpacity(0.8)),
+                backgroundColor: MaterialStateProperty.all<Color>(color2),
                 shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                   RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20)),
