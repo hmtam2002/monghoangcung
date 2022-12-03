@@ -1,15 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:monghoangcung/components/nen_game.dart';
-import 'package:monghoangcung/screens/choidoikhang/choidoikhang.dart';
-import 'package:monghoangcung/screens/dangky/components/nutnhapdangnhap.dart';
-import 'package:monghoangcung/screens/xemxephang/xemxephang.dart';
+import 'package:flutter/src/widgets/container.dart';
+import 'package:flutter/src/widgets/framework.dart';
+import 'package:monghoangcung/screens/phongcho/phongcho.dart';
+
+import '../../components/nen_game.dart';
 import '../../constants.dart';
 import '../trangchu/components/cacnut.dart';
 import '../trangchu/trangchu.dart';
+import 'choidoikhang.dart';
 
-class phongcho extends StatelessWidget {
-  const phongcho({super.key});
+class SreachPlayer extends StatefulWidget {
+  const SreachPlayer({super.key});
 
+  @override
+  State<SreachPlayer> createState() => _SreachPlayerState();
+}
+
+class _SreachPlayerState extends State<SreachPlayer> {
   @override
   Widget build(BuildContext context) {
     return nen_game(
@@ -44,27 +51,17 @@ class phongcho extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Container(
-                  padding: EdgeInsets.all(10),
-                  width: MediaQuery.of(context).size.width / 2 - 20,
-                  child: IconButton(
-                    icon: Icon(Icons.history),
-                    onPressed: () => xemxephang(),
-                  )),
-              Container(
-                  padding: EdgeInsets.all(10),
-                  width: MediaQuery.of(context).size.width / 2 - 20,
-                  child: IconButton(
-                    icon: Icon(Icons.book_outlined),
-                    onPressed: () => xemxephang(),
-                  )),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [Container()],
+              ),
+              cacnut(
+                text: 'Hủy',
+                press: MaterialPageRoute(
+                  builder: (context) => const phongcho(),
+                ),
+              ),
             ],
-          ),
-          cacnut(
-            text: 'Chơi ngay',
-            press: MaterialPageRoute(
-              builder: (context) => const choidoikhang(),
-            ),
           ),
         ],
       ),
