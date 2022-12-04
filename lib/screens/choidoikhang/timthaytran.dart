@@ -44,9 +44,8 @@ class Sreached extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
-                padding: EdgeInsets.all(10),
-                width: MediaQuery.of(context).size.width / 2 - 20,
-                height: MediaQuery.of(context).size.width / 2 - 20,
+                width: MediaQuery.of(context).size.width / 2,
+                height: MediaQuery.of(context).size.width / 2,
                 child: Image(image: AssetImage('assets/vs1.png')),
               )
             ],
