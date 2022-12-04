@@ -15,6 +15,18 @@ class SreachPlayer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    List<String> list = const <String>[
+      '1.jpg',
+      '2.jpg',
+      '3.jpg',
+      '4.jpg',
+      '5.jpg',
+      '6.jpg',
+      '7.jpg',
+      '8.jpg',
+      '9.jpg',
+      '10.jpg'
+    ];
     return nen_game(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
@@ -41,13 +53,10 @@ class SreachPlayer extends StatelessWidget {
             'Tìm đối thủ',
             style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
           ),
-          const SizedBox(
-            height: kDefaultPadding * 10,
-          ),
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Row(
+              Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
@@ -60,16 +69,37 @@ class SreachPlayer extends StatelessWidget {
                   Container(
                     padding: EdgeInsets.all(10),
                     width: MediaQuery.of(context).size.width / 3 - 20,
+                    height: MediaQuery.of(context).size.width / 3 - 20,
                     child: Lottie.network(
                         "https://assets2.lottiefiles.com/packages/lf20_xvqam5qh.json"),
                   ),
-                  Container(
-                      padding: EdgeInsets.all(10),
-                      width: MediaQuery.of(context).size.width / 3 - 20,
-                      height: MediaQuery.of(context).size.width / 3 - 20,
-                      child: CircleAvatar(
-                        backgroundImage: AssetImage('assets/1.jpg'),
-                      ))
+                  CarouselSlider(
+                    options: CarouselOptions(
+                        height: MediaQuery.of(context).size.width / 2,
+                        autoPlay: true,
+                        aspectRatio: 2.0,
+                        enlargeCenterPage: true),
+                    items: list.map((i) {
+                      return Builder(
+                        builder: (BuildContext context) {
+                          return Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Container(
+                                padding: EdgeInsets.all(10),
+                                width:
+                                    MediaQuery.of(context).size.width / 3 - 20,
+                                height:
+                                    MediaQuery.of(context).size.width / 3 - 20,
+                                child: CircleAvatar(
+                                    backgroundImage: AssetImage(i)),
+                              ),
+                            ],
+                          );
+                        },
+                      );
+                    }).toList(),
+                  )
                 ],
               ),
               cacnut(
