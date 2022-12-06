@@ -10,16 +10,13 @@ class TopHeader extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         TextButton(
-          onPressed: () {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => const trangcanhan()));
-          },
-          child: Icon(
-            Icons.account_circle_rounded,
-            color: Colors.brown.withOpacity(0.8),
-            size: 50,
-          ),
-        ),
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const trangcanhan()));
+            },
+            child: CircleAvatar(
+              backgroundImage: AssetImage('assets/1.jpg'),
+            )),
         TextButton(
           onPressed: () {
             Navigator.push(context,

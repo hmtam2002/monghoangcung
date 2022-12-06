@@ -16,16 +16,16 @@ class SreachPlayer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<String> list = const <String>[
-      '1.jpg',
-      '2.jpg',
-      '3.jpg',
-      '4.jpg',
-      '5.jpg',
-      '6.jpg',
-      '7.jpg',
-      '8.jpg',
-      '9.jpg',
-      '10.jpg'
+      'assets/1.jpg',
+      'assets/2.jpg',
+      'assets/3.jpg',
+      'assets/4.jpg',
+      'assets/5.jpg',
+      'assets/6.jpg',
+      'assets/7.jpg',
+      'assets/8.jpg',
+      'assets/9.jpg',
+      'assets/10.jpg'
     ];
     return nen_game(
       child: Column(

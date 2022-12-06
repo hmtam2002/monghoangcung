@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:monghoangcung/constants.dart';
 import 'package:monghoangcung/screens/caidat/caidat.dart';
 import 'package:monghoangcung/screens/chinhsuathongtin/chinhsuathongtin.dart';
@@ -6,6 +7,7 @@ import 'package:monghoangcung/screens/dangky/nhapusername/1_nhapusername.dart';
 import 'package:monghoangcung/screens/dangnhap/nhapmatkhau.dart';
 import 'package:monghoangcung/screens/naptien/naptien.dart';
 import 'package:monghoangcung/screens/nhanthu/nhanthu.dart';
+import 'package:monghoangcung/screens/trangchu/components/TopHeader.dart';
 import 'package:monghoangcung/screens/trangchu/trangchu.dart';
 import 'package:monghoangcung/screens/trogiup/trogiup.dart';
 import 'package:monghoangcung/screens/xemxephang/xemxephang.dart';
@@ -48,7 +50,36 @@ class _trangcanhanState extends State<trangcanhan> {
               Container(
                 child: Column(
                   children: [
-                    const gioithieuthongtin(),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        TextButton(
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const trangcanhan()));
+                            },
+                            child: CircleAvatar(
+                              backgroundImage: AssetImage('assets/1.jpg'),
+                            )),
+                        TextButton(
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const trangchu()));
+                          },
+                          child: Icon(
+                            Icons.menu_rounded,
+                            color: Colors.brown.withOpacity(0.8),
+                            size: 50,
+                          ),
+                        ),
+                      ],
+                    ),
+                    gioithieuthongtin(),
                     cacnuttrongtrangcanhan(
                       noidung: 'Chỉnh sửa thông tin',
                       press: MaterialPageRoute(
