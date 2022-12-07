@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:monghoangcung/components/nen_game.dart';
 import 'package:monghoangcung/constants.dart';
+import 'package:monghoangcung/timecountdown2.dart';
 
 import '../trangchu/trangchu.dart';
 import 'cau2.dart';
@@ -67,6 +68,16 @@ class _level_1State extends State<level_1> {
           const Text(
             'Who are you ?',
             style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+          ),
+          Row(
+            children: [
+              Container(
+                width: 100,
+                height: 100,
+                padding: EdgeInsets.all(10),
+                child: countimedown2(),
+              )
+            ],
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.start,

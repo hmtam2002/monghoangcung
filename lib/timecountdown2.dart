@@ -4,17 +4,18 @@ import 'package:circular_countdown/circular_countdown.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:monghoangcung/screens/choidoikhang/choidoikhang.dart';
+import 'package:monghoangcung/screens/level/level1.dart';
 import 'package:monghoangcung/screens/trangchu/trangchu.dart';
 
-void main() => runApp(const countimedown());
+void main() => runApp(const countimedown2());
 
-class countimedown extends StatefulWidget {
-  const countimedown({super.key});
+class countimedown2 extends StatefulWidget {
+  const countimedown2({super.key});
   @override
-  State<countimedown> createState() => _countimedownState();
+  State<countimedown2> createState() => _countimedownState2();
 }
 
-class _countimedownState extends State<countimedown>
+class _countimedownState2 extends State<countimedown2>
     with SingleTickerProviderStateMixin {
   late AnimationController _controller;
 
@@ -35,8 +36,7 @@ class _countimedownState extends State<countimedown>
     return Container(
       child: TimeCircularCountdown(
         unit: CountdownUnit.second,
-        shouldDowngradeUnit: true,
-        countdownTotal: 2,
+        countdownTotal: 20,
         countdownRemainingColor: Colors.black,
         countdownTotalColor: Colors.grey,
         onUpdated: (unit, remaining) => print(
@@ -46,7 +46,7 @@ class _countimedownState extends State<countimedown>
           Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => choidoikhang(),
+                builder: (context) => level_1(),
               ));
         },
         textStyle: const TextStyle(color: Colors.black, fontSize: 30),
