@@ -1,0 +1,93 @@
+{
+  "question":[
+  {
+    "id":1,
+    "answers":2,
+    "question":" Who are all ________ people?",
+    "answers1":"this",
+    "answers2":"those",
+    "answers3":"them",
+    "answers4":"that"
+
+  },{
+    "id":2,
+    "answers":2,
+    "question":" I ____ a car next year.",
+    "answers1":"buy",
+    "answers2":"am buying",
+    "answers3":"going to buy",
+    "answers4":"bought"
+
+  },{
+    "id":3,
+    "answers":1,
+    "question":" They are all ________ ready for the party.",
+    "answers1":"getting",
+    "answers2":"going",
+    "answers3":"doing",
+    "answers4":"putting"
+
+  },
+  {
+    "id":4,
+    "answers":1,
+    "question":"When do you go ________ bed?",
+    "answers1":"to",
+    "answers2":"to the",
+    "answers3":"in",
+    "answers4":"in the"
+  },
+  {
+    "id":5,
+    "answers":2,
+    "question":"London is famous for _____ red buses.",
+    "answers1":"it's",
+    "answers2":"its",
+    "answers3":"it is",
+    "answers4":"it"
+  },
+  {
+    "id":6,
+    "answers":4,
+    "question":"Is there _____ milk in the fridge?",
+    "answers1":"a lot ",
+    "answers2":"many",
+    "answers3":"any",
+    "answers4":"some"
+  },
+  {
+    "id":7,
+    "answers":1,
+    "question":"There is a flower shop in front _____ my house.",
+    "answers1":"of",
+    "answers2":"to",
+    "answers3":"off",
+    "answers4":"sin"
+  },
+  {
+    "id":8,
+    "answers":1,
+    "question":"Where are _____ children? – They go to school.",
+    "answers1":"the",
+    "answers2":"you",
+    "answers3":"a",
+    "answers4":"an"
+  }
+  ,
+  {
+    "id":9,
+    "answers":2,
+    "question":"Those students are working very _____ for their next exams.",
+    "answers1":"hardly",
+    "answers2":"hard",
+    "answers3":"harder",
+    "answers4":"hardest"
+  }
+
+
+  
+
+ 
+ 
+  ]
+}
