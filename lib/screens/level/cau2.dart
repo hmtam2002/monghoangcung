@@ -7,7 +7,9 @@ import 'package:monghoangcung/constants.dart';
 import '../trangchu/trangchu.dart';
 
 class Lv1_cau2 extends StatefulWidget {
-  const Lv1_cau2({super.key});
+  int id;
+  int point;
+  Lv1_cau2({Key? key, required this.id, required this.point}) : super(key: key);
 
   @override
   State<Lv1_cau2> createState() => _Lv1_cau2State();
@@ -19,7 +21,7 @@ class _Lv1_cau2State extends State<Lv1_cau2> {
   Color button2color = Colors.white.withOpacity(0.8);
   Color button3color = Colors.white.withOpacity(0.8);
   Color button4color = Colors.white.withOpacity(0.8);
-  int point = 0;
+
   @override
   Widget build(BuildContext context) {
     return nen_game(
@@ -71,7 +73,7 @@ class _Lv1_cau2State extends State<Lv1_cau2> {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Text(
-                "Điểm : " + point.toString(),
+                "Điểm : " + widget.point.toString(),
                 style: TextStyle(fontSize: 30),
               ),
             ],
@@ -89,7 +91,8 @@ class _Lv1_cau2State extends State<Lv1_cau2> {
                             setState(() {
                               button = false;
                               button1color = Colors.red;
-                              point += 0;
+
+                              widget.point = widget.point + 100;
                             });
                           }
                         : null,
@@ -121,7 +124,7 @@ class _Lv1_cau2State extends State<Lv1_cau2> {
                             setState(() {
                               button = false;
                               button2color = Colors.green;
-                              point += 100;
+                              widget.point = widget.point + 100;
                             });
                           }
                         : null,
@@ -158,7 +161,7 @@ class _Lv1_cau2State extends State<Lv1_cau2> {
                             setState(() {
                               button = false;
                               button3color = Colors.red;
-                              point += 0;
+                              widget.point = widget.point + 100;
                             });
                           }
                         : null,
@@ -190,7 +193,7 @@ class _Lv1_cau2State extends State<Lv1_cau2> {
                             setState(() {
                               button = false;
                               button4color = Colors.red;
-                              point += 0;
+                              widget.point = widget.point + 100;
                             });
                           }
                         : null,
@@ -220,8 +223,13 @@ class _Lv1_cau2State extends State<Lv1_cau2> {
             margin: const EdgeInsets.all(10),
             child: ElevatedButton(
               onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => const Lv1_cau2()));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => Lv1_cau2(
+                              id: 1,
+                              point: widget.point,
+                            )));
               },
               style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.all<Color>(

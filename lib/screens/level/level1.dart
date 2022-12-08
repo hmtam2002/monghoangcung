@@ -232,8 +232,13 @@ class _level_1State extends State<level_1> {
             margin: const EdgeInsets.all(10),
             child: ElevatedButton(
               onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => const Lv1_cau2()));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => Lv1_cau2(
+                              id: 1,
+                              point: point,
+                            )));
               },
               style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.all<Color>(

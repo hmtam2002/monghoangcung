@@ -82,7 +82,17 @@
     "answers2":"hard",
     "answers3":"harder",
     "answers4":"hardest"
+  },
+  {
+    "id":10,
+    "answers":2,
+    "question":"Those students are working very _____ for their next exams.",
+    "answers1":"hardly",
+    "answers2":"hard",
+    "answers3":"harder",
+    "answers4":"hardest"
   }
+
 
 
   

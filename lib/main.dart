@@ -1,18 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:monghoangcung/screens/choidoikhang/timthaytran.dart';
-import 'package:monghoangcung/screens/choidoikhang/timtran.dart';
-import 'package:monghoangcung/screens/choidon/ketthucchoidon.dart';
-import 'package:monghoangcung/screens/chonlevel/chonlevel.dart';
+
 import 'package:monghoangcung/screens/level/level1.dart';
-import 'package:monghoangcung/screens/trangchu/trangchu.dart';
-import 'package:monghoangcung/timecountdown.dart';
-//khởi tạo cho firebase chạy 1 lần
-// Future<void> main(List<String> agrs) async {
-//   WidgetsFlutterBinding.ensureInitialized();
-//   await Firebase.initializeApp();
-//   runApp(const MyApp());
-// }
 
 void main() {
   runApp(const MyApp());

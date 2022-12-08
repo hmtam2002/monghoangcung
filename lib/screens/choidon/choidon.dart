@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:monghoangcung/components/nen_game.dart';
 import 'package:monghoangcung/constants.dart';
 
+import '../../components/loaddatajson/question_obj.dart';
+
 class choidon extends StatefulWidget {
   const choidon({super.key});
 
@@ -10,6 +12,24 @@ class choidon extends StatefulWidget {
 }
 
 class _choidonState extends State<choidon> {
+  String name = "";
+  List<questionobject> lscontact = [];
+
+  get userprovider => null;
+
+  void _loaddanhsachcontact() async {
+    final data = await userprovider.searchusers(1);
+    setState(() {
+      lscontact = data;
+    });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    _loaddanhsachcontact();
+  }
+
   @override
   Widget build(BuildContext context) {
     return nen_game(
