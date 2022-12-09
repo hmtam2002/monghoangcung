@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:monghoangcung/components/nen_game%20copy.dart';
 import 'package:monghoangcung/components/nen_game.dart';
 import 'package:monghoangcung/constants.dart';
+import 'package:monghoangcung/screens/choidon/ketthucchoidon.dart';
 
 import '../../components/loaddatajson/question_obj.dart';
 import '../../components/loaddatajson/question_provider.dart';
@@ -324,13 +325,23 @@ class _Lv1_cau2State extends State<Lv1_cau2> {
                                 margin: const EdgeInsets.all(10),
                                 child: ElevatedButton(
                                   onPressed: () {
-                                    Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (context) => Lv1_cau2(
-                                                  id: widget.id + 1,
-                                                  point: widget.point,
-                                                )));
+                                    if (widget.id != 10) {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) => Lv1_cau2(
+                                                    id: widget.id + 1,
+                                                    point: widget.point,
+                                                  )));
+                                    } else {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  finalsiglegame(
+                                                    point: widget.point,
+                                                  )));
+                                    }
                                   },
                                   style: ButtonStyle(
                                     backgroundColor:

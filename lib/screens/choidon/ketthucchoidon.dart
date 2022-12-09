@@ -5,7 +5,9 @@ import 'package:monghoangcung/screens/trangchu/trangchu.dart';
 import '../../constants.dart';
 
 class finalsiglegame extends StatefulWidget {
-  const finalsiglegame({super.key});
+  final int point;
+
+  const finalsiglegame({super.key, required this.point});
 
   @override
   State<finalsiglegame> createState() => _finalsiglegameState();
@@ -67,7 +69,7 @@ class _finalsiglegameState extends State<finalsiglegame> {
                     Container(
                       padding: EdgeInsets.all(10),
                       child: Text(
-                        'Point: 500',
+                        'Point: ' + widget.point.toString(),
                         style: TextStyle(
                             fontSize: 30, fontWeight: FontWeight.bold),
                       ),
