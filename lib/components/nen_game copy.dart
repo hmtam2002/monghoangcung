@@ -2,14 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:monghoangcung/constants.dart';
 
 // ignore: camel_case_types
-class nen_game extends StatelessWidget {
-  const nen_game({super.key, required this.child});
+class nen_game2 extends StatelessWidget {
+  const nen_game2({super.key, required this.child});
   final Widget child;
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return Scaffold(
-        body: Container(
+    return Container(
       width: double.infinity,
       height: size.height,
       padding: const EdgeInsets.only(
@@ -24,6 +23,6 @@ class nen_game extends StatelessWidget {
         ),
       ),
       child: child,
-    ));
+    );
   }
 }

@@ -1,11 +1,11 @@
 class questionobject {
   final int? id;
   final int? answers;
-  final String answers1;
-  final String answers2;
-  final String answers3;
-  final String answers4;
-  final String question;
+  final String? answers1;
+  final String? answers2;
+  final String? answers3;
+  final String? answers4;
+  final String? question;
 
   questionobject({
     this.id,
@@ -19,11 +19,11 @@ class questionobject {
 
   questionobject.fromJson(Map<String, dynamic> res)
       : id = res["id"],
-        answers = res["answer"],
-        answers1 = res["answer1"],
-        answers2 = res["answer2"],
-        answers3 = res["answer3"],
-        answers4 = res["answer4"],
+        answers = res["answers"],
+        answers1 = res["answers1"],
+        answers2 = res["answers2"],
+        answers3 = res["answers3"],
+        answers4 = res["answers4"],
         question = res["question"];
 
   Map<String, Object?> toJson() {

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:monghoangcung/screens/level/cau2.dart';
 
 import 'package:monghoangcung/screens/level/level1.dart';
 
@@ -19,7 +20,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: level_1(),
+      home: Lv1_cau2(
+        id: 1,
+        point: 0,
+      ),
     );
   }
 }
