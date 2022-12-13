@@ -37,11 +37,13 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter_svg: ^1.1.6
   websafe_svg: ^2.1.2+7
+  sqflite: ^2.2.0+3
   get: ^4.6.5
   fluttertoast: ^8.1.1
   font_awesome_flutter: ^10.2.1
   firebase_auth: ^4.1.4
   firebase_core: ^2.3.0
+  firebase_database:
   cloud_firestore: ^4.1.0
   carousel_slider: ^4.1.1
   circular_countdown_timer: ^0.2.3

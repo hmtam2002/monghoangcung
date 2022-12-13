@@ -10,9 +10,15 @@ import '../../components/loaddatajson/question_provider.dart';
 import '../trangchu/trangchu.dart';
 
 class Lv1_cau2 extends StatefulWidget {
+  int soluongcau;
   int id;
   int point;
-  Lv1_cau2({Key? key, required this.id, required this.point}) : super(key: key);
+  Lv1_cau2(
+      {Key? key,
+      required this.id,
+      required this.point,
+      required this.soluongcau})
+      : super(key: key);
 
   @override
   State<Lv1_cau2> createState() => _Lv1_cau2State();
@@ -330,11 +336,13 @@ class _Lv1_cau2State extends State<Lv1_cau2> {
                                   margin: const EdgeInsets.all(10),
                                   child: ElevatedButton(
                                     onPressed: () {
-                                      if (widget.id != 10) {
+                                      if (widget.soluongcau != 10) {
                                         Navigator.push(
                                             context,
                                             MaterialPageRoute(
                                                 builder: (context) => Lv1_cau2(
+                                                      soluongcau:
+                                                          widget.soluongcau + 1,
                                                       id: widget.id + 1,
                                                       point: widget.point,
                                                     )));

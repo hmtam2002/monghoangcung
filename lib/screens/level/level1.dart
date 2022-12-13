@@ -236,6 +236,7 @@ class _level_1State extends State<level_1> {
                     context,
                     MaterialPageRoute(
                         builder: (context) => Lv1_cau2(
+                              soluongcau: 1,
                               id: 1,
                               point: point,
                             )));

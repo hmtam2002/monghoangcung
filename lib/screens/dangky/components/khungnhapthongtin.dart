@@ -1,51 +1,83 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
-import '../nhapusername/components/nhapthongtinbatdau.dart';
-
-class khungnhapthongtin extends StatefulWidget {
-  khungnhapthongtin({
-    Key? key,
-    required this.text,
-    this.icon = Icons.person,
-  }) : super(key: key);
-  final String text;
-  final IconData icon;
+class RegisterScreen extends StatefulWidget {
+  RegisterScreen({super.key});
 
   @override
-  State<khungnhapthongtin> createState() => _khungnhapthongtinState();
+  State<RegisterScreen> createState() => RegisterScreenState();
 }
 
-class _khungnhapthongtinState extends State<khungnhapthongtin> {
-  bool isHiden = true;
-
-  Icon iconShow = const Icon(Icons.visibility_off);
-
+class RegisterScreenState extends State<RegisterScreen> {
+  TextEditingController txtEmail = TextEditingController();
+  TextEditingController txtPass = TextEditingController();
+  final _auth = FirebaseAuth.instance;
   @override
   Widget build(BuildContext context) {
-    return nhapthongtin_bandau(
-      child: TextField(
-        obscureText: isHiden,
-        decoration: InputDecoration(
-          border: OutlineInputBorder(),
-          prefixIcon: Icon(Icons.password),
-          suffixIcon: GestureDetector(
-            onTap: () {
-              setState(() {
-                isHiden = !isHiden;
-              });
-
-              if (isHiden) {
-                setState(() {
-                  iconShow = const Icon(Icons.visibility_off);
-                });
-              } else {
-                setState(() {
-                  iconShow = const Icon(Icons.visibility);
-                });
-              }
-            },
-            child: iconShow,
-          ),
+    return Scaffold(
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 24),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            const Text(
+              'Đăng ký',
+              style: TextStyle(
+                fontSize: 48,
+                fontWeight: FontWeight.bold,
+              ),
+              textAlign: TextAlign.center,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 12, bottom: 6),
+              child: TextField(
+                controller: txtEmail,
+                keyboardType: TextInputType.emailAddress,
+                decoration: const InputDecoration(
+                  border: OutlineInputBorder(),
+                  prefixIcon: Icon(Icons.email),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 12, bottom: 6),
+              child: TextField(
+                controller: txtPass,
+                obscureText: true,
+                decoration: const InputDecoration(
+                  border: OutlineInputBorder(),
+                  prefixIcon: Icon(Icons.password),
+                ),
+              ),
+            ),
+            ElevatedButton(
+              onPressed: () async {
+                try {
+                  final newUser = _auth.createUserWithEmailAndPassword(
+                      email: txtEmail.text, password: txtPass.text);
+                  // ignore: unnecessary_null_comparison
+                  if (newUser != null) {
+                    Navigator.pop(context, 'Đăng ký thành công');
+                  } else {
+                    final snackBar =
+                        SnackBar(content: Text('Tài khoản này không hợp lệ'));
+                    ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                  }
+                } catch (e) {
+                  final snackBar = SnackBar(content: Text('Có lỗi xảy ra'));
+                  ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                }
+              },
+              // ignore: sort_child_properties_last
+              child: const Text(
+                'Đăng ký',
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+              ),
+              style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(Colors.grey)),
+            )
+          ],
         ),
       ),
     );

@@ -16,6 +16,7 @@ class _EditInfoState extends State<EditInfo> {
   TextEditingController _username = new TextEditingController();
   TextEditingController _phonenumber = new TextEditingController();
   TextEditingController _email = new TextEditingController();
+
   String? _num = '';
   @override
   Widget build(BuildContext context) {

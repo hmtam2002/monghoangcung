@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:monghoangcung/components/nen_game.dart';
-import 'package:monghoangcung/screens/dangky/nhapusername/1_nhapusername.dart';
+import 'package:monghoangcung/screens/nhanthu/nhanthu.dart';
 
 import '../trangcanhan/trangcanhan.dart';
 
@@ -15,7 +15,7 @@ class loadgame extends StatelessWidget {
         child: InkWell(
           onTap: () {
             Navigator.push(context,
-                MaterialPageRoute(builder: (context) => const nhapusername()));
+                MaterialPageRoute(builder: (context) => const nhan_thu()));
           },
           child: const Image(
             image: AssetImage('assets/Logo.png'),

@@ -1,11 +1,14 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:monghoangcung/screens/level/cau2.dart';
 
-import 'package:monghoangcung/screens/level/level1.dart';
+import 'package:monghoangcung/screens/trangdautien/trangdautien.dart';
 
-void main() {
-  runApp(const MyApp());
+Future main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -20,10 +23,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Lv1_cau2(
-        id: 1,
-        point: 0,
-      ),
+      home: firstscreen(),
     );
   }
 }

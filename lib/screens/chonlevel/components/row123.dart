@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:monghoangcung/screens/level/cau2.dart';
 
 import '../../level/level1.dart';
 
@@ -31,8 +32,14 @@ class _row123State extends State<row123> {
           margin: EdgeInsets.all(20),
           child: ElevatedButton(
             onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const level_1()));
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => Lv1_cau2(
+                            id: 1,
+                            point: 0,
+                            soluongcau: 1,
+                          )));
             },
             child: const Text(
               '1',

@@ -3,15 +3,18 @@ import 'package:get/get.dart';
 import 'package:monghoangcung/constants.dart';
 import 'package:monghoangcung/screens/caidat/caidat.dart';
 import 'package:monghoangcung/screens/chinhsuathongtin/chinhsuathongtin.dart';
-import 'package:monghoangcung/screens/dangky/nhapusername/1_nhapusername.dart';
+import 'package:monghoangcung/screens/choidon/ketthucchoidon.dart';
+
 import 'package:monghoangcung/screens/dangnhap/nhapmatkhau.dart';
 import 'package:monghoangcung/screens/naptien/naptien.dart';
 import 'package:monghoangcung/screens/nhanthu/nhanthu.dart';
 import 'package:monghoangcung/screens/trangchu/components/TopHeader.dart';
 import 'package:monghoangcung/screens/trangchu/trangchu.dart';
+import 'package:monghoangcung/screens/trangdautien/trangdautien.dart';
 import 'package:monghoangcung/screens/trogiup/trogiup.dart';
 import 'package:monghoangcung/screens/xemxephang/xemxephang.dart';
 
+import '../dangky/components/khungnhapthongtin.dart';
 import 'components/cacnuttrongtrangcanhan.dart';
 import 'components/gioithieuthongtin.dart';
 
@@ -96,11 +99,6 @@ class _trangcanhanState extends State<trangcanhan> {
                           builder: (context) => const trogiup()),
                     ),
                     cacnuttrongtrangcanhan(
-                      noidung: 'Nhận thư',
-                      press: MaterialPageRoute(
-                          builder: (context) => const nhan_thu()),
-                    ),
-                    cacnuttrongtrangcanhan(
                       noidung: 'Nạp tiền',
                       press: MaterialPageRoute(
                           builder: (context) => const naptien()),
@@ -111,14 +109,9 @@ class _trangcanhanState extends State<trangcanhan> {
                           builder: (context) => const cai_dat()),
                     ),
                     cacnuttrongtrangcanhan(
-                      noidung: 'Đăng ký',
+                      noidung: 'Đăng xuất',
                       press: MaterialPageRoute(
-                          builder: (context) => const nhapusername()),
-                    ),
-                    cacnuttrongtrangcanhan(
-                      noidung: 'Đăng Nhập',
-                      press: MaterialPageRoute(
-                          builder: (context) => const nhapmatkhau()),
+                          builder: (context) => firstscreen()),
                     ),
                   ],
                 ),
