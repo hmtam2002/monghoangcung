@@ -30,7 +30,7 @@ class _firstscreenState extends State<firstscreen> {
         cacnut(
           text: 'Đăng ký',
           press: MaterialPageRoute(
-            builder: (context) => RegisterScreen(),
+            builder: (context) => CreateInfo(),
           ),
         ),
       ],

@@ -1,9 +1,9 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:monghoangcung/components/nen_game.dart';
 import 'package:monghoangcung/screens/trangchu/components/TopHeader.dart';
 import 'components/avartar.dart';
 import 'components/textview.dart';
-import 'components/info_class.dart';
 
 class EditInfo extends StatefulWidget {
   const EditInfo({super.key});
@@ -14,8 +14,8 @@ class EditInfo extends StatefulWidget {
 
 class _EditInfoState extends State<EditInfo> {
   TextEditingController _username = new TextEditingController();
-  TextEditingController _phonenumber = new TextEditingController();
-  TextEditingController _email = new TextEditingController();
+  TextEditingController _password = new TextEditingController();
+  TextEditingController _fullname = new TextEditingController();
 
   String? _num = '';
   @override
@@ -41,12 +41,12 @@ class _EditInfoState extends State<EditInfo> {
               text: 'username',
             ),
             textview(
-              username: _email,
-              text: 'email',
+              username: _password,
+              text: 'passworc',
             ),
             textview(
-              username: _phonenumber,
-              text: 'phonenumber',
+              username: _fullname,
+              text: 'fullname',
             ),
             Container(
               height: 50,
@@ -56,6 +56,10 @@ class _EditInfoState extends State<EditInfo> {
                 onPressed: () {
                   setState(() {
                     _num = 'Cập nhật thành công ';
+                    final fullname = _fullname.text;
+                    final username = _username.text;
+                    final password = _password.text;
+                    UpdateAccounts(username: username);
                   });
                 },
                 child: Text(
@@ -78,25 +82,20 @@ class _EditInfoState extends State<EditInfo> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
-                  padding: EdgeInsets.only(left: 15),
-                  child: Row(
-                    children: [
-                      Column(
-                        children: [
-                          Text(
-                            _num!,
-                            style: TextStyle(fontSize: 30, color: Colors.black),
-                          )
-                        ],
-                      )
-                    ],
-                  ),
-                ),
+                    padding: EdgeInsets.only(left: 15),
+                    child: Text(
+                      _num!,
+                      style: TextStyle(fontSize: 30, color: Colors.black),
+                    )),
               ],
             )
           ],
         ),
       ),
     );
+  }
+
+  Future UpdateAccounts({required String username}) async {
+    final docAccounts = FirebaseFirestore.instance.collection('accounts').doc();
   }
 }
