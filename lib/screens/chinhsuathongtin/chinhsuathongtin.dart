@@ -3,6 +3,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:monghoangcung/components/nen_game.dart';
 import 'package:monghoangcung/screens/trangchu/components/TopHeader.dart';
+import '../../object/Accounts.dart';
+import '../trangcanhan/trangcanhan.dart';
 import 'components/avartar.dart';
 import 'components/textview.dart';
 
@@ -20,71 +22,115 @@ class _EditInfoState extends State<EditInfo> {
   String? _num = '';
   @override
   Widget build(BuildContext context) {
-    return nen_game(
-      child: SingleChildScrollView(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            const TopHeader(),
-            const avartar(),
-            Padding(padding: EdgeInsets.all(20)),
-            Text(
-              'CẬP NHẬT THÔNG TIN',
-              style: TextStyle(
-                  fontSize: 25,
-                  color: Colors.black87,
-                  fontWeight: FontWeight.bold),
-            ),
-            textview(
-              username: _fullname,
-              text: 'fullname',
-            ),
-            Container(
-              height: 50,
-              width: 200,
-              margin: EdgeInsets.fromLTRB(0, 20, 0, 20),
-              child: ElevatedButton(
-                onPressed: () {
-                  setState(() {
-                    _num = 'Cập nhật thành công ';
-                    final fullname = _fullname.text;
+    final accid = FirebaseAuth.instance.currentUser?.uid;
+    return FutureBuilder(
+        future: readAccount(),
+        builder: ((context, snapshot) {
+          if (snapshot.hasData) {
+            final account = snapshot.data;
+            return nen_game(
+              child: SingleChildScrollView(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        TextButton(
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const trangcanhan()));
+                          },
+                          child: Icon(
+                            Icons.arrow_back,
+                            color: Colors.brown.withOpacity(0.8),
+                            size: 50,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: CircleAvatar(
+                          maxRadius: 60,
+                          backgroundImage: AssetImage(account!.picture),
+                        )),
+                    Padding(padding: EdgeInsets.all(20)),
+                    Text(
+                      'CẬP NHẬT THÔNG TIN',
+                      style: TextStyle(
+                          fontSize: 25,
+                          color: Colors.black87,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    textview(
+                      username: _fullname,
+                      text: 'fullname',
+                    ),
+                    Container(
+                      height: 50,
+                      width: 200,
+                      margin: EdgeInsets.fromLTRB(0, 20, 0, 20),
+                      child: ElevatedButton(
+                        onPressed: () {
+                          setState(() {
+                            _num = 'Cập nhật thành công ';
+                            final fullname = _fullname.text;
 
-                    UpdateAccounts(fullname: _fullname.text);
-                    final user = FirebaseAuth.instance.currentUser?.reload();
-                  });
-                },
-                child: Text(
-                  'Cập Nhật',
-                  style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black87),
+                            UpdateAccounts(fullname: _fullname.text);
+                            final user =
+                                FirebaseAuth.instance.currentUser?.reload();
+                          });
+                        },
+                        child: Text(
+                          'Cập Nhật',
+                          style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black87),
+                        ),
+                        style: ButtonStyle(
+                            backgroundColor: MaterialStateProperty.all<Color>(
+                                Colors.blue.withOpacity(0.7)),
+                            shape: MaterialStateProperty.all<
+                                RoundedRectangleBorder>(
+                              RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(20)),
+                            )),
+                      ),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Container(
+                            padding: EdgeInsets.only(left: 15),
+                            child: Text(
+                              _num!,
+                              style:
+                                  TextStyle(fontSize: 30, color: Colors.black),
+                            )),
+                      ],
+                    )
+                  ],
                 ),
-                style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all<Color>(
-                        Colors.blue.withOpacity(0.7)),
-                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                      RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20)),
-                    )),
               ),
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Container(
-                    padding: EdgeInsets.only(left: 15),
-                    child: Text(
-                      _num!,
-                      style: TextStyle(fontSize: 30, color: Colors.black),
-                    )),
-              ],
-            )
-          ],
-        ),
-      ),
-    );
+            );
+          } else {
+            return Container();
+          }
+        }));
+  }
+
+  Future<Account?> readAccount() async {
+    final docAccounts =
+        FirebaseFirestore.instance.collection('accounts').doc(accid);
+    final snapshot = await docAccounts.get();
+    if (snapshot.exists) {
+      return Account.fromJson(snapshot.data()!);
+    }
   }
 
   Future UpdateAccounts({required String fullname}) async {

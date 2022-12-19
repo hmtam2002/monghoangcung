@@ -38,6 +38,7 @@ class _gioithieuthongtinState extends State<gioithieuthongtin> {
                   Padding(
                       padding: EdgeInsets.all(8.0),
                       child: CircleAvatar(
+                        maxRadius: 40,
                         backgroundImage: AssetImage(account!.picture),
                       )),
                   Column(

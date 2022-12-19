@@ -61,6 +61,7 @@ class _EditavatarState extends State<Editavatar> {
                       });
                     },
                     icon: CircleAvatar(
+                      maxRadius: 40,
                       backgroundImage: AssetImage('assets/1.jpg'),
                     )),
               ),
@@ -78,6 +79,7 @@ class _EditavatarState extends State<Editavatar> {
                       });
                     },
                     child: CircleAvatar(
+                      maxRadius: 40,
                       backgroundImage: AssetImage('assets/2.jpg'),
                     )),
               ),
@@ -97,9 +99,14 @@ class _EditavatarState extends State<Editavatar> {
                         UpdateAccounts(avatar: avatar);
                         final user =
                             FirebaseAuth.instance.currentUser?.reload();
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const trangcanhan()));
                       });
                     },
                     child: CircleAvatar(
+                      maxRadius: 40,
                       backgroundImage: AssetImage('assets/3.jpg'),
                     )),
               ),
@@ -114,9 +121,14 @@ class _EditavatarState extends State<Editavatar> {
                         UpdateAccounts(avatar: avatar);
                         final user =
                             FirebaseAuth.instance.currentUser?.reload();
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const trangcanhan()));
                       });
                     },
                     child: CircleAvatar(
+                      maxRadius: 40,
                       backgroundImage: AssetImage('assets/4.jpg'),
                     )),
               ),
@@ -136,9 +148,14 @@ class _EditavatarState extends State<Editavatar> {
                         UpdateAccounts(avatar: avatar);
                         final user =
                             FirebaseAuth.instance.currentUser?.reload();
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const trangcanhan()));
                       });
                     },
                     child: CircleAvatar(
+                      maxRadius: 40,
                       backgroundImage: AssetImage('assets/5.jpg'),
                     )),
               ),
@@ -153,9 +170,14 @@ class _EditavatarState extends State<Editavatar> {
                         UpdateAccounts(avatar: avatar);
                         final user =
                             FirebaseAuth.instance.currentUser?.reload();
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const trangcanhan()));
                       });
                     },
                     child: CircleAvatar(
+                      maxRadius: 40,
                       backgroundImage: AssetImage('assets/6.jpg'),
                     )),
               ),
@@ -175,9 +197,14 @@ class _EditavatarState extends State<Editavatar> {
                         UpdateAccounts(avatar: avatar);
                         final user =
                             FirebaseAuth.instance.currentUser?.reload();
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const trangcanhan()));
                       });
                     },
                     child: CircleAvatar(
+                      maxRadius: 40,
                       backgroundImage: AssetImage('assets/7.jpg'),
                     )),
               ),
@@ -192,9 +219,14 @@ class _EditavatarState extends State<Editavatar> {
                         UpdateAccounts(avatar: avatar);
                         final user =
                             FirebaseAuth.instance.currentUser?.reload();
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const trangcanhan()));
                       });
                     },
                     child: CircleAvatar(
+                      maxRadius: 40,
                       backgroundImage: AssetImage('assets/8.jpg'),
                     )),
               ),

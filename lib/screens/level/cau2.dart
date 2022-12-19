@@ -354,6 +354,8 @@ class _Lv1_cau2State extends State<Lv1_cau2> {
                                                 builder: (context) =>
                                                     finalsiglegame(
                                                       point: widget.point,
+                                                      lv: (widget.id / 10)
+                                                          .toInt(),
                                                     )));
                                       }
                                     },
