@@ -12,7 +12,7 @@ import 'package:monghoangcung/screens/nhanthu/nhanthu.dart';
 import 'package:monghoangcung/screens/trangchu/components/TopHeader.dart';
 import 'package:monghoangcung/screens/trangchu/trangchu.dart';
 import 'package:monghoangcung/screens/trangdautien/trangdautien.dart';
-import 'package:monghoangcung/screens/trogiup/trogiup.dart';
+import 'package:monghoangcung/screens/avatar/avatar.dart';
 import 'package:monghoangcung/screens/xemxephang/xemxephang.dart';
 
 import '../dangky/components/khungnhapthongtin.dart';
@@ -59,17 +59,6 @@ class _trangcanhanState extends State<trangcanhan> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         TextButton(
-                            onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) =>
-                                          const trangcanhan()));
-                            },
-                            child: CircleAvatar(
-                              backgroundImage: AssetImage('assets/1.jpg'),
-                            )),
-                        TextButton(
                           onPressed: () {
                             Navigator.push(
                                 context,
@@ -77,7 +66,7 @@ class _trangcanhanState extends State<trangcanhan> {
                                     builder: (context) => const trangchu()));
                           },
                           child: Icon(
-                            Icons.menu_rounded,
+                            Icons.arrow_back,
                             color: Colors.brown.withOpacity(0.8),
                             size: 50,
                           ),
@@ -91,14 +80,14 @@ class _trangcanhanState extends State<trangcanhan> {
                           builder: (context) => const EditInfo()),
                     ),
                     cacnuttrongtrangcanhan(
+                      noidung: 'Thay đổi avatar',
+                      press: MaterialPageRoute(
+                          builder: (context) => const Editavatar()),
+                    ),
+                    cacnuttrongtrangcanhan(
                       noidung: 'Xem xếp hạng',
                       press: MaterialPageRoute(
                           builder: (context) => const xemxephang()),
-                    ),
-                    cacnuttrongtrangcanhan(
-                      noidung: 'Trợ giúp',
-                      press: MaterialPageRoute(
-                          builder: (context) => const trogiup()),
                     ),
                     cacnuttrongtrangcanhan(
                       noidung: 'Nạp tiền',

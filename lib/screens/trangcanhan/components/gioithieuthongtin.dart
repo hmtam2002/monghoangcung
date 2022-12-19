@@ -21,7 +21,6 @@ class _gioithieuthongtinState extends State<gioithieuthongtin> {
         builder: ((context, snapshot) {
           if (snapshot.hasData) {
             final account = snapshot.data;
-
             return Container(
               padding: const EdgeInsets.all(10),
               margin: const EdgeInsets.only(
@@ -36,38 +35,33 @@ class _gioithieuthongtinState extends State<gioithieuthongtin> {
               ),
               child: Row(
                 children: [
-                  const Padding(
+                  Padding(
                       padding: EdgeInsets.all(8.0),
                       child: CircleAvatar(
-                        backgroundImage: AssetImage(account.picture),
+                        backgroundImage: AssetImage(account!.picture),
                       )),
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const [
+                    children: [
                       Text(
-                        'Username',
+                        account.fullname,
+                        style: TextStyle(
+                            fontSize: 30, fontWeight: FontWeight.bold),
+                      ),
+                      Text(
+                        'lv:' + account.lv.toString(),
                         style: TextStyle(
                           fontSize: 26,
                         ),
-                      ),
-                      Text(
-                        'SDT',
-                        style: TextStyle(
-                          fontSize: 16,
-                        ),
-                      ),
-                      Text(
-                        'Email',
-                        style: TextStyle(
-                          fontSize: 16,
-                        ),
-                      ),
+                      )
                     ],
                   )
                 ],
               ),
             );
+          } else {
+            return Container();
           }
         }));
   }

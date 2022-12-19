@@ -28,7 +28,7 @@ class _CreateInfoState extends State<CreateInfo> {
     return nen_game(
       child: SingleChildScrollView(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const TopHeader(),

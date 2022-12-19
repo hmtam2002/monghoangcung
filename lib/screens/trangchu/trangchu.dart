@@ -28,7 +28,7 @@ class _trangchuState extends State<trangchu> {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          const TopHeader(),
+          TopHeader(),
           const Expanded(
             flex: 1,
             child: Image(

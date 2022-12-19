@@ -25,7 +25,7 @@ class RegisterScreenState extends State<RegisterScreen> {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             const Text(
-              'Yako App',
+              'Dang ky',
               style: TextStyle(
                 fontSize: 48,
                 fontWeight: FontWeight.bold,

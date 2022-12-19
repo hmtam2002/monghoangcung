@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:monghoangcung/components/nen_game.dart';
 import 'package:monghoangcung/screens/trangchu/components/TopHeader.dart';
@@ -13,8 +14,7 @@ class EditInfo extends StatefulWidget {
 }
 
 class _EditInfoState extends State<EditInfo> {
-  TextEditingController _username = new TextEditingController();
-  TextEditingController _password = new TextEditingController();
+  final accid = FirebaseAuth.instance.currentUser?.uid;
   TextEditingController _fullname = new TextEditingController();
 
   String? _num = '';
@@ -37,14 +37,6 @@ class _EditInfoState extends State<EditInfo> {
                   fontWeight: FontWeight.bold),
             ),
             textview(
-              username: _username,
-              text: 'username',
-            ),
-            textview(
-              username: _password,
-              text: 'passworc',
-            ),
-            textview(
               username: _fullname,
               text: 'fullname',
             ),
@@ -57,9 +49,9 @@ class _EditInfoState extends State<EditInfo> {
                   setState(() {
                     _num = 'Cập nhật thành công ';
                     final fullname = _fullname.text;
-                    final username = _username.text;
-                    final password = _password.text;
-                    UpdateAccounts(username: username);
+
+                    UpdateAccounts(fullname: _fullname.text);
+                    final user = FirebaseAuth.instance.currentUser?.reload();
                   });
                 },
                 child: Text(
@@ -95,7 +87,9 @@ class _EditInfoState extends State<EditInfo> {
     );
   }
 
-  Future UpdateAccounts({required String username}) async {
-    final docAccounts = FirebaseFirestore.instance.collection('accounts').doc();
+  Future UpdateAccounts({required String fullname}) async {
+    final docAccounts =
+        FirebaseFirestore.instance.collection('accounts').doc(accid);
+    docAccounts.update({'fullname': fullname});
   }
 }
