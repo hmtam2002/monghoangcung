@@ -34,9 +34,7 @@ class SignInScreenState extends State<SignInScreen> {
                 controller: txtEmail,
                 keyboardType: TextInputType.emailAddress,
                 decoration: const InputDecoration(
-                  border: OutlineInputBorder(),
-                  prefixIcon: Icon(Icons.email),
-                ),
+                    border: OutlineInputBorder(), hintText: 'Email'),
               ),
             ),
             Padding(
@@ -45,9 +43,7 @@ class SignInScreenState extends State<SignInScreen> {
                 controller: txtPass,
                 obscureText: true,
                 decoration: const InputDecoration(
-                  border: OutlineInputBorder(),
-                  prefixIcon: Icon(Icons.password),
-                ),
+                    border: OutlineInputBorder(), hintText: 'Password'),
               ),
             ),
             ElevatedButton(

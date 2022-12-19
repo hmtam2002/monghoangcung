@@ -1,3 +1,5 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:monghoangcung/components/nen_game.dart';
 import 'package:monghoangcung/constants.dart';
@@ -6,6 +8,7 @@ import 'package:monghoangcung/screens/choidon/choidon.dart';
 import 'package:monghoangcung/screens/chonlevel/chonlevel.dart';
 import 'package:monghoangcung/screens/phongcho/phongcho.dart';
 
+import '../../object/Accounts.dart';
 import 'components/cacnut.dart';
 import 'components/TopHeader.dart';
 
@@ -18,7 +21,7 @@ class trangchu extends StatefulWidget {
 }
 
 class _trangchuState extends State<trangchu> {
-  @override
+  final accid = FirebaseAuth.instance.currentUser?.uid;
   Widget build(BuildContext context) {
     return nen_game(
       child: Column(
@@ -62,5 +65,10 @@ class _trangchuState extends State<trangchu> {
         ],
       ),
     );
+  }
+
+  Future<Account?> readAccount() async {
+    final docAccounts =
+        FirebaseFirestore.instance.collection('accounts').doc(accid);
   }
 }

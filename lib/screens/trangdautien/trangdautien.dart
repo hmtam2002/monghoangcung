@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:monghoangcung/components/nen_game.dart';
 import 'package:monghoangcung/screens/dangnhap/nhapmatkhau.dart';
 
+import '../dangky/components/dangky.dart';
 import '../dangky/components/khungnhapthongtin.dart';
 import '../trangchu/components/cacnut.dart';
 
@@ -30,7 +31,7 @@ class _firstscreenState extends State<firstscreen> {
         cacnut(
           text: 'Đăng ký',
           press: MaterialPageRoute(
-            builder: (context) => CreateInfo(),
+            builder: (context) => RegisterScreen(),
           ),
         ),
       ],

@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:monghoangcung/components/nen_game.dart';
 
@@ -20,7 +21,7 @@ class _CreateInfoState extends State<CreateInfo> {
   TextEditingController _username = new TextEditingController();
   TextEditingController _password = new TextEditingController();
   TextEditingController _fullname = new TextEditingController();
-
+  final _auth = FirebaseAuth.instance;
   String? _num = '';
   @override
   Widget build(BuildContext context) {
@@ -41,14 +42,6 @@ class _CreateInfoState extends State<CreateInfo> {
                   fontWeight: FontWeight.bold),
             ),
             textview(
-              username: _username,
-              text: 'username',
-            ),
-            textview(
-              username: _password,
-              text: 'password',
-            ),
-            textview(
               username: _fullname,
               text: 'fullname',
             ),
@@ -58,9 +51,7 @@ class _CreateInfoState extends State<CreateInfo> {
               margin: EdgeInsets.fromLTRB(0, 20, 0, 20),
               child: ElevatedButton(
                 onPressed: () {
-                  if (_username.text == '' ||
-                      _fullname.text == '' ||
-                      _password.text == '') {
+                  if (_fullname.text == '') {
                     setState(() {
                       _num = 'Đăng ký thất bại';
                     });
@@ -68,9 +59,7 @@ class _CreateInfoState extends State<CreateInfo> {
                     setState(() {
                       _num = 'Đăng ký thành công ';
                       final account = Account(
-                          username: _username.text,
                           fullname: _fullname.text,
-                          password: _password.text,
                           picture: 'assets/1.jpg',
                           lv: 1);
                       createAccounts(account: account);
@@ -115,7 +104,9 @@ class _CreateInfoState extends State<CreateInfo> {
   }
 
   Future createAccounts({required Account account}) async {
-    final docAccounts = FirebaseFirestore.instance.collection('accounts').doc();
+    final docAccounts = FirebaseFirestore.instance
+        .collection('accounts')
+        .doc(_auth.currentUser!.uid);
     account.id = docAccounts.id;
 
     final json = account.toJson();

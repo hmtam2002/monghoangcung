@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:monghoangcung/constants.dart';
@@ -27,6 +28,7 @@ class trangcanhan extends StatefulWidget {
 
 // ignore: camel_case_types
 class _trangcanhanState extends State<trangcanhan> {
+  final user = FirebaseAuth.instance.authStateChanges();
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -3,7 +3,6 @@ import 'package:monghoangcung/components/nen_game.dart';
 import 'package:monghoangcung/screens/dangky/4_thanhcong.dart';
 import 'package:monghoangcung/screens/dangnhap/dangnhapthanhcong.dart';
 
-import '../components/nutnhapdangnhap.dart';
 import 'components/o_nhap_thong_tin.dart';
 
 class dienthongtin extends StatelessWidget {
@@ -33,10 +32,6 @@ class dienthongtin extends StatelessWidget {
             o_nhap_thong_tin(hintext: 'Ngày sinh'),
             o_nhap_thong_tin(hintext: 'Số điện thoại'),
             o_nhap_thong_tin(hintext: 'Đăng ký'),
-            nut_an_dangnhap(
-                press: MaterialPageRoute(
-              builder: (context) => const dangkythanhcong(),
-            ))
           ],
         ),
       ),
