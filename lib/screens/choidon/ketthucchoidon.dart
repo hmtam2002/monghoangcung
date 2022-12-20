@@ -84,7 +84,7 @@ class _finalsiglegameState extends State<finalsiglegame> {
                             Container(
                               padding: EdgeInsets.all(10),
                               child: Text(
-                                account!.fullname,
+                                account.fullname,
                                 style: TextStyle(
                                     fontSize: 30, fontWeight: FontWeight.bold),
                               ),

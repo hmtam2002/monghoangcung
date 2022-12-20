@@ -99,42 +99,37 @@ class _trangcanhanState extends State<trangcanhan> {
                       press: MaterialPageRoute(
                           builder: (context) => const cai_dat()),
                     ),
-                    cacnuttrongtrangcanhan(
-                      noidung: 'Đăng xuất',
-                      press: MaterialPageRoute(
-                          builder: (context) => firstscreen()),
+                    Container(
+                      height: 50,
+                      width: MediaQuery.of(context).size.width * 9 / 10,
+                      margin: EdgeInsets.fromLTRB(0, 10, 0, 10),
+                      child: ElevatedButton(
+                        onPressed: () {
+                          FirebaseAuth.instance.signOut();
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => firstscreen()));
+                        },
+                        style: ButtonStyle(
+                            backgroundColor: MaterialStateProperty.all<Color>(
+                                Colors.white.withOpacity(0.8)),
+                            shape: MaterialStateProperty.all<
+                                RoundedRectangleBorder>(
+                              RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(20)),
+                            )),
+                        child: Text(
+                          'Đăng xuất',
+                          style: const TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black87),
+                        ),
+                      ),
                     ),
                   ],
                 ),
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  TextButton(
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const trangchu(),
-                          ));
-                    },
-                    child: Icon(
-                      Icons.home_rounded,
-                      color: Colors.brown.withOpacity(0.8),
-                      size: 50,
-                    ),
-                  ),
-                  TextButton(
-                    onPressed: () {
-                      Navigator.pop(context);
-                    },
-                    child: Icon(
-                      Icons.clear,
-                      color: Colors.brown.withOpacity(0.8),
-                      size: 50,
-                    ),
-                  ),
-                ],
               ),
             ],
           ),
