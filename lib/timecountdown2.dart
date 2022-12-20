@@ -1,11 +1,6 @@
-import 'dart:ui';
-
 import 'package:circular_countdown/circular_countdown.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:monghoangcung/screens/choidoikhang/choidoikhang.dart';
 import 'package:monghoangcung/screens/level/level1.dart';
-import 'package:monghoangcung/screens/trangchu/trangchu.dart';
 
 void main() => runApp(const countimedown2());
 
@@ -33,6 +28,7 @@ class _countimedownState2 extends State<countimedown2>
 
   @override
   Widget build(BuildContext context) {
+    // ignore: avoid_unnecessary_containers
     return Container(
       child: TimeCircularCountdown(
         unit: CountdownUnit.second,
@@ -46,7 +42,7 @@ class _countimedownState2 extends State<countimedown2>
           Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => level_1(),
+                builder: (context) => const level_1(),
               ));
         },
         textStyle: const TextStyle(color: Colors.black, fontSize: 30),

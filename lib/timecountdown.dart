@@ -1,10 +1,6 @@
-import 'dart:ui';
-
 import 'package:circular_countdown/circular_countdown.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:monghoangcung/screens/choidoikhang/choidoikhang.dart';
-import 'package:monghoangcung/screens/trangchu/trangchu.dart';
 
 void main() => runApp(const countimedown());
 
@@ -46,7 +42,7 @@ class _countimedownState extends State<countimedown>
           Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => choidoikhang(),
+                builder: (context) => const choidoikhang(),
               ));
         },
         textStyle: const TextStyle(color: Colors.black, fontSize: 30),

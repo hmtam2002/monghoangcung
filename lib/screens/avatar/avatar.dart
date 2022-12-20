@@ -1,10 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:monghoangcung/components/nen_game.dart';
-import 'package:monghoangcung/screens/chinhsuathongtin/components/avartar.dart';
-import 'package:monghoangcung/screens/trangchu/components/TopHeader.dart';
 
 import '../trangcanhan/trangcanhan.dart';
 
@@ -40,7 +37,7 @@ class _EditavatarState extends State<Editavatar> {
               ),
             ],
           ),
-          Text(
+          const Text(
             'Chọn avatar',
             style: TextStyle(fontSize: 30),
           ),
@@ -48,7 +45,7 @@ class _EditavatarState extends State<Editavatar> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
-                padding: EdgeInsets.all(10),
+                padding: const EdgeInsets.all(10),
                 width: MediaQuery.of(context).size.width / 2 - 20,
                 height: MediaQuery.of(context).size.width / 3 - 20,
                 child: IconButton(
@@ -60,7 +57,7 @@ class _EditavatarState extends State<Editavatar> {
                             FirebaseAuth.instance.currentUser?.reload();
                       });
                     },
-                    icon: CircleAvatar(
+                    icon: const CircleAvatar(
                       maxRadius: 40,
                       backgroundImage: AssetImage('assets/1.jpg'),
                     )),
