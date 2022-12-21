@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:flutter/services.dart';
-import 'package:monghoangcung/components/loaddatajson/question_obj.dart';
+import 'package:monghoangcung/object/question_obj.dart';
 
 class questionprovider {
   static Future<List<dynamic>> readJsondata() async {
