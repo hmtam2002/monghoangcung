@@ -20,13 +20,12 @@ class questionprovider {
   static Future<List<questionobject>> searchusers(int id) async {
     List<questionobject> lsresult = [];
     List<dynamic> data = await readJsondata();
-    data.forEach((element) {
+    for (var element in data) {
       questionobject question = questionobject.fromJson(element);
       if (question.id == id) {
         lsresult.add(question);
       }
-    });
-    print(data);
+    }
     return lsresult;
   }
 }

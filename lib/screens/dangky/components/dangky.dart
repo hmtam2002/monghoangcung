@@ -25,12 +25,11 @@ class RegisterScreenState extends State<RegisterScreen> {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             const Text(
-              'Dang ky',
+              'Đăng ký',
               style: TextStyle(
                 fontSize: 48,
                 fontWeight: FontWeight.bold,
               ),
-              textAlign: TextAlign.center,
             ),
             Padding(
               padding: const EdgeInsets.only(top: 12, bottom: 6),
@@ -38,7 +37,9 @@ class RegisterScreenState extends State<RegisterScreen> {
                 controller: txtEmail,
                 keyboardType: TextInputType.emailAddress,
                 decoration: const InputDecoration(
-                    border: OutlineInputBorder(), hintText: 'Email'),
+                  border: OutlineInputBorder(),
+                  hintText: 'Email',
+                ),
               ),
             ),
             Padding(
@@ -48,7 +49,7 @@ class RegisterScreenState extends State<RegisterScreen> {
                 obscureText: true,
                 decoration: const InputDecoration(
                   border: OutlineInputBorder(),
-                  hintText: 'Password',
+                  hintText: 'Mật khẩu',
                 ),
               ),
             ),
@@ -57,21 +58,26 @@ class RegisterScreenState extends State<RegisterScreen> {
                 if (txtEmail.text != '' && txtPass.text != '') {
                   try {
                     final newUser = _auth.createUserWithEmailAndPassword(
-                        email: txtEmail.text, password: txtPass.text);
+                      email: txtEmail.text,
+                      password: txtPass.text,
+                    );
 
                     // ignore: unnecessary_null_comparison
                     if (newUser != null) {
                       Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => CreateInfo()));
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const CreateInfo(),
+                        ),
+                      );
                     } else {
-                      final snackBar =
-                          SnackBar(content: Text('Tài khoản này không hợp lệ'));
+                      const snackBar = SnackBar(
+                        content: Text('Tài khoản này không hợp lệ'),
+                      );
                       ScaffoldMessenger.of(context).showSnackBar(snackBar);
                     }
                   } catch (e) {
-                    final snackBar = SnackBar(content: Text('Có lỗi xảy ra'));
+                    const snackBar = SnackBar(content: Text('Có lỗi xảy ra'));
                     ScaffoldMessenger.of(context).showSnackBar(snackBar);
                   }
                 } else {
