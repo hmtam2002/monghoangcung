@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:monghoangcung/components/nen_game.dart';
+import 'package:monghoangcung/screens/chonlevel/chonlevel.dart';
 import 'package:monghoangcung/screens/trangchu/trangchu.dart';
 
 import '../../constants.dart';
@@ -23,15 +24,19 @@ class _finalsiglegameState extends State<finalsiglegame> {
   Future UpdateAccounts() async {
     final docAccounts =
         FirebaseFirestore.instance.collection('accounts').doc(accid);
+
     if (widget.point >= 500) {
       docAccounts.update({'lv': widget.lv + 1});
     }
   }
 
-  @override
-  void initState() {
-    super.initState();
-    UpdateAccounts();
+  Future<Account?> readAccount() async {
+    final docAccounts =
+        FirebaseFirestore.instance.collection('accounts').doc(accid);
+    final snapshot = await docAccounts.get();
+    if (snapshot.exists) {
+      return Account.fromJson(snapshot.data()!);
+    }
   }
 
   @override
@@ -61,7 +66,7 @@ class _finalsiglegameState extends State<finalsiglegame> {
                             Padding(
                               padding: EdgeInsets.all(20),
                               child: Text(
-                                'Level 1',
+                                'Level ' + widget.lv.toString(),
                                 style: TextStyle(
                                     fontSize: 30, fontWeight: FontWeight.bold),
                               ),
@@ -114,6 +119,10 @@ class _finalsiglegameState extends State<finalsiglegame> {
                               padding: EdgeInsets.all(20),
                               child: TextButton(
                                 onPressed: () {
+                                  if (widget.lv == account.lv &&
+                                      widget.point >= 500) {
+                                    UpdateAccounts();
+                                  }
                                   Navigator.push(
                                       context,
                                       MaterialPageRoute(
@@ -131,11 +140,15 @@ class _finalsiglegameState extends State<finalsiglegame> {
                               padding: EdgeInsets.all(20),
                               child: TextButton(
                                 onPressed: () {
+                                  if (widget.lv == account.lv &&
+                                      widget.point >= 500) {
+                                    UpdateAccounts();
+                                  }
                                   Navigator.push(
                                       context,
                                       MaterialPageRoute(
                                           builder: (context) => Lv1_cau2(
-                                                id: widget.lv,
+                                                id: (widget.lv - 1) * 10 + 1,
                                                 point: 0,
                                                 soluongcau: 1,
                                               )));
@@ -151,11 +164,14 @@ class _finalsiglegameState extends State<finalsiglegame> {
                               padding: EdgeInsets.all(20),
                               child: TextButton(
                                 onPressed: () {
+                                  if (widget.lv == account.lv &&
+                                      widget.point >= 500) {
+                                    UpdateAccounts();
+                                  }
                                   Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                          builder: (context) =>
-                                              const trangchu()));
+                                          builder: (context) => Chooselv()));
                                 },
                                 child: Icon(
                                   Icons.list_alt,
@@ -174,14 +190,5 @@ class _finalsiglegameState extends State<finalsiglegame> {
             return Container();
           }
         }));
-  }
-
-  Future<Account?> readAccount() async {
-    final docAccounts =
-        FirebaseFirestore.instance.collection('accounts').doc(accid);
-    final snapshot = await docAccounts.get();
-    if (snapshot.exists) {
-      return Account.fromJson(snapshot.data()!);
-    }
   }
 }

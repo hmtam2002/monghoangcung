@@ -117,10 +117,10 @@ class _row123State extends State<row123> {
                   width: 70,
                   margin: EdgeInsets.all(20),
                   child: ElevatedButton(
-                    onPressed: (account!.lv >= 3)
+                    onPressed: (account.lv >= 3)
                         ? () {
                             setState(() {
-                              color1 = Colors.white.withOpacity(0.8);
+                              color2 = Colors.white.withOpacity(0.8);
                             });
                             Navigator.push(
                                 context,
