@@ -62,9 +62,11 @@ class _CreateInfoState extends State<CreateInfo> {
                       createAccounts(account: account);
                     });
                     Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const trangchu()));
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const trangchu(),
+                      ),
+                    );
                   }
                 },
                 style: ButtonStyle(
@@ -77,9 +79,10 @@ class _CreateInfoState extends State<CreateInfo> {
                 child: const Text(
                   'Đăng ký',
                   style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black87),
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black87,
+                  ),
                 ),
               ),
             ),
@@ -87,10 +90,10 @@ class _CreateInfoState extends State<CreateInfo> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
-                    padding: EdgeInsets.only(left: 15),
+                    padding: const EdgeInsets.only(left: 15),
                     child: Text(
                       _num!,
-                      style: TextStyle(fontSize: 30, color: Colors.black),
+                      style: const TextStyle(fontSize: 30, color: Colors.black),
                     )),
               ],
             )

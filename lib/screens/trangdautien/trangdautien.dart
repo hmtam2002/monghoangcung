@@ -4,7 +4,6 @@ import 'package:monghoangcung/components/nen_game.dart';
 import 'package:monghoangcung/screens/dangnhap/nhapmatkhau.dart';
 
 import '../dangky/components/dangky.dart';
-import '../dangky/components/khungnhapthongtin.dart';
 import '../trangchu/components/cacnut.dart';
 
 class firstscreen extends StatefulWidget {

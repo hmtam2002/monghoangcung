@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:monghoangcung/components/nen_game.dart';
-import 'package:monghoangcung/screens/choidoikhang/choidoikhang.dart';
 import 'package:monghoangcung/screens/choidoikhang/timtran.dart';
 
 import 'package:monghoangcung/screens/xemxephang/xemxephang.dart';

@@ -1,3 +1,5 @@
+// ignore: file_names
+
 class Account {
   Account(
       {this.id = '',
@@ -10,12 +12,17 @@ class Account {
 
   final int lv;
   final String picture;
-  Map<String, dynamic> toJson() =>
-      {'id': id, 'fullname': fullname, 'picture': picture, 'lv': lv};
+  Map<String, dynamic> toJson() => {
+        'id': id,
+        'fullname': fullname,
+        'picture': picture,
+        'lv': lv,
+      };
 
   static Account fromJson(Map<String, dynamic> json) => Account(
-      fullname: json['fullname'],
-      id: json['id'],
-      picture: json['picture'],
-      lv: json['lv']);
+        fullname: json['fullname'],
+        id: json['id'],
+        picture: json['picture'],
+        lv: json['lv'],
+      );
 }

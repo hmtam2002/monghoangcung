@@ -53,13 +53,13 @@ class _EditInfoState extends State<EditInfo> {
                       ],
                     ),
                     Padding(
-                        padding: EdgeInsets.all(8.0),
+                        padding: const EdgeInsets.all(8.0),
                         child: CircleAvatar(
                           maxRadius: 60,
                           backgroundImage: AssetImage(account!.picture),
                         )),
-                    Padding(padding: EdgeInsets.all(20)),
-                    Text(
+                    const Padding(padding: EdgeInsets.all(20)),
+                    const Text(
                       'CẬP NHẬT THÔNG TIN',
                       style: TextStyle(
                           fontSize: 25,
@@ -73,7 +73,7 @@ class _EditInfoState extends State<EditInfo> {
                     Container(
                       height: 50,
                       width: 200,
-                      margin: EdgeInsets.fromLTRB(0, 20, 0, 20),
+                      margin: const EdgeInsets.fromLTRB(0, 20, 0, 20),
                       child: ElevatedButton(
                         onPressed: () {
                           setState(() {
@@ -85,13 +85,6 @@ class _EditInfoState extends State<EditInfo> {
                                 FirebaseAuth.instance.currentUser?.reload();
                           });
                         },
-                        child: Text(
-                          'Cập Nhật',
-                          style: TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.black87),
-                        ),
                         style: ButtonStyle(
                             backgroundColor: MaterialStateProperty.all<Color>(
                                 Colors.blue.withOpacity(0.7)),
@@ -100,17 +93,24 @@ class _EditInfoState extends State<EditInfo> {
                               RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(20)),
                             )),
+                        child: const Text(
+                          'Cập Nhật',
+                          style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black87),
+                        ),
                       ),
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Container(
-                            padding: EdgeInsets.only(left: 15),
+                            padding: const EdgeInsets.only(left: 15),
                             child: Text(
                               _num!,
-                              style:
-                                  TextStyle(fontSize: 30, color: Colors.black),
+                              style: const TextStyle(
+                                  fontSize: 30, color: Colors.black),
                             )),
                       ],
                     )
