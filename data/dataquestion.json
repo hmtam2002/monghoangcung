@@ -1,104 +1,751 @@
 {
-  "question":[
-  {
-    "id":1,
-    "answers":2,
-    "question":" Who are all ________ people?",
-    "answers1":"this",
-    "answers2":"those",
-    "answers3":"them",
-    "answers4":"that"
-
-  },{
-    "id":2,
-    "answers":2,
-    "question":" I ____ a car next year.",
-    "answers1":"buy",
-    "answers2":"am buying",
-    "answers3":"going to buy",
-    "answers4":"bought"
-
-  },{
-    "id":3,
-    "answers":1,
-    "question":" They are all ________ ready for the party.",
-    "answers1":"getting",
-    "answers2":"going",
-    "answers3":"doing",
-    "answers4":"putting"
-
-  },
-  {
-    "id":4,
-    "answers":1,
-    "question":"When do you go ________ bed?",
-    "answers1":"to",
-    "answers2":"to the",
-    "answers3":"in",
-    "answers4":"in the"
-  },
-  {
-    "id":5,
-    "answers":2,
-    "question":"London is famous for _____ red buses.",
-    "answers1":"it's",
-    "answers2":"its",
-    "answers3":"it is",
-    "answers4":"it"
-  },
-  {
-    "id":6,
-    "answers":4,
-    "question":"Is there _____ milk in the fridge?",
-    "answers1":"a lot ",
-    "answers2":"many",
-    "answers3":"any",
-    "answers4":"some"
-  },
-  {
-    "id":7,
-    "answers":1,
-    "question":"There is a flower shop in front _____ my house.",
-    "answers1":"of",
-    "answers2":"to",
-    "answers3":"off",
-    "answers4":"sin"
-  },
-  {
-    "id":8,
-    "answers":1,
-    "question":"Where are _____ children? – They go to school.",
-    "answers1":"the",
-    "answers2":"you",
-    "answers3":"a",
-    "answers4":"an"
-  }
-  ,
-  {
-    "id":9,
-    "answers":2,
-    "question":"Those students are working very _____ for their next exams.",
-    "answers1":"hardly",
-    "answers2":"hard",
-    "answers3":"harder",
-    "answers4":"hardest"
-  },
-  {
-    "id":10,
-    "answers":2,
-    "question":"Those students are working very _____ for their next exams.",
-    "answers1":"hardly",
-    "answers2":"hard",
-    "answers3":"harder",
-    "answers4":"hardest"
-  }
-  
-
-
-
-  
-
- 
- 
+  "question": [
+    {
+      "id": 1,
+      "answers": 2,
+      "question": " Who are all ________ people?",
+      "answers1": "this",
+      "answers2": "those",
+      "answers3": "them",
+      "answers4": "that"
+    },
+    {
+      "id": 2,
+      "answers": 2,
+      "question": " I ____ a car next year.",
+      "answers1": "buy",
+      "answers2": "am buying",
+      "answers3": "going to buy",
+      "answers4": "bought"
+    },
+    {
+      "id": 3,
+      "answers": 1,
+      "question": " They are all ________ ready for the party.",
+      "answers1": "getting",
+      "answers2": "going",
+      "answers3": "doing",
+      "answers4": "putting"
+    },
+    {
+      "id": 4,
+      "answers": 1,
+      "question": "When do you go ________ bed?",
+      "answers1": "to",
+      "answers2": "to the",
+      "answers3": "in",
+      "answers4": "in the"
+    },
+    {
+      "id": 5,
+      "answers": 2,
+      "question": "London is famous for _____ red buses.",
+      "answers1": "it's",
+      "answers2": "its",
+      "answers3": "it is",
+      "answers4": "it"
+    },
+    {
+      "id": 6,
+      "answers": 4,
+      "question": "Is there _____ milk in the fridge?",
+      "answers1": "a lot ",
+      "answers2": "many",
+      "answers3": "any",
+      "answers4": "some"
+    },
+    {
+      "id": 7,
+      "answers": 1,
+      "question": "There is a flower shop in front _____ my house.",
+      "answers1": "of",
+      "answers2": "to",
+      "answers3": "off",
+      "answers4": "sin"
+    },
+    {
+      "id": 8,
+      "answers": 1,
+      "question": "Where are _____ children? – They go to school.",
+      "answers1": "the",
+      "answers2": "you",
+      "answers3": "a",
+      "answers4": "an"
+    },
+    {
+      "id": 9,
+      "answers": 2,
+      "question": "Those students are working very _____ for their next exams.",
+      "answers1": "hardly",
+      "answers2": "hard",
+      "answers3": "harder",
+      "answers4": "hardest"
+    },
+    {
+      "id": 10,
+      "answers": 4,
+      "question": "Sự khác nhau giữa truyền thuyết và cổ tích:",
+      "answers1": "Truyền thuyết có thật, cổ tích không có thật.",
+      "answers2": "Truyền thuyết có nhân vật nghèo khổ, cổ tích không có.",
+      "answers3": "Truyền thuyết có nhân vật anh hùng, cổ tích không có.",
+      "answers4": "Nhân vật, sự việc trong truyền thuyết có liên quan đến sự thật lịch sử, còn cổ tích thì không có."
+    },
+    {
+      "id": 11,
+      "answers": 3,
+      "question": "Truyện Con rồng cháu tiên chi tiết có ý nghĩ nói lên toàn thể nhân vật Việt Nam có chung nguồn gốc là:",
+      "answers1": "Long Quân diệt trừ yêu quái.",
+      "answers2": "Cha rồng mẹ tiên.",
+      "answers3": "Cái bọc trăm trứng nở trăm con.",
+      "answers4": "Cả 3 ý trên đều đúng."
+    },
+    {
+      "id": 12,
+      "answers": 4,
+      "question": "Nhân vật nào ở các truyện dân gian đã học có phẩm chất đáng quí, thật thà, dũng cảm. tài năng.",
+      "answers1": "Sọ Dừa.",
+      "answers2": "Lang Liêu.",
+      "answers3": "Sơn Tinh Thuỷ Tinh",
+      "answers4": "Thạch Sanh."
+    },
+    {
+      "id": 13,
+      "answers": 4,
+      "question": "Chi tiết em bé giải câu đố bằng bài hát đồng dao có ý nghĩa như thế nào?",
+      "answers1": "Dễ dàng.",
+      "answers2": "Đó là kinh nghiệm của dân gian",
+      "answers3": "Hồn nhiên, tài năng.",
+      "answers4": "Cả 3 ý trên đều đúng"
+    },
+    {
+      "id": 14,
+      "answers": 3,
+      "question": "Chi tiết lưỡi kiếm dưới nước chuôi gươm lên rừng tra lại vừa vặn như in có ý nghĩa như thế nào?",
+      "answers1": "Gỗ sắt đều là vũ khí.",
+      "answers2": "Ủng hộ thần núi, thần nước.",
+      "answers3": "Nhân dân mọi miền thống nhất một lòng đánh giặc cứu nước.",
+      "answers4": "Cả 3 ý trên đều đúng."
+    },
+    {
+      "id": 15,
+      "answers": 3,
+      "question": "Tên gọi Hội khoẻ phù đổng có liên quan đến chi tiết trong truyện nào?",
+      "answers1": "Sọ Dừa.",
+      "answers2": "Sơn Tinh Thuỷ Tinh.",
+      "answers3": "Thánh gióng.",
+      "answers4": "Sự tích hồ gươm."
+    },
+    {
+      "id": 16,
+      "answers": 4,
+      "question": "Thạch Sanh đã bị Lý Thông nhiều lần hãm hại nhưng không oán hận vì:",
+      "answers1": "Nghĩ tình anh em",
+      "answers2": "Độ lượng , vị tha.",
+      "answers3": "Sợ Lý Thông.",
+      "answers4": "Cả A và B đều đúng."
+    },
+    {
+      "id": 17,
+      "answers": 3,
+      "question": "Chi tiết do con người tưởng tượng ra để gửi gắm nguyện vọng ước mơ là:",
+      "answers1": "Chi tiết hoang đường.",
+      "answers2": "Tưởng tượng kỳ ảo.",
+      "answers3": "Cả A và B đều đúng.",
+      "answers4": "Cả A và B đếu sai."
+    },
+    {
+      "id": 18,
+      "answers": 4,
+      "question": "Trong truyến Thánh Gióng chi tiết Gióng cất tiếng nói đầu tiên đòi đi đánh giặc có ý nghĩa như thế nào?",
+      "answers1": "Ca ngợi ý thức đánh giặc của người anh hùng Gióng.",
+      "answers2": "Ý thức đáng giặc cứu nước tạo cho người anh hùng có khả năng hành động khác thường, thần kỳ.",
+      "answers3": "Ý thức đánh giặc cứu nước được đặt lên hàng đầu ở người anh hùng Gióng.",
+      "answers4": "Cả 3 ý trên đều đúng."
+    },
+    {
+      "id": 19,
+      "answers": 2,
+      "question": "Trong truyện Sơn Tinh Thuỷ Tinh chi tiết:  Sơn Tinh bốc từng quả đồi dời từng dãy núi ngăn chặn dòng nước lũ, nước dân cao bao nhiêu núi dân cao bấy nhiêu chi tiết ấy có ý nghĩa gì?",
+      "answers1": "Để bảo vệ người vợ mới cưới",
+      "answers2": "Ước mơ có sức mạnh chế ngự thiên tai.",
+      "answers3": "Thể hiện sức mạnh của một vị thần.",
+      "answers4": "Ước mơ chống lại Thủy Tinh nhanh chóng"
+    },
+    {
+      "id": 20,
+      "answers": 4,
+      "question": "Tại sao đức Long Quân không cho giặc Minh mượn gươm thần mà cho nghĩa quân Lam Sơn mượn gươm thần ?",
+      "answers1": "Giặc Minh đã có nhiều vũ khí.",
+      "answers2": "Nghĩa quân Lam Sơn thiếu vũ khí.",
+      "answers3": "Rùa Vàng gặp được Lê Thận.",
+      "answers4": "Cuộc chiến đấu giữa nghĩa quân Lam Sơn là cuộc chiến đấu chính nghĩa thuận ý trời hợp lòng dân."
+    },
+    {
+      "id": 21,
+      "answers": 4,
+      "question": "Vì sao Lang Liêu được nối ngôi vua:",
+      "answers1": "Lang Liêu hiền lành chăm lo công việc đồng án, tăng gia sản xuất.",
+      "answers2": "Lang Liêu quí trọng tổ tiên, những người đi trước.",
+      "answers3": "Lang Liêu thông minh tài trí.",
+      "answers4": "Cả 3 ý trên đều đúng."
+    },
+    {
+      "id": 22,
+      "answers": 2,
+      "question": "Văn bản Sơn Tinh Thuỷ Tinh được viết theo phương thức biểu đạt nào?",
+      "answers1": "Biểu cảm",
+      "answers2": "Tự sự.",
+      "answers3": "Nghị luận.",
+      "answers4": "Miêu tả."
+    },
+    {
+      "id": 23,
+      "answers": 3,
+      "question": "Ngôi kể trong đoạn văn bản Sơn Tinh Thuỷ Tinh ở ngôi thứ mấy?",
+      "answers1": "Ngôi thứ nhất.",
+      "answers2": "Ngôi thứ hai.",
+      "answers3": "Ngôi thứ ba.",
+      "answers4": "Ngôi thứ hai số nhiều."
+    },
+    {
+      "id": 24,
+      "answers": 2,
+      "question": "Một tập thể xã hội được định nghĩa là:",
+      "answers1": "Một tập thể có hai người trở lên",
+      "answers2": "Một tập thể có hai người trợ lên có một mức độ nhận biết chung và tương tác với nhau thường xuyên",
+      "answers3": "Một nhóm người có mối quan hệ gần gũi nhau",
+      "answers4": "Một nhóm người có mối quan hệ dựa trên công việc"
+    },
+    {
+      "id": 25,
+      "answers": 4,
+      "question": "Một tập thể xã hội là:",
+      "answers1": "Một tập thể có ít người trong đó các mối quan hệ mang tính cá nhân lẫn kéo dài",
+      "answers2": "Một tập thể dùng làm điểm tham khảo cho cá nhân trong khi đánh giá và quyết định",
+      "answers3": "Một tập thể khách quan, đông người, gắn kết nhau trên cơ sở một số quan tâm hay hoạt động đặc biệt",
+      "answers4": "Tập thể có từ hai người trở lên, có một mức nhận biết chung và tương tác với nhau thường xuyên"
+    },
+    {
+      "id": 26,
+      "answers": 1,
+      "question": "Theo Walt W. Rostow, sự hiện đại hóa của xã hội trải qua bốn giai đoạn, trong đó giai đoạn có trình độ phát triển khá thô sơ, năng suất hạn chế, mức sống thấp... được gọi là:",
+      "answers1": "Giai đoạn truyền thống",
+      "answers2": "Giai đoạn cất cánh",
+      "answers3": "Giai đoạn săn đuổi sự trưởng thành công nghệ",
+      "answers4": "Giai đoạn tiêu dùng hàng loạt ở mức cao"
+    },
+    {
+      "id": 27,
+      "answers": 2,
+      "question": "Theo Walt W. Rostow, sự hiện đại hóa của xã hội trải qua bốn giai đoạn, trong đó giai đoạn bắt đầu quá trình chuyên môn hóa, kinh tế thị trường phát triển, sản xuất để bán chứ không đơn thuần chỉ để tiêu dùng... được gọi là:",
+      "answers1": "Giai đoạn truyền thống",
+      "answers2": "Giai đoạn cất cánh",
+      "answers3": "Giai đoạn săn đuổi sự trưởng thành công nghệ",
+      "answers4": "Giai đoạn tiêu dùng hàng loạt ở mức cao"
+    },
+    {
+      "id": 28,
+      "answers": 3,
+      "question": "Theo Walt W. Rostow, sự hiện đại hóa của xã hội trải qua bốn giai đoạn, trong đó giai đoạn quá trình công nghiệp hóa tương đối hoàn tất, nhiều thành phố lớn mọc lên, dân số giảm bớt sự gia tăng, chuyên môn hóa sản xuất mở rộng, giáo dục đại chúng... được gọi là:",
+      "answers1": "Giai đoạn truyền thống",
+      "answers2": "Giai đoạn cất cánh",
+      "answers3": "Giai đoạn săn đuổi sự trưởng thành công nghệ",
+      "answers4": "Giai đoạn tiêu dùng hàng loạt ở mức cao"
+    },
+    {
+      "id": 29,
+      "answers": 4,
+      "question": "Theo Walt W. Rostow, sự hiện đại hóa của xã hội trải qua bốn giai đoạn, trong đó giai đoạn có trình độ phát triển cao nhất, hàng hóa sản xuất dư thừa buộc phải tiến hành các biện pháp kích cầu, mức sống cao, mức tăng dân số giảm, dịch vụ chiếm tỷ lệ cao trong nền kinh tế... được gọi là:",
+      "answers1": "Giai đoạn truyền thống",
+      "answers2": "Giai đoạn cất cánh",
+      "answers3": "Giai đoạn săn đuổi sự trưởng thành công nghệ",
+      "answers4": "Giai đoạn tiêu dùng hàng loạt ở mức cao"
+    },
+    {
+      "id": 30,
+      "answers": 4,
+      "question": "Vấn đề nào sẽ được các nhà chính trị học và các nhà chính trị xã hội học cùng quan tâm nghiên cứu khi nó xuất hiện trong các tổ chức chính trị và giữa các cơ quan chính trị?",
+      "answers1": "mâu thuẫn",
+      "answers2": "điểm nóng",
+      "answers3": "xu hướng mới",
+      "answers4": "quan hệ xã hội"
+    },
+    {
+      "id": 31,
+      "answers": 3,
+      "question": "Khi nghiên cứu về các nhóm người, xã hội học có vai trò gì?",
+      "answers1": "Một tập đoàn",
+      "answers2": "Một hiện tượng xã hội",
+      "answers3": "Môn khoa học",
+      "answers4": "Một nhận định"
+    },
+    {
+      "id": 32,
+      "answers": 1,
+      "question": "Một nhà xã hội học thuộc trường phái cấu trúc chức năng sẽ nghiên cứu vấn đề nào sau đây?",
+      "answers1": "Xã hội hội nhập như thế nào?",
+      "answers2": "Xã hội chia cắt như thế nào?",
+      "answers3": "Xã hội học được điều gì?",
+      "answers4": "Làm cách nào để những nhóm người khác không thừa nhận tình trạng hiện tại?"
+    },
+    {
+      "id": 33,
+      "answers": 1,
+      "question": "Môn khoa học xã hội nào quan tâm đến các vấn đề cá nhân?",
+      "answers1": "Tâm lý học",
+      "answers2": "Chính trị học",
+      "answers3": "Kinh tế học",
+      "answers4": "Công tác xã hội"
+    },
+    {
+      "id": 34,
+      "answers": 3,
+      "question": "Các thành viên trong nhóm phải thực hiện điều gì khi hầu hết thành viên trong nhóm tin rằng cách nghĩ, cách cảm thụ và hành động của họ luôn là nhất?",
+      "answers1": "Sự đoàn kết",
+      "answers2": "Sự quy tụ",
+      "answers3": "Sự tuân thủ quy tắc",
+      "answers4": "Sự tan rã"
+    },
+    {
+      "id": 35,
+      "answers": 1,
+      "question": "Bước xác định vấn đề nghiên cứu và tên đề tài nằm trong giai đoạn nào?",
+      "answers1": "Chuẩn bị",
+      "answers2": "Thu thập thông tin",
+      "answers3": "Lập dự án",
+      "answers4": "Xử lý và phân tích thông tin"
+    },
+    {
+      "id": 36,
+      "answers": 4,
+      "question": "Các loại chuẩn mực bất thành văn?",
+      "answers1": "Chuẩn mực phong tục tập quán",
+      "answers2": "Chuẩn mực thẩm mỹ",
+      "answers3": "Chuẩn mực đạo đức",
+      "answers4": "Tất cả các phương án đều đúng"
+    },
+    {
+      "id": 37,
+      "answers": 3,
+      "question": "Sức quyến rũ của xã hội học là ở chỗ cách giải thích vấn đề của nó khiến cho chúng ta có thể nhìn thế giới mà chúng ta đang sống suốt cả đời mình dưới một ánh sáng mới” là của nhà xã hội học nào viết?",
+      "answers1": "C Marx",
+      "answers2": "Max Weber",
+      "answers3": "Berger",
+      "answers4": "Auguste Comte"
+    },
+    {
+      "id": 38,
+      "answers": 1,
+      "question": "Chuẩn mực thẩm mỹ không đúng khi?",
+      "answers1": "Mang tính tự do",
+      "answers2": "Mang tính khái quát",
+      "answers3": "Đảm bảo tính điều hòa",
+      "answers4": "Mang tính lợi ích"
+    },
+    {
+      "id": 39,
+      "answers": 2,
+      "question": "Chức năng của xã hội học pháp luật không phải nhằm?",
+      "answers1": "Để duy trì, bảo vệ trật tự xã hội, bảo vệ lợi ích của Nhà nước, các nhóm xã hội và của mỗi cá nhân, đảm bảo cuộc sống bình thường của xã hội",
+      "answers2": "Nhấn mạnh vấn đề đấu tranh giai cấp, xung đột xã hội",
+      "answers3": "Điều hòa giải quyết các xung đột xã hội",
+      "answers4": "Giáo dục, định hướng cho các cá nhân, thành viên của xã hội –ý thức đúng đắn về điều hay, lẽ phải, những; việc nên làm và những việc không nên làm; về hành vi pháp luật hợp pháp và hành vi pháp luật bất hợp pháp"
+    },
+    {
+      "id": 40,
+      "answers": 4,
+      "question": "Chức năng của xã hội học tội phạm khác với chức năng của các ngành xã hội học chuyên biệt khác là?",
+      "answers1": "Chức năng nhận thức",
+      "answers2": "Chức năng thực tiễn",
+      "answers3": "Chức năng giáo dục",
+      "answers4": "Chức năng dự báo"
+    },
+    {
+      "id": 41,
+      "answers": 1,
+      "question": "Cơ cấu xã hội nào là nguyên nhân dẫn đến nhiều tệ nạn xã hội khác nhau?",
+      "answers1": "Cơ cấu nghề nghiệp",
+      "answers2": "Cơ cấu giai cấp",
+      "answers3": "Cơ cấu lãnh thổ",
+      "answers4": "Cơ cấu dân tộc"
+    },
+    {
+      "id": 42,
+      "answers": 3,
+      "question": "Cơ cấu xã hội nào là nguyên nhân nảy sinh các cuộc đấu tranh giành quyền lực và lợi ích trong lịch sử?",
+      "answers1": "Cơ cấu nhân khẩu",
+      "answers2": "Cơ cấu lãnh thổ",
+      "answers3": "Cơ cấu giai cấp",
+      "answers4": "Cơ cấu dân tộc"
+    },
+    {
+      "id": 43,
+      "answers": 2,
+      "question": "Có câu: Phép vua còn thua lệ làng. Vậy thiết chế nào quan trọng nhất?",
+      "answers1": "Gia đình",
+      "answers2": "Nhà nước",
+      "answers3": "Dòng họ",
+      "answers4": "Làng xóm"
+    },
+    {
+      "id": 44,
+      "answers": 2,
+      "question": "Đây không phải là nội dung của dư luận xã hội?",
+      "answers1": "Phản ánh các vấn đề chính trị, thời sự, đường lối chính sách đối nội,đối ngoại của Đảng và nhà nước",
+      "answers2": "Phản ánh về một sự việc, sự kiện hay hiện tượng có thể có thật, không có thật hoặc chỉ có một phần sự thật được lan truyền từ người này sang người khác chủ yếu bằng con đường truyền miệng",
+      "answers3": "Phản ánh những nhu cầu ngày càng tăng của con người trong thực tế đời sống xã hội",
+      "answers4": "Phản ánh các vấn đề kinh tế, đường lối chính sách kinh tế và cơ chế quản lý kinh tế của nhà nước"
+    },
+    {
+      "id": 45,
+      "answers": 1,
+      "question": "Đối tượng mà dư luận xã hội không quan tâm đến?",
+      "answers1": "Tương lai của trái đất 1000 năm sau",
+      "answers2": "Giá cả thị trường",
+      "answers3": "Vấn đề kinh tế",
+      "answers4": "Vệ sinh an toàn thực phẩm"
+    },
+    {
+      "id": 46,
+      "answers": 1,
+      "question": "Hành vi sai lệch - thụ động – tiêu cực?",
+      "answers1": "Là hành vi vô ý vi phạm, phá vỡ hiệu lực của các chuẩn mực pháp luật tiến bộ, phù hợp đang phổ biến, thịnh hành và được công nhận rộng rài trong xã hội",
+      "answers2": "Là hành vi vô ý vi phạm, phá vỡ sự tác động của các chuẩn mực pháp luật đã lạc hậu, lỗi thời không còn phù hợp",
+      "answers3": "Là hành vi cố ý vi phạm, phá vỡ hiệu lực của các chuẩn mực pháp luật hiện hành mang tính chất tiến bộ, phù hợp đang phổ biến, thịnh hành và được Nhà nước, xã hội thừa nhận rộng rài",
+      "answers4": "Là hành vi vô ý không mong muốn vi phạm, phá vỡ tính ổn định, sự tác động của các chuẩn mực pháp luật"
+    },
+    {
+      "id": 47,
+      "answers": 1,
+      "question": "Khái niệm dùng để chỉ quá trình diễn ra những thay đổi căn bản về lịch sử, trên các phương diện kinh tế, văn hóa, xã hội của xã hội, thể hiện ở sự phát triển lớn mạnh của các đô thị, sự gia tăng dân cư đô thị và sự phổ biến lối sống đô thị tới toàn xã hội là?",
+      "answers1": "Khái niệm đô thị hóa",
+      "answers2": "Khái niệm lối sống đô thị",
+      "answers3": "Khái niệm đô thị",
+      "answers4": "Khái niệm cơ cấu đô thị"
+    },
+    {
+      "id": 48,
+      "answers": 3,
+      "question": "Trong cuộc đối thoại với xác anh hàng thịt, thái độ và hành động của Hồn Trương Ba có sự thay đổi như thế nào?",
+      "answers1": "Trong cuộc đối thoại với xác anh hàng thịt, thái độ và hành động của Hồn Trương Ba có sự thay đổi như thế nào?",
+      "answers2": "Lúc đầu đối thoại rồi chuyển sang tranh luận và cuối cùng là kết tội xác anh hàng thịt.",
+      "answers3": "Lúc đầu giận dữ, quát tháo sau dần đuối lí, bất lực và tuyệt vọng.",
+      "answers4": "Lúc đầu bình tĩnh, ôn hòa sau bất bình, giận dữ."
+    },
+    {
+      "id": 49,
+      "answers": 4,
+      "question": "Dựa vào nguyên mẫu hay cốt truyện nào để Lưu Quang Vũ sáng tác”Hồn Trương Ba da hàng thịt”?",
+      "answers1": "Tác giả sáng tác hoàn toàn dựa vào sự hư cáu tưởng tượng",
+      "answers2": "Sáng tác dựa vào một câu truyện dân gian.",
+      "answers3": "Được sáng tác dựa trên một nguyên mẫu nhân vật lịch sử.",
+      "answers4": "Sáng tác dựa vào một cốt truyện của một tác phẩm văn họcviết nước ngoài."
+    },
+    {
+      "id": 50,
+      "answers": 3,
+      "question": "Sau khi được sống lại bằng cách nhập vào thân xác của anh hàng thịt, Hồn Trương Ba đã có cuộc sống như thế nào?",
+      "answers1": "Mãn nguyện vì đã được hồi sinh.",
+      "answers2": "Sung sướng và hạnh phúc bên vợ con.",
+      "answers3": "Đau khổ, dằn vặt vì phải sống nhờ thân xác người khác.",
+      "answers4": "Tất cả các đáp án đều đúng."
+    },
+    {
+      "id": 51,
+      "answers": 2,
+      "question": "Mở đầu đoạn trích Hồn Trương Ba, da hàng thịt là cuộc đối thoại giữa.",
+      "answers1": "Hồn Trương Ba và cái Gái",
+      "answers2": "Hồn Trương Ba và xác hàng thịt",
+      "answers3": "Hồn Trương Ba và Đế Thích",
+      "answers4": "Hồn Trương Ba và vợ Trương Ba"
+    },
+    {
+      "id": 52,
+      "answers": 4,
+      "question": "Tình huống kịch của vở Hồn Trương Ba, da hàng thịt là gì?",
+      "answers1": "Hồn Trương Ba xin Đế Thích cho được chết hẳn, không nhập vào thân xác của ai nữa.",
+      "answers2": "Trương Ba là một người đàn ông khỏe mạnh, lương thiện, đôn hậu nhưng lại phải chết do sự tắc trách của Nam Tào và Bắc Đẩu",
+      "answers3": "Trương Ba là một người chơi cờ rất giỏi, từng đánh cờ với Đế Thích nên khi chết đi được Đế Thích cứu sống.",
+      "answers4": "Trương Ba là một người đôn hậu, chất phác nhưng khi chết Hồn Trương Ba lại phải trú ngụ trong xác anh hàng thịt, tạo nên cuộc đấu tranh gay gắt giữa phần hồn Trương Ba cao quý với những ham muốn bản năng của phần xác hàng thịt."
+    },
+    {
+      "id": 53,
+      "answers": 2,
+      "question": "Trong đoạn trích Hồn Trương Ba, da hàng thịt, câu nói nào của nhân vật Trương Ba thể hiện rõ nhất chủ đề tư tưởng của tác phẩm?",
+      "answers1": "Sống thế này còn khổ hơn là cái chết",
+      "answers2": "Không thể bên trong một đằng, bên ngoài một nẻo được. Tôi muốn được là tôi toàn vẹn",
+      "answers3": "Không phải mượn thân ai cả, tôi vẫn ở đây, trong cái vườn nhà ta, trong những điều tốt lành của cuộc đời, trong mỗi trái cây cái Gái nâng niu",
+      "answers4": "Không còn cái vật quái gở mang tên: Hồn Trương Ba, da hàng thịt nữa"
+    },
+    {
+      "id": 54,
+      "answers": 4,
+      "question": "Ý nào sau đây miêu tả đúng nhất về anh hàng thịt trong vở kịch Hồn Trương Ba, da hàng thịt?",
+      "answers1": "Người gầy còm, tính nhút nhát.",
+      "answers2": "Tất cả các đáp án đều sai.",
+      "answers3": "Người học rộng biết nhiều.",
+      "answers4": "Thân xác thô kệch, tính cách thô thiển."
+    },
+    {
+      "id": 55,
+      "answers": 3,
+      "question": "Dựa vào nguyên mẫu hay cốt truyện nào để Lưu Quang Vũ sáng tác Hồn Trương Ba, da hàng thịt ",
+      "answers1": "Tác giả sáng tác hoàn toàn dựa vào hư cấu tưởng tượng.",
+      "answers2": "Được sáng tác dựa trẹn một nguyên mẫu nhân vật lịch sử.",
+      "answers3": "Sáng tác dựa vào một câu chuyện dân gian.",
+      "answers4": "Sáng tác dựa vào một cốt truyện của một tác phẩm văn học viết nước ngoài"
+    },
+    {
+      "id": 56,
+      "answers": 1,
+      "question": "Điền tiếp vế còn thiếu trong nhận xét sau sao cho hợp lý nhất về ý nghĩa vở kịch Hồn Trương Ba, da hàng thịt: “Vở kịch Hồn Trương Ba, da hàng thịt………..”.",
+      "answers1": "Đặt ra nhiều vấn đề mới mẻ về xã hội và con người với ý nghĩa triết lý nhân sinh sâu sắc",
+      "answers2": "là tác phẩm mang dấu ấn chính trị sâu sắc.",
+      "answers3": "mang lại tiếng cười hóm hỉnh.",
+      "answers4": "mang tính phê phán hiện thực xã hội đương thời."
+    },
+    {
+      "id": 57,
+      "answers": 3,
+      "question": "Chủ đề đề đoạn trích cảnh VI Hồn Trương Ba, da hàng thịt là:",
+      "answers1": "Tâm hồn mới là yếu tố quan trọng, thể xác là cái bình chứa linh hồn, đầy dục vọng.",
+      "answers2": "Thương xót cho hoàn cảnh trớ trêu của Hồn Trương Ba phải sống trong xác anh hàng thịt.",
+      "answers3": "Đặt ra vấn đề con người phải sống trung thực, hạnh phúc và ý nghĩa cuộc đời là được sống đúng là mình.",
+      "answers4": "Phê phán thói hư tật xấu của thân xác con người."
+    },
+    {
+      "id": 58,
+      "answers": 1,
+      "question": "Thông tin nào sau đây về Lưu Quang Vũ là chưa chính xác?",
+      "answers1": "Quê gốc ở Phú Thọ nhưng được sinh ra và tuồi thơ gắn bó với mảnh đất Quảng Nam chưa mưa đã nắng.",
+      "answers2": "Từng tham gia quân đội thời kì kháng chiến chống Mỉ.",
+      "answers3": "Bắt đầu sáng tác văn chương từ giữa những năm 60 của thế kỉ XX.",
+      "answers4": "Đã được tặng Giải Thưởng Hồ Chí Minh về văn học Nghệ thuật năm 2000"
+    },
+    {
+      "id": 59,
+      "answers": 4,
+      "question": "Trước khi đến với kịch, Lưu Quang Vũ chủ yếu sáng tác văn học ở thể loại nào?",
+      "answers1": "Truyện ngắn",
+      "answers2": "Bút kí.",
+      "answers3": "Tiểu thuyết",
+      "answers4": "Thơ"
+    },
+    {
+      "id": 60,
+      "answers": 4,
+      "question": "Màn đối thoại giữa Hồn Trương Ba và Đế Thích ở cuối đoạn trích, toát lên ý nghĩa gì?",
+      "answers1": "Người và thần tiên luôn luôn bất đồng quan điểm sống",
+      "answers2": "Cuộc nói chuyện giữa người thường và thần tiên.",
+      "answers3": "Cuộc tranh luận về sự sống và cái chết.",
+      "answers4": "Khát vọng sống đẹp, khát vọng tự giải phóng cho tâm hồn thanh cao của Hồn Trương Ba. Đó là khát vọng tự hoàn thiện nhân cách"
+    },
+    {
+      "id": 61,
+      "answers": 3,
+      "question": "Tác giả Lưu Quang Vũ là chồng của nữ thi sĩ nổi tiếng nào của Việt Nam?",
+      "answers1": "Bà Huyện Thanh Quan",
+      "answers2": "Lâm Thị Mĩ Dạ",
+      "answers3": "Xuân Quỳnh",
+      "answers4": "Phan Thị Thanh Nhàn"
+    },
+    {
+      "id": 62,
+      "answers": 2,
+      "question": "Nhận xét nào đúng nhất khi nói về nội dung đoạn trích Hồn Trương Ba, da hàng thịt trong Sách Giáo Khoa Ngữ Văn 12, tập 1?",
+      "answers1": "Đoạn trích tái hiện lại bức tranh sinh động về làng quê Việt Nam thế kỷ XIX.",
+      "answers2": "Đoạn trích giúp người đọc thấy được tình cảnh trớ trêu, đau khổ của nhân vật Trương Ba khi tâm hồn thanh cao phải ẩn trong thân xác anh hàng thịt, từ đó lí giải quyết định giải thoát của nhân vật này.",
+      "answers3": "Đoạn trích giúp người đọc hiểu thêm về một câu chuyện dân gian.",
+      "answers4": "Đoạn trích tái hiện lại một sự việc tưởng tượng không có thật: đó là hồn nhập vào xác."
+    },
+    {
+      "id": 63,
+      "answers": 3,
+      "question": "Việc xin Đế Thích cho cu Tị sống, để mình được chết hẳn, không nhập hồn vào cơ thể ai nữa, cho thấy điều gì trong con người Trương Ba?",
+      "answers1": "Con người hiền lành, chăm chỉ.",
+      "answers2": "Con người khó tính, không thích trẻ con.",
+      "answers3": "Con người nhân hậu, sáng suốt, giàu lòng tự trọng.",
+      "answers4": "Con người của cõi Tiên."
+    },
+    {
+      "id": 64,
+      "answers": 4,
+      "question": "Trong đoạn trích “Hồn Trương Ba, da hàng thịt”, qua các nhân vật Tây Vương Mẫu, Nam Tào, Bắc Đẩu, tác giả muốn nói lên điều gì?",
+      "answers1": "Phê phán cuộc sống xa hoa, hưởng lạc của một bộ phận những người có nhiều quyền thế trong xã hội.",
+      "answers2": "Phê phán những kẻ giả dối, chạy theo sở thích tầm thường, bản năng, xác thịt.",
+      "answers3": "Phê phán tính hợm hĩnh, thiếu trung thực, chạy theo ham muốn vật chất.",
+      "answers4": "Phê phán sự vô trách nhiệm, quan liêu, thờ ơ của những người lãnh đạo, những người nắm quyền hành trong tay trước cuộc sống, số phận của người dân."
+    },
+    {
+      "id": 65,
+      "answers": 3,
+      "question": "Câu nói: “Không thể bên trong một đằng, bên ngoài một nẻo được. Tôi muốn được là tôi toàn vẹn.” là của nhân vật nào trong tác phẩm?",
+      "answers1": "Đế Thích.",
+      "answers2": "Xác anh hàng thịt.",
+      "answers3": "Hồn Trương Ba.",
+      "answers4": "Chị Lụa."
+    },
+    {
+      "id": 66,
+      "answers": 3,
+      "question": "Tác phẩm nào sau đây không phải của Lưu Quang Vũ?",
+      "answers1": "Nàng Xi-ta",
+      "answers2": "Con rồng tre",
+      "answers3": "Sống mãi tuổi 17",
+      "answers4": "Nếu anh không đốt lửa"
+    },
+    {
+      "id": 67,
+      "answers": 3,
+      "question": "Nhận xét nào sau đây nói đúng nhất về chiều sâu triết lý của vở kịch Hồn Trương Ba, da hàng thịt?",
+      "answers1": "Phải biết đấu tranh vì sự sống còn của bản thân.",
+      "answers2": "Nếu có cơ hội được sống lại, hãy tận dụng.",
+      "answers3": "Cuộc sống thật đáng quý nhưng không phải sống thế nào cũng được. Hạnh phúc chân chính của con người là được sống chân thật với chính mình và với mọi người.",
+      "answers4": "Hãy tồn tại bằng bất cứ giá nào."
+    },
+    {
+      "id": 68,
+      "answers": 3,
+      "question": "Câu nói sau là của nhân vật nào trong vở kịch Hồn Trương Ba, da hàng thịt: “Cho nó mọc thành cây mới. Ông nội tớ bảo vậy. Những cây sẽ nối nhau mà lớn khôn. Mãi mãi…”",
+      "answers1": "Chị con dâu",
+      "answers2": "Cu Tị",
+      "answers3": "Cái Gái",
+      "answers4": "Chị Lụa"
+    },
+    {
+      "id": 69,
+      "answers": 4,
+      "question": "Trong đoạn trích “Hồn Trương Ba, da hàng thịt”, thái độ của nhân vật xác anh hàng thịt trong cuộc đối thoại với Hồn Trương Ba như thế nào?",
+      "answers1": "Khinh bỉ, coi thường.",
+      "answers2": "Đe dọa, uy hiếp.",
+      "answers3": "Nhường nhịn, van xin.",
+      "answers4": "Giễu cợt, tự đắc."
+    },
+    {
+      "id": 70,
+      "answers": 3,
+      "question": "Trong vở kịch “Hồn Trương Ba da hàng thịt”nhân vật chính là cái xác được hồn nhập vào vốn là người làm nghề gì?",
+      "answers1": "Làm vườn",
+      "answers2": "Buôn bán",
+      "answers3": "Đồ tể",
+      "answers4": "Thợ mộc"
+    },
+    {
+      "id": 71,
+      "answers": 3,
+      "question": "Đoạn trích Hồn Trương Ba, da hàng thịt (Lưu Quang Vũ) thuộc phần nào của vở kịch?",
+      "answers1": "Thắt nút",
+      "answers2": "Phát triển",
+      "answers3": "Cao trào",
+      "answers4": "Mở nút"
+    },
+    {
+      "id": 72,
+      "answers": 3,
+      "question": "Nghệ thuật đặc sắc của vở kịch Hồn Trương Ba, da hàng thịt là:",
+      "answers1": "Nghệ thuật miêu tả nhân vật.",
+      "answers2": "Nghệ thuật dựng đối thoại nhân vật.",
+      "answers3": "Nghệ thuật dựng cảnh, dựng đối thoại giữa các nhân vật.",
+      "answers4": "Nghệ thuật tả cảnh."
+    },
+    {
+      "id": 73,
+      "answers": 1,
+      "question": "Nhận xét nào dưới đây là đúng nhất khi nói về nhân vật Trương Ba?",
+      "answers1": "Người làm vườn- người chồng, người bố, người ông hiền hậu, cao quý.",
+      "answers2": "Người sống dựa dẫm vào con cháu.",
+      "answers3": "Người chồng, người cha vũ phu.",
+      "answers4": "Người nông dân thiển cận, ít suy nghĩ."
+    },
+    {
+      "id": 74,
+      "answers": 3,
+      "question": "Vở kịch của Lưu Quang Vũ dựa vào câu chuyện dân gian nào?",
+      "answers1": "Bi kịch của Trương Ba",
+      "answers2": "Hồn Trương Ba và da hàng thịt",
+      "answers3": "Hồn Trương Ba, da hàng thịt",
+      "answers4": "Nỗi oan của Trương Ba"
+    },
+    {
+      "id": 75,
+      "answers": 3,
+      "question": "Dòng nào không nói lên đặc điểm của thế loại kịch ?",
+      "answers1": "Phản ánh cuộc sống bằng hình tượng nghệ thuật.",
+      "answers2": "Phán ánh cuộc sống bằng việc khám phá, phát hiện những mâu thuẫn, xung đột.",
+      "answers3": "Phản ánh cuộc sống bằng cảm xúc và tâm trạng.",
+      "answers4": "Phản ánh cuộc sông bằng hành động và ngôn ngữ đôi thoại."
+    },
+    {
+      "id": 76,
+      "answers": 4,
+      "question": "Ý nghĩa triết học của vở kịch nằm ở khía cạnh nào?",
+      "answers1": "Cho thấy sự tồn tại độc lập của thể xác và linh hồn.",
+      "answers2": "Cho thấy sự chi phối của thân xác với linh hồn.",
+      "answers3": "Cho thấy những phiền toái do sự không hoà hợp, không thống nhất giữa linh hồn và thể xác.",
+      "answers4": "Tất cả đều đúng"
+    },
+    {
+      "id": 77,
+      "answers": 4,
+      "question": "Nét tương đồng giữa kịch với tác phẩm văn học là gì ?",
+      "answers1": "Phân tích cuộc sống bằng hình tượng nghệ thuật, sự kiện, nhân vật.",
+      "answers2": "Là tác phẩm nghệ thuật thể hiện tư tưởng, tình cảm quan điểm của tác giả về cuộc sống và con người.",
+      "answers3": "Chú ý thể hiện các mâu thuẫn, xung đột rồi đẩy chúng lên thành cao trào.",
+      "answers4": "Cả A và B."
+    },
+    {
+      "id": 78,
+      "answers": 2,
+      "question": "Những lời tự giải thích, thah minh của hồn Trương Ba với thân xác hàng thịt cho thấy hồn Trương Ba đang rơi vào cảnh như thế nào?",
+      "answers1": "Đầy đủ, sung sướng",
+      "answers2": "Yếu thế, bế tắc",
+      "answers3": "Tiến thoái lưỡng nan",
+      "answers4": "Buồn vui lẫn lộn"
+    },
+    {
+      "id": 79,
+      "answers": 3,
+      "question": "Dòng nào nói đúng xung đột cùa vở kịch Hồn Trương Ba, da hàng thịt ?",
+      "answers1": "Xung đột giữa các nhân vật trong gia đình Trương Ba khi ông trở về trong hình hài thô lỗ của anh hàng thịt.",
+      "answers2": "Xung đột giữa vợ Trương Ba với vợ anh hàng thịt.",
+      "answers3": "Xung đột từ bên trong con người - cuộc xung đột giữa linh hồn với thể xác.",
+      "answers4": "Xung đột giữa Đế Thích với Tây Thiên Mẫu về việc gọi tên nhầm người phải chết trong ngày."
+    },
+    {
+      "id": 80,
+      "answers": 3,
+      "question": "Nỗi đau khổ nhất của nhân vật Trương Ba là gì ?",
+      "answers1": "Ý thức được nỗi đau khổ cùa mình mà không thế giải quyết.",
+      "answers2": "Phải hành động như một người hàng thịt",
+      "answers3": "Phải giúp vợ hàng thịt mổ lợn, pha thịt, bán thịt.",
+      "answers4": "Làm gẫy chiếc diều cùa cu Tị."
+    },
+    {
+      "id": 81,
+      "answers": 2,
+      "question": "Câu nói nào của xác hàng thịt làm Trương Ba lúng túng nhát ?",
+      "answers1": "Tôi đã cho ông sức mạnh...ông có thêm sức mạnh của tôi.",
+      "answers2": "Tôi là cái bình để chứa đựng làm hồn. Nhờ tôi mà ông có thể làm lụng.",
+      "answers3": "Làm xong điểu gì xấu, ông cứ việc đổ tôi cho tôi, để ông được thanh thản.",
+      "answers4": "Cần phải để cho tính tự ái cúa ông được ve vuốt. Tâm hồn là thứ lắm sĩ diện"
+    },
+    {
+      "id": 82,
+      "answers": 4,
+      "question": "Dòng nào nói đúng hiệu quả nghệ thuật của màn kết ?",
+      "answers1": "Màn kết với chất thơ sâu lắng đã đem lại âm hưởng thanh thoát cho một bi kịch.",
+      "answers2": "Truyền đi thông điệp về sự chiến thắng của cái Thiện, cái đẹp và sự sống đích thực",
+      "answers3": "Cuộc đấu tranh có gay go quyết liêt đến đâu thì cuối cùng khát vọng cao đẹpvẫn chiến thẳng.",
+      "answers4": "Cả A và C."
+    },
+    {
+      "id": 83,
+      "answers": 4,
+      "question": "Trong cuộc đối thoại, xác anh hàng thịt có thái độ như thế nào đối với hồn Trương Ba?",
+      "answers1": "Giễu cợt hồn Trương Ba và tự đắc.",
+      "answers2": "Thông cảm và xót thương",
+      "answers3": "Lên án và phê phán",
+      "answers4": "Ca ngợi và tự hào"
+    }
   ]
 }
