@@ -6,6 +6,7 @@ class questionprovider {
   static Future<List<dynamic>> readJsondata() async {
     var jsontext = await rootBundle.loadString('data/dataquestion.json');
     var data = json.decode(jsontext);
+
     return data['question'];
   }
 

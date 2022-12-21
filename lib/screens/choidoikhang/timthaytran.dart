@@ -7,7 +7,7 @@ import 'package:monghoangcung/screens/phongcho/phongcho.dart';
 
 import '../../components/nen_game.dart';
 import '../../constants.dart';
-import '../../timecountdown.dart';
+import '../../timer/timecountdown.dart';
 import '../trangchu/components/cacnut.dart';
 import '../trangchu/trangchu.dart';
 import 'choidoikhang.dart';
@@ -19,11 +19,11 @@ class Sreached extends StatelessWidget {
   Widget build(BuildContext context) {
     return nen_game(
         child: Column(mainAxisAlignment: MainAxisAlignment.start, children: [
-      Text(
+      const Text(
         'Đấu đối kháng',
         style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
       ),
-      Opacity(
+      const Opacity(
         opacity: 0,
         child: SizedBox(
           child: countimedown(),

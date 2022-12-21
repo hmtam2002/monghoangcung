@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:monghoangcung/components/nen_game.dart';
 import 'package:monghoangcung/constants.dart';
-import 'package:monghoangcung/timecountdown2.dart';
 
+import '../../timer/timecountdown2.dart';
 import '../trangchu/trangchu.dart';
 import 'cau2.dart';
 
