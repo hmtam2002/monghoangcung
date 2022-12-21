@@ -115,9 +115,9 @@ class _row123State extends State<row123> {
                 Container(
                   height: 70,
                   width: 70,
-                  margin: EdgeInsets.all(20),
+                  margin: const EdgeInsets.all(20),
                   child: ElevatedButton(
-                    onPressed: (account!.lv >= 3)
+                    onPressed: (account.lv >= 3)
                         ? () {
                             setState(() {
                               color1 = Colors.white.withOpacity(0.8);
@@ -132,13 +132,6 @@ class _row123State extends State<row123> {
                                         )));
                           }
                         : null,
-                    child: const Text(
-                      '3',
-                      style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black87),
-                    ),
                     style: ButtonStyle(
                         backgroundColor:
                             MaterialStateProperty.all<Color>(color2),
@@ -147,6 +140,13 @@ class _row123State extends State<row123> {
                           RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(20)),
                         )),
+                    child: const Text(
+                      '3',
+                      style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black87),
+                    ),
                   ),
                 ),
               ],
