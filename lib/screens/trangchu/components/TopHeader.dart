@@ -17,17 +17,17 @@ class TopHeader extends StatelessWidget {
             child: const CircleAvatar(
               backgroundImage: AssetImage('assets/1.jpg'),
             )),
-        TextButton(
-          onPressed: () {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => const TrangCaNhan()));
-          },
-          child: Icon(
-            Icons.menu_rounded,
-            color: Colors.brown.withOpacity(0.8),
-            size: 50,
-          ),
-        ),
+        // TextButton(
+        //   onPressed: () {
+        //     Navigator.push(context,
+        //         MaterialPageRoute(builder: (context) => const TrangCaNhan()));
+        //   },
+        //   child: Icon(
+        //     Icons.menu_rounded,
+        //     color: Colors.brown.withOpacity(0.8),
+        //     size: 50,
+        //   ),
+        // ),
       ],
     );
   }

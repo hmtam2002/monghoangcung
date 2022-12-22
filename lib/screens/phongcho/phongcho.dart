@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_connect/http/src/utils/utils.dart';
 import 'package:monghoangcung/components/nen_game.dart';
 import 'package:monghoangcung/screens/choidoikhang/timtran.dart';
 import 'package:monghoangcung/screens/xemxephang/xemxephang.dart';
@@ -6,9 +7,15 @@ import '../../constants.dart';
 import '../trangchu/components/cacnut.dart';
 import '../trangchu/trangchu.dart';
 
-class PhongCho extends StatelessWidget {
+class PhongCho extends StatefulWidget {
   const PhongCho({super.key});
 
+  @override
+  State<PhongCho> createState() => _PhongChoState();
+}
+
+class _PhongChoState extends State<PhongCho> {
+  final TextEditingController txtIdPhong = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return nen_game(
@@ -40,24 +47,11 @@ class PhongCho extends StatelessWidget {
           const SizedBox(
             height: kDefaultPadding * 10,
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Container(
-                  padding: const EdgeInsets.all(10),
-                  width: MediaQuery.of(context).size.width / 2 - 20,
-                  child: IconButton(
-                    icon: const Icon(Icons.history),
-                    onPressed: () => const Xemxephang(),
-                  )),
-              Container(
-                  padding: const EdgeInsets.all(10),
-                  width: MediaQuery.of(context).size.width / 2 - 20,
-                  child: IconButton(
-                    icon: const Icon(Icons.book_outlined),
-                    onPressed: () => const Xemxephang(),
-                  )),
-            ],
+          TextField(
+            controller: txtIdPhong,
+            decoration: const InputDecoration(
+              hintText: 'Id Phong',
+            ),
           ),
           CacNut(
             text: 'Chơi ngay',

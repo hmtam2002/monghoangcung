@@ -1,6 +1,8 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:monghoangcung/screens/trangchu/trangchu.dart';
 import 'package:monghoangcung/screens/trangdautien/trangdautien.dart';
 
 Future main() async {
@@ -21,14 +23,13 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const Firstscreen(),
-
-      // initialRoute:
-      //     FirebaseAuth.instance.currentUser == null ? 'welcome' : 'home',
-      // routes: {
-      //   'welcome': (context) => const WelcomeScreen(),
-      //   'home': (context) => const HomeTab(),
-      // },
+      // home: const TrangChu(),
+      initialRoute:
+          FirebaseAuth.instance.currentUser == null ? 'welcome' : 'home',
+      routes: {
+        'welcome': (context) => const Firstscreen(),
+        'home': (context) => const TrangChu(),
+      },
     );
   }
 }
