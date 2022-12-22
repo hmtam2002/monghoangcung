@@ -22,6 +22,13 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: firstscreen(),
+
+      // initialRoute:
+      //     FirebaseAuth.instance.currentUser == null ? 'welcome' : 'home',
+      // routes: {
+      //   'welcome': (context) => const WelcomeScreen(),
+      //   'home': (context) => const HomeTab(),
+      // },
     );
   }
 }

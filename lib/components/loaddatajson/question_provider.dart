@@ -10,14 +10,14 @@ class questionprovider {
     return data['question'];
   }
 
-  static Future<List<questionobject>> getallusers() async {
+  static Future<List<questionobject>> getallcauhoi() async {
     List<questionobject> lsresult = [];
     List<dynamic> data = await readJsondata();
     lsresult = data.map((e) => questionobject.fromJson(e)).toList();
     return lsresult;
   }
 
-  static Future<List<questionobject>> searchusers(int id) async {
+  static Future<List<questionobject>> searchcauhoi(int id) async {
     List<questionobject> lsresult = [];
     List<dynamic> data = await readJsondata();
     data.forEach((element) {

@@ -2,10 +2,8 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:monghoangcung/components/nen_game.dart';
-import 'package:monghoangcung/screens/trangchu/components/TopHeader.dart';
-import '../../object/Accounts.dart';
-import '../trangcanhan/trangcanhan.dart';
-import 'components/avartar.dart';
+import 'package:monghoangcung/object/Accounts.dart';
+import 'package:monghoangcung/screens/trangcanhan/trangcanhan.dart';
 import 'components/textview.dart';
 
 class EditInfo extends StatefulWidget {
@@ -17,7 +15,7 @@ class EditInfo extends StatefulWidget {
 
 class _EditInfoState extends State<EditInfo> {
   final accid = FirebaseAuth.instance.currentUser?.uid;
-  TextEditingController _fullname = new TextEditingController();
+  final TextEditingController _fullname = TextEditingController();
 
   String? _num = '';
   @override
@@ -58,8 +56,8 @@ class _EditInfoState extends State<EditInfo> {
                           maxRadius: 60,
                           backgroundImage: AssetImage(account!.picture),
                         )),
-                    Padding(padding: EdgeInsets.all(20)),
-                    Text(
+                    const Padding(padding: EdgeInsets.all(20)),
+                    const Text(
                       'CẬP NHẬT THÔNG TIN',
                       style: TextStyle(
                           fontSize: 25,
@@ -85,13 +83,6 @@ class _EditInfoState extends State<EditInfo> {
                                 FirebaseAuth.instance.currentUser?.reload();
                           });
                         },
-                        child: Text(
-                          'Cập Nhật',
-                          style: TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.black87),
-                        ),
                         style: ButtonStyle(
                             backgroundColor: MaterialStateProperty.all<Color>(
                                 Colors.blue.withOpacity(0.7)),
@@ -100,6 +91,13 @@ class _EditInfoState extends State<EditInfo> {
                               RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(20)),
                             )),
+                        child: const Text(
+                          'Cập Nhật',
+                          style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black87),
+                        ),
                       ),
                     ),
                     Row(
@@ -109,8 +107,8 @@ class _EditInfoState extends State<EditInfo> {
                             padding: EdgeInsets.only(left: 15),
                             child: Text(
                               _num!,
-                              style:
-                                  TextStyle(fontSize: 30, color: Colors.black),
+                              style: const TextStyle(
+                                  fontSize: 30, color: Colors.black),
                             )),
                       ],
                     )
@@ -131,8 +129,10 @@ class _EditInfoState extends State<EditInfo> {
     if (snapshot.exists) {
       return Account.fromJson(snapshot.data()!);
     }
+    return null;
   }
 
+  // ignore: non_constant_identifier_names
   Future UpdateAccounts({required String fullname}) async {
     final docAccounts =
         FirebaseFirestore.instance.collection('accounts').doc(accid);

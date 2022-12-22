@@ -11,14 +11,15 @@ class choidon extends StatefulWidget {
   State<choidon> createState() => _choidonState();
 }
 
+// ignore: camel_case_types
 class _choidonState extends State<choidon> {
   String name = "";
   List<questionobject> lscontact = [];
 
   get userprovider => null;
 
-  void _loaddanhsachcontact() async {
-    final data = await userprovider.searchusers(1);
+  void _loaddanhsachcauhoi() async {
+    final data = await userprovider.searchcauhoi(1);
     setState(() {
       lscontact = data;
     });
@@ -27,7 +28,7 @@ class _choidonState extends State<choidon> {
   @override
   void initState() {
     super.initState();
-    _loaddanhsachcontact();
+    _loaddanhsachcauhoi();
   }
 
   @override

@@ -29,7 +29,7 @@ class _Lv1_cau2State extends State<Lv1_cau2> {
   List<questionobject> test = [];
 
   Future<List<questionobject>> _loaddanhsachcontact() async {
-    final data = await questionprovider.searchusers(widget.id);
+    final data = await questionprovider.searchcauhoi(widget.id);
     setState(() {
       test = data;
     });
