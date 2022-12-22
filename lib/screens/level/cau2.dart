@@ -2,10 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:monghoangcung/components/nen_game%20copy.dart';
 import 'package:monghoangcung/constants.dart';
 import 'package:monghoangcung/screens/choidon/ketthucchoidon.dart';
-
 import '../../object/question_obj.dart';
 import '../../provider/question_provider.dart';
-
 import '../trangchu/trangchu.dart';
 
 class Lv1_cau2 extends StatefulWidget {

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:monghoangcung/components/nen_game.dart';
+import 'package:monghoangcung/screens/chonlevel/row123.dart';
+import 'package:monghoangcung/screens/chonlevel/row456.dart';
 import 'package:monghoangcung/screens/trangchu/trangchu.dart';
 import 'components/nutchuyenhuong.dart';
-import 'components/row123.dart';
-import 'components/row456.dart';
 
 class Chooselv extends StatefulWidget {
   const Chooselv({super.key});
@@ -15,7 +15,6 @@ class Chooselv extends StatefulWidget {
 class _ChooselvState extends State<Chooselv> {
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
     return nen_game(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
