@@ -9,7 +9,7 @@ import 'package:monghoangcung/screens/avatar/avatar.dart';
 import 'package:monghoangcung/screens/xemxephang/xemxephang.dart';
 import 'package:monghoangcung/screens/trangcanhan/components/cacnuttrongtrangcanhan.dart';
 import 'package:monghoangcung/screens/trangcanhan/components/gioithieuthongtin.dart';
-import 'package:monghoangcung/screens/trangcanhan/components/nuttrove.dart';
+import 'package:monghoangcung/screens/trangcanhan/components/nut_tro_ve.dart';
 
 class TrangCaNhan extends StatefulWidget {
   const TrangCaNhan({super.key});
@@ -61,7 +61,9 @@ class _TrangCaNhanState extends State<TrangCaNhan> {
                 ),
                 Cacnuttrongtrangcanhan(
                   noidung: 'Đăng xuất',
-                  press: MaterialPageRoute(builder: (context) => Firstscreen()),
+                  press: MaterialPageRoute(
+                    builder: (context) => const Firstscreen(),
+                  ),
                 ),
               ],
             ),

@@ -6,14 +6,14 @@ import '../timer/timecountdown2.dart';
 import '../trangchu/trangchu.dart';
 import 'cau2.dart';
 
-class level_1 extends StatefulWidget {
-  const level_1({super.key});
+class Level1 extends StatefulWidget {
+  const Level1({super.key});
 
   @override
-  State<level_1> createState() => _level_1State();
+  State<Level1> createState() => _Level1State();
 }
 
-class _level_1State extends State<level_1> {
+class _Level1State extends State<Level1> {
   bool button = true;
 
   Color button1color = Colors.white.withOpacity(0.8);
