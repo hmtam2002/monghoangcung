@@ -2,12 +2,11 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:monghoangcung/screens/level/cau2.dart';
+import 'package:monghoangcung/object/Accounts.dart';
 
-import '../../../object/Accounts.dart';
-import '../../level/level1.dart';
-
+// ignore: camel_case_types
 class row123 extends StatefulWidget {
-  row123({
+  const row123({
     Key? key,
   }) : super(key: key);
 
@@ -15,13 +14,11 @@ class row123 extends StatefulWidget {
   State<row123> createState() => _row123State();
 }
 
+// ignore: camel_case_types
 class _row123State extends State<row123> {
   Color color1 = Colors.white.withOpacity(0.4);
-
   Color color2 = Colors.white.withOpacity(0.4);
-
   bool i1 = false;
-
   bool i2 = false;
   final accid = FirebaseAuth.instance.currentUser?.uid;
   Future<Account?> readAccount() async {
@@ -31,129 +28,126 @@ class _row123State extends State<row123> {
     if (snapshot.exists) {
       return Account.fromJson(snapshot.data()!);
     }
+    return null;
   }
 
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(
-        future: readAccount(),
-        builder: ((context, snapshot) {
-          if (snapshot.hasData) {
-            final account = snapshot.data;
-            return Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Container(
-                  height: 70,
-                  width: 70,
-                  margin: EdgeInsets.all(20),
-                  child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => Lv1_cau2(
-                                    id: 1,
-                                    point: 0,
-                                    soluongcau: 1,
-                                  )));
-                    },
-                    child: const Text(
-                      '1',
-                      style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black87),
-                    ),
-                    style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all<Color>(
-                            Colors.white.withOpacity(0.8)),
-                        shape:
-                            MaterialStateProperty.all<RoundedRectangleBorder>(
-                          RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20)),
-                        )),
+      future: readAccount(),
+      builder: ((context, snapshot) {
+        if (snapshot.hasData) {
+          final account = snapshot.data;
+          return Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                height: 70,
+                width: 70,
+                margin: const EdgeInsets.all(20),
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => Lv1_cau2(
+                                  id: 1,
+                                  point: 0,
+                                  soluongcau: 1,
+                                )));
+                  },
+                  style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all<Color>(
+                          Colors.white.withOpacity(0.8)),
+                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                        RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20)),
+                      )),
+                  child: const Text(
+                    '1',
+                    style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black87),
                   ),
                 ),
-                Container(
-                  height: 70,
-                  width: 70,
-                  margin: EdgeInsets.all(20),
-                  child: ElevatedButton(
-                    onPressed: (account!.lv >= 2)
-                        ? () {
-                            setState(() {
-                              color1 = Colors.white.withOpacity(0.8);
-                            });
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => Lv1_cau2(
-                                          id: 11,
-                                          point: 0,
-                                          soluongcau: 1,
-                                        )));
-                          }
-                        : null,
-                    child: const Text(
-                      '2',
-                      style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black87),
-                    ),
-                    style: ButtonStyle(
-                        backgroundColor:
-                            MaterialStateProperty.all<Color>(color1),
-                        shape:
-                            MaterialStateProperty.all<RoundedRectangleBorder>(
-                          RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20)),
-                        )),
+              ),
+              Container(
+                height: 70,
+                width: 70,
+                margin: const EdgeInsets.all(20),
+                child: ElevatedButton(
+                  onPressed: (account!.lv >= 2)
+                      ? () {
+                          setState(() {
+                            color1 = Colors.white.withOpacity(0.8);
+                          });
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Lv1_cau2(
+                                        id: 11,
+                                        point: 0,
+                                        soluongcau: 1,
+                                      )));
+                        }
+                      : null,
+                  style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all<Color>(color1),
+                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                        RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20)),
+                      )),
+                  child: const Text(
+                    '2',
+                    style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black87),
                   ),
                 ),
-                Container(
-                  height: 70,
-                  width: 70,
-                  margin: EdgeInsets.all(20),
-                  child: ElevatedButton(
-                    onPressed: (account.lv >= 3)
-                        ? () {
-                            setState(() {
-                              color2 = Colors.white.withOpacity(0.8);
-                            });
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => Lv1_cau2(
-                                          id: 21,
-                                          point: 0,
-                                          soluongcau: 1,
-                                        )));
-                          }
-                        : null,
-                    child: const Text(
-                      '3',
-                      style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black87),
-                    ),
-                    style: ButtonStyle(
-                        backgroundColor:
-                            MaterialStateProperty.all<Color>(color2),
-                        shape:
-                            MaterialStateProperty.all<RoundedRectangleBorder>(
-                          RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20)),
-                        )),
+              ),
+              Container(
+                height: 70,
+                width: 70,
+                margin: const EdgeInsets.all(20),
+                child: ElevatedButton(
+                  onPressed: (account.lv >= 3)
+                      ? () {
+                          setState(() {
+                            color2 = Colors.white.withOpacity(0.8);
+                          });
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Lv1_cau2(
+                                        id: 21,
+                                        point: 0,
+                                        soluongcau: 1,
+                                      )));
+                        }
+                      : null,
+                  style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all<Color>(color2),
+                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                        RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20)),
+                      )),
+                  child: const Text(
+                    '3',
+                    style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black87),
                   ),
                 ),
-              ],
-            );
-          } else {
-            return Container();
-          }
-        }));
+              ),
+            ],
+          );
+        } else {
+          return Container();
+        }
+      }),
+    );
   }
 }

@@ -1,11 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:monghoangcung/components/nen_game.dart';
-import 'package:monghoangcung/constants.dart';
-import 'package:monghoangcung/screens/chonlevel/chonlevel2.dart';
-import 'package:monghoangcung/screens/level/level1.dart';
-import 'package:monghoangcung/screens/trangchu/components/TopHeader.dart';
-
-import '../trangchu/trangchu.dart';
+import 'package:monghoangcung/screens/trangchu/trangchu.dart';
 import 'components/nutchuyenhuong.dart';
 import 'components/row123.dart';
 import 'components/row456.dart';
@@ -44,17 +39,26 @@ class _ChooselvState extends State<Chooselv> {
               ),
             ],
           ),
-          Text(
-            'Chọn Level',
-            style: TextStyle(
-                fontSize: 30, color: Colors.black, fontWeight: FontWeight.bold),
+          const SizedBox(
+            height: 80,
           ),
-          SizedBox(
-            height: size.height / 4,
+          const Text(
+            'Màn chơi',
+            style: TextStyle(
+              fontSize: 30,
+              color: Colors.black54,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          const SizedBox(
+            height: 80,
           ),
           row123(),
           row456(),
-          nutchuyenhuong(),
+          const SizedBox(
+            height: 60,
+          ),
+          const nutchuyenhuong(),
         ],
       ),
     );
