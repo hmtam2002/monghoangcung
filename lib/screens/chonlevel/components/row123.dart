@@ -32,6 +32,13 @@ class _row123State extends State<row123> {
   }
 
   @override
+  void initState() {
+    // TODO: implement initState
+
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return FutureBuilder(
       future: readAccount(),
