@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:monghoangcung/components/nen_game.dart';
 import 'package:monghoangcung/constants.dart';
-import 'package:monghoangcung/timecountdown2.dart';
 
+import '../timer/timecountdown2.dart';
 import '../trangchu/trangchu.dart';
 import 'cau2.dart';
 
@@ -74,8 +74,8 @@ class _level_1State extends State<level_1> {
               Container(
                 width: 100,
                 height: 100,
-                padding: EdgeInsets.all(10),
-                child: countimedown2(),
+                padding: const EdgeInsets.all(10),
+                child: const countimedown2(),
               )
             ],
           ),
@@ -83,8 +83,8 @@ class _level_1State extends State<level_1> {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Text(
-                "Điểm : " + point.toString(),
-                style: TextStyle(fontSize: 30),
+                "Điểm : $point",
+                style: const TextStyle(fontSize: 30),
               ),
             ],
           ),

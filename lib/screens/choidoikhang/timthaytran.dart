@@ -1,16 +1,8 @@
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:lottie/lottie.dart';
-import 'package:monghoangcung/main.dart';
-
-import 'package:monghoangcung/screens/phongcho/phongcho.dart';
+import 'package:monghoangcung/screens/timer/timecountdown.dart';
 
 import '../../components/nen_game.dart';
 import '../../constants.dart';
-import '../../timecountdown.dart';
-import '../trangchu/components/cacnut.dart';
-import '../trangchu/trangchu.dart';
-import 'choidoikhang.dart';
 
 class Sreached extends StatelessWidget {
   const Sreached({super.key});
@@ -19,15 +11,15 @@ class Sreached extends StatelessWidget {
   Widget build(BuildContext context) {
     return nen_game(
         child: Column(mainAxisAlignment: MainAxisAlignment.start, children: [
-      Text(
+      const Text(
         'Đấu đối kháng',
         style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
       ),
-      Opacity(
+      const Opacity(
         opacity: 0,
         child: SizedBox(
-          child: countimedown(),
           height: kDefaultPadding * 3,
+          child: countimedown(),
         ),
       ),
       Column(
@@ -39,15 +31,15 @@ class Sreached extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Container(
-                  padding: EdgeInsets.all(10),
+                  padding: const EdgeInsets.all(10),
                   width: MediaQuery.of(context).size.width / 3 - 20,
                   height: MediaQuery.of(context).size.width / 3 - 20,
-                  child: CircleAvatar(
+                  child: const CircleAvatar(
                     backgroundImage: AssetImage('assets/1.jpg'),
                   )),
               Container(
-                  padding: EdgeInsets.all(10),
-                  child: Text(
+                  padding: const EdgeInsets.all(10),
+                  child: const Text(
                     'MAI HUU PHUOC ',
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                   )),
@@ -56,10 +48,10 @@ class Sreached extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Container(
+              SizedBox(
                 width: MediaQuery.of(context).size.width / 2,
                 height: MediaQuery.of(context).size.width / 2,
-                child: Image(image: AssetImage('assets/vs1.png')),
+                child: const Image(image: AssetImage('assets/vs1.png')),
               )
             ],
           ),
@@ -69,17 +61,18 @@ class Sreached extends StatelessWidget {
             children: [
               Container(
                   padding: EdgeInsets.all(10),
-                  child: Text(
+                  child: const Text(
                     'MAI HUU PHUOC ',
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                   )),
               Container(
-                  padding: EdgeInsets.all(10),
-                  width: MediaQuery.of(context).size.width / 3 - 20,
-                  height: MediaQuery.of(context).size.width / 3 - 20,
-                  child: CircleAvatar(
-                    backgroundImage: AssetImage('assets/1.jpg'),
-                  )),
+                padding: const EdgeInsets.all(10),
+                width: MediaQuery.of(context).size.width / 3 - 20,
+                height: MediaQuery.of(context).size.width / 3 - 20,
+                child: const CircleAvatar(
+                  backgroundImage: AssetImage('assets/1.jpg'),
+                ),
+              ),
             ],
           ),
         ],
