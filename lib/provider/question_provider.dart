@@ -1,12 +1,11 @@
 import 'dart:convert';
 import 'package:flutter/services.dart';
-import 'package:monghoangcung/components/loaddatajson/question_obj.dart';
+import 'package:monghoangcung/object/question_obj.dart';
 
 class questionprovider {
   static Future<List<dynamic>> readJsondata() async {
-    var jsontext = await rootBundle.loadString('assets/data/dataquestion.json');
+    var jsontext = await rootBundle.loadString('data/dataquestion.json');
     var data = json.decode(jsontext);
-    print(data['question']);
     return data['question'];
   }
 
@@ -26,7 +25,6 @@ class questionprovider {
         lsresult.add(question);
       }
     });
-    print(data);
     return lsresult;
   }
 }
