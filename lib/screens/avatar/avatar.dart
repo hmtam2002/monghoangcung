@@ -1,10 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:monghoangcung/components/nen_game.dart';
-import 'package:monghoangcung/screens/chinhsuathongtin/components/avartar.dart';
-import 'package:monghoangcung/screens/trangchu/components/TopHeader.dart';
 
 import '../trangcanhan/trangcanhan.dart';
 

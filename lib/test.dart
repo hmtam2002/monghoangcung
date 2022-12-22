@@ -2,7 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:monghoangcung/object/Accounts.dart';
 
-import 'object/account_provider.dart';
+import 'provider/account_provider.dart';
 
 class test extends StatefulWidget {
   const test({super.key});

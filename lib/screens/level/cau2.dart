@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:monghoangcung/components/nen_game%20copy.dart';
 import 'package:monghoangcung/components/nen_game.dart';
 import 'package:monghoangcung/constants.dart';
-import 'package:monghoangcung/object/account_provider.dart';
+import 'package:monghoangcung/provider/account_provider.dart';
 import 'package:monghoangcung/screens/choidon/ketthucchoidon.dart';
 
-import '../../components/loaddatajson/question_obj.dart';
-import '../../components/loaddatajson/question_provider.dart';
+import '../../object/question_obj.dart';
+import '../../provider/question_provider.dart';
 
 import '../trangchu/trangchu.dart';
 

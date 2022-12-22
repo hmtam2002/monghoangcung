@@ -58,7 +58,7 @@ class _trangcanhanState extends State<trangcanhan> {
                 cacnuttrongtrangcanhan(
                   noidung: 'Cài đặt',
                   press:
-                      MaterialPageRoute(builder: (context) => const cai_dat()),
+                      MaterialPageRoute(builder: (context) => const CaiDat()),
                 ),
                 cacnuttrongtrangcanhan(
                   noidung: 'Đăng xuất',

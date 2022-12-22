@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:monghoangcung/components/nen_game.dart';
 import 'package:monghoangcung/constants.dart';
 
-import '../../components/loaddatajson/question_obj.dart';
+import '../../object/question_obj.dart';
 
 class choidon extends StatefulWidget {
   const choidon({super.key});
