@@ -3,6 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:monghoangcung/object/Accounts.dart';
 
+// ignore: camel_case_types
 class gioithieuthongtin extends StatefulWidget {
   const gioithieuthongtin({
     Key? key,
@@ -12,9 +13,10 @@ class gioithieuthongtin extends StatefulWidget {
   State<gioithieuthongtin> createState() => _gioithieuthongtinState();
 }
 
+// ignore: camel_case_types
 class _gioithieuthongtinState extends State<gioithieuthongtin> {
-  @override
   final accid = FirebaseAuth.instance.currentUser?.uid;
+  @override
   Widget build(BuildContext context) {
     return FutureBuilder(
         future: readAccount(),
@@ -36,7 +38,7 @@ class _gioithieuthongtinState extends State<gioithieuthongtin> {
               child: Row(
                 children: [
                   Padding(
-                      padding: EdgeInsets.all(8.0),
+                      padding: const EdgeInsets.all(8.0),
                       child: CircleAvatar(
                         maxRadius: 40,
                         backgroundImage: AssetImage(account!.picture),
@@ -47,12 +49,12 @@ class _gioithieuthongtinState extends State<gioithieuthongtin> {
                     children: [
                       Text(
                         account.fullname,
-                        style: TextStyle(
+                        style: const TextStyle(
                             fontSize: 30, fontWeight: FontWeight.bold),
                       ),
                       Text(
-                        'lv:' + account.lv.toString(),
-                        style: TextStyle(
+                        'lv:${account.lv}',
+                        style: const TextStyle(
                           fontSize: 26,
                         ),
                       )
@@ -74,5 +76,6 @@ class _gioithieuthongtinState extends State<gioithieuthongtin> {
     if (snapshot.exists) {
       return Account.fromJson(snapshot.data()!);
     }
+    return null;
   }
 }
