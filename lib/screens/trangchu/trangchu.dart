@@ -3,13 +3,10 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:monghoangcung/components/nen_game.dart';
 import 'package:monghoangcung/constants.dart';
-import 'package:monghoangcung/screens/choidoikhang/choidoikhang.dart';
-import 'package:monghoangcung/screens/choidon/choidon.dart';
 import 'package:monghoangcung/screens/chonlevel/chonlevel.dart';
 import 'package:monghoangcung/screens/phongcho/phongcho.dart';
-
-import '../../object/Accounts.dart';
-import 'components/cacnut.dart';
+import 'package:monghoangcung/object/Accounts.dart';
+import 'package:monghoangcung/screens/trangchu/components/cacnut.dart';
 import 'components/TopHeader.dart';
 
 // ignore: camel_case_types
@@ -22,13 +19,14 @@ class trangchu extends StatefulWidget {
 
 class _trangchuState extends State<trangchu> {
   final accid = FirebaseAuth.instance.currentUser?.uid;
+  @override
   Widget build(BuildContext context) {
     return nen_game(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          TopHeader(),
+          const TopHeader(),
           const Expanded(
             flex: 1,
             child: Image(

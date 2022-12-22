@@ -14,13 +14,17 @@ class nuttrove extends StatelessWidget {
       children: [
         TextButton(
           onPressed: () {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => const trangchu()));
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const trangchu(),
+              ),
+            );
           },
           child: Icon(
-            Icons.arrow_back,
-            color: Colors.brown.withOpacity(0.8),
-            size: 50,
+            Icons.arrow_back_rounded,
+            color: Colors.brown[300],
+            size: 40,
           ),
         ),
       ],

@@ -53,9 +53,9 @@ class _gioithieuthongtinState extends State<gioithieuthongtin> {
                             fontSize: 30, fontWeight: FontWeight.bold),
                       ),
                       Text(
-                        'lv:${account.lv}',
+                        'Level: ${account.lv}',
                         style: const TextStyle(
-                          fontSize: 26,
+                          fontSize: 20,
                         ),
                       )
                     ],
