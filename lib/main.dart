@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: firstscreen(),
+      home: const Firstscreen(),
 
       // initialRoute:
       //     FirebaseAuth.instance.currentUser == null ? 'welcome' : 'home',

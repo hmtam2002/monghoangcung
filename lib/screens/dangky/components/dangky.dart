@@ -66,12 +66,12 @@ class RegisterScreenState extends State<RegisterScreen> {
                           MaterialPageRoute(
                               builder: (context) => CreateInfo()));
                     } else {
-                      final snackBar =
+                      const snackBar =
                           SnackBar(content: Text('Tài khoản này không hợp lệ'));
                       ScaffoldMessenger.of(context).showSnackBar(snackBar);
                     }
                   } catch (e) {
-                    final snackBar = SnackBar(content: Text('Có lỗi xảy ra'));
+                    const snackBar = SnackBar(content: Text('Có lỗi xảy ra'));
                     ScaffoldMessenger.of(context).showSnackBar(snackBar);
                   }
                 } else {
@@ -92,10 +92,10 @@ class RegisterScreenState extends State<RegisterScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
-                    padding: EdgeInsets.only(left: 15),
+                    padding: const EdgeInsets.only(left: 15),
                     child: Text(
                       _num!,
-                      style: TextStyle(fontSize: 30, color: Colors.black),
+                      style: const TextStyle(fontSize: 30, color: Colors.black),
                     )),
               ],
             )

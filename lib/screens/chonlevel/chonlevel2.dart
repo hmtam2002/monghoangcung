@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:monghoangcung/components/nen_game.dart';
 import 'package:monghoangcung/screens/chonlevel/chonlevel.dart';
-
 import '../trangchu/trangchu.dart';
 
 class Chooselv2 extends StatefulWidget {
@@ -27,7 +26,7 @@ class _Chooselv2State extends State<Chooselv2> {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const trangchu()));
+                          builder: (context) => const TrangChu()));
                 },
                 child: Icon(
                   Icons.home,
@@ -39,7 +38,7 @@ class _Chooselv2State extends State<Chooselv2> {
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [
+            children: const [
               Text(
                 'Chọn Level',
                 style: TextStyle(
@@ -51,7 +50,7 @@ class _Chooselv2State extends State<Chooselv2> {
           ),
           Opacity(
             opacity: 0.0,
-            child: Container(
+            child: SizedBox(
               width: MediaQuery.of(context).size.width * 9 / 10,
               height: MediaQuery.of(context).size.height / 4,
             ),
@@ -62,9 +61,16 @@ class _Chooselv2State extends State<Chooselv2> {
               Container(
                 height: 70,
                 width: 70,
-                margin: EdgeInsets.all(20),
+                margin: const EdgeInsets.all(20),
                 child: ElevatedButton(
                   onPressed: () {},
+                  style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all<Color>(
+                          Colors.white.withOpacity(0.8)),
+                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                        RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20)),
+                      )),
                   child: const Text(
                     '7',
                     style: TextStyle(
@@ -72,6 +78,14 @@ class _Chooselv2State extends State<Chooselv2> {
                         fontWeight: FontWeight.bold,
                         color: Colors.black87),
                   ),
+                ),
+              ),
+              Container(
+                height: 70,
+                width: 70,
+                margin: const EdgeInsets.all(20),
+                child: ElevatedButton(
+                  onPressed: () {},
                   style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all<Color>(
                           Colors.white.withOpacity(0.8)),
@@ -79,14 +93,6 @@ class _Chooselv2State extends State<Chooselv2> {
                         RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(20)),
                       )),
-                ),
-              ),
-              Container(
-                height: 70,
-                width: 70,
-                margin: EdgeInsets.all(20),
-                child: ElevatedButton(
-                  onPressed: () {},
                   child: const Text(
                     '8',
                     style: TextStyle(
@@ -94,6 +100,14 @@ class _Chooselv2State extends State<Chooselv2> {
                         fontWeight: FontWeight.bold,
                         color: Colors.black87),
                   ),
+                ),
+              ),
+              Container(
+                height: 70,
+                width: 70,
+                margin: const EdgeInsets.all(20),
+                child: ElevatedButton(
+                  onPressed: () {},
                   style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all<Color>(
                           Colors.white.withOpacity(0.8)),
@@ -101,14 +115,6 @@ class _Chooselv2State extends State<Chooselv2> {
                         RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(20)),
                       )),
-                ),
-              ),
-              Container(
-                height: 70,
-                width: 70,
-                margin: EdgeInsets.all(20),
-                child: ElevatedButton(
-                  onPressed: () {},
                   child: const Text(
                     '9',
                     style: TextStyle(
@@ -116,13 +122,6 @@ class _Chooselv2State extends State<Chooselv2> {
                         fontWeight: FontWeight.bold,
                         color: Colors.black87),
                   ),
-                  style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all<Color>(
-                          Colors.white.withOpacity(0.8)),
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                        RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20)),
-                      )),
                 ),
               ),
             ],
@@ -133,9 +132,16 @@ class _Chooselv2State extends State<Chooselv2> {
               Container(
                 height: 70,
                 width: 70,
-                margin: EdgeInsets.all(20),
+                margin: const EdgeInsets.all(20),
                 child: ElevatedButton(
                   onPressed: () {},
+                  style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all<Color>(
+                          Colors.white.withOpacity(0.8)),
+                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                        RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20)),
+                      )),
                   child: const Text(
                     '10',
                     style: TextStyle(
@@ -143,6 +149,14 @@ class _Chooselv2State extends State<Chooselv2> {
                         fontWeight: FontWeight.bold,
                         color: Colors.black87),
                   ),
+                ),
+              ),
+              Container(
+                height: 70,
+                width: 70,
+                margin: const EdgeInsets.all(20),
+                child: ElevatedButton(
+                  onPressed: () {},
                   style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all<Color>(
                           Colors.white.withOpacity(0.8)),
@@ -150,14 +164,6 @@ class _Chooselv2State extends State<Chooselv2> {
                         RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(20)),
                       )),
-                ),
-              ),
-              Container(
-                height: 70,
-                width: 70,
-                margin: EdgeInsets.all(20),
-                child: ElevatedButton(
-                  onPressed: () {},
                   child: const Text(
                     '11',
                     style: TextStyle(
@@ -165,6 +171,14 @@ class _Chooselv2State extends State<Chooselv2> {
                         fontWeight: FontWeight.bold,
                         color: Colors.black87),
                   ),
+                ),
+              ),
+              Container(
+                height: 70,
+                width: 70,
+                margin: const EdgeInsets.all(20),
+                child: ElevatedButton(
+                  onPressed: () {},
                   style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all<Color>(
                           Colors.white.withOpacity(0.8)),
@@ -172,14 +186,6 @@ class _Chooselv2State extends State<Chooselv2> {
                         RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(20)),
                       )),
-                ),
-              ),
-              Container(
-                height: 70,
-                width: 70,
-                margin: EdgeInsets.all(20),
-                child: ElevatedButton(
-                  onPressed: () {},
                   child: const Text(
                     '12',
                     style: TextStyle(
@@ -187,13 +193,6 @@ class _Chooselv2State extends State<Chooselv2> {
                         fontWeight: FontWeight.bold,
                         color: Colors.black87),
                   ),
-                  style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all<Color>(
-                          Colors.white.withOpacity(0.8)),
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                        RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20)),
-                      )),
                 ),
               ),
             ],
@@ -204,7 +203,7 @@ class _Chooselv2State extends State<Chooselv2> {
               Container(
                 height: 50,
                 width: 150,
-                margin: EdgeInsets.all(10),
+                margin: const EdgeInsets.all(10),
                 child: ElevatedButton(
                   onPressed: () {
                     Navigator.push(
@@ -212,6 +211,13 @@ class _Chooselv2State extends State<Chooselv2> {
                         MaterialPageRoute(
                             builder: (context) => const Chooselv()));
                   },
+                  style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all<Color>(
+                          Colors.blue.withOpacity(0.8)),
+                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                        RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20)),
+                      )),
                   child: const Text(
                     'Quay lại',
                     style: TextStyle(
@@ -219,6 +225,14 @@ class _Chooselv2State extends State<Chooselv2> {
                         fontWeight: FontWeight.bold,
                         color: Colors.black87),
                   ),
+                ),
+              ),
+              Container(
+                height: 50,
+                width: 150,
+                margin: const EdgeInsets.all(10),
+                child: ElevatedButton(
+                  onPressed: () {},
                   style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all<Color>(
                           Colors.blue.withOpacity(0.8)),
@@ -226,14 +240,6 @@ class _Chooselv2State extends State<Chooselv2> {
                         RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(20)),
                       )),
-                ),
-              ),
-              Container(
-                height: 50,
-                width: 150,
-                margin: EdgeInsets.all(10),
-                child: ElevatedButton(
-                  onPressed: () {},
                   child: const Text(
                     'Tiếp theo',
                     style: TextStyle(
@@ -241,13 +247,6 @@ class _Chooselv2State extends State<Chooselv2> {
                         fontWeight: FontWeight.bold,
                         color: Colors.black87),
                   ),
-                  style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all<Color>(
-                          Colors.blue.withOpacity(0.8)),
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                        RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20)),
-                      )),
                 ),
               ),
             ],

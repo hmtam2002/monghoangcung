@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:monghoangcung/components/nen_game.dart';
-
 import '../trangchu/trangchu.dart';
 
-class dangnhapthanhcong extends StatelessWidget {
-  const dangnhapthanhcong({super.key});
+class DangNhapThanhCong extends StatelessWidget {
+  const DangNhapThanhCong({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +13,7 @@ class dangnhapthanhcong extends StatelessWidget {
           onTap: () {
             Navigator.pop(context);
             Navigator.push(context,
-                MaterialPageRoute(builder: (context) => const trangchu()));
+                MaterialPageRoute(builder: (context) => const TrangChu()));
           },
           child: const Image(
             image: AssetImage('assets/logo/Logo2.png'),

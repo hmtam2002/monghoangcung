@@ -40,7 +40,7 @@ class _EditInfoState extends State<EditInfo> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => const trangcanhan()));
+                                    builder: (context) => const TrangCaNhan()));
                           },
                           child: Icon(
                             Icons.arrow_back,
@@ -51,7 +51,7 @@ class _EditInfoState extends State<EditInfo> {
                       ],
                     ),
                     Padding(
-                        padding: EdgeInsets.all(8.0),
+                        padding: const EdgeInsets.all(8.0),
                         child: CircleAvatar(
                           maxRadius: 60,
                           backgroundImage: AssetImage(account!.picture),
@@ -71,7 +71,7 @@ class _EditInfoState extends State<EditInfo> {
                     Container(
                       height: 50,
                       width: 200,
-                      margin: EdgeInsets.fromLTRB(0, 20, 0, 20),
+                      margin: const EdgeInsets.fromLTRB(0, 20, 0, 20),
                       child: ElevatedButton(
                         onPressed: () {
                           setState(() {
@@ -104,7 +104,7 @@ class _EditInfoState extends State<EditInfo> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Container(
-                            padding: EdgeInsets.only(left: 15),
+                            padding: const EdgeInsets.only(left: 15),
                             child: Text(
                               _num!,
                               style: const TextStyle(

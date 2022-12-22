@@ -9,15 +9,14 @@ import 'package:monghoangcung/object/Accounts.dart';
 import 'package:monghoangcung/screens/trangchu/components/cacnut.dart';
 import 'components/TopHeader.dart';
 
-// ignore: camel_case_types
-class trangchu extends StatefulWidget {
-  const trangchu({super.key});
+class TrangChu extends StatefulWidget {
+  const TrangChu({super.key});
 
   @override
-  State<trangchu> createState() => _trangchuState();
+  State<TrangChu> createState() => _TrangChuState();
 }
 
-class _trangchuState extends State<trangchu> {
+class _TrangChuState extends State<TrangChu> {
   final accid = FirebaseAuth.instance.currentUser?.uid;
   @override
   Widget build(BuildContext context) {
@@ -39,7 +38,7 @@ class _trangchuState extends State<trangchu> {
               mainAxisAlignment: MainAxisAlignment.center,
               mainAxisSize: MainAxisSize.min,
               children: [
-                cacnut(
+                CacNut(
                   text: 'Chơi đơn',
                   press: MaterialPageRoute(
                     builder: (context) => const Chooselv(),
@@ -48,10 +47,10 @@ class _trangchuState extends State<trangchu> {
                 const SizedBox(
                   height: kDefaultPadding,
                 ),
-                cacnut(
+                CacNut(
                   text: 'Chơi đối kháng',
                   press: MaterialPageRoute(
-                    builder: (context) => const phongcho(),
+                    builder: (context) => const PhongCho(),
                   ),
                 ),
                 const SizedBox(

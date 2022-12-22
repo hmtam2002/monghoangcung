@@ -1,4 +1,3 @@
-// ignore: file_names
 import 'package:flutter/material.dart';
 import '../../trangcanhan/trangcanhan.dart';
 
@@ -13,7 +12,7 @@ class TopHeader extends StatelessWidget {
         TextButton(
             onPressed: () {
               Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const trangcanhan()));
+                  MaterialPageRoute(builder: (context) => const TrangCaNhan()));
             },
             child: const CircleAvatar(
               backgroundImage: AssetImage('assets/1.jpg'),
@@ -21,7 +20,7 @@ class TopHeader extends StatelessWidget {
         TextButton(
           onPressed: () {
             Navigator.push(context,
-                MaterialPageRoute(builder: (context) => const trangcanhan()));
+                MaterialPageRoute(builder: (context) => const TrangCaNhan()));
           },
           child: Icon(
             Icons.menu_rounded,

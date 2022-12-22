@@ -4,23 +4,23 @@ import 'package:flutter/material.dart';
 import 'package:monghoangcung/components/nen_game.dart';
 import 'package:monghoangcung/screens/chonlevel/chonlevel.dart';
 import 'package:monghoangcung/screens/trangchu/trangchu.dart';
-
 import '../../constants.dart';
 import '../../object/Accounts.dart';
 import '../level/cau2.dart';
 
-class finalsiglegame extends StatefulWidget {
+class FinalSingleGame extends StatefulWidget {
   final int point;
   final int lv;
 
-  const finalsiglegame({super.key, required this.point, required this.lv});
+  const FinalSingleGame({super.key, required this.point, required this.lv});
 
   @override
-  State<finalsiglegame> createState() => _finalsiglegameState();
+  State<FinalSingleGame> createState() => _FinalSingleGameState();
 }
 
-class _finalsiglegameState extends State<finalsiglegame> {
+class _FinalSingleGameState extends State<FinalSingleGame> {
   final accid = FirebaseAuth.instance.currentUser?.uid;
+  // ignore: non_constant_identifier_names
   Future UpdateAccounts() async {
     final docAccounts =
         FirebaseFirestore.instance.collection('accounts').doc(accid);
@@ -37,6 +37,7 @@ class _finalsiglegameState extends State<finalsiglegame> {
     if (snapshot.exists) {
       return Account.fromJson(snapshot.data()!);
     }
+    return null;
   }
 
   @override
@@ -64,10 +65,10 @@ class _finalsiglegameState extends State<finalsiglegame> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Padding(
-                              padding: EdgeInsets.all(20),
+                              padding: const EdgeInsets.all(20),
                               child: Text(
-                                'Level ' + widget.lv.toString(),
-                                style: TextStyle(
+                                'Level ${widget.lv}',
+                                style: const TextStyle(
                                     fontSize: 30, fontWeight: FontWeight.bold),
                               ),
                             )
@@ -77,7 +78,7 @@ class _finalsiglegameState extends State<finalsiglegame> {
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                             Container(
-                                padding: EdgeInsets.all(10),
+                                padding: const EdgeInsets.all(10),
                                 width:
                                     MediaQuery.of(context).size.width / 5 - 20,
                                 height:
@@ -87,10 +88,10 @@ class _finalsiglegameState extends State<finalsiglegame> {
                                   backgroundImage: AssetImage(account!.picture),
                                 )),
                             Container(
-                              padding: EdgeInsets.all(10),
+                              padding: const EdgeInsets.all(10),
                               child: Text(
                                 account.fullname,
-                                style: TextStyle(
+                                style: const TextStyle(
                                     fontSize: 30, fontWeight: FontWeight.bold),
                               ),
                             )
@@ -100,10 +101,10 @@ class _finalsiglegameState extends State<finalsiglegame> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Container(
-                              padding: EdgeInsets.all(10),
+                              padding: const EdgeInsets.all(10),
                               child: Text(
-                                'Point: ' + widget.point.toString(),
-                                style: TextStyle(
+                                'Point: ${widget.point}',
+                                style: const TextStyle(
                                     fontSize: 30, fontWeight: FontWeight.bold),
                               ),
                             ),
@@ -116,7 +117,7 @@ class _finalsiglegameState extends State<finalsiglegame> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Container(
-                              padding: EdgeInsets.all(20),
+                              padding: const EdgeInsets.all(20),
                               child: TextButton(
                                 onPressed: () {
                                   if (widget.lv == account.lv &&
@@ -127,7 +128,7 @@ class _finalsiglegameState extends State<finalsiglegame> {
                                       context,
                                       MaterialPageRoute(
                                           builder: (context) =>
-                                              const trangchu()));
+                                              const TrangChu()));
                                 },
                                 child: Icon(
                                   Icons.home,
@@ -137,7 +138,7 @@ class _finalsiglegameState extends State<finalsiglegame> {
                               ),
                             ),
                             Container(
-                              padding: EdgeInsets.all(20),
+                              padding: const EdgeInsets.all(20),
                               child: TextButton(
                                 onPressed: () {
                                   if (widget.lv == account.lv &&
@@ -161,7 +162,7 @@ class _finalsiglegameState extends State<finalsiglegame> {
                               ),
                             ),
                             Container(
-                              padding: EdgeInsets.all(20),
+                              padding: const EdgeInsets.all(20),
                               child: TextButton(
                                 onPressed: () {
                                   if (widget.lv == account.lv &&
@@ -169,9 +170,11 @@ class _finalsiglegameState extends State<finalsiglegame> {
                                     UpdateAccounts();
                                   }
                                   Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) => Chooselv()));
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => const Chooselv(),
+                                    ),
+                                  );
                                 },
                                 child: Icon(
                                   Icons.list_alt,

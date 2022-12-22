@@ -8,7 +8,11 @@ class item_user extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: [Text('Score'), Icon(Icons.account_circle), Text('Level')],
+      children: const [
+        Text('Score'),
+        Icon(Icons.account_circle),
+        Text('Level')
+      ],
     );
   }
 }

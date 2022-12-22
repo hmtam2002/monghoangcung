@@ -2,11 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:monghoangcung/components/nen_game.dart';
 import 'package:monghoangcung/screens/nhanthu/nhanthu.dart';
 
-import '../trangcanhan/trangcanhan.dart';
-
-// ignore: camel_case_types
-class loadgame extends StatelessWidget {
-  const loadgame({super.key});
+class LoadGame extends StatelessWidget {
+  const LoadGame({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +12,7 @@ class loadgame extends StatelessWidget {
         child: InkWell(
           onTap: () {
             Navigator.push(context,
-                MaterialPageRoute(builder: (context) => const nhan_thu()));
+                MaterialPageRoute(builder: (context) => const NhanThu()));
           },
           child: const Image(
             image: AssetImage('assets/Logo.png'),

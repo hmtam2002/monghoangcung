@@ -37,7 +37,7 @@ class _level_1State extends State<level_1> {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const trangchu()));
+                          builder: (context) => const TrangChu()));
                 },
                 child: Icon(
                   Icons.home,
@@ -50,7 +50,7 @@ class _level_1State extends State<level_1> {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const trangchu()));
+                          builder: (context) => const TrangChu()));
                 },
                 child: Icon(
                   Icons.settings,
@@ -75,7 +75,7 @@ class _level_1State extends State<level_1> {
                 width: 100,
                 height: 100,
                 padding: const EdgeInsets.all(10),
-                child: const countimedown2(),
+                child: const Countimedown2(),
               )
             ],
           ),

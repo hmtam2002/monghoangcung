@@ -11,16 +11,15 @@ import 'package:monghoangcung/screens/trangcanhan/components/cacnuttrongtrangcan
 import 'package:monghoangcung/screens/trangcanhan/components/gioithieuthongtin.dart';
 import 'package:monghoangcung/screens/trangcanhan/components/nuttrove.dart';
 
-// ignore: camel_case_types
-class trangcanhan extends StatefulWidget {
-  const trangcanhan({super.key});
+class TrangCaNhan extends StatefulWidget {
+  const TrangCaNhan({super.key});
 
   @override
-  State<trangcanhan> createState() => _trangcanhanState();
+  State<TrangCaNhan> createState() => _TrangCaNhanState();
 }
 
 // ignore: camel_case_types
-class _trangcanhanState extends State<trangcanhan> {
+class _TrangCaNhanState extends State<TrangCaNhan> {
   final user = FirebaseAuth.instance.authStateChanges();
   @override
   Widget build(BuildContext context) {
@@ -33,36 +32,36 @@ class _trangcanhanState extends State<trangcanhan> {
           SingleChildScrollView(
             child: Column(
               children: [
-                const nuttrove(),
+                const NutTroVe(),
                 const gioithieuthongtin(),
-                cacnuttrongtrangcanhan(
+                Cacnuttrongtrangcanhan(
                   noidung: 'Chỉnh sửa thông tin',
                   press:
                       MaterialPageRoute(builder: (context) => const EditInfo()),
                 ),
-                cacnuttrongtrangcanhan(
+                Cacnuttrongtrangcanhan(
                   noidung: 'Thay đổi avatar',
                   press: MaterialPageRoute(
                       builder: (context) => const Editavatar()),
                 ),
-                cacnuttrongtrangcanhan(
+                Cacnuttrongtrangcanhan(
                   noidung: 'Xem xếp hạng',
                   press: MaterialPageRoute(
-                      builder: (context) => const xemxephang()),
+                      builder: (context) => const Xemxephang()),
                 ),
-                cacnuttrongtrangcanhan(
+                Cacnuttrongtrangcanhan(
                   noidung: 'Nạp tiền',
                   press:
-                      MaterialPageRoute(builder: (context) => const naptien()),
+                      MaterialPageRoute(builder: (context) => const NapTien()),
                 ),
-                cacnuttrongtrangcanhan(
+                Cacnuttrongtrangcanhan(
                   noidung: 'Cài đặt',
                   press:
                       MaterialPageRoute(builder: (context) => const CaiDat()),
                 ),
-                cacnuttrongtrangcanhan(
+                Cacnuttrongtrangcanhan(
                   noidung: 'Đăng xuất',
-                  press: MaterialPageRoute(builder: (context) => firstscreen()),
+                  press: MaterialPageRoute(builder: (context) => Firstscreen()),
                 ),
               ],
             ),

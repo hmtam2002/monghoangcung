@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:monghoangcung/components/nen_game.dart';
-import 'package:monghoangcung/screens/choidoikhang/choidoikhang.dart';
 import 'package:monghoangcung/screens/choidoikhang/timtran.dart';
-
 import 'package:monghoangcung/screens/xemxephang/xemxephang.dart';
 import '../../constants.dart';
 import '../trangchu/components/cacnut.dart';
 import '../trangchu/trangchu.dart';
 
-class phongcho extends StatelessWidget {
-  const phongcho({super.key});
+class PhongCho extends StatelessWidget {
+  const PhongCho({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +23,7 @@ class phongcho extends StatelessWidget {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const trangchu()));
+                          builder: (context) => const TrangChu()));
                 },
                 child: Icon(
                   Icons.arrow_back_outlined,
@@ -35,7 +33,7 @@ class phongcho extends StatelessWidget {
               ),
             ],
           ),
-          Text(
+          const Text(
             'Đấu đối kháng',
             style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
           ),
@@ -46,22 +44,22 @@ class phongcho extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
-                  padding: EdgeInsets.all(10),
+                  padding: const EdgeInsets.all(10),
                   width: MediaQuery.of(context).size.width / 2 - 20,
                   child: IconButton(
-                    icon: Icon(Icons.history),
-                    onPressed: () => xemxephang(),
+                    icon: const Icon(Icons.history),
+                    onPressed: () => const Xemxephang(),
                   )),
               Container(
-                  padding: EdgeInsets.all(10),
+                  padding: const EdgeInsets.all(10),
                   width: MediaQuery.of(context).size.width / 2 - 20,
                   child: IconButton(
-                    icon: Icon(Icons.book_outlined),
-                    onPressed: () => xemxephang(),
+                    icon: const Icon(Icons.book_outlined),
+                    onPressed: () => const Xemxephang(),
                   )),
             ],
           ),
-          cacnut(
+          CacNut(
             text: 'Chơi ngay',
             press: MaterialPageRoute(
               builder: (context) => const SreachPlayer(),

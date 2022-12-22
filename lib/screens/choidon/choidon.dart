@@ -4,15 +4,15 @@ import 'package:monghoangcung/constants.dart';
 
 import '../../object/question_obj.dart';
 
-class choidon extends StatefulWidget {
-  const choidon({super.key});
+class ChoiDon extends StatefulWidget {
+  const ChoiDon({super.key});
 
   @override
-  State<choidon> createState() => _choidonState();
+  State<ChoiDon> createState() => _ChoiDonState();
 }
 
 // ignore: camel_case_types
-class _choidonState extends State<choidon> {
+class _ChoiDonState extends State<ChoiDon> {
   String name = "";
   List<questionobject> lscontact = [];
 
@@ -37,7 +37,7 @@ class _choidonState extends State<choidon> {
       child: Column(
         children: [
           Container(
-            padding: EdgeInsets.all(kDefaultPadding),
+            padding: const EdgeInsets.all(kDefaultPadding),
             decoration: BoxDecoration(
               color: Colors.pink.withOpacity(0.8),
               borderRadius: BorderRadius.circular(20),
@@ -48,10 +48,10 @@ class _choidonState extends State<choidon> {
             ),
             width: 500,
             height: 300,
-            child: Text('Câu hỏi \n Ai đã đặt tên cho dòng sông'),
-            margin: EdgeInsets.only(
+            margin: const EdgeInsets.only(
               bottom: 40,
             ),
+            child: const Text('Câu hỏi \n Ai đã đặt tên cho dòng sông'),
           ),
           Column(
             children: [
@@ -62,9 +62,9 @@ class _choidonState extends State<choidon> {
                   backgroundColor: Colors.pink.withOpacity(0.8),
                 ),
               ),
-              Text('data'),
-              Text('data'),
-              Text('data'),
+              const Text('data'),
+              const Text('data'),
+              const Text('data'),
             ],
           )
         ],

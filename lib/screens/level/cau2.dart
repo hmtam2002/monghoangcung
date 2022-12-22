@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:monghoangcung/components/nen_game%20copy.dart';
-import 'package:monghoangcung/components/nen_game.dart';
 import 'package:monghoangcung/constants.dart';
-import 'package:monghoangcung/provider/account_provider.dart';
 import 'package:monghoangcung/screens/choidon/ketthucchoidon.dart';
 
 import '../../object/question_obj.dart';
@@ -73,7 +71,7 @@ class _Lv1_cau2State extends State<Lv1_cau2> {
                                           context,
                                           MaterialPageRoute(
                                               builder: (context) =>
-                                                  const trangchu()));
+                                                  const TrangChu()));
                                     },
                                     child: Icon(
                                       Icons.home,
@@ -87,7 +85,7 @@ class _Lv1_cau2State extends State<Lv1_cau2> {
                                           context,
                                           MaterialPageRoute(
                                               builder: (context) =>
-                                                  const trangchu()));
+                                                  const TrangChu()));
                                     },
                                     child: Icon(
                                       Icons.settings,
@@ -364,7 +362,7 @@ class _Lv1_cau2State extends State<Lv1_cau2> {
                                               context,
                                               MaterialPageRoute(
                                                   builder: (context) =>
-                                                      finalsiglegame(
+                                                      FinalSingleGame(
                                                         point: widget.point,
                                                         lv: (widget.id / 10)
                                                             .toInt(),

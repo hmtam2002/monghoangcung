@@ -2,20 +2,18 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:monghoangcung/screens/level/cau2.dart';
-
 import '../../../object/Accounts.dart';
-import '../../level/level1.dart';
 
-class row456 extends StatefulWidget {
-  row456({
+class Row456 extends StatefulWidget {
+  const Row456({
     Key? key,
   }) : super(key: key);
 
   @override
-  State<row456> createState() => _row456State();
+  State<Row456> createState() => _Row456State();
 }
 
-class _row456State extends State<row456> {
+class _Row456State extends State<Row456> {
   Color color1 = Colors.white.withOpacity(0.4);
 
   Color color2 = Colors.white.withOpacity(0.4);
@@ -33,6 +31,7 @@ class _row456State extends State<row456> {
     if (snapshot.exists) {
       return Account.fromJson(snapshot.data()!);
     }
+    return null;
   }
 
   @override
@@ -48,7 +47,7 @@ class _row456State extends State<row456> {
                 Container(
                   height: 70,
                   width: 70,
-                  margin: EdgeInsets.all(20),
+                  margin: const EdgeInsets.all(20),
                   child: ElevatedButton(
                     onPressed: (account!.lv >= 4)
                         ? () {
@@ -65,13 +64,6 @@ class _row456State extends State<row456> {
                                         )));
                           }
                         : null,
-                    child: const Text(
-                      '4',
-                      style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black87),
-                    ),
                     style: ButtonStyle(
                         backgroundColor:
                             MaterialStateProperty.all<Color>(color1),
@@ -80,12 +72,19 @@ class _row456State extends State<row456> {
                           RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(20)),
                         )),
+                    child: const Text(
+                      '4',
+                      style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black87),
+                    ),
                   ),
                 ),
                 Container(
                   height: 70,
                   width: 70,
-                  margin: EdgeInsets.all(20),
+                  margin: const EdgeInsets.all(20),
                   child: ElevatedButton(
                     onPressed: (account.lv >= 5)
                         ? () {
@@ -102,13 +101,6 @@ class _row456State extends State<row456> {
                                         )));
                           }
                         : null,
-                    child: const Text(
-                      '5',
-                      style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black87),
-                    ),
                     style: ButtonStyle(
                         backgroundColor:
                             MaterialStateProperty.all<Color>(color2),
@@ -117,12 +109,19 @@ class _row456State extends State<row456> {
                           RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(20)),
                         )),
+                    child: const Text(
+                      '5',
+                      style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black87),
+                    ),
                   ),
                 ),
                 Container(
                   height: 70,
                   width: 70,
-                  margin: EdgeInsets.all(20),
+                  margin: const EdgeInsets.all(20),
                   child: ElevatedButton(
                     onPressed: (account.lv >= 6)
                         ? () {
@@ -139,13 +138,6 @@ class _row456State extends State<row456> {
                                         )));
                           }
                         : null,
-                    child: const Text(
-                      '6',
-                      style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black87),
-                    ),
                     style: ButtonStyle(
                         backgroundColor:
                             MaterialStateProperty.all<Color>(color3),
@@ -154,6 +146,13 @@ class _row456State extends State<row456> {
                           RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(20)),
                         )),
+                    child: const Text(
+                      '6',
+                      style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black87),
+                    ),
                   ),
                 ),
               ],

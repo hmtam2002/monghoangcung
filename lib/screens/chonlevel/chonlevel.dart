@@ -29,7 +29,7 @@ class _ChooselvState extends State<Chooselv> {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const trangchu()));
+                          builder: (context) => const TrangChu()));
                 },
                 child: Icon(
                   Icons.arrow_back_outlined,
@@ -53,12 +53,12 @@ class _ChooselvState extends State<Chooselv> {
           const SizedBox(
             height: 80,
           ),
-          row123(),
-          row456(),
+          const Row123(),
+          const Row456(),
           const SizedBox(
             height: 60,
           ),
-          const nutchuyenhuong(),
+          const Nutchuyenhuong(),
         ],
       ),
     );

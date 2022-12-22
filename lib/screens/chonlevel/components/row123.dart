@@ -4,18 +4,17 @@ import 'package:flutter/material.dart';
 import 'package:monghoangcung/screens/level/cau2.dart';
 import 'package:monghoangcung/object/Accounts.dart';
 
-// ignore: camel_case_types
-class row123 extends StatefulWidget {
-  const row123({
+class Row123 extends StatefulWidget {
+  const Row123({
     Key? key,
   }) : super(key: key);
 
   @override
-  State<row123> createState() => _row123State();
+  State<Row123> createState() => _Row123State();
 }
 
 // ignore: camel_case_types
-class _row123State extends State<row123> {
+class _Row123State extends State<Row123> {
   Color color1 = Colors.white.withOpacity(0.4);
   Color color2 = Colors.white.withOpacity(0.4);
   bool i1 = false;
@@ -29,13 +28,6 @@ class _row123State extends State<row123> {
       return Account.fromJson(snapshot.data()!);
     }
     return null;
-  }
-
-  @override
-  void initState() {
-    // TODO: implement initState
-
-    super.initState();
   }
 
   @override

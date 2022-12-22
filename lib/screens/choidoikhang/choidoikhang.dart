@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:monghoangcung/components/nen_game.dart';
-import 'package:monghoangcung/screens/trangchu/components/TopHeader.dart';
-
 import '../../constants.dart';
 import '../trangchu/trangchu.dart';
 import 'components/goi_y.dart';
@@ -27,7 +25,7 @@ class choidoikhang extends StatelessWidget {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const trangchu()));
+                          builder: (context) => const TrangChu()));
                 },
                 child: Icon(
                   Icons.arrow_back_outlined,
@@ -38,18 +36,18 @@ class choidoikhang extends StatelessWidget {
             ],
           ),
           const Text('Đối kháng'),
-          const row_title(),
-          const noidungcauhoi(),
+          const RowTitle(),
+          const Noidungcauhoi(),
           const goi_y(),
           const SizedBox(height: kDefaultPadding),
           Column(
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              cautraloi_item(text: 'a'),
-              cautraloi_item(text: 'b'),
-              cautraloi_item(text: 'c'),
-              cautraloi_item(text: 'd'),
+            children: const [
+              CautraloiItem(text: 'a'),
+              CautraloiItem(text: 'b'),
+              CautraloiItem(text: 'c'),
+              CautraloiItem(text: 'd'),
             ],
           )
         ],
@@ -58,8 +56,8 @@ class choidoikhang extends StatelessWidget {
   }
 }
 
-class cautraloi_item extends StatelessWidget {
-  const cautraloi_item({
+class CautraloiItem extends StatelessWidget {
+  const CautraloiItem({
     Key? key,
     required this.text,
   }) : super(key: key);
@@ -67,7 +65,7 @@ class cautraloi_item extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return Container(
+    return SizedBox(
       width: size.width * 0.8,
       child: ElevatedButton(
         onPressed: () {},

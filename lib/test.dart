@@ -2,16 +2,14 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:monghoangcung/object/Accounts.dart';
 
-import 'provider/account_provider.dart';
-
-class test extends StatefulWidget {
-  const test({super.key});
+class Test extends StatefulWidget {
+  const Test({super.key});
 
   @override
-  State<test> createState() => _testState();
+  State<Test> createState() => _TestState();
 }
 
-class _testState extends State<test> {
+class _TestState extends State<Test> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,7 +22,7 @@ class _testState extends State<test> {
               children: account.map(buildaccount).toList(),
             );
           } else {
-            return Center(
+            return const Center(
               child: Text('ERROR'),
             );
           }

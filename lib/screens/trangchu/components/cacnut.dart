@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:monghoangcung/constants.dart';
 
-import '../../chonlevel/chonlevel.dart';
-
-// ignore: camel_case_types
-class cacnut extends StatelessWidget {
-  const cacnut({
+class CacNut extends StatelessWidget {
+  const CacNut({
     Key? key,
     required this.text,
     required this.press,

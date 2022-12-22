@@ -56,16 +56,16 @@ class SignInScreenState extends State<SignInScreen> {
                       txtEmail.clear();
                       txtPass.clear();
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => trangchu()));
+                          MaterialPageRoute(builder: (context) => TrangChu()));
                     } else {
-                      final snackBar = const SnackBar(
+                      const snackBar = SnackBar(
                           content: Text('Email hoặc mật khẩu không đúng'));
                       ScaffoldMessenger.of(context).showSnackBar(snackBar);
                     }
                   });
                 } catch (e) {
-                  final snackBar =
-                      const SnackBar(content: Text('Lỗi kết nối tới server'));
+                  const snackBar =
+                      SnackBar(content: Text('Lỗi kết nối tới server'));
                   ScaffoldMessenger.of(context).showSnackBar(snackBar);
                 }
               },

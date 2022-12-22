@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:monghoangcung/components/nen_game.dart';
-import 'package:monghoangcung/screens/dangky/4_thanhcong.dart';
-import 'package:monghoangcung/screens/dangnhap/dangnhapthanhcong.dart';
-
 import 'components/o_nhap_thong_tin.dart';
 
-class dienthongtin extends StatelessWidget {
-  const dienthongtin({super.key});
+class DienThongTin extends StatelessWidget {
+  const DienThongTin({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +17,7 @@ class dienthongtin extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
+          children: const [
             Text(
               'Nhập thông tin',
               style: TextStyle(

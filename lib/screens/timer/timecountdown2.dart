@@ -1,21 +1,16 @@
-import 'dart:ui';
-
 import 'package:circular_countdown/circular_countdown.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:monghoangcung/screens/choidoikhang/choidoikhang.dart';
 import 'package:monghoangcung/screens/level/level1.dart';
-import 'package:monghoangcung/screens/trangchu/trangchu.dart';
 
-void main() => runApp(const countimedown2());
+void main() => runApp(const Countimedown2());
 
-class countimedown2 extends StatefulWidget {
-  const countimedown2({super.key});
+class Countimedown2 extends StatefulWidget {
+  const Countimedown2({super.key});
   @override
-  State<countimedown2> createState() => _countimedownState2();
+  State<Countimedown2> createState() => _CountimedownState2();
 }
 
-class _countimedownState2 extends State<countimedown2>
+class _CountimedownState2 extends State<Countimedown2>
     with SingleTickerProviderStateMixin {
   late AnimationController _controller;
 
@@ -33,25 +28,24 @@ class _countimedownState2 extends State<countimedown2>
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: TimeCircularCountdown(
-        unit: CountdownUnit.second,
-        countdownTotal: 20,
-        countdownRemainingColor: Colors.black,
-        countdownTotalColor: Colors.grey,
-        onUpdated: (unit, remaining) => print(
-          "$CountdownUnit.second",
-        ),
-        onFinished: () {
-          Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => level_1(),
-              ));
-        },
-        textStyle: const TextStyle(color: Colors.black, fontSize: 30),
-        isClockwise: true,
+    return TimeCircularCountdown(
+      unit: CountdownUnit.second,
+      countdownTotal: 20,
+      countdownRemainingColor: Colors.black,
+      countdownTotalColor: Colors.grey,
+      // ignore: avoid_print
+      onUpdated: (unit, remaining) => print(
+        "$CountdownUnit.second",
       ),
+      onFinished: () {
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const level_1(),
+            ));
+      },
+      textStyle: const TextStyle(color: Colors.black, fontSize: 30),
+      isClockwise: true,
     );
   }
 }

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:monghoangcung/screens/timer/timecountdown.dart';
-
 import '../../components/nen_game.dart';
 import '../../constants.dart';
 
@@ -19,7 +18,7 @@ class Sreached extends StatelessWidget {
         opacity: 0,
         child: SizedBox(
           height: kDefaultPadding * 3,
-          child: countimedown(),
+          child: Countimedown(),
         ),
       ),
       Column(
@@ -60,9 +59,9 @@ class Sreached extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Container(
-                  padding: EdgeInsets.all(10),
+                  padding: const EdgeInsets.all(10),
                   child: const Text(
-                    'MAI HUU PHUOC ',
+                    'MAI HỮU PHƯỚC',
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                   )),
               Container(

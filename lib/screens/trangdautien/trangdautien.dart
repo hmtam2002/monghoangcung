@@ -1,20 +1,17 @@
 import 'package:flutter/material.dart';
-
 import 'package:monghoangcung/components/nen_game.dart';
 import 'package:monghoangcung/screens/dangnhap/nhapmatkhau.dart';
-
 import '../dangky/components/dangky.dart';
-import '../dangky/components/khungnhapthongtin.dart';
 import '../trangchu/components/cacnut.dart';
 
-class firstscreen extends StatefulWidget {
-  firstscreen({super.key});
+class Firstscreen extends StatefulWidget {
+  const Firstscreen({super.key});
 
   @override
-  State<firstscreen> createState() => _firstscreenState();
+  State<Firstscreen> createState() => _FirstscreenState();
 }
 
-class _firstscreenState extends State<firstscreen> {
+class _FirstscreenState extends State<Firstscreen> {
   @override
   Widget build(BuildContext context) {
     return nen_game(
@@ -22,16 +19,16 @@ class _firstscreenState extends State<firstscreen> {
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        cacnut(
+        CacNut(
           text: 'Đăng nhập',
           press: MaterialPageRoute(
-            builder: (context) => SignInScreen(),
+            builder: (context) => const SignInScreen(),
           ),
         ),
-        cacnut(
+        CacNut(
           text: 'Đăng ký',
           press: MaterialPageRoute(
-            builder: (context) => RegisterScreen(),
+            builder: (context) => const RegisterScreen(),
           ),
         ),
       ],

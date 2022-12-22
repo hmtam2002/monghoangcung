@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:monghoangcung/screens/trangchu/trangchu.dart';
 
-// ignore: camel_case_types
-class nuttrove extends StatelessWidget {
-  const nuttrove({
+class NutTroVe extends StatelessWidget {
+  const NutTroVe({
     Key? key,
   }) : super(key: key);
 
@@ -17,7 +16,7 @@ class nuttrove extends StatelessWidget {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => const trangchu(),
+                builder: (context) => const TrangChu(),
               ),
             );
           },

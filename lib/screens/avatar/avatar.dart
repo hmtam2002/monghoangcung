@@ -27,7 +27,7 @@ class _EditavatarState extends State<Editavatar> {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const trangcanhan()));
+                          builder: (context) => const TrangCaNhan()));
                 },
                 child: Icon(
                   Icons.arrow_back,
@@ -99,7 +99,7 @@ class _EditavatarState extends State<Editavatar> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const trangcanhan()));
+                                builder: (context) => const TrangCaNhan()));
                       });
                     },
                     child: CircleAvatar(
@@ -121,7 +121,7 @@ class _EditavatarState extends State<Editavatar> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const trangcanhan()));
+                                builder: (context) => const TrangCaNhan()));
                       });
                     },
                     child: CircleAvatar(
@@ -148,7 +148,7 @@ class _EditavatarState extends State<Editavatar> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const trangcanhan()));
+                                builder: (context) => const TrangCaNhan()));
                       });
                     },
                     child: CircleAvatar(
@@ -170,7 +170,7 @@ class _EditavatarState extends State<Editavatar> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const trangcanhan()));
+                                builder: (context) => const TrangCaNhan()));
                       });
                     },
                     child: CircleAvatar(
@@ -197,7 +197,7 @@ class _EditavatarState extends State<Editavatar> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const trangcanhan()));
+                                builder: (context) => const TrangCaNhan()));
                       });
                     },
                     child: CircleAvatar(
@@ -219,7 +219,7 @@ class _EditavatarState extends State<Editavatar> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const trangcanhan()));
+                                builder: (context) => const TrangCaNhan()));
                       });
                     },
                     child: CircleAvatar(

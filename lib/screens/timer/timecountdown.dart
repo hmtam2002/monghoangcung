@@ -1,20 +1,16 @@
-import 'dart:ui';
-
 import 'package:circular_countdown/circular_countdown.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:monghoangcung/screens/choidoikhang/choidoikhang.dart';
-import 'package:monghoangcung/screens/trangchu/trangchu.dart';
 
-void main() => runApp(const countimedown());
+void main() => runApp(const Countimedown());
 
-class countimedown extends StatefulWidget {
-  const countimedown({super.key});
+class Countimedown extends StatefulWidget {
+  const Countimedown({super.key});
   @override
-  State<countimedown> createState() => _countimedownState();
+  State<Countimedown> createState() => _CountimedownState();
 }
 
-class _countimedownState extends State<countimedown>
+class _CountimedownState extends State<Countimedown>
     with SingleTickerProviderStateMixin {
   late AnimationController _controller;
 
@@ -32,26 +28,25 @@ class _countimedownState extends State<countimedown>
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: TimeCircularCountdown(
-        unit: CountdownUnit.second,
-        shouldDowngradeUnit: true,
-        countdownTotal: 2,
-        countdownRemainingColor: Colors.black,
-        countdownTotalColor: Colors.grey,
-        onUpdated: (unit, remaining) => print(
-          "$CountdownUnit.second",
-        ),
-        onFinished: () {
-          Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => choidoikhang(),
-              ));
-        },
-        textStyle: const TextStyle(color: Colors.black, fontSize: 30),
-        isClockwise: true,
+    return TimeCircularCountdown(
+      unit: CountdownUnit.second,
+      shouldDowngradeUnit: true,
+      countdownTotal: 2,
+      countdownRemainingColor: Colors.black,
+      countdownTotalColor: Colors.grey,
+      // ignore: avoid_print
+      onUpdated: (unit, remaining) => print(
+        "$CountdownUnit.second",
       ),
+      onFinished: () {
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const choidoikhang(),
+            ));
+      },
+      textStyle: const TextStyle(color: Colors.black, fontSize: 30),
+      isClockwise: true,
     );
   }
 }

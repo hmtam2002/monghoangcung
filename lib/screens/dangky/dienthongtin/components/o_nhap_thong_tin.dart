@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// ignore: camel_case_types
 class o_nhap_thong_tin extends StatelessWidget {
   const o_nhap_thong_tin({
     Key? key,
