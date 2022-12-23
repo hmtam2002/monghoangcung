@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
 import '../../trangcanhan/trangcanhan.dart';
 
-class TopHeader extends StatelessWidget {
+class TopHeader extends StatefulWidget {
   const TopHeader({Key? key}) : super(key: key);
 
+  @override
+  State<TopHeader> createState() => _TopHeaderState();
+}
+
+class _TopHeaderState extends State<TopHeader> {
   @override
   Widget build(BuildContext context) {
     return Row(
