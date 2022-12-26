@@ -25,7 +25,7 @@ class _Lv1Cau2State extends State<Lv1Cau2> {
   List<questionobject> test = [];
 
   Future<List<questionobject>> _loaddanhsachcauhoi() async {
-    final data = await questionprovider.searchcauhoi(widget.id);
+    final data = await QuestionProvider.searchcauhoi(widget.id);
     setState(() {
       test = data;
     });

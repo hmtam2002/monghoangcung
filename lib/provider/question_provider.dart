@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'package:flutter/services.dart';
 import 'package:monghoangcung/object/question_obj.dart';
 
-class questionprovider {
+class QuestionProvider {
   static Future<List<dynamic>> readJsondata() async {
     var jsontext = await rootBundle.loadString('data/dataquestion.json');
     var data = json.decode(jsontext);

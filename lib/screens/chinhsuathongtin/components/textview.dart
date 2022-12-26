@@ -14,7 +14,7 @@ class textview extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width * 9 / 10,
-      padding: EdgeInsets.all(20),
+      padding: const EdgeInsets.all(20),
       child: TextField(
         controller: _username,
         keyboardType: TextInputType.text,
