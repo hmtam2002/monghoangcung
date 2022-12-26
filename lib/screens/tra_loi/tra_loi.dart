@@ -4,7 +4,6 @@ import 'package:monghoangcung/constants.dart';
 import 'package:monghoangcung/screens/choidon/ketthucchoidon.dart';
 import '../../object/question_obj.dart';
 import '../../provider/question_provider.dart';
-import '../trangchu/trangchu.dart';
 import 'header.dart';
 
 class ManHinhTraLoi extends StatefulWidget {
@@ -96,7 +95,7 @@ class _ManHinhTraLoiState extends State<ManHinhTraLoi> {
                                 child: Text(
                                   snapshot.data![index].question,
                                   style: const TextStyle(
-                                      fontSize: 30,
+                                      fontSize: 25,
                                       color: Colors.black,
                                       fontWeight: FontWeight.bold),
                                 ),
@@ -104,148 +103,183 @@ class _ManHinhTraLoiState extends State<ManHinhTraLoi> {
                               const SizedBox(
                                 height: kDefaultPadding * 2,
                               ),
-                              ElevatedButton(
-                                onPressed: button
-                                    ? () {
-                                        setState(() {
-                                          button = false;
-                                          if (snapshot.data![index].answers ==
-                                              1) {
-                                            button1color = Colors.green;
+                              Container(
+                                constraints:
+                                    const BoxConstraints(minHeight: 50),
+                                width: MediaQuery.of(context).size.width - 40,
+                                child: ElevatedButton(
+                                  onPressed: button
+                                      ? () {
+                                          setState(() {
+                                            button = false;
+                                            if (snapshot.data![index].answers ==
+                                                1) {
+                                              button1color = Colors.green;
 
-                                            widget.point = widget.point + 100;
-                                          } else {
-                                            button1color = Colors.red;
+                                              widget.point = widget.point + 100;
+                                            } else {
+                                              button1color = Colors.red;
 
-                                            widget.point = widget.point + 0;
-                                          }
-                                        });
-                                      }
-                                    : null,
-                                style: ButtonStyle(
-                                    backgroundColor:
-                                        MaterialStateProperty.all<Color>(
-                                            button1color),
-                                    shape: MaterialStateProperty.all<
-                                        RoundedRectangleBorder>(
-                                      RoundedRectangleBorder(
-                                          borderRadius:
-                                              BorderRadius.circular(20)),
-                                    )),
-                                child: Text(
-                                  snapshot.data![index].answers1!,
-                                  style: const TextStyle(
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.black87),
+                                              widget.point = widget.point + 0;
+                                            }
+                                          });
+                                        }
+                                      : null,
+                                  style: ButtonStyle(
+                                      backgroundColor:
+                                          MaterialStateProperty.all<Color>(
+                                              button1color),
+                                      shape: MaterialStateProperty.all<
+                                          RoundedRectangleBorder>(
+                                        RoundedRectangleBorder(
+                                            borderRadius:
+                                                BorderRadius.circular(20)),
+                                      )),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Text(
+                                      snapshot.data![index].answers1!,
+                                      style: const TextStyle(
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.black87),
+                                    ),
+                                  ),
                                 ),
                               ),
-                              ElevatedButton(
-                                onPressed: button
-                                    ? () {
-                                        setState(() {
-                                          button = false;
-                                          if (snapshot.data![index].answers ==
-                                              2) {
-                                            button2color = Colors.green;
+                              const SizedBox(height: kDefaultPadding),
+                              Container(
+                                constraints:
+                                    const BoxConstraints(minHeight: 50),
+                                width: MediaQuery.of(context).size.width - 40,
+                                child: ElevatedButton(
+                                  onPressed: button
+                                      ? () {
+                                          setState(() {
+                                            button = false;
+                                            if (snapshot.data![index].answers ==
+                                                2) {
+                                              button2color = Colors.green;
 
-                                            widget.point = widget.point + 100;
-                                          } else {
-                                            button2color = Colors.red;
+                                              widget.point = widget.point + 100;
+                                            } else {
+                                              button2color = Colors.red;
 
-                                            widget.point = widget.point + 0;
-                                          }
-                                        });
-                                      }
-                                    : null,
-                                style: ButtonStyle(
-                                    backgroundColor:
-                                        MaterialStateProperty.all<Color>(
-                                            button2color),
-                                    shape: MaterialStateProperty.all<
-                                        RoundedRectangleBorder>(
-                                      RoundedRectangleBorder(
-                                          borderRadius:
-                                              BorderRadius.circular(20)),
-                                    )),
-                                child: Text(
-                                  snapshot.data![index].answers2!,
-                                  style: const TextStyle(
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.black87),
+                                              widget.point = widget.point + 0;
+                                            }
+                                          });
+                                        }
+                                      : null,
+                                  style: ButtonStyle(
+                                      backgroundColor:
+                                          MaterialStateProperty.all<Color>(
+                                              button2color),
+                                      shape: MaterialStateProperty.all<
+                                          RoundedRectangleBorder>(
+                                        RoundedRectangleBorder(
+                                            borderRadius:
+                                                BorderRadius.circular(20)),
+                                      )),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Text(
+                                      snapshot.data![index].answers2!,
+                                      style: const TextStyle(
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.black87),
+                                    ),
+                                  ),
                                 ),
                               ),
-                              ElevatedButton(
-                                onPressed: button
-                                    ? () {
-                                        setState(() {
-                                          button = false;
-                                          if (snapshot.data![index].answers ==
-                                              3) {
-                                            button3color = Colors.green;
+                              const SizedBox(height: kDefaultPadding),
+                              Container(
+                                constraints:
+                                    const BoxConstraints(minHeight: 50),
+                                width: MediaQuery.of(context).size.width - 40,
+                                child: ElevatedButton(
+                                  onPressed: button
+                                      ? () {
+                                          setState(() {
+                                            button = false;
+                                            if (snapshot.data![index].answers ==
+                                                3) {
+                                              button3color = Colors.green;
 
-                                            widget.point = widget.point + 100;
-                                          } else {
-                                            button3color = Colors.red;
+                                              widget.point = widget.point + 100;
+                                            } else {
+                                              button3color = Colors.red;
 
-                                            widget.point = widget.point + 0;
-                                          }
-                                        });
-                                      }
-                                    : null,
-                                style: ButtonStyle(
-                                    backgroundColor:
-                                        MaterialStateProperty.all<Color>(
-                                            button3color),
-                                    shape: MaterialStateProperty.all<
-                                        RoundedRectangleBorder>(
-                                      RoundedRectangleBorder(
-                                          borderRadius:
-                                              BorderRadius.circular(20)),
-                                    )),
-                                child: Text(
-                                  snapshot.data![index].answers3!,
-                                  style: const TextStyle(
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.black87),
+                                              widget.point = widget.point + 0;
+                                            }
+                                          });
+                                        }
+                                      : null,
+                                  style: ButtonStyle(
+                                      backgroundColor:
+                                          MaterialStateProperty.all<Color>(
+                                              button3color),
+                                      shape: MaterialStateProperty.all<
+                                          RoundedRectangleBorder>(
+                                        RoundedRectangleBorder(
+                                            borderRadius:
+                                                BorderRadius.circular(20)),
+                                      )),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Text(
+                                      snapshot.data![index].answers3!,
+                                      style: const TextStyle(
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.black87),
+                                    ),
+                                  ),
                                 ),
                               ),
-                              ElevatedButton(
-                                onPressed: button
-                                    ? () {
-                                        setState(() {
-                                          button = false;
-                                          if (snapshot.data![index].answers ==
-                                              4) {
-                                            button4color = Colors.green;
+                              const SizedBox(height: kDefaultPadding),
+                              Container(
+                                constraints:
+                                    const BoxConstraints(minHeight: 50),
+                                width: MediaQuery.of(context).size.width - 40,
+                                child: ElevatedButton(
+                                  onPressed: button
+                                      ? () {
+                                          setState(() {
+                                            button = false;
+                                            if (snapshot.data![index].answers ==
+                                                4) {
+                                              button4color = Colors.green;
 
-                                            widget.point = widget.point + 100;
-                                          } else {
-                                            button4color = Colors.red;
+                                              widget.point = widget.point + 100;
+                                            } else {
+                                              button4color = Colors.red;
 
-                                            widget.point = widget.point + 0;
-                                          }
-                                        });
-                                      }
-                                    : null,
-                                style: ButtonStyle(
-                                    backgroundColor:
-                                        MaterialStateProperty.all<Color>(
-                                            button4color),
-                                    shape: MaterialStateProperty.all<
-                                        RoundedRectangleBorder>(
-                                      RoundedRectangleBorder(
-                                          borderRadius:
-                                              BorderRadius.circular(20)),
-                                    )),
-                                child: Text(
-                                  snapshot.data![index].answers4!,
-                                  style: const TextStyle(
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.black87),
+                                              widget.point = widget.point + 0;
+                                            }
+                                          });
+                                        }
+                                      : null,
+                                  style: ButtonStyle(
+                                      backgroundColor:
+                                          MaterialStateProperty.all<Color>(
+                                              button4color),
+                                      shape: MaterialStateProperty.all<
+                                          RoundedRectangleBorder>(
+                                        RoundedRectangleBorder(
+                                            borderRadius:
+                                                BorderRadius.circular(20)),
+                                      )),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Text(
+                                      snapshot.data![index].answers4!,
+                                      style: const TextStyle(
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.black87),
+                                    ),
+                                  ),
                                 ),
                               ),
                               Container(
