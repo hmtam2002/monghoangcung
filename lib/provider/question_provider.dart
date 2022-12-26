@@ -10,7 +10,8 @@ class QuestionProvider {
     return data['question'];
   }
 
-  //chuyển json thành object
+  //chuyển json thành
+  //lấy danh sách câu hỏi
   static Future<List<QuestionObject>> getallcauhoi() async {
     List<QuestionObject> lsresult = [];
     List<dynamic> data = await readJsondata();
