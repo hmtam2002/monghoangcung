@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:monghoangcung/components/nen_game%20copy.dart';
+import 'package:monghoangcung/components/nen_game_copy.dart';
 import 'package:monghoangcung/constants.dart';
 import 'package:monghoangcung/screens/choidon/ketthucchoidon.dart';
 import '../../object/question_obj.dart';
