@@ -37,7 +37,7 @@ class _EditavatarState extends State<Editavatar> {
               ),
             ],
           ),
-          Text(
+          const Text(
             'Chọn avatar',
             style: TextStyle(fontSize: 30),
           ),
@@ -45,7 +45,7 @@ class _EditavatarState extends State<Editavatar> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
-                padding: EdgeInsets.all(10),
+                padding: const EdgeInsets.all(10),
                 width: MediaQuery.of(context).size.width / 2 - 20,
                 height: MediaQuery.of(context).size.width / 3 - 20,
                 child: IconButton(
@@ -63,7 +63,7 @@ class _EditavatarState extends State<Editavatar> {
                     )),
               ),
               Container(
-                padding: EdgeInsets.all(10),
+                padding: const EdgeInsets.all(10),
                 width: MediaQuery.of(context).size.width / 2 - 20,
                 height: MediaQuery.of(context).size.width / 3 - 20,
                 child: TextButton(
@@ -75,7 +75,7 @@ class _EditavatarState extends State<Editavatar> {
                             FirebaseAuth.instance.currentUser?.reload();
                       });
                     },
-                    child: CircleAvatar(
+                    child: const CircleAvatar(
                       maxRadius: 40,
                       backgroundImage: AssetImage('assets/2.jpg'),
                     )),
@@ -86,7 +86,7 @@ class _EditavatarState extends State<Editavatar> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
-                padding: EdgeInsets.all(10),
+                padding: const EdgeInsets.all(10),
                 width: MediaQuery.of(context).size.width / 2 - 20,
                 height: MediaQuery.of(context).size.width / 2 - 20,
                 child: TextButton(
@@ -102,13 +102,13 @@ class _EditavatarState extends State<Editavatar> {
                                 builder: (context) => const TrangCaNhan()));
                       });
                     },
-                    child: CircleAvatar(
+                    child: const CircleAvatar(
                       maxRadius: 40,
                       backgroundImage: AssetImage('assets/3.jpg'),
                     )),
               ),
               Container(
-                padding: EdgeInsets.all(10),
+                padding: const EdgeInsets.all(10),
                 width: MediaQuery.of(context).size.width / 2 - 20,
                 height: MediaQuery.of(context).size.width / 3 - 20,
                 child: TextButton(
@@ -124,7 +124,7 @@ class _EditavatarState extends State<Editavatar> {
                                 builder: (context) => const TrangCaNhan()));
                       });
                     },
-                    child: CircleAvatar(
+                    child: const CircleAvatar(
                       maxRadius: 40,
                       backgroundImage: AssetImage('assets/4.jpg'),
                     )),
@@ -135,7 +135,7 @@ class _EditavatarState extends State<Editavatar> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
-                padding: EdgeInsets.all(10),
+                padding: const EdgeInsets.all(10),
                 width: MediaQuery.of(context).size.width / 2 - 20,
                 height: MediaQuery.of(context).size.width / 3 - 20,
                 child: TextButton(
@@ -151,13 +151,13 @@ class _EditavatarState extends State<Editavatar> {
                                 builder: (context) => const TrangCaNhan()));
                       });
                     },
-                    child: CircleAvatar(
+                    child: const CircleAvatar(
                       maxRadius: 40,
                       backgroundImage: AssetImage('assets/5.jpg'),
                     )),
               ),
               Container(
-                padding: EdgeInsets.all(10),
+                padding: const EdgeInsets.all(10),
                 width: MediaQuery.of(context).size.width / 2 - 20,
                 height: MediaQuery.of(context).size.width / 3 - 20,
                 child: TextButton(
@@ -173,7 +173,7 @@ class _EditavatarState extends State<Editavatar> {
                                 builder: (context) => const TrangCaNhan()));
                       });
                     },
-                    child: CircleAvatar(
+                    child: const CircleAvatar(
                       maxRadius: 40,
                       backgroundImage: AssetImage('assets/6.jpg'),
                     )),
@@ -184,7 +184,7 @@ class _EditavatarState extends State<Editavatar> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
-                padding: EdgeInsets.all(10),
+                padding: const EdgeInsets.all(10),
                 width: MediaQuery.of(context).size.width / 2 - 20,
                 height: MediaQuery.of(context).size.width / 3 - 20,
                 child: TextButton(
@@ -200,13 +200,13 @@ class _EditavatarState extends State<Editavatar> {
                                 builder: (context) => const TrangCaNhan()));
                       });
                     },
-                    child: CircleAvatar(
+                    child: const CircleAvatar(
                       maxRadius: 40,
                       backgroundImage: AssetImage('assets/7.jpg'),
                     )),
               ),
               Container(
-                padding: EdgeInsets.all(10),
+                padding: const EdgeInsets.all(10),
                 width: MediaQuery.of(context).size.width / 2 - 20,
                 height: MediaQuery.of(context).size.width / 3 - 20,
                 child: TextButton(
@@ -222,7 +222,7 @@ class _EditavatarState extends State<Editavatar> {
                                 builder: (context) => const TrangCaNhan()));
                       });
                     },
-                    child: CircleAvatar(
+                    child: const CircleAvatar(
                       maxRadius: 40,
                       backgroundImage: AssetImage('assets/8.jpg'),
                     )),
