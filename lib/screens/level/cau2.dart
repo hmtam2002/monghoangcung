@@ -6,22 +6,22 @@ import '../../object/question_obj.dart';
 import '../../provider/question_provider.dart';
 import '../trangchu/trangchu.dart';
 
-class Lv1Cau2 extends StatefulWidget {
-  int soluongcau;
-  int id;
-  int point;
-  Lv1Cau2({
+class ManHinhTraLoi extends StatefulWidget {
+  ManHinhTraLoi({
     Key? key,
     required this.id,
     required this.point,
     required this.soluongcau,
   }) : super(key: key);
+  int id;
+  int point;
+  int soluongcau;
 
   @override
-  State<Lv1Cau2> createState() => _Lv1Cau2State();
+  State<ManHinhTraLoi> createState() => _ManHinhTraLoiState();
 }
 
-class _Lv1Cau2State extends State<Lv1Cau2> {
+class _ManHinhTraLoiState extends State<ManHinhTraLoi> {
   List<QuestionObject> test = [];
 
   Future<List<QuestionObject>> _loaddanhsachcauhoi() async {
@@ -347,7 +347,8 @@ class _Lv1Cau2State extends State<Lv1Cau2> {
                                           Navigator.push(
                                               context,
                                               MaterialPageRoute(
-                                                  builder: (context) => Lv1Cau2(
+                                                  builder: (context) =>
+                                                      ManHinhTraLoi(
                                                         soluongcau:
                                                             widget.soluongcau +
                                                                 1,

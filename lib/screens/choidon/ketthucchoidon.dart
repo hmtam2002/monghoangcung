@@ -148,7 +148,7 @@ class _FinalSingleGameState extends State<FinalSingleGame> {
                                   Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                          builder: (context) => Lv1Cau2(
+                                          builder: (context) => ManHinhTraLoi(
                                                 id: (widget.lv - 1) * 10 + 1,
                                                 point: 0,
                                                 soluongcau: 1,

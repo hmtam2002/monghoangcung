@@ -57,7 +57,7 @@ class _Row456State extends State<Row456> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => Lv1Cau2(
+                              builder: (context) => ManHinhTraLoi(
                                 id: 31,
                                 point: 0,
                                 soluongcau: 1,
@@ -94,7 +94,7 @@ class _Row456State extends State<Row456> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => Lv1Cau2(
+                                  builder: (context) => ManHinhTraLoi(
                                         id: 41,
                                         point: 0,
                                         soluongcau: 1,
@@ -129,7 +129,7 @@ class _Row456State extends State<Row456> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => Lv1Cau2(
+                                  builder: (context) => ManHinhTraLoi(
                                         id: 51,
                                         point: 0,
                                         soluongcau: 1,
