@@ -1,9 +1,10 @@
 class AccountObject {
-  AccountObject(
-      {this.id = '',
-      required this.fullname,
-      required this.lv,
-      required this.picture});
+  AccountObject({
+    this.id = '',
+    required this.fullname,
+    required this.lv,
+    required this.picture,
+  });
   String id;
   final String fullname;
   final int lv;

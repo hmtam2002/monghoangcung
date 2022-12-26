@@ -49,14 +49,16 @@ class SignInScreenState extends State<SignInScreen> {
             ElevatedButton(
               onPressed: () async {
                 try {
-                  final newUser = _auth.createUserWithEmailAndPassword(
-                      email: txtEmail.text, password: txtPass.text);
                   _auth.authStateChanges().listen((event) {
                     if (event != null) {
                       txtEmail.clear();
                       txtPass.clear();
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => TrangChu()));
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const TrangChu(),
+                        ),
+                      );
                     } else {
                       const snackBar = SnackBar(
                           content: Text('Email hoặc mật khẩu không đúng'));
