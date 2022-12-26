@@ -12,12 +12,14 @@ class CacNut extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return SizedBox(
-      width: size.width * 0.7,
+      width: size.width * 0.6,
+      height: 55,
       // decoration: BoxDecoration(gradient: kPrimatigradient),
       // height: size.height * 0.045,
       // padding: EdgeInsets.fromLTRB(0, 10, 0, 5),
       child: ElevatedButton(
         onPressed: () {
+          Navigator.pop(context);
           Navigator.push(context, press);
         },
         style: ButtonStyle(
@@ -29,14 +31,17 @@ class CacNut extends StatelessWidget {
           backgroundColor:
               MaterialStateProperty.all<Color>(Colors.white.withOpacity(0.65)),
           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-            RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+            RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
           ),
           alignment: Alignment.center,
         ),
         child: Text(
           text,
           style: const TextStyle(
-              fontSize: 20, fontWeight: FontWeight.bold, color: Colors.black87),
+            fontSize: 15,
+            fontWeight: FontWeight.bold,
+            color: Colors.black87,
+          ),
         ),
       ),
     );

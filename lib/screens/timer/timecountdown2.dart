@@ -1,6 +1,6 @@
 import 'package:circular_countdown/circular_countdown.dart';
 import 'package:flutter/material.dart';
-import 'package:monghoangcung/screens/level/level1.dart';
+import 'package:monghoangcung/screens/tra_loi/level1.dart';
 
 void main() => runApp(const Countimedown2());
 

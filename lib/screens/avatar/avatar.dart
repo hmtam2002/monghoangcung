@@ -23,12 +23,7 @@ class _EditavatarState extends State<Editavatar> {
           Row(
             children: [
               TextButton(
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const TrangCaNhan()));
-                },
+                onPressed: () => Navigator.pop(context),
                 child: Icon(
                   Icons.arrow_back,
                   color: Colors.brown.withOpacity(0.8),

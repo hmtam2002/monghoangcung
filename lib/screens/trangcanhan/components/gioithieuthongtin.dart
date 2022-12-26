@@ -50,12 +50,17 @@ class _gioithieuthongtinState extends State<gioithieuthongtin> {
                       Text(
                         account.fullname,
                         style: const TextStyle(
-                            fontSize: 30, fontWeight: FontWeight.bold),
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                       Text(
                         'Level: ${account.lv}',
-                        style: const TextStyle(
-                          fontSize: 20,
+                        style: TextStyle(
+                          fontSize: 15,
+                          color: Colors.deepPurple[400],
+                          fontStyle: FontStyle.italic,
+                          fontWeight: FontWeight.bold,
                         ),
                       )
                     ],

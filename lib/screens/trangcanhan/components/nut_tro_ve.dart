@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:monghoangcung/screens/trangchu/trangchu.dart';
 
 class NutTroVe extends StatelessWidget {
@@ -12,14 +13,7 @@ class NutTroVe extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         TextButton(
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => const TrangChu(),
-              ),
-            );
-          },
+          onPressed: () => Navigator.pop(context),
           child: Icon(
             Icons.arrow_back_rounded,
             color: Colors.brown[300],

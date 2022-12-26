@@ -41,7 +41,7 @@ class _CreateInfoState extends State<CreateInfo> {
             ),
             textview(
               username: _fullname,
-              text: 'fullname',
+              text: 'Họ và tên',
             ),
             Container(
               height: 50,

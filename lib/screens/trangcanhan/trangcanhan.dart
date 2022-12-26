@@ -33,6 +33,7 @@ class _TrangCaNhanState extends State<TrangCaNhan> {
             child: Column(
               children: [
                 const NutTroVe(),
+                const SizedBox(height: 20),
                 const gioithieuthongtin(),
                 Cacnuttrongtrangcanhan(
                   noidung: 'Chỉnh sửa thông tin',

@@ -25,13 +25,14 @@ class _ChooselvState extends State<Chooselv> {
             children: [
               TextButton(
                 onPressed: () {
+                  Navigator.pop(context);
                   Navigator.push(
                       context,
                       MaterialPageRoute(
                           builder: (context) => const TrangChu()));
                 },
                 child: Icon(
-                  Icons.arrow_back_outlined,
+                  Icons.arrow_back_rounded,
                   color: Colors.brown.withOpacity(0.8),
                   size: 50,
                 ),
@@ -41,11 +42,11 @@ class _ChooselvState extends State<Chooselv> {
           const SizedBox(
             height: 80,
           ),
-          const Text(
+          Text(
             'Màn chơi',
             style: TextStyle(
               fontSize: 30,
-              color: Colors.black54,
+              color: Colors.deepPurple[800],
               fontWeight: FontWeight.bold,
             ),
           ),
