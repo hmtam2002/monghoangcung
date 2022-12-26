@@ -57,7 +57,7 @@ class _EditavatarState extends State<Editavatar> {
                             FirebaseAuth.instance.currentUser?.reload();
                       });
                     },
-                    icon: CircleAvatar(
+                    icon: const CircleAvatar(
                       maxRadius: 40,
                       backgroundImage: AssetImage('assets/1.jpg'),
                     )),
