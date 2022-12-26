@@ -6,25 +6,25 @@ import '../../object/question_obj.dart';
 import '../../provider/question_provider.dart';
 import '../trangchu/trangchu.dart';
 
-class Lv1_cau2 extends StatefulWidget {
+class Lv1Cau2 extends StatefulWidget {
   int soluongcau;
   int id;
   int point;
-  Lv1_cau2(
-      {Key? key,
-      required this.id,
-      required this.point,
-      required this.soluongcau})
-      : super(key: key);
+  Lv1Cau2({
+    Key? key,
+    required this.id,
+    required this.point,
+    required this.soluongcau,
+  }) : super(key: key);
 
   @override
-  State<Lv1_cau2> createState() => _Lv1_cau2State();
+  State<Lv1Cau2> createState() => _Lv1Cau2State();
 }
 
-class _Lv1_cau2State extends State<Lv1_cau2> {
+class _Lv1Cau2State extends State<Lv1Cau2> {
   List<questionobject> test = [];
 
-  Future<List<questionobject>> _loaddanhsachcontact() async {
+  Future<List<questionobject>> _loaddanhsachcauhoi() async {
     final data = await questionprovider.searchcauhoi(widget.id);
     setState(() {
       test = data;
@@ -35,7 +35,7 @@ class _Lv1_cau2State extends State<Lv1_cau2> {
   @override
   void initState() {
     super.initState();
-    _loaddanhsachcontact();
+    _loaddanhsachcauhoi();
   }
 
   bool button = true;
@@ -48,7 +48,7 @@ class _Lv1_cau2State extends State<Lv1_cau2> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: FutureBuilder<List<questionobject>>(
-          future: _loaddanhsachcontact(),
+          future: _loaddanhsachcauhoi(),
           builder: (context, AsyncSnapshot snapshot) {
             if (snapshot.hasData) {
               return ListView.builder(
@@ -94,8 +94,8 @@ class _Lv1_cau2State extends State<Lv1_cau2> {
                                 ],
                               ),
                               Text(
-                                'Câu ' + widget.id.toString(),
-                                style: TextStyle(
+                                'Câu ${widget.id}',
+                                style: const TextStyle(
                                     fontSize: 30,
                                     color: Colors.black,
                                     fontWeight: FontWeight.bold),
@@ -105,7 +105,7 @@ class _Lv1_cau2State extends State<Lv1_cau2> {
                               ),
                               Text(
                                 snapshot.data![index].question,
-                                style: TextStyle(
+                                style: const TextStyle(
                                     fontSize: 30,
                                     color: Colors.black,
                                     fontWeight: FontWeight.bold),
@@ -117,8 +117,8 @@ class _Lv1_cau2State extends State<Lv1_cau2> {
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 children: [
                                   Text(
-                                    "Điểm : " + widget.point.toString(),
-                                    style: TextStyle(
+                                    "Điểm : ${widget.point}",
+                                    style: const TextStyle(
                                       fontSize: 30,
                                       color: Colors.black,
                                     ),
@@ -174,7 +174,7 @@ class _Lv1_cau2State extends State<Lv1_cau2> {
                                                 )),
                                             child: Text(
                                               snapshot.data![index].answers1!,
-                                              style: TextStyle(
+                                              style: const TextStyle(
                                                   fontSize: 20,
                                                   fontWeight: FontWeight.bold,
                                                   color: Colors.black87),
@@ -223,7 +223,7 @@ class _Lv1_cau2State extends State<Lv1_cau2> {
                                                 )),
                                             child: Text(
                                               snapshot.data![index].answers2!,
-                                              style: TextStyle(
+                                              style: const TextStyle(
                                                   fontSize: 20,
                                                   fontWeight: FontWeight.bold,
                                                   color: Colors.black87),
@@ -278,7 +278,7 @@ class _Lv1_cau2State extends State<Lv1_cau2> {
                                                 )),
                                             child: Text(
                                               snapshot.data![index].answers3!,
-                                              style: TextStyle(
+                                              style: const TextStyle(
                                                   fontSize: 20,
                                                   fontWeight: FontWeight.bold,
                                                   color: Colors.black87),
@@ -327,7 +327,7 @@ class _Lv1_cau2State extends State<Lv1_cau2> {
                                                 )),
                                             child: Text(
                                               snapshot.data![index].answers4!,
-                                              style: TextStyle(
+                                              style: const TextStyle(
                                                   fontSize: 20,
                                                   fontWeight: FontWeight.bold,
                                                   color: Colors.black87),
@@ -347,8 +347,7 @@ class _Lv1_cau2State extends State<Lv1_cau2> {
                                           Navigator.push(
                                               context,
                                               MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      Lv1_cau2(
+                                                  builder: (context) => Lv1Cau2(
                                                         soluongcau:
                                                             widget.soluongcau +
                                                                 1,
@@ -362,8 +361,7 @@ class _Lv1_cau2State extends State<Lv1_cau2> {
                                                   builder: (context) =>
                                                       FinalSingleGame(
                                                         point: widget.point,
-                                                        lv: (widget.id / 10)
-                                                            .toInt(),
+                                                        lv: widget.id ~/ 10,
                                                       )));
                                         }
                                       },
@@ -394,7 +392,7 @@ class _Lv1_cau2State extends State<Lv1_cau2> {
                         ),
                       ));
             } else {
-              return Text('1');
+              return const Text('1');
             }
           }),
     );
