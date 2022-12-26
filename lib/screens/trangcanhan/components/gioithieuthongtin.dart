@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:monghoangcung/object/account.dart';
+import 'package:monghoangcung/object/account_obj.dart';
 
 // ignore: camel_case_types
 class gioithieuthongtin extends StatefulWidget {
@@ -69,12 +69,12 @@ class _gioithieuthongtinState extends State<gioithieuthongtin> {
         }));
   }
 
-  Future<Account?> readAccount() async {
+  Future<AccountObject?> readAccount() async {
     final docAccounts =
         FirebaseFirestore.instance.collection('accounts').doc(accid);
     final snapshot = await docAccounts.get();
     if (snapshot.exists) {
-      return Account.fromJson(snapshot.data()!);
+      return AccountObject.fromJson(snapshot.data()!);
     }
     return null;
   }

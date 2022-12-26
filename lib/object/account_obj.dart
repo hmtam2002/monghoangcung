@@ -1,5 +1,5 @@
-class Account {
-  Account(
+class AccountObject {
+  AccountObject(
       {this.id = '',
       required this.fullname,
       required this.lv,
@@ -13,7 +13,7 @@ class Account {
   Map<String, dynamic> toJson() =>
       {'id': id, 'fullname': fullname, 'picture': picture, 'lv': lv};
 
-  static Account fromJson(Map<String, dynamic> json) => Account(
+  static AccountObject fromJson(Map<String, dynamic> json) => AccountObject(
       fullname: json['fullname'],
       id: json['id'],
       picture: json['picture'],

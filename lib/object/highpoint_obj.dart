@@ -1,5 +1,5 @@
-class HighPoint {
-  HighPoint(
+class HighPointObject {
+  HighPointObject(
       {required this.top1,
       required this.top1name,
       required this.top2,
@@ -20,7 +20,7 @@ class HighPoint {
         'top3': top3,
         'top3name': top3name
       };
-  static HighPoint fromjson(Map<String, dynamic> json) => HighPoint(
+  static HighPointObject fromjson(Map<String, dynamic> json) => HighPointObject(
       top1: json['top1'],
       top1name: json['top1name'],
       top2: json['top2'],

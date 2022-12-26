@@ -5,7 +5,7 @@ import 'package:monghoangcung/components/nen_game.dart';
 import 'package:monghoangcung/constants.dart';
 import 'package:monghoangcung/screens/chonlevel/chonlevel.dart';
 import 'package:monghoangcung/screens/phongcho/phongcho.dart';
-import 'package:monghoangcung/object/account.dart';
+import 'package:monghoangcung/object/account_obj.dart';
 import 'package:monghoangcung/screens/trangchu/components/cacnut.dart';
 import 'components/top_header.dart';
 
@@ -64,7 +64,7 @@ class _TrangChuState extends State<TrangChu> {
     );
   }
 
-  Future<Account?> readAccount() async {
+  Future<AccountObject?> readAccount() async {
     final docAccounts =
         FirebaseFirestore.instance.collection('accounts').doc(accid);
   }

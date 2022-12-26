@@ -1,10 +1,11 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:monghoangcung/object/account.dart';
+import 'package:monghoangcung/object/account_obj.dart';
 
 class AccountProvider {
-  Stream<List<Account>> readAccounts() => FirebaseFirestore.instance
+  Stream<List<AccountObject>> readAccounts() => FirebaseFirestore.instance
       .collection('accounts')
       .snapshots()
-      .map((snapshot) =>
-          snapshot.docs.map((doc) => Account.fromJson(doc.data())).toList());
+      .map((snapshot) => snapshot.docs
+          .map((doc) => AccountObject.fromJson(doc.data()))
+          .toList());
 }

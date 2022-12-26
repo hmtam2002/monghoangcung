@@ -5,7 +5,7 @@ import 'package:monghoangcung/components/nen_game.dart';
 import 'package:monghoangcung/screens/chonlevel/chonlevel.dart';
 import 'package:monghoangcung/screens/trangchu/trangchu.dart';
 import '../../constants.dart';
-import '../../object/account.dart';
+import '../../object/account_obj.dart';
 import '../level/cau2.dart';
 
 class FinalSingleGame extends StatefulWidget {
@@ -30,12 +30,12 @@ class _FinalSingleGameState extends State<FinalSingleGame> {
     }
   }
 
-  Future<Account?> readAccount() async {
+  Future<AccountObject?> readAccount() async {
     final docAccounts =
         FirebaseFirestore.instance.collection('accounts').doc(accid);
     final snapshot = await docAccounts.get();
     if (snapshot.exists) {
-      return Account.fromJson(snapshot.data()!);
+      return AccountObject.fromJson(snapshot.data()!);
     }
     return null;
   }
