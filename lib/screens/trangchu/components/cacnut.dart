@@ -11,7 +11,7 @@ class CacNut extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return Container(
+    return SizedBox(
       width: size.width * 0.7,
       // decoration: BoxDecoration(gradient: kPrimatigradient),
       // height: size.height * 0.045,

@@ -1,5 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:monghoangcung/object/Accounts.dart';
+import 'package:monghoangcung/object/account.dart';
 
 class AccountProvider {
   Stream<List<Account>> readAccounts() => FirebaseFirestore.instance

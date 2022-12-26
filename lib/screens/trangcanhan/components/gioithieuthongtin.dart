@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:monghoangcung/object/Accounts.dart';
+import 'package:monghoangcung/object/account.dart';
 
 // ignore: camel_case_types
 class gioithieuthongtin extends StatefulWidget {

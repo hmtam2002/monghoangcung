@@ -1,8 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import '../../../object/Accounts.dart';
-import '../../trangcanhan/trangcanhan.dart';
+import 'package:monghoangcung/object/account.dart';
+import 'package:monghoangcung/screens/trangcanhan/trangcanhan.dart';
 
 class TopHeader extends StatefulWidget {
   const TopHeader({Key? key}) : super(key: key);

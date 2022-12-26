@@ -1,4 +1,4 @@
-class questionobject {
+class QuestionObject {
   final int? id;
   final int? answers;
   final String? answers1;
@@ -7,7 +7,7 @@ class questionobject {
   final String? answers4;
   final String? question;
 
-  questionobject({
+  QuestionObject({
     this.id,
     required this.answers,
     required this.answers1,
@@ -17,7 +17,7 @@ class questionobject {
     required this.question,
   });
 
-  questionobject.fromJson(Map<String, dynamic> res)
+  QuestionObject.fromJson(Map<String, dynamic> res)
       : id = res["id"],
         answers = res["answers"],
         answers1 = res["answers1"],

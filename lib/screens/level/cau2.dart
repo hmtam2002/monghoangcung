@@ -22,9 +22,9 @@ class Lv1Cau2 extends StatefulWidget {
 }
 
 class _Lv1Cau2State extends State<Lv1Cau2> {
-  List<questionobject> test = [];
+  List<QuestionObject> test = [];
 
-  Future<List<questionobject>> _loaddanhsachcauhoi() async {
+  Future<List<QuestionObject>> _loaddanhsachcauhoi() async {
     final data = await QuestionProvider.searchcauhoi(widget.id);
     setState(() {
       test = data;
@@ -47,7 +47,7 @@ class _Lv1Cau2State extends State<Lv1Cau2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: FutureBuilder<List<questionobject>>(
+      body: FutureBuilder<List<QuestionObject>>(
           future: _loaddanhsachcauhoi(),
           builder: (context, AsyncSnapshot snapshot) {
             if (snapshot.hasData) {

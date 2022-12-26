@@ -5,9 +5,9 @@ import 'package:monghoangcung/components/nen_game.dart';
 import 'package:monghoangcung/constants.dart';
 import 'package:monghoangcung/screens/chonlevel/chonlevel.dart';
 import 'package:monghoangcung/screens/phongcho/phongcho.dart';
-import 'package:monghoangcung/object/Accounts.dart';
+import 'package:monghoangcung/object/account.dart';
 import 'package:monghoangcung/screens/trangchu/components/cacnut.dart';
-import 'components/TopHeader.dart';
+import 'components/top_header.dart';
 
 class TrangChu extends StatefulWidget {
   const TrangChu({super.key});

@@ -5,7 +5,7 @@ import 'package:monghoangcung/components/nen_game.dart';
 import 'package:monghoangcung/screens/chonlevel/chonlevel.dart';
 import 'package:monghoangcung/screens/trangchu/trangchu.dart';
 import '../../constants.dart';
-import '../../object/Accounts.dart';
+import '../../object/account.dart';
 import '../level/cau2.dart';
 
 class FinalSingleGame extends StatefulWidget {
