@@ -4,7 +4,7 @@ class AccountObject {
       required this.fullname,
       required this.lv,
       required this.picture});
-  final String id;
+  String id;
   final String fullname;
   final int lv;
   final String picture;
