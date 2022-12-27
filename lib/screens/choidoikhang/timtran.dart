@@ -24,7 +24,7 @@ class SreachPlayer extends StatelessWidget {
     ];
     return nen_game(
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           const Text(
             'Tìm đối thủ',
@@ -37,7 +37,7 @@ class SreachPlayer extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
-                      padding: EdgeInsets.all(10),
+                      padding: const EdgeInsets.all(10),
                       width: MediaQuery.of(context).size.width / 3 - 20,
                       height: MediaQuery.of(context).size.width / 3 - 20,
                       child: const CircleAvatar(

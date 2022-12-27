@@ -15,26 +15,27 @@ class header extends StatelessWidget {
       children: [
         TextButton(
           onPressed: () {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => const TrangChu()));
+            Navigator.pop(context);
+            // Navigator.push(context,
+            //     MaterialPageRoute(builder: (context) => const TrangChu()));
           },
           child: Icon(
-            Icons.home_rounded,
+            Icons.arrow_back_rounded,
             color: Colors.brown.withOpacity(0.8),
             size: 50,
           ),
         ),
-        TextButton(
-          onPressed: () {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => const TrangChu()));
-          },
-          child: Icon(
-            Icons.settings,
-            color: Colors.brown.withOpacity(0.8),
-            size: 50,
-          ),
-        ),
+        // TextButton(
+        //   onPressed: () {
+        //     Navigator.push(context,
+        //         MaterialPageRoute(builder: (context) => const TrangChu()));
+        //   },
+        //   child: Icon(
+        //     Icons.settings,
+        //     color: Colors.brown.withOpacity(0.8),
+        //     size: 50,
+        //   ),
+        // ),
       ],
     );
   }

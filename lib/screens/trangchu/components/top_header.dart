@@ -26,9 +26,11 @@ class _TopHeaderState extends State<TopHeader> {
                 TextButton(
                     onPressed: () {
                       Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const TrangCaNhan()));
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const TrangCaNhan(),
+                        ),
+                      );
                     },
                     child: CircleAvatar(
                       backgroundImage: AssetImage(account!.picture),

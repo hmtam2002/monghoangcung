@@ -19,11 +19,10 @@ class MyApp extends StatelessWidget {
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Mộng Hoàng Cung',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      // home: const TrangChu(),
       initialRoute:
           FirebaseAuth.instance.currentUser == null ? 'welcome' : 'home',
       routes: {
