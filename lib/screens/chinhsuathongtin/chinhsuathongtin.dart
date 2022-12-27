@@ -3,6 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:monghoangcung/components/nen_game.dart';
 import 'package:monghoangcung/object/account_obj.dart';
+import 'package:monghoangcung/screens/trangcanhan/trangcanhan.dart';
 import 'components/textview.dart';
 
 class EditInfo extends StatefulWidget {
@@ -34,29 +35,34 @@ class _EditInfoState extends State<EditInfo> {
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         TextButton(
-                          onPressed: () => Navigator.pop(context),
+                          onPressed: () {
+                            Navigator.pop(context);
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const TrangCaNhan(),
+                              ),
+                            );
+                          },
                           child: Icon(
-                            Icons.arrow_back,
+                            Icons.arrow_back_rounded,
                             color: Colors.brown.withOpacity(0.8),
                             size: 50,
                           ),
                         ),
                       ],
                     ),
-                    const SizedBox(
-                      height: 50,
-                    ),
-                    CircleAvatar(
-                      maxRadius: 60,
-                      backgroundImage: AssetImage(account!.picture),
-                    ),
-                    const SizedBox(
-                      height: 50,
-                    ),
+                    Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: CircleAvatar(
+                          maxRadius: 60,
+                          backgroundImage: AssetImage(account!.picture),
+                        )),
+                    const Padding(padding: EdgeInsets.all(20)),
                     const Text(
                       'CẬP NHẬT THÔNG TIN',
                       style: TextStyle(
-                          fontSize: 20,
+                          fontSize: 25,
                           color: Colors.black87,
                           fontWeight: FontWeight.bold),
                     ),
@@ -90,15 +96,23 @@ class _EditInfoState extends State<EditInfo> {
                         child: const Text(
                           'Cập Nhật',
                           style: TextStyle(
-                              fontSize: 15,
+                              fontSize: 20,
                               fontWeight: FontWeight.bold,
                               color: Colors.black87),
                         ),
                       ),
                     ),
-                    Text(
-                      _num!,
-                      style: const TextStyle(fontSize: 20, color: Colors.black),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Container(
+                            padding: const EdgeInsets.only(left: 15),
+                            child: Text(
+                              _num!,
+                              style: const TextStyle(
+                                  fontSize: 30, color: Colors.black),
+                            )),
+                      ],
                     )
                   ],
                 ),
@@ -117,10 +131,8 @@ class _EditInfoState extends State<EditInfo> {
     if (snapshot.exists) {
       return AccountObject.fromJson(snapshot.data()!);
     }
-    return null;
   }
 
-  // ignore: non_constant_identifier_names
   Future UpdateAccounts({required String fullname}) async {
     final docAccounts =
         FirebaseFirestore.instance.collection('accounts').doc(accid);

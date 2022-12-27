@@ -294,6 +294,7 @@ class _ManHinhTraLoiState extends State<ManHinhTraLoi> {
                                                     point: widget.point,
                                                   )));
                                     } else {
+                                      Navigator.pop(context);
                                       Navigator.push(
                                           context,
                                           MaterialPageRoute(

@@ -25,6 +25,7 @@ class _TopHeaderState extends State<TopHeader> {
               children: [
                 TextButton(
                     onPressed: () {
+                      Navigator.pop(context);
                       Navigator.push(
                         context,
                         MaterialPageRoute(

@@ -13,7 +13,15 @@ class NutTroVe extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         TextButton(
-          onPressed: () => Navigator.pop(context),
+          onPressed: () {
+            Navigator.pop(context);
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const TrangChu(),
+              ),
+            );
+          },
           child: Icon(
             Icons.arrow_back_rounded,
             color: Colors.brown[300],
