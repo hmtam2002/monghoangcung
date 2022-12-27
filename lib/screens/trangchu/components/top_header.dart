@@ -36,17 +36,23 @@ class _TopHeaderState extends State<TopHeader> {
                     child: CircleAvatar(
                       backgroundImage: AssetImage(account!.picture),
                     )),
-                TextButton(
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const TrangCaNhan()));
-                  },
-                  child: Icon(
-                    Icons.menu_rounded,
-                    color: Colors.brown.withOpacity(0.8),
-                    size: 50,
+                Container(
+                  width: 50,
+                  height: 40,
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(20)),
+                  child: TextButton(
+                    onPressed: () {
+                      FirebaseAuth.instance.signOut();
+                      Navigator.pushNamedAndRemoveUntil(
+                          context, 'welcome', (route) => false);
+                    },
+                    child: const Icon(
+                      Icons.logout,
+                      color: Colors.black,
+                      size: 20,
+                    ),
                   ),
                 ),
               ],

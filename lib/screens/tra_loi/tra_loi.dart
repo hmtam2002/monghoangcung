@@ -87,8 +87,10 @@ class _ManHinhTraLoiState extends State<ManHinhTraLoi> {
                                 ],
                               ),
                               Container(
-                                constraints:
-                                    const BoxConstraints(minHeight: 200),
+                                constraints: BoxConstraints(
+                                  minHeight: 200,
+                                  minWidth: MediaQuery.of(context).size.width,
+                                ),
                                 decoration: BoxDecoration(
                                   color: Colors.white.withOpacity(0.8),
                                   borderRadius: BorderRadius.circular(25),
@@ -106,8 +108,9 @@ class _ManHinhTraLoiState extends State<ManHinhTraLoi> {
                                 height: kDefaultPadding * 2,
                               ),
                               Container(
-                                constraints:
-                                    const BoxConstraints(minHeight: 50),
+                                constraints: const BoxConstraints(
+                                  minHeight: 50,
+                                ),
                                 width: MediaQuery.of(context).size.width - 40,
                                 child: ElevatedButton(
                                   onPressed: button

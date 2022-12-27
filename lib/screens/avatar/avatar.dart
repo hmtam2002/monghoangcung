@@ -72,6 +72,12 @@ class _EditavatarState extends State<Editavatar> {
                         FirebaseAuth.instance.currentUser?.reload();
                       });
                       Navigator.pop(context);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const TrangCaNhan(),
+                        ),
+                      );
                     },
                     icon: const CircleAvatar(
                       maxRadius: 40,
@@ -89,6 +95,12 @@ class _EditavatarState extends State<Editavatar> {
                         FirebaseAuth.instance.currentUser?.reload();
                       });
                       Navigator.pop(context);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const TrangCaNhan(),
+                        ),
+                      );
                     },
                     child: const CircleAvatar(
                       maxRadius: 40,
@@ -111,6 +123,12 @@ class _EditavatarState extends State<Editavatar> {
                         FirebaseAuth.instance.currentUser?.reload();
                       });
                       Navigator.pop(context);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const TrangCaNhan(),
+                        ),
+                      );
                     },
                     child: const CircleAvatar(
                       maxRadius: 40,
@@ -128,6 +146,12 @@ class _EditavatarState extends State<Editavatar> {
                         FirebaseAuth.instance.currentUser?.reload();
                       });
                       Navigator.pop(context);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const TrangCaNhan(),
+                        ),
+                      );
                     },
                     child: const CircleAvatar(
                       maxRadius: 40,
@@ -150,6 +174,12 @@ class _EditavatarState extends State<Editavatar> {
                         FirebaseAuth.instance.currentUser?.reload();
                       });
                       Navigator.pop(context);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const TrangCaNhan(),
+                        ),
+                      );
                     },
                     child: const CircleAvatar(
                       maxRadius: 40,
@@ -167,6 +197,12 @@ class _EditavatarState extends State<Editavatar> {
                         FirebaseAuth.instance.currentUser?.reload();
                       });
                       Navigator.pop(context);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const TrangCaNhan(),
+                        ),
+                      );
                     },
                     child: const CircleAvatar(
                       maxRadius: 40,
@@ -189,6 +225,12 @@ class _EditavatarState extends State<Editavatar> {
                         FirebaseAuth.instance.currentUser?.reload();
                       });
                       Navigator.pop(context);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const TrangCaNhan(),
+                        ),
+                      );
                     },
                     child: const CircleAvatar(
                       maxRadius: 40,
@@ -206,6 +248,12 @@ class _EditavatarState extends State<Editavatar> {
                         FirebaseAuth.instance.currentUser?.reload();
                       });
                       Navigator.pop(context);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const TrangCaNhan(),
+                        ),
+                      );
                     },
                     child: const CircleAvatar(
                       maxRadius: 40,
