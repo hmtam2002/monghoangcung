@@ -1,27 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a4a82a5a-8f69-42c9-bbb1-ce228d1b4f5b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/components/nen_game.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/components/nen_game.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/avatar/avatar.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/avatar/avatar.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/chinhsuathongtin/chinhsuathongtin.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/chinhsuathongtin/chinhsuathongtin.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/choidon/ketthucchoidon.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/choidon/ketthucchoidon.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/chonlevel/chonlevel.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/chonlevel/chonlevel.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/chonlevel/chonlevel2.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/chonlevel/chonlevel2.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/chonlevel/components/nutchuyenhuong.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/chonlevel/components/nutchuyenhuong.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/dangky/4_thanhcong.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/dangky/components/khungnhapthongtin.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/dangky/components/khungnhapthongtin.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/dangky/dienthongtin/3_dienthongtin.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/dangky/dienthongtin/components/o_nhap_thong_tin.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/trangcanhan/components/gioithieuthongtin.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/trangcanhan/components/gioithieuthongtin.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/trangcanhan/components/nut_tro_ve.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/trangcanhan/components/nut_tro_ve.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/trangcanhan/trangcanhan.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/trangcanhan/trangcanhan.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/trangchu/components/cacnut.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/trangchu/components/cacnut.dart" afterDir="false" />
-    </list>
+    <list default="true" id="a4a82a5a-8f69-42c9-bbb1-ce228d1b4f5b" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,6 +35,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ResourceManagerPrefKey.ResourceType" value="DRAWABLE" />
     <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
     <property name="cidr.known.project.marker" value="true" />
     <property name="dart.analysis.tool.window.force.activate" value="true" />

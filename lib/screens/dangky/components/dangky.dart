@@ -25,7 +25,7 @@ class RegisterScreenState extends State<RegisterScreen> {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             const Text(
-              'Dang ky',
+              'Đăng ký',
               style: TextStyle(
                 fontSize: 48,
                 fontWeight: FontWeight.bold,
@@ -64,7 +64,7 @@ class RegisterScreenState extends State<RegisterScreen> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => CreateInfo()));
+                              builder: (context) => const CreateInfo()));
                     } else {
                       const snackBar =
                           SnackBar(content: Text('Tài khoản này không hợp lệ'));

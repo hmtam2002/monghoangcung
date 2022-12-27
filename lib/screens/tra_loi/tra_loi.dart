@@ -87,6 +87,8 @@ class _ManHinhTraLoiState extends State<ManHinhTraLoi> {
                                 ],
                               ),
                               Container(
+                                constraints:
+                                    const BoxConstraints(minHeight: 200),
                                 decoration: BoxDecoration(
                                   color: Colors.white.withOpacity(0.8),
                                   borderRadius: BorderRadius.circular(25),
@@ -140,9 +142,7 @@ class _ManHinhTraLoiState extends State<ManHinhTraLoi> {
                                     child: Text(
                                       snapshot.data![index].answers1!,
                                       style: const TextStyle(
-                                          fontSize: 20,
-                                          fontWeight: FontWeight.bold,
-                                          color: Colors.black87),
+                                          fontSize: 20, color: Colors.black87),
                                     ),
                                   ),
                                 ),
@@ -185,9 +185,7 @@ class _ManHinhTraLoiState extends State<ManHinhTraLoi> {
                                     child: Text(
                                       snapshot.data![index].answers2!,
                                       style: const TextStyle(
-                                          fontSize: 20,
-                                          fontWeight: FontWeight.bold,
-                                          color: Colors.black87),
+                                          fontSize: 20, color: Colors.black87),
                                     ),
                                   ),
                                 ),
@@ -230,9 +228,7 @@ class _ManHinhTraLoiState extends State<ManHinhTraLoi> {
                                     child: Text(
                                       snapshot.data![index].answers3!,
                                       style: const TextStyle(
-                                          fontSize: 20,
-                                          fontWeight: FontWeight.bold,
-                                          color: Colors.black87),
+                                          fontSize: 20, color: Colors.black87),
                                     ),
                                   ),
                                 ),
@@ -275,9 +271,7 @@ class _ManHinhTraLoiState extends State<ManHinhTraLoi> {
                                     child: Text(
                                       snapshot.data![index].answers4!,
                                       style: const TextStyle(
-                                          fontSize: 20,
-                                          fontWeight: FontWeight.bold,
-                                          color: Colors.black87),
+                                          fontSize: 20, color: Colors.black87),
                                     ),
                                   ),
                                 ),
