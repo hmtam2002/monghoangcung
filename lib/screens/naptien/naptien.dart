@@ -17,11 +17,11 @@ class NapTien extends StatelessWidget {
               color: Colors.white.withOpacity(0.8),
               borderRadius: BorderRadius.circular(30),
             ),
-            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+            padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
             child: const Text(
               'Nạp tiền',
               style: TextStyle(
-                fontSize: 25,
+                fontSize: 20,
                 fontWeight: FontWeight.bold,
                 color: Colors.deepPurple,
               ),

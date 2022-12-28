@@ -36,22 +36,22 @@ class _TrangCaNhanState extends State<TrangCaNhan> {
                 const SizedBox(height: 20),
                 const gioithieuthongtin(),
                 Cacnuttrongtrangcanhan(
-                  noidung: 'Chỉnh sửa thông tin',
+                  noidung: 'Đổi tên',
                   press:
                       MaterialPageRoute(builder: (context) => const EditInfo()),
                 ),
                 Cacnuttrongtrangcanhan(
-                  noidung: 'Thay đổi avatar',
+                  noidung: 'Đổi avatar',
                   press: MaterialPageRoute(
                       builder: (context) => const Editavatar()),
                 ),
                 Cacnuttrongtrangcanhan(
-                  noidung: 'Xem xếp hạng',
+                  noidung: 'Xếp hạng',
                   press: MaterialPageRoute(
                       builder: (context) => const Xemxephang()),
                 ),
                 Cacnuttrongtrangcanhan(
-                  noidung: 'Nhận thư',
+                  noidung: 'Hộp thư',
                   press:
                       MaterialPageRoute(builder: (context) => const NhanThu()),
                 ),

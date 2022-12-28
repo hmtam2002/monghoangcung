@@ -28,7 +28,7 @@ class Cacnuttrongtrangcanhan extends StatelessWidget {
         child: Text(
           noidung,
           style: const TextStyle(
-              fontSize: 20, fontWeight: FontWeight.bold, color: Colors.black87),
+              fontSize: 18, fontWeight: FontWeight.bold, color: Colors.black87),
         ),
       ),
     );

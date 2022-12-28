@@ -20,7 +20,7 @@ class Nutchuyenhuong extends StatelessWidget {
             onPressed: null,
             style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.all<Color>(
-                    Colors.blue.withOpacity(0.2)),
+                    Colors.white.withOpacity(0.8)),
                 shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                   RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20)),

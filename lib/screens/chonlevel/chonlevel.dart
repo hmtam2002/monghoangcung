@@ -21,7 +21,7 @@ class _ChooselvState extends State<Chooselv> {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
               TextButton(
                 onPressed: () {
@@ -33,8 +33,8 @@ class _ChooselvState extends State<Chooselv> {
                 },
                 child: Icon(
                   Icons.arrow_back_rounded,
-                  color: Colors.brown.withOpacity(0.8),
-                  size: 50,
+                  color: Colors.brown[300],
+                  size: 40,
                 ),
               ),
             ],
@@ -42,12 +42,19 @@ class _ChooselvState extends State<Chooselv> {
           const SizedBox(
             height: 80,
           ),
-          Text(
-            'Màn chơi',
-            style: TextStyle(
-              fontSize: 30,
-              color: Colors.deepPurple[800],
-              fontWeight: FontWeight.bold,
+          Container(
+            decoration: BoxDecoration(
+              color: Colors.white.withOpacity(0.8),
+              borderRadius: BorderRadius.circular(30),
+            ),
+            padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+            child: const Text(
+              'Màn chơi',
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+                color: Colors.deepPurple,
+              ),
             ),
           ),
           const SizedBox(

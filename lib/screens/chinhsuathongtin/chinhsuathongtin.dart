@@ -46,11 +46,11 @@ class _EditInfoState extends State<EditInfo> {
                         borderRadius: BorderRadius.circular(30),
                       ),
                       padding: const EdgeInsets.symmetric(
-                          horizontal: 20, vertical: 10),
+                          horizontal: 30, vertical: 10),
                       child: const Text(
                         'Đổi tên',
                         style: TextStyle(
-                          fontSize: 25,
+                          fontSize: 20,
                           fontWeight: FontWeight.bold,
                           color: Colors.deepPurple,
                         ),

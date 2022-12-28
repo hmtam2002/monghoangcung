@@ -37,6 +37,7 @@ class _TopHeaderState extends State<TopHeader> {
                       backgroundImage: AssetImage(account!.picture),
                     )),
                 Container(
+                  margin: const EdgeInsets.only(right: 10),
                   width: 50,
                   height: 40,
                   decoration: BoxDecoration(
