@@ -1,8 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:monghoangcung/screens/level/cau2.dart';
-import 'package:monghoangcung/object/Accounts.dart';
+import 'package:monghoangcung/screens/tra_loi/tra_loi.dart';
+import 'package:monghoangcung/object/account_obj.dart';
 
 class Row123 extends StatefulWidget {
   Row123({Key? key, required this.lv}) : super(key: key);
@@ -20,12 +20,12 @@ class _Row123State extends State<Row123> {
   bool i2 = false;
 
   final accid = FirebaseAuth.instance.currentUser?.uid;
-  Future<Account?> readAccount() async {
+  Future<AccountObject?> readAccount() async {
     final docAccounts =
         FirebaseFirestore.instance.collection('accounts').doc(accid);
     final snapshot = await docAccounts.get();
     if (snapshot.exists) {
-      return Account.fromJson(snapshot.data()!);
+      return AccountObject.fromJson(snapshot.data()!);
     }
     return null;
   }
@@ -58,7 +58,7 @@ class _Row123State extends State<Row123> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => Lv1_cau2(
+                            builder: (context) => ManHinhTraLoi(
                                   id: 1,
                                   point: 0,
                                   soluongcau: 1,
@@ -93,7 +93,7 @@ class _Row123State extends State<Row123> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => Lv1_cau2(
+                                  builder: (context) => ManHinhTraLoi(
                                         id: 11,
                                         point: 0,
                                         soluongcau: 1,
@@ -128,7 +128,7 @@ class _Row123State extends State<Row123> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => Lv1_cau2(
+                                  builder: (context) => ManHinhTraLoi(
                                         id: 21,
                                         point: 0,
                                         soluongcau: 1,

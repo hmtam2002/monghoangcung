@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:monghoangcung/object/Accounts.dart';
+import 'package:monghoangcung/object/account_obj.dart';
 
 // ignore: camel_case_types
 class gioithieuthongtin extends StatefulWidget {
@@ -50,12 +50,17 @@ class _gioithieuthongtinState extends State<gioithieuthongtin> {
                       Text(
                         account.fullname,
                         style: const TextStyle(
-                            fontSize: 30, fontWeight: FontWeight.bold),
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                       Text(
                         'Level: ${account.lv}',
-                        style: const TextStyle(
-                          fontSize: 20,
+                        style: TextStyle(
+                          fontSize: 15,
+                          color: Colors.deepPurple[400],
+                          fontStyle: FontStyle.italic,
+                          fontWeight: FontWeight.bold,
                         ),
                       )
                     ],
@@ -69,12 +74,12 @@ class _gioithieuthongtinState extends State<gioithieuthongtin> {
         }));
   }
 
-  Future<Account?> readAccount() async {
+  Future<AccountObject?> readAccount() async {
     final docAccounts =
         FirebaseFirestore.instance.collection('accounts').doc(accid);
     final snapshot = await docAccounts.get();
     if (snapshot.exists) {
-      return Account.fromJson(snapshot.data()!);
+      return AccountObject.fromJson(snapshot.data()!);
     }
     return null;
   }

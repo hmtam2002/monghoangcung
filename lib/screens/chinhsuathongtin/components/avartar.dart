@@ -7,11 +7,9 @@ class avartar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Icon(
-        Icons.account_box_sharp,
-        size: MediaQuery.of(context).size.width / 4,
-      ),
+    return Icon(
+      Icons.account_box_sharp,
+      size: MediaQuery.of(context).size.width / 4,
     );
   }
 }

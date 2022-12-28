@@ -2,7 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:monghoangcung/components/nen_game.dart';
-import 'package:monghoangcung/object/Accounts.dart';
+import 'package:monghoangcung/object/account_obj.dart';
 import 'package:monghoangcung/screens/trangcanhan/trangcanhan.dart';
 import 'components/textview.dart';
 
@@ -20,7 +20,6 @@ class _EditInfoState extends State<EditInfo> {
   String? _num = '';
   @override
   Widget build(BuildContext context) {
-    final accid = FirebaseAuth.instance.currentUser?.uid;
     return FutureBuilder(
         future: readAccount(),
         builder: ((context, snapshot) {
@@ -37,13 +36,16 @@ class _EditInfoState extends State<EditInfo> {
                       children: [
                         TextButton(
                           onPressed: () {
+                            Navigator.pop(context);
                             Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => const TrangCaNhan()));
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const TrangCaNhan(),
+                              ),
+                            );
                           },
                           child: Icon(
-                            Icons.arrow_back,
+                            Icons.arrow_back_rounded,
                             color: Colors.brown.withOpacity(0.8),
                             size: 50,
                           ),
@@ -122,17 +124,15 @@ class _EditInfoState extends State<EditInfo> {
         }));
   }
 
-  Future<Account?> readAccount() async {
+  Future<AccountObject?> readAccount() async {
     final docAccounts =
         FirebaseFirestore.instance.collection('accounts').doc(accid);
     final snapshot = await docAccounts.get();
     if (snapshot.exists) {
-      return Account.fromJson(snapshot.data()!);
+      return AccountObject.fromJson(snapshot.data()!);
     }
-    return null;
   }
 
-  // ignore: non_constant_identifier_names
   Future UpdateAccounts({required String fullname}) async {
     final docAccounts =
         FirebaseFirestore.instance.collection('accounts').doc(accid);

@@ -16,14 +16,13 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Mộng Hoàng Cung',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      // home: const TrangChu(),
       initialRoute:
           FirebaseAuth.instance.currentUser == null ? 'welcome' : 'home',
       routes: {

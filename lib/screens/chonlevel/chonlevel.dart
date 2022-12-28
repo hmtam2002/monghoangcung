@@ -35,10 +35,10 @@ class _ChooselvState extends State<Chooselv> {
         if (snapshot.hasData) {
           final account = snapshot.data;
           return nen_game(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
+              child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -81,9 +81,7 @@ class _ChooselvState extends State<Chooselv> {
                   height: 60,
                 ),
                 const Nutchuyenhuong(),
-              ],
-            ),
-          );
+              ]));
         } else {
           return Container();
         }

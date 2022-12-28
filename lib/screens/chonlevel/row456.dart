@@ -1,8 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:monghoangcung/screens/level/cau2.dart';
-import '../../../object/Accounts.dart';
+import 'package:monghoangcung/screens/tra_loi/tra_loi.dart';
+import '../../object/account_obj.dart';
 
 class Row456 extends StatefulWidget {
   Row456({Key? key, required this.lv}) : super(key: key);
@@ -22,12 +22,12 @@ class _Row456State extends State<Row456> {
 
   bool i2 = false;
   final accid = FirebaseAuth.instance.currentUser?.uid;
-  Future<Account?> readAccount() async {
+  Future<AccountObject?> readAccount() async {
     final docAccounts =
         FirebaseFirestore.instance.collection('accounts').doc(accid);
     final snapshot = await docAccounts.get();
     if (snapshot.exists) {
-      return Account.fromJson(snapshot.data()!);
+      return AccountObject.fromJson(snapshot.data()!);
     }
     return null;
   }
@@ -55,7 +55,7 @@ class _Row456State extends State<Row456> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => Lv1_cau2(
+                              builder: (context) => ManHinhTraLoi(
                                 id: 31,
                                 point: 0,
                                 soluongcau: 1,
@@ -92,7 +92,7 @@ class _Row456State extends State<Row456> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => Lv1_cau2(
+                                  builder: (context) => ManHinhTraLoi(
                                         id: 41,
                                         point: 0,
                                         soluongcau: 1,
@@ -127,7 +127,7 @@ class _Row456State extends State<Row456> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => Lv1_cau2(
+                                  builder: (context) => ManHinhTraLoi(
                                         id: 51,
                                         point: 0,
                                         soluongcau: 1,

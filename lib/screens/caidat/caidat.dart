@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:monghoangcung/components/nen_game.dart';
-import 'package:monghoangcung/screens/trangchu/components/TopHeader.dart';
+import 'package:monghoangcung/screens/trangchu/components/top_header.dart';
 
 class CaiDat extends StatelessWidget {
   const CaiDat({super.key});

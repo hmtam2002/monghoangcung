@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:monghoangcung/screens/trangchu/trangchu.dart';
 
 class NutTroVe extends StatelessWidget {
@@ -13,6 +14,7 @@ class NutTroVe extends StatelessWidget {
       children: [
         TextButton(
           onPressed: () {
+            Navigator.pop(context);
             Navigator.push(
               context,
               MaterialPageRoute(

@@ -33,6 +33,7 @@ class _TrangCaNhanState extends State<TrangCaNhan> {
             child: Column(
               children: [
                 const NutTroVe(),
+                const SizedBox(height: 20),
                 const gioithieuthongtin(),
                 Cacnuttrongtrangcanhan(
                   noidung: 'Chỉnh sửa thông tin',
@@ -58,12 +59,6 @@ class _TrangCaNhanState extends State<TrangCaNhan> {
                   noidung: 'Cài đặt',
                   press:
                       MaterialPageRoute(builder: (context) => const CaiDat()),
-                ),
-                Cacnuttrongtrangcanhan(
-                  noidung: 'Đăng xuất',
-                  press: MaterialPageRoute(
-                    builder: (context) => const Firstscreen(),
-                  ),
                 ),
               ],
             ),

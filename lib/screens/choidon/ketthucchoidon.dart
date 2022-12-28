@@ -2,11 +2,11 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:monghoangcung/components/nen_game.dart';
+import 'package:monghoangcung/main.dart';
 import 'package:monghoangcung/screens/chonlevel/chonlevel.dart';
 import 'package:monghoangcung/screens/trangchu/trangchu.dart';
-import '../../constants.dart';
-import '../../object/Accounts.dart';
-import '../level/cau2.dart';
+import '../../object/account_obj.dart';
+import '../tra_loi/tra_loi.dart';
 
 class FinalSingleGame extends StatefulWidget {
   final int point;
@@ -30,12 +30,12 @@ class _FinalSingleGameState extends State<FinalSingleGame> {
     }
   }
 
-  Future<Account?> readAccount() async {
+  Future<AccountObject?> readAccount() async {
     final docAccounts =
         FirebaseFirestore.instance.collection('accounts').doc(accid);
     final snapshot = await docAccounts.get();
     if (snapshot.exists) {
-      return Account.fromJson(snapshot.data()!);
+      return AccountObject.fromJson(snapshot.data()!);
     }
     return null;
   }
@@ -48,146 +48,115 @@ class _FinalSingleGameState extends State<FinalSingleGame> {
           if (snapshot.hasData) {
             final account = snapshot.data;
             return nen_game(
-                child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Container(
-                    width: MediaQuery.of(context).size.width / 6 * 5,
-                    decoration: BoxDecoration(
-                      color: Colors.white.withOpacity(0.5),
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    child: Column(
-                      children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.all(20),
-                              child: Text(
-                                'Level ${widget.lv}',
-                                style: const TextStyle(
-                                    fontSize: 30, fontWeight: FontWeight.bold),
-                              ),
-                            )
-                          ],
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Container(
-                                padding: const EdgeInsets.all(10),
-                                width:
-                                    MediaQuery.of(context).size.width / 5 - 20,
-                                height:
-                                    MediaQuery.of(context).size.width / 5 - 20,
-                                child: CircleAvatar(
-                                  maxRadius: 40,
-                                  backgroundImage: AssetImage(account!.picture),
-                                )),
-                            Container(
-                              padding: const EdgeInsets.all(10),
-                              child: Text(
-                                account.fullname,
-                                style: const TextStyle(
-                                    fontSize: 30, fontWeight: FontWeight.bold),
-                              ),
-                            )
-                          ],
-                        ),
-                        Row(
+                child: Center(
+              child: Container(
+                  padding: const EdgeInsets.all(30),
+                  width: MediaQuery.of(context).size.width / 6 * 5,
+                  height: MediaQuery.of(context).size.height * 3 / 5,
+                  decoration: BoxDecoration(
+                    color: Colors.white.withOpacity(0.5),
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: Column(
+                    children: [
+                      Text(
+                        'Level: ${widget.lv}',
+                        style: const TextStyle(
+                            fontSize: 30, fontWeight: FontWeight.bold),
+                      ),
+                      Expanded(
+                        child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Container(
-                              padding: const EdgeInsets.all(10),
-                              child: Text(
-                                'Point: ${widget.point}',
-                                style: const TextStyle(
-                                    fontSize: 30, fontWeight: FontWeight.bold),
+                            CircleAvatar(
+                              maxRadius: 40,
+                              backgroundImage: AssetImage(account!.picture),
+                            ),
+                            Text(
+                              account.fullname,
+                              textAlign: TextAlign.center,
+                              style: const TextStyle(
+                                fontSize: 25,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            const SizedBox(
+                              height: 50,
+                            ),
+                            Text(
+                              'Điểm: ${widget.point}',
+                              style: const TextStyle(
+                                fontSize: 25,
+                                fontWeight: FontWeight.bold,
                               ),
                             ),
                           ],
                         ),
-                        const SizedBox(
-                          height: kDefaultPadding * 6,
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Container(
-                              padding: const EdgeInsets.all(20),
-                              child: TextButton(
-                                onPressed: () {
-                                  if (widget.lv == account.lv &&
-                                      widget.point >= 500) {
-                                    UpdateAccounts();
-                                  }
-                                  Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) =>
-                                              const TrangChu()));
-                                },
-                                child: Icon(
-                                  Icons.home,
-                                  color: Colors.brown.withOpacity(0.8),
-                                  size: 50,
-                                ),
-                              ),
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          TextButton(
+                            onPressed: () {
+                              if (widget.lv == account.lv &&
+                                  widget.point >= 500) {
+                                UpdateAccounts();
+                              }
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => const TrangChu()));
+                            },
+                            child: Icon(
+                              Icons.home_rounded,
+                              color: Colors.brown.withOpacity(0.8),
+                              size: 50,
                             ),
-                            Container(
-                              padding: const EdgeInsets.all(20),
-                              child: TextButton(
-                                onPressed: () {
-                                  if (widget.lv == account.lv &&
-                                      widget.point >= 500) {
-                                    UpdateAccounts();
-                                  }
-                                  Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) => Lv1_cau2(
-                                                id: (widget.lv - 1) * 10 + 1,
-                                                point: 0,
-                                                soluongcau: 1,
-                                              )));
-                                },
-                                child: Icon(
-                                  Icons.settings_backup_restore,
-                                  color: Colors.brown.withOpacity(0.8),
-                                  size: 50,
-                                ),
-                              ),
+                          ),
+                          TextButton(
+                            onPressed: () {
+                              if (widget.lv == account.lv &&
+                                  widget.point >= 500) {
+                                UpdateAccounts();
+                              }
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => ManHinhTraLoi(
+                                            id: (widget.lv - 1) * 10 + 1,
+                                            point: 0,
+                                            soluongcau: 1,
+                                          )));
+                            },
+                            child: Icon(
+                              Icons.settings_backup_restore,
+                              color: Colors.brown.withOpacity(0.8),
+                              size: 50,
                             ),
-                            Container(
-                              padding: const EdgeInsets.all(20),
-                              child: TextButton(
-                                onPressed: () {
-                                  if (widget.lv == account.lv &&
-                                      widget.point >= 500) {
-                                    UpdateAccounts();
-                                  }
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => const Chooselv(),
-                                    ),
-                                  );
-                                },
-                                child: Icon(
-                                  Icons.list_alt,
-                                  color: Colors.brown.withOpacity(0.8),
-                                  size: 50,
+                          ),
+                          TextButton(
+                            onPressed: () {
+                              if (widget.lv == account.lv &&
+                                  widget.point >= 500) {
+                                UpdateAccounts();
+                              }
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => const Chooselv(),
                                 ),
-                              ),
-                            )
-                          ],
-                        )
-                      ],
-                    ))
-              ],
+                              );
+                            },
+                            child: Icon(
+                              Icons.list_alt,
+                              color: Colors.brown.withOpacity(0.8),
+                              size: 50,
+                            ),
+                          )
+                        ],
+                      )
+                    ],
+                  )),
             ));
           } else {
             return Container();

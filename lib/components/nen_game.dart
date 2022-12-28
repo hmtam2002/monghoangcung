@@ -10,7 +10,7 @@ class nen_game extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
         body: Container(
-      width: double.infinity,
+      width: size.width,
       height: size.height,
       padding: const EdgeInsets.only(
         top: kDefaultPadding,

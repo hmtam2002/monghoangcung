@@ -40,6 +40,7 @@ class Nutchuyenhuong extends StatelessWidget {
           margin: const EdgeInsets.all(10),
           child: ElevatedButton(
             onPressed: () {
+              Navigator.pop(context);
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => const Chooselv2()));
             },

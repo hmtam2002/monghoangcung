@@ -23,6 +23,7 @@ class _Chooselv2State extends State<Chooselv2> {
             children: [
               TextButton(
                 onPressed: () {
+                  Navigator.pop(context);
                   Navigator.push(
                       context,
                       MaterialPageRoute(
@@ -206,6 +207,7 @@ class _Chooselv2State extends State<Chooselv2> {
                 margin: const EdgeInsets.all(10),
                 child: ElevatedButton(
                   onPressed: () {
+                    Navigator.pop(context);
                     Navigator.push(
                         context,
                         MaterialPageRoute(

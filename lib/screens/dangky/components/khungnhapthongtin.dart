@@ -2,8 +2,8 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:monghoangcung/components/nen_game.dart';
-import 'package:monghoangcung/screens/trangchu/components/TopHeader.dart';
-import 'package:monghoangcung/object/Accounts.dart';
+import 'package:monghoangcung/screens/trangchu/components/top_header.dart';
+import 'package:monghoangcung/object/account_obj.dart';
 import '../../chinhsuathongtin/components/avartar.dart';
 import '../../chinhsuathongtin/components/textview.dart';
 import '../../trangchu/trangchu.dart';
@@ -41,7 +41,7 @@ class _CreateInfoState extends State<CreateInfo> {
             ),
             textview(
               username: _fullname,
-              text: 'fullname',
+              text: 'Họ và tên',
             ),
             Container(
               height: 50,
@@ -56,7 +56,7 @@ class _CreateInfoState extends State<CreateInfo> {
                   } else {
                     setState(() {
                       _num = 'Đăng ký thành công ';
-                      final account = Account(
+                      final account = AccountObject(
                           fullname: _fullname.text,
                           picture: 'assets/1.jpg',
                           lv: 1);
@@ -101,7 +101,7 @@ class _CreateInfoState extends State<CreateInfo> {
     );
   }
 
-  Future createAccounts({required Account account}) async {
+  Future createAccounts({required AccountObject account}) async {
     final docAccounts = FirebaseFirestore.instance
         .collection('accounts')
         .doc(_auth.currentUser!.uid);

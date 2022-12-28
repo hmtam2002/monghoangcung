@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:monghoangcung/components/nen_game.dart';
 import 'package:monghoangcung/screens/dangky/components/khungnhapthongtin.dart';
+import '../../trangdautien/trangdautien.dart';
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});
@@ -24,8 +25,23 @@ class RegisterScreenState extends State<RegisterScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
+            TextButton(
+              onPressed: () {
+                Navigator.pop(context);
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const Firstscreen(),
+                    ));
+              },
+              child: Icon(
+                Icons.arrow_back_rounded,
+                color: Colors.brown[300],
+                size: 40,
+              ),
+            ),
             const Text(
-              'Dang ky',
+              'Đăng ký',
               style: TextStyle(
                 fontSize: 48,
                 fontWeight: FontWeight.bold,
@@ -49,6 +65,9 @@ class RegisterScreenState extends State<RegisterScreen> {
                 decoration: const InputDecoration(
                   border: OutlineInputBorder(),
                   hintText: 'Password',
+                  suffixIcon: Icon(
+                    Icons.remove_red_eye,
+                  ),
                 ),
               ),
             ),
@@ -64,7 +83,7 @@ class RegisterScreenState extends State<RegisterScreen> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => CreateInfo()));
+                              builder: (context) => const CreateInfo()));
                     } else {
                       const snackBar =
                           SnackBar(content: Text('Tài khoản này không hợp lệ'));

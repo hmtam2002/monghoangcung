@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:monghoangcung/object/Accounts.dart';
+import 'package:monghoangcung/object/account_obj.dart';
 
 class Test extends StatefulWidget {
   const Test({super.key});
@@ -33,13 +33,14 @@ class _TestState extends State<Test> {
     // ignore: dead_code
   }
 
-  Stream<List<Account>> readAccounts() => FirebaseFirestore.instance
+  Stream<List<AccountObject>> readAccounts() => FirebaseFirestore.instance
       .collection('accounts')
       .snapshots()
-      .map((snapshot) =>
-          snapshot.docs.map((doc) => Account.fromJson(doc.data())).toList());
+      .map((snapshot) => snapshot.docs
+          .map((doc) => AccountObject.fromJson(doc.data()))
+          .toList());
 
-  Widget buildaccount(Account account) => ListTile(
+  Widget buildaccount(AccountObject account) => ListTile(
         leading: CircleAvatar(
           backgroundImage: AssetImage(account.picture),
         ),

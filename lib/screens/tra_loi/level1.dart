@@ -4,7 +4,7 @@ import 'package:monghoangcung/constants.dart';
 
 import '../timer/timecountdown2.dart';
 import '../trangchu/trangchu.dart';
-import 'cau2.dart';
+import 'tra_loi.dart';
 
 class Level1 extends StatefulWidget {
   const Level1({super.key});
@@ -235,7 +235,7 @@ class _Level1State extends State<Level1> {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => Lv1_cau2(
+                        builder: (context) => ManHinhTraLoi(
                               soluongcau: 1,
                               id: 1,
                               point: point,

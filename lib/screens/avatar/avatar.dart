@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:monghoangcung/components/nen_game.dart';
+import 'package:monghoangcung/constants.dart';
 
 import '../trangcanhan/trangcanhan.dart';
 
@@ -24,10 +25,13 @@ class _EditavatarState extends State<Editavatar> {
             children: [
               TextButton(
                 onPressed: () {
+                  Navigator.pop(context);
                   Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const TrangCaNhan()));
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const TrangCaNhan(),
+                    ),
+                  );
                 },
                 child: Icon(
                   Icons.arrow_back,
@@ -37,15 +41,27 @@ class _EditavatarState extends State<Editavatar> {
               ),
             ],
           ),
-          Text(
-            'Chọn avatar',
-            style: TextStyle(fontSize: 30),
+          Container(
+            decoration: BoxDecoration(
+              color: Colors.white.withOpacity(0.8),
+              borderRadius: BorderRadius.circular(30),
+            ),
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+            child: const Text(
+              'Chọn avatar',
+              style: TextStyle(
+                fontSize: 30,
+                fontWeight: FontWeight.bold,
+                color: Colors.deepPurple,
+              ),
+            ),
           ),
+          const SizedBox(height: kDefaultPadding * 2),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Container(
-                padding: EdgeInsets.all(10),
+              SizedBox(
+                // padding: const EdgeInsets.all(10),
                 width: MediaQuery.of(context).size.width / 2 - 20,
                 height: MediaQuery.of(context).size.width / 3 - 20,
                 child: IconButton(
@@ -53,17 +69,22 @@ class _EditavatarState extends State<Editavatar> {
                       setState(() {
                         avatar = 'assets/1.jpg';
                         UpdateAccounts(avatar: avatar);
-                        final user =
-                            FirebaseAuth.instance.currentUser?.reload();
+                        FirebaseAuth.instance.currentUser?.reload();
                       });
+                      Navigator.pop(context);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const TrangCaNhan(),
+                        ),
+                      );
                     },
-                    icon: CircleAvatar(
+                    icon: const CircleAvatar(
                       maxRadius: 40,
                       backgroundImage: AssetImage('assets/1.jpg'),
                     )),
               ),
-              Container(
-                padding: EdgeInsets.all(10),
+              SizedBox(
                 width: MediaQuery.of(context).size.width / 2 - 20,
                 height: MediaQuery.of(context).size.width / 3 - 20,
                 child: TextButton(
@@ -71,11 +92,17 @@ class _EditavatarState extends State<Editavatar> {
                       setState(() {
                         avatar = 'assets/2.jpg';
                         UpdateAccounts(avatar: avatar);
-                        final user =
-                            FirebaseAuth.instance.currentUser?.reload();
+                        FirebaseAuth.instance.currentUser?.reload();
                       });
+                      Navigator.pop(context);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const TrangCaNhan(),
+                        ),
+                      );
                     },
-                    child: CircleAvatar(
+                    child: const CircleAvatar(
                       maxRadius: 40,
                       backgroundImage: AssetImage('assets/2.jpg'),
                     )),
@@ -85,8 +112,7 @@ class _EditavatarState extends State<Editavatar> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Container(
-                padding: EdgeInsets.all(10),
+              SizedBox(
                 width: MediaQuery.of(context).size.width / 2 - 20,
                 height: MediaQuery.of(context).size.width / 2 - 20,
                 child: TextButton(
@@ -94,21 +120,22 @@ class _EditavatarState extends State<Editavatar> {
                       setState(() {
                         avatar = 'assets/3.jpg';
                         UpdateAccounts(avatar: avatar);
-                        final user =
-                            FirebaseAuth.instance.currentUser?.reload();
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const TrangCaNhan()));
+                        FirebaseAuth.instance.currentUser?.reload();
                       });
+                      Navigator.pop(context);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const TrangCaNhan(),
+                        ),
+                      );
                     },
-                    child: CircleAvatar(
+                    child: const CircleAvatar(
                       maxRadius: 40,
                       backgroundImage: AssetImage('assets/3.jpg'),
                     )),
               ),
-              Container(
-                padding: EdgeInsets.all(10),
+              SizedBox(
                 width: MediaQuery.of(context).size.width / 2 - 20,
                 height: MediaQuery.of(context).size.width / 3 - 20,
                 child: TextButton(
@@ -116,15 +143,17 @@ class _EditavatarState extends State<Editavatar> {
                       setState(() {
                         avatar = 'assets/4.jpg';
                         UpdateAccounts(avatar: avatar);
-                        final user =
-                            FirebaseAuth.instance.currentUser?.reload();
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const TrangCaNhan()));
+                        FirebaseAuth.instance.currentUser?.reload();
                       });
+                      Navigator.pop(context);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const TrangCaNhan(),
+                        ),
+                      );
                     },
-                    child: CircleAvatar(
+                    child: const CircleAvatar(
                       maxRadius: 40,
                       backgroundImage: AssetImage('assets/4.jpg'),
                     )),
@@ -134,8 +163,7 @@ class _EditavatarState extends State<Editavatar> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Container(
-                padding: EdgeInsets.all(10),
+              SizedBox(
                 width: MediaQuery.of(context).size.width / 2 - 20,
                 height: MediaQuery.of(context).size.width / 3 - 20,
                 child: TextButton(
@@ -143,21 +171,22 @@ class _EditavatarState extends State<Editavatar> {
                       setState(() {
                         avatar = 'assets/5.jpg';
                         UpdateAccounts(avatar: avatar);
-                        final user =
-                            FirebaseAuth.instance.currentUser?.reload();
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const TrangCaNhan()));
+                        FirebaseAuth.instance.currentUser?.reload();
                       });
+                      Navigator.pop(context);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const TrangCaNhan(),
+                        ),
+                      );
                     },
-                    child: CircleAvatar(
+                    child: const CircleAvatar(
                       maxRadius: 40,
                       backgroundImage: AssetImage('assets/5.jpg'),
                     )),
               ),
-              Container(
-                padding: EdgeInsets.all(10),
+              SizedBox(
                 width: MediaQuery.of(context).size.width / 2 - 20,
                 height: MediaQuery.of(context).size.width / 3 - 20,
                 child: TextButton(
@@ -165,15 +194,17 @@ class _EditavatarState extends State<Editavatar> {
                       setState(() {
                         avatar = 'assets/6.jpg';
                         UpdateAccounts(avatar: avatar);
-                        final user =
-                            FirebaseAuth.instance.currentUser?.reload();
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const TrangCaNhan()));
+                        FirebaseAuth.instance.currentUser?.reload();
                       });
+                      Navigator.pop(context);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const TrangCaNhan(),
+                        ),
+                      );
                     },
-                    child: CircleAvatar(
+                    child: const CircleAvatar(
                       maxRadius: 40,
                       backgroundImage: AssetImage('assets/6.jpg'),
                     )),
@@ -183,8 +214,7 @@ class _EditavatarState extends State<Editavatar> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Container(
-                padding: EdgeInsets.all(10),
+              SizedBox(
                 width: MediaQuery.of(context).size.width / 2 - 20,
                 height: MediaQuery.of(context).size.width / 3 - 20,
                 child: TextButton(
@@ -192,21 +222,22 @@ class _EditavatarState extends State<Editavatar> {
                       setState(() {
                         avatar = 'assets/7.jpg';
                         UpdateAccounts(avatar: avatar);
-                        final user =
-                            FirebaseAuth.instance.currentUser?.reload();
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const TrangCaNhan()));
+                        FirebaseAuth.instance.currentUser?.reload();
                       });
+                      Navigator.pop(context);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const TrangCaNhan(),
+                        ),
+                      );
                     },
-                    child: CircleAvatar(
+                    child: const CircleAvatar(
                       maxRadius: 40,
                       backgroundImage: AssetImage('assets/7.jpg'),
                     )),
               ),
-              Container(
-                padding: EdgeInsets.all(10),
+              SizedBox(
                 width: MediaQuery.of(context).size.width / 2 - 20,
                 height: MediaQuery.of(context).size.width / 3 - 20,
                 child: TextButton(
@@ -214,15 +245,17 @@ class _EditavatarState extends State<Editavatar> {
                       setState(() {
                         avatar = 'assets/8.jpg';
                         UpdateAccounts(avatar: avatar);
-                        final user =
-                            FirebaseAuth.instance.currentUser?.reload();
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const TrangCaNhan()));
+                        FirebaseAuth.instance.currentUser?.reload();
                       });
+                      Navigator.pop(context);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const TrangCaNhan(),
+                        ),
+                      );
                     },
-                    child: CircleAvatar(
+                    child: const CircleAvatar(
                       maxRadius: 40,
                       backgroundImage: AssetImage('assets/8.jpg'),
                     )),
