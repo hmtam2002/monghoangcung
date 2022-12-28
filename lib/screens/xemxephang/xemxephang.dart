@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:monghoangcung/components/nen_game.dart';
-import 'package:monghoangcung/screens/trangchu/components/top_header.dart';
+import 'package:monghoangcung/screens/trangcanhan/components/nutrove2.dart';
 
 class Xemxephang extends StatelessWidget {
   const Xemxephang({super.key});
@@ -10,7 +10,7 @@ class Xemxephang extends StatelessWidget {
     return nen_game(
       child: Column(
         children: const [
-          TopHeader(),
+          NutTroVeV2(),
           Text(
             'xem xếp hạng',
             style: TextStyle(fontSize: 30),

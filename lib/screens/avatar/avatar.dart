@@ -3,6 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:monghoangcung/components/nen_game.dart';
 import 'package:monghoangcung/constants.dart';
+import 'package:monghoangcung/screens/trangcanhan/components/nutrove2.dart';
 
 import '../trangcanhan/trangcanhan.dart';
 
@@ -21,26 +22,7 @@ class _EditavatarState extends State<Editavatar> {
     return nen_game(
       child: Column(
         children: [
-          Row(
-            children: [
-              TextButton(
-                onPressed: () {
-                  Navigator.pop(context);
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const TrangCaNhan(),
-                    ),
-                  );
-                },
-                child: Icon(
-                  Icons.arrow_back,
-                  color: Colors.brown.withOpacity(0.8),
-                  size: 50,
-                ),
-              ),
-            ],
-          ),
+          const NutTroVeV2(),
           Container(
             decoration: BoxDecoration(
               color: Colors.white.withOpacity(0.8),

@@ -4,7 +4,7 @@ import 'package:monghoangcung/components/nen_game.dart';
 import 'package:monghoangcung/screens/caidat/caidat.dart';
 import 'package:monghoangcung/screens/chinhsuathongtin/chinhsuathongtin.dart';
 import 'package:monghoangcung/screens/naptien/naptien.dart';
-import 'package:monghoangcung/screens/trangdautien/trangdautien.dart';
+import 'package:monghoangcung/screens/nhanthu/nhanthu.dart';
 import 'package:monghoangcung/screens/avatar/avatar.dart';
 import 'package:monghoangcung/screens/xemxephang/xemxephang.dart';
 import 'package:monghoangcung/screens/trangcanhan/components/cacnuttrongtrangcanhan.dart';
@@ -49,6 +49,11 @@ class _TrangCaNhanState extends State<TrangCaNhan> {
                   noidung: 'Xem xếp hạng',
                   press: MaterialPageRoute(
                       builder: (context) => const Xemxephang()),
+                ),
+                Cacnuttrongtrangcanhan(
+                  noidung: 'Nhận thư',
+                  press:
+                      MaterialPageRoute(builder: (context) => const NhanThu()),
                 ),
                 Cacnuttrongtrangcanhan(
                   noidung: 'Nạp tiền',

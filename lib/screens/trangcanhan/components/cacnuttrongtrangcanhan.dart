@@ -16,6 +16,7 @@ class Cacnuttrongtrangcanhan extends StatelessWidget {
       margin: const EdgeInsets.fromLTRB(0, 10, 0, 10),
       child: ElevatedButton(
         onPressed: () {
+          Navigator.pop(context);
           Navigator.push(context, press);
         },
         style: ButtonStyle(

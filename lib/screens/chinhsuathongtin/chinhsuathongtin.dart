@@ -3,6 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:monghoangcung/components/nen_game.dart';
 import 'package:monghoangcung/object/account_obj.dart';
+import 'package:monghoangcung/screens/trangcanhan/components/nutrove2.dart';
 import 'package:monghoangcung/screens/trangcanhan/trangcanhan.dart';
 import 'components/textview.dart';
 
@@ -31,27 +32,7 @@ class _EditInfoState extends State<EditInfo> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        TextButton(
-                          onPressed: () {
-                            Navigator.pop(context);
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => const TrangCaNhan(),
-                              ),
-                            );
-                          },
-                          child: Icon(
-                            Icons.arrow_back_rounded,
-                            color: Colors.brown.withOpacity(0.8),
-                            size: 50,
-                          ),
-                        ),
-                      ],
-                    ),
+                    const NutTroVeV2(),
                     Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: CircleAvatar(
