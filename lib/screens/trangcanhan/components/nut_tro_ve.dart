@@ -12,20 +12,26 @@ class NutTroVe extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        TextButton(
-          onPressed: () {
-            Navigator.pop(context);
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => const TrangChu(),
-              ),
-            );
-          },
-          child: Icon(
-            Icons.arrow_back_rounded,
-            color: Colors.brown[300],
-            size: 40,
+        Container(
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(20),
+          ),
+          child: TextButton(
+            onPressed: () {
+              Navigator.pop(context);
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const TrangChu(),
+                ),
+              );
+            },
+            child: Icon(
+              Icons.arrow_back_rounded,
+              color: Colors.brown[300],
+              size: 40,
+            ),
           ),
         ),
       ],

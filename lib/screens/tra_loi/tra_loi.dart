@@ -6,6 +6,7 @@ import '../../object/question_obj.dart';
 import '../../provider/question_provider.dart';
 import 'header.dart';
 
+// ignore: must_be_immutable
 class ManHinhTraLoi extends StatefulWidget {
   ManHinhTraLoi({
     Key? key,
@@ -59,7 +60,7 @@ class _ManHinhTraLoiState extends State<ManHinhTraLoi> {
                             mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              const header(),
+                              const Header(),
                               Text(
                                 'Câu ${widget.id}',
                                 style: const TextStyle(

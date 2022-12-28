@@ -11,8 +11,8 @@ class Row123 extends StatefulWidget {
 
 // ignore: camel_case_types
 class _Row123State extends State<Row123> {
-  Color color1 = Colors.white.withOpacity(0.4);
-  Color color2 = Colors.white.withOpacity(0.4);
+  Color color1 = Colors.grey;
+  Color color2 = Colors.grey;
   bool i1 = false;
   bool i2 = false;
 
@@ -22,11 +22,11 @@ class _Row123State extends State<Row123> {
     setState(() {
       if (widget.lv >= 2) {
         i1 = true;
-        color1 = Colors.white.withOpacity(0.8);
+        color1 = Colors.deepPurple.withOpacity(0.6);
       }
       if (widget.lv >= 3) {
         i2 = true;
-        color2 = Colors.white.withOpacity(0.8);
+        color2 = Colors.deepPurple.withOpacity(0.6);
       }
     });
   }
@@ -53,7 +53,7 @@ class _Row123State extends State<Row123> {
             },
             style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.all<Color>(
-                    Colors.white.withOpacity(0.8)),
+                    Colors.deepPurple.withOpacity(0.6)),
                 shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                   RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20)),
@@ -61,9 +61,9 @@ class _Row123State extends State<Row123> {
             child: const Text(
               '1',
               style: TextStyle(
-                  fontSize: 20,
+                  fontSize: 28,
                   fontWeight: FontWeight.bold,
-                  color: Colors.black87),
+                  color: Colors.white),
             ),
           ),
         ),
@@ -93,9 +93,9 @@ class _Row123State extends State<Row123> {
             child: const Text(
               '2',
               style: TextStyle(
-                  fontSize: 20,
+                  fontSize: 28,
                   fontWeight: FontWeight.bold,
-                  color: Colors.black87),
+                  color: Colors.white),
             ),
           ),
         ),
@@ -125,9 +125,9 @@ class _Row123State extends State<Row123> {
             child: const Text(
               '3',
               style: TextStyle(
-                  fontSize: 20,
+                  fontSize: 28,
                   fontWeight: FontWeight.bold,
-                  color: Colors.black87),
+                  color: Colors.white),
             ),
           ),
         ),

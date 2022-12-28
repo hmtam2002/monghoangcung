@@ -11,9 +11,9 @@ class Row789 extends StatefulWidget {
 
 // ignore: camel_case_types
 class _Row789State extends State<Row789> {
-  Color color1 = Colors.white.withOpacity(0.4);
-  Color color2 = Colors.white.withOpacity(0.4);
-  Color color3 = Colors.white.withOpacity(0.4);
+  Color color1 = Colors.grey;
+  Color color2 = Colors.grey;
+  Color color3 = Colors.grey;
   bool i1 = false;
   bool i2 = false;
   bool i3 = false;
@@ -24,15 +24,15 @@ class _Row789State extends State<Row789> {
     setState(() {
       if (widget.lv >= 7) {
         i1 = true;
-        color1 = Colors.white.withOpacity(0.8);
+        color1 = Colors.deepPurple.withOpacity(0.6);
       }
       if (widget.lv >= 8) {
         i2 = true;
-        color2 = Colors.white.withOpacity(0.8);
+        color2 = Colors.deepPurple.withOpacity(0.6);
       }
       if (widget.lv >= 9) {
         i3 = true;
-        color3 = Colors.white.withOpacity(0.8);
+        color3 = Colors.deepPurple.withOpacity(0.6);
       }
     });
   }
@@ -68,9 +68,9 @@ class _Row789State extends State<Row789> {
             child: const Text(
               '7',
               style: TextStyle(
-                  fontSize: 20,
+                  fontSize: 28,
                   fontWeight: FontWeight.bold,
-                  color: Colors.black87),
+                  color: Colors.white),
             ),
           ),
         ),
@@ -100,9 +100,9 @@ class _Row789State extends State<Row789> {
             child: const Text(
               '8',
               style: TextStyle(
-                  fontSize: 20,
+                  fontSize: 28,
                   fontWeight: FontWeight.bold,
-                  color: Colors.black87),
+                  color: Colors.white),
             ),
           ),
         ),
@@ -132,9 +132,9 @@ class _Row789State extends State<Row789> {
             child: const Text(
               '9',
               style: TextStyle(
-                  fontSize: 20,
+                  fontSize: 28,
                   fontWeight: FontWeight.bold,
-                  color: Colors.black87),
+                  color: Colors.white),
             ),
           ),
         ),

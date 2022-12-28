@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:monghoangcung/components/nen_game.dart';
 import 'package:monghoangcung/object/account_obj.dart';
 import 'package:monghoangcung/screens/trangcanhan/components/nutrove2.dart';
-import 'package:monghoangcung/screens/trangcanhan/trangcanhan.dart';
 import 'components/textview.dart';
 
 class EditInfo extends StatefulWidget {

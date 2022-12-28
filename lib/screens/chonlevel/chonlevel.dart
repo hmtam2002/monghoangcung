@@ -40,20 +40,28 @@ class _ChooselvState extends State<Chooselv> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    TextButton(
-                      onPressed: () {
-                        Navigator.pop(context);
-                        Navigator.push(
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: TextButton(
+                        onPressed: () {
+                          Navigator.pop(context);
+                          Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const TrangChu()));
-                      },
-                      child: Icon(
-                        Icons.arrow_back_outlined,
-                        color: Colors.brown.withOpacity(0.8),
-                        size: 50,
+                              builder: (context) => const TrangChu(),
+                            ),
+                          );
+                        },
+                        child: Icon(
+                          Icons.arrow_back_rounded,
+                          color: Colors.brown[300],
+                          size: 40,
+                        ),
                       ),
                     ),
                   ],
@@ -67,11 +75,11 @@ class _ChooselvState extends State<Chooselv> {
                     borderRadius: BorderRadius.circular(30),
                   ),
                   padding:
-                      const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+                      const EdgeInsets.symmetric(horizontal: 45, vertical: 10),
                   child: const Text(
                     'Màn chơi',
                     style: TextStyle(
-                      fontSize: 20,
+                      fontSize: 25,
                       fontWeight: FontWeight.bold,
                       color: Colors.deepPurple,
                     ),

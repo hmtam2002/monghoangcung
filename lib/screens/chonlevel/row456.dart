@@ -9,11 +9,9 @@ class Row456 extends StatefulWidget {
 }
 
 class _Row456State extends State<Row456> {
-  Color color1 = Colors.white.withOpacity(0.4);
-
-  Color color2 = Colors.white.withOpacity(0.4);
-
-  Color color3 = Colors.white.withOpacity(0.4);
+  Color color1 = Colors.grey;
+  Color color2 = Colors.grey;
+  Color color3 = Colors.grey;
 
   bool i1 = false;
 
@@ -26,15 +24,15 @@ class _Row456State extends State<Row456> {
     setState(() {
       if (widget.lv >= 4) {
         i1 = true;
-        color1 = Colors.white.withOpacity(0.8);
+        color1 = Colors.deepPurple.withOpacity(0.6);
       }
       if (widget.lv >= 5) {
         i2 = true;
-        color2 = Colors.white.withOpacity(0.8);
+        color2 = Colors.deepPurple.withOpacity(0.6);
       }
       if (widget.lv >= 6) {
         i3 = true;
-        color3 = Colors.white.withOpacity(0.8);
+        color3 = Colors.deepPurple.withOpacity(0.6);
       }
     });
   }
@@ -72,9 +70,9 @@ class _Row456State extends State<Row456> {
             child: const Text(
               '4',
               style: TextStyle(
-                  fontSize: 20,
+                  fontSize: 28,
                   fontWeight: FontWeight.bold,
-                  color: Colors.black87),
+                  color: Colors.white),
             ),
           ),
         ),
@@ -104,9 +102,9 @@ class _Row456State extends State<Row456> {
             child: const Text(
               '5',
               style: TextStyle(
-                  fontSize: 20,
+                  fontSize: 28,
                   fontWeight: FontWeight.bold,
-                  color: Colors.black87),
+                  color: Colors.white),
             ),
           ),
         ),
@@ -136,9 +134,9 @@ class _Row456State extends State<Row456> {
             child: const Text(
               '6',
               style: TextStyle(
-                  fontSize: 20,
+                  fontSize: 28,
                   fontWeight: FontWeight.bold,
-                  color: Colors.black87),
+                  color: Colors.white),
             ),
           ),
         ),

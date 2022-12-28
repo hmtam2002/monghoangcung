@@ -40,20 +40,28 @@ class _Chooselv2State extends State<Chooselv2> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    TextButton(
-                      onPressed: () {
-                        Navigator.pop(context);
-                        Navigator.push(
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: TextButton(
+                        onPressed: () {
+                          Navigator.pop(context);
+                          Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const TrangChu()));
-                      },
-                      child: Icon(
-                        Icons.arrow_back_outlined,
-                        color: Colors.brown.withOpacity(0.8),
-                        size: 50,
+                              builder: (context) => const TrangChu(),
+                            ),
+                          );
+                        },
+                        child: Icon(
+                          Icons.arrow_back_rounded,
+                          color: Colors.brown[300],
+                          size: 40,
+                        ),
                       ),
                     ),
                   ],
