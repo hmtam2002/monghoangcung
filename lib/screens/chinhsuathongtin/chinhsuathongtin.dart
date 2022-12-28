@@ -40,16 +40,25 @@ class _EditInfoState extends State<EditInfo> {
                           backgroundImage: AssetImage(account!.picture),
                         )),
                     const Padding(padding: EdgeInsets.all(20)),
-                    const Text(
-                      'CẬP NHẬT THÔNG TIN',
-                      style: TextStyle(
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Colors.white.withOpacity(0.8),
+                        borderRadius: BorderRadius.circular(30),
+                      ),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 20, vertical: 10),
+                      child: const Text(
+                        'Đổi tên',
+                        style: TextStyle(
                           fontSize: 25,
-                          color: Colors.black87,
-                          fontWeight: FontWeight.bold),
+                          fontWeight: FontWeight.bold,
+                          color: Colors.deepPurple,
+                        ),
+                      ),
                     ),
                     textview(
                       username: _fullname,
-                      text: 'fullname',
+                      text: 'Tên mới',
                     ),
                     Container(
                       height: 50,

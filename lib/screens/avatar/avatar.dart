@@ -32,7 +32,7 @@ class _EditavatarState extends State<Editavatar> {
             child: const Text(
               'Chọn avatar',
               style: TextStyle(
-                fontSize: 30,
+                fontSize: 25,
                 fontWeight: FontWeight.bold,
                 color: Colors.deepPurple,
               ),
