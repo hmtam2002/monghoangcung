@@ -1,14 +1,11 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:monghoangcung/components/nen_game.dart';
+import 'package:monghoangcung/object/account_obj.dart';
 import 'package:monghoangcung/screens/chonlevel/chonlevel.dart';
 import 'package:monghoangcung/screens/chonlevel/row111213.dart';
-import 'package:monghoangcung/screens/chonlevel/row123.dart';
-import 'package:monghoangcung/screens/chonlevel/row456.dart';
 import 'package:monghoangcung/screens/chonlevel/row789.dart';
 import 'package:monghoangcung/screens/trangchu/trangchu.dart';
-import '../../object/Accounts.dart';
-import 'components/nutchuyenhuong.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 class Chooselv2 extends StatefulWidget {
@@ -20,12 +17,12 @@ class Chooselv2 extends StatefulWidget {
 
 class _Chooselv2State extends State<Chooselv2> {
   final accid = FirebaseAuth.instance.currentUser?.uid;
-  Future<Account?> readAccount() async {
+  Future<AccountObject?> readAccount() async {
     final docAccounts =
         FirebaseFirestore.instance.collection('accounts').doc(accid);
     final snapshot = await docAccounts.get();
     if (snapshot.exists) {
-      return Account.fromJson(snapshot.data()!);
+      return AccountObject.fromJson(snapshot.data()!);
     }
     return null;
   }
@@ -47,6 +44,7 @@ class _Chooselv2State extends State<Chooselv2> {
                   children: [
                     TextButton(
                       onPressed: () {
+                        Navigator.pop(context);
                         Navigator.push(
                             context,
                             MaterialPageRoute(
@@ -63,12 +61,20 @@ class _Chooselv2State extends State<Chooselv2> {
                 const SizedBox(
                   height: 80,
                 ),
-                const Text(
-                  'Màn chơi',
-                  style: TextStyle(
-                    fontSize: 30,
-                    color: Colors.black54,
-                    fontWeight: FontWeight.bold,
+                Container(
+                  decoration: BoxDecoration(
+                    color: Colors.white.withOpacity(0.8),
+                    borderRadius: BorderRadius.circular(30),
+                  ),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+                  child: const Text(
+                    'Màn chơi',
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.deepPurple,
+                    ),
                   ),
                 ),
                 const SizedBox(
@@ -92,10 +98,11 @@ class _Chooselv2State extends State<Chooselv2> {
                       margin: const EdgeInsets.all(10),
                       child: ElevatedButton(
                         onPressed: () {
+                          Navigator.pop(context);
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => Chooselv()));
+                                  builder: (context) => const Chooselv()));
                         },
                         style: ButtonStyle(
                             backgroundColor: MaterialStateProperty.all<Color>(
