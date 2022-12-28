@@ -5,9 +5,8 @@ import 'package:monghoangcung/screens/level/cau2.dart';
 import 'package:monghoangcung/object/Accounts.dart';
 
 class Row123 extends StatefulWidget {
-  const Row123({
-    Key? key,
-  }) : super(key: key);
+  Row123({Key? key, required this.lv}) : super(key: key);
+  final int lv;
 
   @override
   State<Row123> createState() => _Row123State();
@@ -19,6 +18,7 @@ class _Row123State extends State<Row123> {
   Color color2 = Colors.white.withOpacity(0.4);
   bool i1 = false;
   bool i2 = false;
+
   final accid = FirebaseAuth.instance.currentUser?.uid;
   Future<Account?> readAccount() async {
     final docAccounts =
@@ -28,6 +28,15 @@ class _Row123State extends State<Row123> {
       return Account.fromJson(snapshot.data()!);
     }
     return null;
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    setState(() {
+      if (widget.lv >= 2) i1 = true;
+      if (widget.lv >= 3) i2 = true;
+    });
   }
 
   @override
@@ -76,7 +85,7 @@ class _Row123State extends State<Row123> {
                 width: 70,
                 margin: const EdgeInsets.all(20),
                 child: ElevatedButton(
-                  onPressed: (account!.lv >= 2)
+                  onPressed: i1
                       ? () {
                           setState(() {
                             color1 = Colors.white.withOpacity(0.8);
@@ -111,7 +120,7 @@ class _Row123State extends State<Row123> {
                 width: 70,
                 margin: const EdgeInsets.all(20),
                 child: ElevatedButton(
-                  onPressed: (account.lv >= 3)
+                  onPressed: i2
                       ? () {
                           setState(() {
                             color2 = Colors.white.withOpacity(0.8);
