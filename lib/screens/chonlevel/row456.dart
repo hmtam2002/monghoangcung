@@ -1,11 +1,8 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:monghoangcung/screens/tra_loi/tra_loi.dart';
-import '../../object/account_obj.dart';
 
 class Row456 extends StatefulWidget {
-  Row456({Key? key, required this.lv}) : super(key: key);
+  const Row456({Key? key, required this.lv}) : super(key: key);
   final int lv;
   @override
   State<Row456> createState() => _Row456State();

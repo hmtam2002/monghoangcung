@@ -121,35 +121,35 @@ class _Chooselv2State extends State<Chooselv2> {
                         ),
                       ),
                     ),
-                    Container(
-                      height: 50,
-                      width: 150,
-                      margin: const EdgeInsets.all(10),
-                      child: ElevatedButton(
-                        onPressed: () {
-                          Navigator.pop(context);
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const Chooselv2()));
-                        },
-                        style: ButtonStyle(
-                            backgroundColor: MaterialStateProperty.all<Color>(
-                                Colors.blue.withOpacity(0.8)),
-                            shape: MaterialStateProperty.all<
-                                RoundedRectangleBorder>(
-                              RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(20)),
-                            )),
-                        child: const Text(
-                          'Tiếp theo',
-                          style: TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.black87),
-                        ),
-                      ),
-                    ),
+                    // Container(
+                    //   height: 50,
+                    //   width: 150,
+                    //   margin: const EdgeInsets.all(10),
+                    //   child: ElevatedButton(
+                    //     onPressed: () {
+                    //       Navigator.pop(context);
+                    //       Navigator.push(
+                    //           context,
+                    //           MaterialPageRoute(
+                    //               builder: (context) => const Chooselv2()));
+                    //     },
+                    //     style: ButtonStyle(
+                    //         backgroundColor: MaterialStateProperty.all<Color>(
+                    //             Colors.blue.withOpacity(0.8)),
+                    //         shape: MaterialStateProperty.all<
+                    //             RoundedRectangleBorder>(
+                    //           RoundedRectangleBorder(
+                    //               borderRadius: BorderRadius.circular(20)),
+                    //         )),
+                    //     child: const Text(
+                    //       'Tiếp theo',
+                    //       style: TextStyle(
+                    //           fontSize: 20,
+                    //           fontWeight: FontWeight.bold,
+                    //           color: Colors.black87),
+                    //     ),
+                    //   ),
+                    // ),
                   ],
                 )
               ]));
