@@ -61,12 +61,22 @@ class _ManHinhTraLoiState extends State<ManHinhTraLoi> {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               const Header(),
-                              Text(
-                                'Câu ${widget.id}',
-                                style: const TextStyle(
-                                    fontSize: 30,
-                                    color: Colors.deepPurple,
-                                    fontWeight: FontWeight.bold),
+                              Container(
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(30),
+                                ),
+                                child: Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                      horizontal: 30, vertical: 10),
+                                  child: Text(
+                                    'Câu ${widget.id}',
+                                    style: const TextStyle(
+                                        fontSize: 30,
+                                        color: Colors.deepPurple,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                ),
                               ),
                               const SizedBox(
                                 height: kDefaultPadding,
