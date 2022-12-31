@@ -37,8 +37,8 @@ class _Row123State extends State<Row123> {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Container(
-          height: 70,
-          width: 70,
+          height: MediaQuery.of(context).size.width / 6,
+          width: MediaQuery.of(context).size.width / 6,
           margin: const EdgeInsets.all(20),
           child: ElevatedButton(
             onPressed: () {
@@ -68,8 +68,8 @@ class _Row123State extends State<Row123> {
           ),
         ),
         Container(
-          height: 70,
-          width: 70,
+          height: MediaQuery.of(context).size.width / 6,
+          width: MediaQuery.of(context).size.width / 6,
           margin: const EdgeInsets.all(20),
           child: ElevatedButton(
             onPressed: i1
@@ -100,8 +100,8 @@ class _Row123State extends State<Row123> {
           ),
         ),
         Container(
-          height: 70,
-          width: 70,
+          height: MediaQuery.of(context).size.width / 6,
+          width: MediaQuery.of(context).size.width / 6,
           margin: const EdgeInsets.all(20),
           child: ElevatedButton(
             onPressed: i2
