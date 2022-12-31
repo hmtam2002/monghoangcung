@@ -45,8 +45,8 @@ class _Row10State extends State<Row10> {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Container(
-          height: 70,
-          width: 70,
+          height: MediaQuery.of(context).size.width / 6,
+          width: MediaQuery.of(context).size.width / 6,
           margin: const EdgeInsets.all(20),
           child: ElevatedButton(
             onPressed: i1
@@ -79,8 +79,8 @@ class _Row10State extends State<Row10> {
           ),
         ),
         Container(
-          height: 70,
-          width: 70,
+          height: MediaQuery.of(context).size.width / 6,
+          width: MediaQuery.of(context).size.width / 6,
           margin: const EdgeInsets.all(20),
           child: ElevatedButton(
             onPressed: i2
@@ -111,8 +111,8 @@ class _Row10State extends State<Row10> {
           ),
         ),
         Container(
-          height: 70,
-          width: 70,
+          height: MediaQuery.of(context).size.width / 6,
+          width: MediaQuery.of(context).size.width / 6,
           margin: const EdgeInsets.all(20),
           child: ElevatedButton(
             onPressed: i3
