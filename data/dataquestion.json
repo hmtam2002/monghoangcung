@@ -746,6 +746,159 @@
       "answers2": "Thông cảm và xót thương",
       "answers3": "Lên án và phê phán",
       "answers4": "Ca ngợi và tự hào"
+    },
+    {
+      "id": 84,
+      "answers": 2,
+      "question": "Sự xuất hiện của nhà nước cổ đại nào sau đây có nguyên nhân là do mâu thuẫn giai cấp gay gắt đến mức không thể điều hòa được:",
+      "answers1": "Nhà nước Giéc – manh",
+      "answers2": "Nhà nước Rôma",
+      "answers3": "Lên án và phê phán",
+      "answers4": "Các Nhà nước phương Đông"
+    },
+    {
+      "id": 85,
+      "answers": 2,
+      "question": "Theo học thuyết Mác – Lênin, nhận định nào sau đây là đúng:",
+      "answers1": "Tính chất giai cấp của nhà nước không đổi nhưng bản chất của nhà nước thì thay đổi qua các kiểu nhà nước khác nhau",
+      "answers2": "Tính chất giai cấp và bản chất của nhà nước không thay đổi qua các kiểu nhà nước khác nhau",
+      "answers3": "Tính chất giai cấp và bản chất của nhà nước luôn luôn thay đổi qua các kiểu nhà nước khác nhau",
+      "answers4": "Tính chất giai cấp của nhà nước luôn luôn thay đổi, còn bản chất của nhà nước là không đổi qua các kiểu nhà nước khác nhau"
+    },
+    {
+      "id": 86,
+      "answers": 1,
+      "question": "hành phố nào sau đây không phải là thành phố trực thuộc trung ương",
+      "answers1": "Thành phố Huế",
+      "answers2": "Thành phố Cần Thơ",
+      "answers3": "Thành phố Đà Nẵng",
+      "answers4": "Thành phố Hải Phòng"
+    },
+    {
+      "id": 87,
+      "answers": 1,
+      "question": " Câu nào sau đây đúng với quy định được ghi trong Điều 15 Hiến pháp Việt Nam 1992, đã được sửa đổi, bổ sung",
+      "answers1": "…Nhà nước thực hiện nhất quán chính sách phát triển nền kinh tế thị trường có sự quản lý của nhà nước theo định hướng XHCN…",
+      "answers2": "…Nhà nước thực hiện nhất quán chính sách phát triển nền kinh tế thị trường định hướng XHCN…",
+      "answers3": "…Nhà nước thực hiện nhất quán chính sách phát triển nền kinh tế thị trường tự do cạnh tranh theo định hướng XHCN…",
+      "answers4": "…Nhà nước thực hiện nhất quán chính sách phát triển nền kinh tế thị trường kết hợp với kế hoạch phát triển kinh tế của nhà nước theo định hướng XHCN…"
+    },
+    {
+      "id": 88,
+      "answers": 4,
+      "question": "Sự tồn tại của nhà nước",
+      "answers1": "Là kết quả tất yếu của xã hội loài người, ở đâu có xã hội ở đó tồn tại nhà nước",
+      "answers2": "Là kết quả tất yếu của xã hội có giai cấp ",
+      "answers3": "Là do ý chí của các thành viên trong xã hội với mong muốn thành lập nên nhà nước để bảo vệ lợi ích chung",
+      "answers4": "Cả A, B và C đều đúng"
+    },
+    {
+      "id": 89,
+      "answers": 2,
+      "question": "Số lượng tỉnh, thành phố trực thuộc trung ương hiện nay của nước CHXHCN Việt Nam là",
+      "answers1": "62",
+      "answers2": "63",
+      "answers3": "64",
+      "answers4": "65"
+    },
+    {
+      "id": 90,
+      "answers": 1,
+      "question": "Quyền lực và hệ thống tổ chức quyền lực trong xã hội CXNT",
+      "answers1": "Hòa nhập vào xã hội và phục vụ lợi ích cho các thành viên trong xã hội",
+      "answers2": "Đứng trên xã hội, tách khỏi xã hội và phục vụ lợi ích cho Hội đồng thị tộc, tù trưởng, các thủ lĩnh tôn giáo",
+      "answers3": "Đứng trên xã hội, tách khỏi xã hội và phục vụ lợi ích cho các thành viên trong xã hội",
+      "answers4": "Hòa nhập vào xã hội và phục vụ cho lợi ích của Hội đồng thị tộc, tù trưởng, các thủ lĩnh tôn giáo"
+    },
+    {
+      "id": 91,
+      "answers": 2,
+      "question": "Ngoài tính chất giai cấp, kiểu nhà nước nào sau đây còn có vai trò xã hội",
+      "answers1": "Nhà nước XHCN",
+      "answers2": "Nhà nước XHCN; Nhà nước tư sản",
+      "answers3": "Nhà nước XHCN; Nhà nước tư sản; Nhà nước phong kiến",
+      "answers4": "Nhà nước XHCN; Nhà nước tư sản; Nhà nước phong kiến; Nhà nước chủ nô"
+    },
+    {
+      "id": 92,
+      "answers": 2,
+      "question": "Theo Hiến pháp Việt Nam 1992, Thủ tướng Chính phủ Nước CHXHCN Việt Nam",
+      "answers1": "Do nhân dân bầu",
+      "answers2": "Do Quốc hội bầu theo sự giới thiệu của Chủ tịch nước",
+      "answers3": "Do Chủ tịch nước giới thiệu ",
+      "answers4": "Do chính phủ bầu"
+    },
+    {
+      "id": 93,
+      "answers": 3,
+      "question": "Theo Điều lệ ĐCS Việt Nam, nếu không có đại hội bất thường, thì mấy năm ĐCS Việt Nam tổ chức Đại hội đại biểu toàn quốc một lần",
+      "answers1": "3 năm",
+      "answers2": "4 năm",
+      "answers3": "5 năm",
+      "answers4": "6 năm"
+    },
+    {
+      "id": 94,
+      "answers": 3,
+      "question": "Nước nào sau đây có hình thức cấu trúc nhà nước liên bang",
+      "answers1": "Việt Nam",
+      "answers2": "Pháp",
+      "answers3": "Ấn độ",
+      "answers4": "Cả B và C"
+    },
+    {
+      "id": 95,
+      "answers": 3,
+      "question": "Nhà nước nào sau đây có hình thức cấu trúc là nhà nước đơn nhất",
+      "answers1": "Mêxicô",
+      "answers2": "Thụy Sĩ ",
+      "answers3": "Séc",
+      "answers4": "Cả B và C"
+    },
+    {
+      "id": 96,
+      "answers": 1,
+      "question": "Nhà nước CHXHCN Việt Nam có hình thức cấu trúc là  ",
+      "answers1": "Nhà nước đơn nhất",
+      "answers2": "Nhà nước liên bang",
+      "answers3": "Nhà nước liên minh",
+      "answers4": "Cả A và C đều đúng"
+    },
+    {
+      "id": 97,
+      "answers": 4,
+      "question": "Nhà nước nào sau đây có hình thức chính thể cộng hòa tổng thống?",
+      "answers1": "Đức",
+      "answers2": "Ấn Độ",
+      "answers3": "Nga",
+      "answers4": "Cả A, B và C đều sai"
+    },
+    {
+      "id": 98,
+      "answers": 4,
+      "question": "Nhà nước nào sau đây có chính thể cộng hòa",
+      "answers1": "Ucraina",
+      "answers2": "Marốc",
+      "answers3": "Nam Phi",
+      "answers4": "Cả A và C"
+    },
+    {
+      "id": 99,
+      "answers": 1,
+      "question": "Nhà nước nào sau đây có chính thể cộng hòa đại nghị",
+      "answers1": "Đức",
+      "answers2": "Bồ Đào Nha",
+      "answers3": "Hoa Kỳ ",
+      "answers4": "Cả A và B"
+    },
+    {
+      "id": 100,
+      "answers": 3,
+      "question": "Nhà nước quân chủ hạn chế (quân chủ lập hiến) là nhà nước",
+      "answers1": "Quyền lực nhà nước tối cao thuộc về một cơ quan tập thể và được hình thành theo phương thức thừa kế",
+      "answers2": "Quyền lực nhà nước tối cao thuộc về một cơ quan tập thể do bầu cử mà ra",
+      "answers3": "Quyền lực nhà nước được phân chia cho người đứng đầu nhà nước theo phương thức thừa kế và một CQNN khác.",
+      "answers4": "Quyền lực nhà nước thuộc về một tập thể gồm những người quý tộc và được hình thành do thừa kế"
     }
   ]
 }

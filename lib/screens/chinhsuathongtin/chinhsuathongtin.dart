@@ -2,10 +2,8 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:monghoangcung/components/nen_game.dart';
-import 'package:monghoangcung/screens/trangchu/components/TopHeader.dart';
-import '../../object/Accounts.dart';
-import '../trangcanhan/trangcanhan.dart';
-import 'components/avartar.dart';
+import 'package:monghoangcung/object/account_obj.dart';
+import 'package:monghoangcung/screens/trangcanhan/components/nutrove2.dart';
 import 'components/textview.dart';
 
 class EditInfo extends StatefulWidget {
@@ -17,12 +15,11 @@ class EditInfo extends StatefulWidget {
 
 class _EditInfoState extends State<EditInfo> {
   final accid = FirebaseAuth.instance.currentUser?.uid;
-  TextEditingController _fullname = new TextEditingController();
+  final TextEditingController _fullname = TextEditingController();
 
   String? _num = '';
   @override
   Widget build(BuildContext context) {
-    final accid = FirebaseAuth.instance.currentUser?.uid;
     return FutureBuilder(
         future: readAccount(),
         builder: ((context, snapshot) {
@@ -34,24 +31,7 @@ class _EditInfoState extends State<EditInfo> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        TextButton(
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => const trangcanhan()));
-                          },
-                          child: Icon(
-                            Icons.arrow_back,
-                            color: Colors.brown.withOpacity(0.8),
-                            size: 50,
-                          ),
-                        ),
-                      ],
-                    ),
+                    const NutTroVeV2(),
                     Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: CircleAvatar(
@@ -59,16 +39,25 @@ class _EditInfoState extends State<EditInfo> {
                           backgroundImage: AssetImage(account!.picture),
                         )),
                     const Padding(padding: EdgeInsets.all(20)),
-                    const Text(
-                      'CẬP NHẬT THÔNG TIN',
-                      style: TextStyle(
-                          fontSize: 25,
-                          color: Colors.black87,
-                          fontWeight: FontWeight.bold),
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Colors.white.withOpacity(0.8),
+                        borderRadius: BorderRadius.circular(30),
+                      ),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 30, vertical: 10),
+                      child: const Text(
+                        'Đổi tên',
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.deepPurple,
+                        ),
+                      ),
                     ),
                     textview(
                       username: _fullname,
-                      text: 'fullname',
+                      text: 'Tên mới',
                     ),
                     Container(
                       height: 50,
@@ -124,12 +113,12 @@ class _EditInfoState extends State<EditInfo> {
         }));
   }
 
-  Future<Account?> readAccount() async {
+  Future<AccountObject?> readAccount() async {
     final docAccounts =
         FirebaseFirestore.instance.collection('accounts').doc(accid);
     final snapshot = await docAccounts.get();
     if (snapshot.exists) {
-      return Account.fromJson(snapshot.data()!);
+      return AccountObject.fromJson(snapshot.data()!);
     }
   }
 

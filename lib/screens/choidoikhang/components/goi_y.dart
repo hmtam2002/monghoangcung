@@ -12,15 +12,15 @@ class goi_y extends StatelessWidget {
       children: [
         ElevatedButton(
           onPressed: () {},
-          child: Text('-2'),
+          child: const Text('-2'),
         ),
         ElevatedButton(
           onPressed: () {},
-          child: Text('-2'),
+          child: const Text('-2'),
         ),
         ElevatedButton(
           onPressed: () {},
-          child: Text('-2'),
+          child: const Text('-2'),
         ),
       ],
     );

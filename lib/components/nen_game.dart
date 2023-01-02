@@ -9,22 +9,21 @@ class nen_game extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      body: Container(
-        width: double.infinity,
-        height: size.height,
-        padding: const EdgeInsets.only(
-          top: kDefaultPadding,
-          left: kDefaultPadding,
-          right: kDefaultPadding,
-        ),
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: nen_game_image,
-            fit: BoxFit.cover,
-          ),
-        ),
-        child: child,
+        body: Container(
+      width: size.width,
+      height: size.height,
+      padding: const EdgeInsets.only(
+        top: kDefaultPadding,
+        left: kDefaultPadding,
+        right: kDefaultPadding,
       ),
-    );
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          image: nen_game_image,
+          fit: BoxFit.cover,
+        ),
+      ),
+      child: child,
+    ));
   }
 }

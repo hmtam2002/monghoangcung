@@ -2,7 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:monghoangcung/object/account_obj.dart';
-import '../../trangcanhan/trangcanhan.dart';
+import 'package:monghoangcung/screens/trangcanhan/trangcanhan.dart';
 
 class TopHeader extends StatefulWidget {
   const TopHeader({Key? key}) : super(key: key);
@@ -25,25 +25,35 @@ class _TopHeaderState extends State<TopHeader> {
               children: [
                 TextButton(
                     onPressed: () {
+                      Navigator.pop(context);
                       Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const TrangCaNhan()));
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const TrangCaNhan(),
+                        ),
+                      );
                     },
                     child: CircleAvatar(
                       backgroundImage: AssetImage(account!.picture),
                     )),
-                TextButton(
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const TrangCaNhan()));
-                  },
-                  child: Icon(
-                    Icons.menu_rounded,
-                    color: Colors.brown.withOpacity(0.8),
-                    size: 50,
+                Container(
+                  margin: const EdgeInsets.only(right: 10),
+                  width: 50,
+                  height: 40,
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(20)),
+                  child: TextButton(
+                    onPressed: () {
+                      FirebaseAuth.instance.signOut();
+                      Navigator.pushNamedAndRemoveUntil(
+                          context, 'welcome', (route) => false);
+                    },
+                    child: const Icon(
+                      Icons.logout,
+                      color: Colors.black,
+                      size: 20,
+                    ),
                   ),
                 ),
               ],
@@ -61,5 +71,6 @@ class _TopHeaderState extends State<TopHeader> {
     if (snapshot.exists) {
       return AccountObject.fromJson(snapshot.data()!);
     }
+    return null;
   }
 }

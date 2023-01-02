@@ -1,14 +1,12 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:monghoangcung/components/nen_game.dart';
-import 'package:monghoangcung/constants.dart';
-import 'package:monghoangcung/screens/chonlevel/chonlevel2.dart';
-import 'package:monghoangcung/screens/level/level1.dart';
-import 'package:monghoangcung/screens/trangchu/components/TopHeader.dart';
-
-import '../trangchu/trangchu.dart';
+import 'package:monghoangcung/object/account_obj.dart';
+import 'package:monghoangcung/screens/chonlevel/row123.dart';
+import 'package:monghoangcung/screens/chonlevel/row456.dart';
+import 'package:monghoangcung/screens/trangchu/trangchu.dart';
 import 'components/nutchuyenhuong.dart';
-import 'components/row123.dart';
-import 'components/row456.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class Chooselv extends StatefulWidget {
   const Chooselv({super.key});
@@ -18,45 +16,96 @@ class Chooselv extends StatefulWidget {
 }
 
 class _ChooselvState extends State<Chooselv> {
+  final accid = FirebaseAuth.instance.currentUser?.uid;
+  Future<AccountObject?> readAccount() async {
+    final docAccounts =
+        FirebaseFirestore.instance.collection('accounts').doc(accid);
+    final snapshot = await docAccounts.get();
+    if (snapshot.exists) {
+      return AccountObject.fromJson(snapshot.data()!);
+    }
+    return null;
+  }
+
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
-    return nen_game(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              TextButton(
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const trangchu()));
-                },
-                child: Icon(
-                  Icons.arrow_back_outlined,
-                  color: Colors.brown.withOpacity(0.8),
-                  size: 50,
+    return FutureBuilder(
+      future: readAccount(),
+      builder: ((context, snapshot) {
+        if (snapshot.hasData) {
+          final account = snapshot.data;
+          return nen_game(
+              child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: TextButton(
+                        onPressed: () {
+                          Navigator.pop(context);
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const TrangChu(),
+                            ),
+                          );
+                        },
+                        child: Icon(
+                          Icons.arrow_back_rounded,
+                          color: Colors.brown[300],
+                          size: 40,
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
-              ),
-            ],
-          ),
-          Text(
-            'Chọn Level',
-            style: TextStyle(
-                fontSize: 30, color: Colors.black, fontWeight: FontWeight.bold),
-          ),
-          SizedBox(
-            height: size.height / 4,
-          ),
-          row123(),
-          row456(),
-          nutchuyenhuong(),
-        ],
-      ),
+                const SizedBox(
+                  height: 80,
+                ),
+                Container(
+                  decoration: BoxDecoration(
+                    color: Colors.white.withOpacity(0.8),
+                    borderRadius: BorderRadius.circular(30),
+                  ),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 45, vertical: 10),
+                  child: const Text(
+                    'Màn chơi',
+                    style: TextStyle(
+                      fontSize: 25,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.deepPurple,
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  height: 80,
+                ),
+                Row123(
+                  lv: account!.lv,
+                ),
+                const SizedBox(
+                  height: 40,
+                ),
+                Row456(
+                  lv: account.lv,
+                ),
+                const SizedBox(
+                  height: 60,
+                ),
+                const Nutchuyenhuong(),
+              ]));
+        } else {
+          return Container();
+        }
+      }),
     );
   }
 }

@@ -1,15 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_connect/http/src/utils/utils.dart';
 import 'package:monghoangcung/components/nen_game.dart';
 import 'package:monghoangcung/screens/choidoikhang/timtran.dart';
-
 import 'package:monghoangcung/screens/xemxephang/xemxephang.dart';
 import '../../constants.dart';
 import '../trangchu/components/cacnut.dart';
 import '../trangchu/trangchu.dart';
 
-class phongcho extends StatelessWidget {
-  const phongcho({super.key});
+class PhongCho extends StatefulWidget {
+  const PhongCho({super.key});
 
+  @override
+  State<PhongCho> createState() => _PhongChoState();
+}
+
+class _PhongChoState extends State<PhongCho> {
+  final TextEditingController txtIdPhong = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return nen_game(
@@ -24,7 +30,7 @@ class phongcho extends StatelessWidget {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const trangchu()));
+                          builder: (context) => const TrangChu()));
                 },
                 child: Icon(
                   Icons.arrow_back_outlined,
@@ -34,33 +40,20 @@ class phongcho extends StatelessWidget {
               ),
             ],
           ),
-          Text(
+          const Text(
             'Đấu đối kháng',
             style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
           ),
           const SizedBox(
             height: kDefaultPadding * 10,
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Container(
-                  padding: EdgeInsets.all(10),
-                  width: MediaQuery.of(context).size.width / 2 - 20,
-                  child: IconButton(
-                    icon: Icon(Icons.history),
-                    onPressed: () => xemxephang(),
-                  )),
-              Container(
-                  padding: EdgeInsets.all(10),
-                  width: MediaQuery.of(context).size.width / 2 - 20,
-                  child: IconButton(
-                    icon: Icon(Icons.book_outlined),
-                    onPressed: () => xemxephang(),
-                  )),
-            ],
+          TextField(
+            controller: txtIdPhong,
+            decoration: const InputDecoration(
+              hintText: 'Id Phong',
+            ),
           ),
-          cacnut(
+          CacNut(
             text: 'Chơi ngay',
             press: MaterialPageRoute(
               builder: (context) => const SreachPlayer(),

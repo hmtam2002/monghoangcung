@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../../../constants.dart';
 
-class noidungcauhoi extends StatelessWidget {
-  const noidungcauhoi({
+class Noidungcauhoi extends StatelessWidget {
+  const Noidungcauhoi({
     Key? key,
   }) : super(key: key);
 
@@ -12,16 +12,16 @@ class noidungcauhoi extends StatelessWidget {
     return Container(
       width: double.infinity,
       height: 200,
-      margin: EdgeInsets.only(
+      margin: const EdgeInsets.only(
         top: 20,
         bottom: 20,
       ),
-      padding: EdgeInsets.all(kDefaultPadding),
+      padding: const EdgeInsets.all(kDefaultPadding),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(20),
       ),
-      child: Text('Câu hỏi:\nAi đã đặt tên cho dòng sông'),
+      child: const Text('Câu hỏi:\nAi đã đặt tên cho dòng sông'),
     );
   }
 }

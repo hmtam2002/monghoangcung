@@ -1,19 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:monghoangcung/components/nen_game.dart';
 import 'package:monghoangcung/constants.dart';
-
-import '../../timer/timecountdown2.dart';
+import '../timer/timecountdown2.dart';
 import '../trangchu/trangchu.dart';
-import 'cau2.dart';
+import 'tra_loi.dart';
 
-class level_1 extends StatefulWidget {
-  const level_1({super.key});
+class Level1 extends StatefulWidget {
+  const Level1({super.key});
 
   @override
-  State<level_1> createState() => _level_1State();
+  State<Level1> createState() => _Level1State();
 }
 
-class _level_1State extends State<level_1> {
+class _Level1State extends State<Level1> {
   bool button = true;
 
   Color button1color = Colors.white.withOpacity(0.8);
@@ -37,7 +36,7 @@ class _level_1State extends State<level_1> {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const trangchu()));
+                          builder: (context) => const TrangChu()));
                 },
                 child: Icon(
                   Icons.home,
@@ -50,7 +49,7 @@ class _level_1State extends State<level_1> {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const trangchu()));
+                          builder: (context) => const TrangChu()));
                 },
                 child: Icon(
                   Icons.settings,
@@ -74,8 +73,8 @@ class _level_1State extends State<level_1> {
               Container(
                 width: 100,
                 height: 100,
-                padding: EdgeInsets.all(10),
-                child: countimedown2(),
+                padding: const EdgeInsets.all(10),
+                child: const Countimedown2(),
               )
             ],
           ),
@@ -83,8 +82,8 @@ class _level_1State extends State<level_1> {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Text(
-                "Điểm : " + point.toString(),
-                style: TextStyle(fontSize: 30),
+                "Điểm : $point",
+                style: const TextStyle(fontSize: 30),
               ),
             ],
           ),
@@ -235,7 +234,7 @@ class _level_1State extends State<level_1> {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => Lv1_cau2(
+                        builder: (context) => ManHinhTraLoi(
                               soluongcau: 1,
                               id: 1,
                               point: point,

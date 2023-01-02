@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:monghoangcung/components/nen_game.dart';
 
-class diemdanh extends StatelessWidget {
-  const diemdanh({super.key});
+class DiemDanh extends StatelessWidget {
+  const DiemDanh({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-
-import '../choidoikhang.dart';
 import 'item_user.dart';
 
-class row_title extends StatelessWidget {
-  const row_title({
+class RowTitle extends StatelessWidget {
+  const RowTitle({
     Key? key,
   }) : super(key: key);
 
@@ -13,11 +11,11 @@ class row_title extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
-        item_user(),
+        const item_user(),
         Column(
-          children: [Text('level'), Text('6')],
+          children: const [Text('level'), Text('6')],
         ),
-        item_user(),
+        const item_user(),
       ],
     );
   }

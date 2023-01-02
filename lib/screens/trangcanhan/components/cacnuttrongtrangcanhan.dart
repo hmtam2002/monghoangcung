@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../chinhsuathongtin/chinhsuathongtin.dart';
-
-class cacnuttrongtrangcanhan extends StatelessWidget {
-  const cacnuttrongtrangcanhan({
+class Cacnuttrongtrangcanhan extends StatelessWidget {
+  const Cacnuttrongtrangcanhan({
     Key? key,
     required this.noidung,
     required this.press,
@@ -15,9 +13,10 @@ class cacnuttrongtrangcanhan extends StatelessWidget {
     return Container(
       height: 50,
       width: MediaQuery.of(context).size.width * 9 / 10,
-      margin: EdgeInsets.fromLTRB(0, 10, 0, 10),
+      margin: const EdgeInsets.fromLTRB(0, 10, 0, 10),
       child: ElevatedButton(
         onPressed: () {
+          Navigator.pop(context);
           Navigator.push(context, press);
         },
         style: ButtonStyle(
@@ -29,7 +28,7 @@ class cacnuttrongtrangcanhan extends StatelessWidget {
         child: Text(
           noidung,
           style: const TextStyle(
-              fontSize: 20, fontWeight: FontWeight.bold, color: Colors.black87),
+              fontSize: 18, fontWeight: FontWeight.bold, color: Colors.black87),
         ),
       ),
     );

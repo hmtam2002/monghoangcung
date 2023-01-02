@@ -2,8 +2,8 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:monghoangcung/components/nen_game.dart';
-import 'package:monghoangcung/screens/trangchu/components/TopHeader.dart';
-import 'package:monghoangcung/object/Accounts.dart';
+import 'package:monghoangcung/screens/trangchu/components/top_header.dart';
+import 'package:monghoangcung/object/account_obj.dart';
 import '../../chinhsuathongtin/components/avartar.dart';
 import '../../chinhsuathongtin/components/textview.dart';
 import '../../trangchu/trangchu.dart';
@@ -16,6 +16,8 @@ class CreateInfo extends StatefulWidget {
 }
 
 class _CreateInfoState extends State<CreateInfo> {
+  final TextEditingController _username = TextEditingController();
+  final TextEditingController _password = TextEditingController();
   final TextEditingController _fullname = TextEditingController();
   final _auth = FirebaseAuth.instance;
   String? _num = '';
@@ -39,7 +41,7 @@ class _CreateInfoState extends State<CreateInfo> {
             ),
             textview(
               username: _fullname,
-              text: 'Tên của bạn',
+              text: 'Họ và tên',
             ),
             Container(
               height: 50,
@@ -49,24 +51,21 @@ class _CreateInfoState extends State<CreateInfo> {
                 onPressed: () {
                   if (_fullname.text == '') {
                     setState(() {
-                      _num = 'Vui lòng nhập tên';
+                      _num = 'Đăng ký thất bại';
                     });
                   } else {
                     setState(() {
-                      _num = 'Đăng ký thành công';
-                      final account = Account(
-                        fullname: _fullname.text,
-                        picture: 'assets/1.jpg',
-                        lv: 1,
-                      );
+                      _num = 'Đăng ký thành công ';
+                      final account = AccountObject(
+                          fullname: _fullname.text,
+                          picture: 'assets/1.jpg',
+                          lv: 1);
                       createAccounts(account: account);
                     });
                     Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const trangchu(),
-                      ),
-                    );
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const TrangChu()));
                   }
                 },
                 style: ButtonStyle(
@@ -79,10 +78,9 @@ class _CreateInfoState extends State<CreateInfo> {
                 child: const Text(
                   'Đăng ký',
                   style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black87,
-                  ),
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black87),
                 ),
               ),
             ),
@@ -103,7 +101,7 @@ class _CreateInfoState extends State<CreateInfo> {
     );
   }
 
-  Future createAccounts({required Account account}) async {
+  Future createAccounts({required AccountObject account}) async {
     final docAccounts = FirebaseFirestore.instance
         .collection('accounts')
         .doc(_auth.currentUser!.uid);
