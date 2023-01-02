@@ -91,6 +91,9 @@ class _ChooselvState extends State<Chooselv> {
                 Row123(
                   lv: account!.lv,
                 ),
+                const SizedBox(
+                  height: 40,
+                ),
                 Row456(
                   lv: account.lv,
                 ),

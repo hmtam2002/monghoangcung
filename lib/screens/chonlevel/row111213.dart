@@ -42,12 +42,11 @@ class _Row10State extends State<Row10> {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
-        Container(
-          height: MediaQuery.of(context).size.width / 6,
-          width: MediaQuery.of(context).size.width / 6,
-          margin: const EdgeInsets.all(20),
+        SizedBox(
+          height: MediaQuery.of(context).size.width / 5,
+          width: MediaQuery.of(context).size.width / 5,
           child: ElevatedButton(
             onPressed: i1
                 ? () {
@@ -78,10 +77,9 @@ class _Row10State extends State<Row10> {
             ),
           ),
         ),
-        Container(
-          height: MediaQuery.of(context).size.width / 6,
-          width: MediaQuery.of(context).size.width / 6,
-          margin: const EdgeInsets.all(20),
+        SizedBox(
+          height: MediaQuery.of(context).size.width / 5,
+          width: MediaQuery.of(context).size.width / 5,
           child: ElevatedButton(
             onPressed: i2
                 ? () {
@@ -110,10 +108,9 @@ class _Row10State extends State<Row10> {
             ),
           ),
         ),
-        Container(
-          height: MediaQuery.of(context).size.width / 6,
-          width: MediaQuery.of(context).size.width / 6,
-          margin: const EdgeInsets.all(20),
+        SizedBox(
+          height: MediaQuery.of(context).size.width / 5,
+          width: MediaQuery.of(context).size.width / 5,
           child: ElevatedButton(
             onPressed: i3
                 ? () {

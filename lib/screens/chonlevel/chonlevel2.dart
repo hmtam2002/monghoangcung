@@ -79,7 +79,7 @@ class _Chooselv2State extends State<Chooselv2> {
                   child: const Text(
                     'Màn chơi',
                     style: TextStyle(
-                      fontSize: 20,
+                      fontSize: 25,
                       fontWeight: FontWeight.bold,
                       color: Colors.deepPurple,
                     ),
@@ -90,6 +90,9 @@ class _Chooselv2State extends State<Chooselv2> {
                 ),
                 Row789(
                   lv: account!.lv,
+                ),
+                const SizedBox(
+                  height: 40,
                 ),
                 Row10(
                   lv: account.lv,
