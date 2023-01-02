@@ -1,11 +1,14 @@
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:monghoangcung/screens/dangky/dienthongtin.dart';
-import 'package:monghoangcung/screens/dangky/nhapusername.dart';
-import 'package:monghoangcung/screens/level/level1.dart';
-
+import 'package:flutter/services.dart';
 import 'package:monghoangcung/screens/trangchu/trangchu.dart';
+import 'package:monghoangcung/screens/trangdautien/trangdautien.dart';
 
-void main() {
+Future main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+
   runApp(const MyApp());
 }
 
@@ -13,13 +16,19 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Mộng Hoàng Cung',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: level_1(),
+      initialRoute:
+          FirebaseAuth.instance.currentUser == null ? 'welcome' : 'home',
+      routes: {
+        'welcome': (context) => const Firstscreen(),
+        'home': (context) => const TrangChu(),
+      },
     );
   }
 }

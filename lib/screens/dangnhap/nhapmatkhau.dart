@@ -1,73 +1,107 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:monghoangcung/screens/dangnhap/dangnhapthanhcong.dart';
+import 'package:monghoangcung/components/nen_game.dart';
+import 'package:monghoangcung/screens/choidoikhang/components/item_user.dart';
+import 'package:monghoangcung/screens/trangdautien/trangdautien.dart';
 
-class nhapmatkhau extends StatelessWidget {
-  const nhapmatkhau({super.key});
+class SignInScreen extends StatefulWidget {
+  const SignInScreen({super.key});
 
   @override
+  State<SignInScreen> createState() => SignInScreenState();
+}
+
+class SignInScreenState extends State<SignInScreen> {
+  TextEditingController txtEmail = TextEditingController();
+  TextEditingController txtPass = TextEditingController();
+  final _auth = FirebaseAuth.instance;
+  @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.all(20),
-      width: MediaQuery.of(context).size.width,
-      height: MediaQuery.of(context).size.height,
-      decoration: const BoxDecoration(
-          image: DecorationImage(
-        image: AssetImage('assets/a.png'),
-        fit: BoxFit.cover,
-      )),
-      child: Container(
-        padding: EdgeInsets.all(15),
-        decoration: BoxDecoration(
-          color: Colors.white.withOpacity(0.8),
-          borderRadius: BorderRadius.circular(50),
-        ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            const Image(
-              image: AssetImage('assets/Logo.png'),
-              fit: BoxFit.cover,
+    return nen_game(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          TextButton(
+            onPressed: () {
+              Navigator.pop(context);
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const Firstscreen(),
+                  ));
+            },
+            child: Icon(
+              Icons.arrow_back_rounded,
+              color: Colors.brown[300],
+              size: 40,
             ),
-            const Padding(
-              padding: EdgeInsets.all(8.0),
-              child: Text(
-                'Nhập mật khẩu',
-                style: TextStyle(
-                  fontSize: 20,
-                ),
-              ),
+          ),
+          const Text(
+            'Đăng nhập',
+            style: TextStyle(fontSize: 48, fontWeight: FontWeight.bold),
+            textAlign: TextAlign.center,
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 12, bottom: 6),
+            child: TextField(
+              controller: txtEmail,
+              keyboardType: TextInputType.emailAddress,
+              decoration: const InputDecoration(
+                  border: OutlineInputBorder(), hintText: 'Email'),
             ),
-            const TextField(
-              style: TextStyle(
-                color: Colors.grey,
-              ),
-              decoration: InputDecoration(
-                enabledBorder: OutlineInputBorder(
-                  // borderRadius: BorderRadius.circular(10),
-                  borderSide: BorderSide(
-                    width: 3,
-                    color: Colors.grey,
-                  ),
-                ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 6, bottom: 12),
+            child: TextField(
+              controller: txtPass,
+              obscureText: true,
+              decoration: const InputDecoration(
                 border: OutlineInputBorder(),
-                hintText: "Mật khẩu",
-                hintStyle: TextStyle(
-                  color: Colors.grey,
+                hintText: 'Password',
+                suffixIcon: Icon(
+                  Icons.remove_red_eye,
                 ),
               ),
             ),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const dangnhapthanhcong()));
-              },
-              child: const Text('Tiếp theo'),
+          ),
+          ElevatedButton(
+            onPressed: () async {
+              try {
+                await _auth.signInWithEmailAndPassword(
+                    email: txtEmail.text, password: txtPass.text);
+                _auth.authStateChanges().listen((event) async {
+                  if (event != null) {
+                    txtEmail.clear();
+                    txtPass.clear();
+                    Navigator.pushNamedAndRemoveUntil(
+                      context,
+                      'home',
+                      (route) => false,
+                    );
+                    const snackBar =
+                        SnackBar(content: Text('Đăng nhập thành công'));
+                    ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                  } else {
+                    const snackBar = SnackBar(
+                        content: Text('Email hoặc mật khẩu không đúng'));
+                    ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                  }
+                });
+              } catch (e) {
+                const snackBar =
+                    SnackBar(content: Text('Email hoặc mật khẩu không đúng'));
+                ScaffoldMessenger.of(context).showSnackBar(snackBar);
+              }
+            },
+            style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(Colors.grey)),
+            child: const Text(
+              'Đăng nhập',
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

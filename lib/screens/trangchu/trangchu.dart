@@ -1,119 +1,71 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:monghoangcung/components/nen_game.dart';
+import 'package:monghoangcung/constants.dart';
 import 'package:monghoangcung/screens/chonlevel/chonlevel.dart';
-import 'package:monghoangcung/screens/trangcanhan/trangcanhan.dart';
+import 'package:monghoangcung/screens/phongcho/phongcho.dart';
+import 'package:monghoangcung/object/account_obj.dart';
+import 'package:monghoangcung/screens/trangchu/components/cacnut.dart';
+import 'components/top_header.dart';
 
-class trangchu extends StatefulWidget {
-  const trangchu({super.key});
+class TrangChu extends StatefulWidget {
+  const TrangChu({super.key});
 
   @override
-  State<trangchu> createState() => _trangchuState();
+  State<TrangChu> createState() => _TrangChuState();
 }
 
-class _trangchuState extends State<trangchu> {
+class _TrangChuState extends State<TrangChu> {
+  final accid = FirebaseAuth.instance.currentUser?.uid;
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(20),
-      width: MediaQuery.of(context).size.width,
-      height: MediaQuery.of(context).size.height,
-      decoration: const BoxDecoration(
-          image: DecorationImage(
-        image: AssetImage('assets/a.png'),
-        fit: BoxFit.cover,
-      )),
+    return nen_game(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              TextButton(
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const trangcanhan()));
-                },
-                child: Icon(
-                  Icons.account_circle_rounded,
-                  color: Colors.brown.withOpacity(0.8),
-                  size: 50,
-                ),
-              ),
-              TextButton(
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const trangcanhan()));
-                },
-                child: Icon(
-                  Icons.menu,
-                  color: Colors.brown.withOpacity(0.8),
-                  size: 50,
-                ),
-              ),
-            ],
+          const TopHeader(),
+          const Expanded(
+            flex: 1,
+            child: Image(
+              image: AssetImage('assets/Logo.png'),
+            ),
           ),
-          const Image(
-            image: AssetImage('assets/Logo.png'),
-          ),
-          Column(
-            children: [
-              Container(
-                height: 50,
-                width: 200,
-                margin: EdgeInsets.fromLTRB(0, 20, 0, 20),
-                child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const Chooselv()));
-                  },
-                  child: const Text(
-                    'Chơi đơn',
-                    style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black87),
+          Expanded(
+            flex: 1,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                CacNut(
+                  text: 'Chơi đơn',
+                  press: MaterialPageRoute(
+                    builder: (context) => const Chooselv(),
                   ),
-                  style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all<Color>(
-                          Colors.white.withOpacity(0.65)),
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                        RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20)),
-                      )),
                 ),
-              ),
-              Container(
-                height: 50,
-                width: 200,
-                margin: EdgeInsets.fromLTRB(0, 20, 0, 20),
-                child: ElevatedButton(
-                  onPressed: () {},
-                  child: const Text(
-                    'Chơi đối kháng',
-                    style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black87),
+                const SizedBox(
+                  height: kDefaultPadding,
+                ),
+                CacNut(
+                  text: 'Chơi đối kháng',
+                  press: MaterialPageRoute(
+                    builder: (context) => const PhongCho(),
                   ),
-                  style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all<Color>(
-                          Colors.white.withOpacity(0.5)),
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                        RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20)),
-                      )),
                 ),
-              ),
-            ],
+                const SizedBox(
+                  height: kDefaultPadding * 2,
+                ),
+              ],
+            ),
           ),
         ],
       ),
     );
+  }
+
+  Future<AccountObject?> readAccount() async {
+    final docAccounts =
+        FirebaseFirestore.instance.collection('accounts').doc(accid);
   }
 }

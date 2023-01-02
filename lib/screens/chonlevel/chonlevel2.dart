@@ -1,7 +1,12 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:monghoangcung/components/nen_game.dart';
+import 'package:monghoangcung/object/account_obj.dart';
 import 'package:monghoangcung/screens/chonlevel/chonlevel.dart';
-
-import '../trangchu/trangchu.dart';
+import 'package:monghoangcung/screens/chonlevel/row111213.dart';
+import 'package:monghoangcung/screens/chonlevel/row789.dart';
+import 'package:monghoangcung/screens/trangchu/trangchu.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class Chooselv2 extends StatefulWidget {
   const Chooselv2({super.key});
@@ -11,255 +16,158 @@ class Chooselv2 extends StatefulWidget {
 }
 
 class _Chooselv2State extends State<Chooselv2> {
+  final accid = FirebaseAuth.instance.currentUser?.uid;
+  Future<AccountObject?> readAccount() async {
+    final docAccounts =
+        FirebaseFirestore.instance.collection('accounts').doc(accid);
+    final snapshot = await docAccounts.get();
+    if (snapshot.exists) {
+      return AccountObject.fromJson(snapshot.data()!);
+    }
+    return null;
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: MediaQuery.of(context).size.width,
-      height: MediaQuery.of(context).size.height,
-      decoration: const BoxDecoration(
-          image: DecorationImage(
-        image: AssetImage('assets/a.png'),
-        fit: BoxFit.cover,
-      )),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              TextButton(
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const trangchu()));
-                },
-                child: Icon(
-                  Icons.home,
-                  color: Colors.brown.withOpacity(0.8),
-                  size: 50,
+    return FutureBuilder(
+      future: readAccount(),
+      builder: ((context, snapshot) {
+        if (snapshot.hasData) {
+          final account = snapshot.data;
+          return nen_game(
+              child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: TextButton(
+                        onPressed: () {
+                          Navigator.pop(context);
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const TrangChu(),
+                            ),
+                          );
+                        },
+                        child: Icon(
+                          Icons.arrow_back_rounded,
+                          color: Colors.brown[300],
+                          size: 40,
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
-              ),
-            ],
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                'Chọn Level',
-                style: TextStyle(
-                    fontSize: 30,
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold),
-              )
-            ],
-          ),
-          Opacity(
-            opacity: 0.0,
-            child: Container(
-              width: MediaQuery.of(context).size.width * 9 / 10,
-              height: MediaQuery.of(context).size.height / 4,
-            ),
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Container(
-                height: 70,
-                width: 70,
-                margin: EdgeInsets.all(20),
-                child: ElevatedButton(
-                  onPressed: () {},
-                  child: const Text(
-                    '7',
-                    style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black87),
+                const SizedBox(
+                  height: 80,
+                ),
+                Container(
+                  decoration: BoxDecoration(
+                    color: Colors.white.withOpacity(0.8),
+                    borderRadius: BorderRadius.circular(30),
                   ),
-                  style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all<Color>(
-                          Colors.white.withOpacity(0.8)),
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                        RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20)),
-                      )),
-                ),
-              ),
-              Container(
-                height: 70,
-                width: 70,
-                margin: EdgeInsets.all(20),
-                child: ElevatedButton(
-                  onPressed: () {},
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
                   child: const Text(
-                    '8',
+                    'Màn chơi',
                     style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black87),
+                      fontSize: 25,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.deepPurple,
+                    ),
                   ),
-                  style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all<Color>(
-                          Colors.white.withOpacity(0.8)),
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                        RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20)),
-                      )),
                 ),
-              ),
-              Container(
-                height: 70,
-                width: 70,
-                margin: EdgeInsets.all(20),
-                child: ElevatedButton(
-                  onPressed: () {},
-                  child: const Text(
-                    '9',
-                    style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black87),
-                  ),
-                  style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all<Color>(
-                          Colors.white.withOpacity(0.8)),
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                        RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20)),
-                      )),
+                const SizedBox(
+                  height: 80,
                 ),
-              ),
-            ],
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Container(
-                height: 70,
-                width: 70,
-                margin: EdgeInsets.all(20),
-                child: ElevatedButton(
-                  onPressed: () {},
-                  child: const Text(
-                    '10',
-                    style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black87),
-                  ),
-                  style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all<Color>(
-                          Colors.white.withOpacity(0.8)),
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                        RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20)),
-                      )),
+                Row789(
+                  lv: account!.lv,
                 ),
-              ),
-              Container(
-                height: 70,
-                width: 70,
-                margin: EdgeInsets.all(20),
-                child: ElevatedButton(
-                  onPressed: () {},
-                  child: const Text(
-                    '11',
-                    style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black87),
-                  ),
-                  style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all<Color>(
-                          Colors.white.withOpacity(0.8)),
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                        RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20)),
-                      )),
+                const SizedBox(
+                  height: 40,
                 ),
-              ),
-              Container(
-                height: 70,
-                width: 70,
-                margin: EdgeInsets.all(20),
-                child: ElevatedButton(
-                  onPressed: () {},
-                  child: const Text(
-                    '12',
-                    style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black87),
-                  ),
-                  style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all<Color>(
-                          Colors.white.withOpacity(0.8)),
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                        RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20)),
-                      )),
+                Row10(
+                  lv: account.lv,
                 ),
-              ),
-            ],
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Container(
-                height: 50,
-                width: 150,
-                margin: EdgeInsets.all(10),
-                child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const Chooselv()));
-                  },
-                  child: const Text(
-                    'Quay lại',
-                    style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black87),
-                  ),
-                  style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all<Color>(
-                          Colors.blue.withOpacity(0.8)),
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                        RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20)),
-                      )),
+                const SizedBox(
+                  height: 60,
                 ),
-              ),
-              Container(
-                height: 50,
-                width: 150,
-                margin: EdgeInsets.all(10),
-                child: ElevatedButton(
-                  onPressed: () {},
-                  child: const Text(
-                    'Tiếp theo',
-                    style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black87),
-                  ),
-                  style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all<Color>(
-                          Colors.blue.withOpacity(0.8)),
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                        RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20)),
-                      )),
-                ),
-              ),
-            ],
-          )
-        ],
-      ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      height: 50,
+                      width: 150,
+                      margin: const EdgeInsets.all(10),
+                      child: ElevatedButton(
+                        onPressed: () {
+                          Navigator.pop(context);
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const Chooselv()));
+                        },
+                        style: ButtonStyle(
+                            backgroundColor: MaterialStateProperty.all<Color>(
+                                Colors.blue.withOpacity(0.8)),
+                            shape: MaterialStateProperty.all<
+                                RoundedRectangleBorder>(
+                              RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(20)),
+                            )),
+                        child: const Text(
+                          'Quay lại',
+                          style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black87),
+                        ),
+                      ),
+                    ),
+                    // Container(
+                    //   height: 50,
+                    //   width: 150,
+                    //   margin: const EdgeInsets.all(10),
+                    //   child: ElevatedButton(
+                    //     onPressed: () {
+                    //       Navigator.pop(context);
+                    //       Navigator.push(
+                    //           context,
+                    //           MaterialPageRoute(
+                    //               builder: (context) => const Chooselv2()));
+                    //     },
+                    //     style: ButtonStyle(
+                    //         backgroundColor: MaterialStateProperty.all<Color>(
+                    //             Colors.blue.withOpacity(0.8)),
+                    //         shape: MaterialStateProperty.all<
+                    //             RoundedRectangleBorder>(
+                    //           RoundedRectangleBorder(
+                    //               borderRadius: BorderRadius.circular(20)),
+                    //         )),
+                    //     child: const Text(
+                    //       'Tiếp theo',
+                    //       style: TextStyle(
+                    //           fontSize: 20,
+                    //           fontWeight: FontWeight.bold,
+                    //           color: Colors.black87),
+                    //     ),
+                    //   ),
+                    // ),
+                  ],
+                )
+              ]));
+        } else {
+          return Container();
+        }
+      }),
     );
   }
 }

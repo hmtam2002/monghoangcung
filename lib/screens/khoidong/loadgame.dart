@@ -1,28 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:monghoangcung/components/nen_game.dart';
 
-class loadgame extends StatelessWidget {
-  const loadgame({super.key});
+class LoadGame extends StatelessWidget {
+  const LoadGame({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: MediaQuery.of(context).size.width,
-      height: MediaQuery.of(context).size.height,
-      decoration: const BoxDecoration(
-          image: DecorationImage(
-        image: AssetImage('assets/a.png'),
-        fit: BoxFit.cover,
-      )),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: const [
-          Image(
-            image: AssetImage('assets/Logo.png'),
-            // width: MediaQuery.of(context).size.width * 9 / 10,
-            fit: BoxFit.cover,
-          ),
-        ],
+    return const nen_game(
+      child: Center(
+        child: Image(
+          image: AssetImage('assets/Logo.png'),
+          fit: BoxFit.cover,
+        ),
       ),
     );
   }

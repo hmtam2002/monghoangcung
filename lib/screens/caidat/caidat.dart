@@ -1,66 +1,29 @@
 import 'package:flutter/material.dart';
+import 'package:monghoangcung/components/nen_game.dart';
+import 'package:monghoangcung/screens/trangcanhan/components/nutrove2.dart';
 
-import '../trangchu/trangchu.dart';
+class CaiDat extends StatelessWidget {
+  const CaiDat({super.key});
 
-class caidat extends StatefulWidget {
-  const caidat({super.key});
-
-  @override
-  State<caidat> createState() => _caidatState();
-}
-
-class _caidatState extends State<caidat> {
-  bool valuefirst = false;
-  bool valuesecond = false;
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: MediaQuery.of(context).size.width,
-      height: MediaQuery.of(context).size.height,
-      decoration: const BoxDecoration(
-          image: DecorationImage(
-        image: AssetImage('assets/a.png'),
-        fit: BoxFit.cover,
-      )),
+    return nen_game(
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              TextButton(
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const trangchu()));
-                },
-                child: Icon(
-                  Icons.home,
-                  color: Colors.brown.withOpacity(0.8),
-                  size: 50,
-                ),
+          const NutTroVeV2(),
+          Container(
+            decoration: BoxDecoration(
+              color: Colors.white.withOpacity(0.8),
+              borderRadius: BorderRadius.circular(30),
+            ),
+            padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+            child: const Text(
+              'Cài đặt',
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+                color: Colors.deepPurple,
               ),
-            ],
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                'Cài Đặt',
-                style: TextStyle(
-                    fontSize: 30,
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold),
-              )
-            ],
-          ),
-          Opacity(
-            opacity: 0.0,
-            child: Container(
-              width: MediaQuery.of(context).size.width * 9 / 10,
-              height: MediaQuery.of(context).size.height / 4,
             ),
           ),
         ],
