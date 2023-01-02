@@ -30,7 +30,7 @@ class _CreateInfoState extends State<CreateInfo> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const TopHeader(),
-            const avartar(),
+            const Avatar(),
             const Padding(padding: EdgeInsets.all(20)),
             const Text(
               'ĐĂNG KÝ THÔNG TIN',

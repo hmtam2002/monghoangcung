@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class avartar extends StatelessWidget {
-  const avartar({
+class Avatar extends StatelessWidget {
+  const Avatar({
     Key? key,
   }) : super(key: key);
 

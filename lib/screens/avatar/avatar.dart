@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:monghoangcung/components/nen_game.dart';
 import 'package:monghoangcung/constants.dart';
 import 'package:monghoangcung/screens/trangcanhan/components/nutrove2.dart';
-
 import '../trangcanhan/trangcanhan.dart';
 
 class Editavatar extends StatefulWidget {
