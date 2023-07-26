@@ -16,7 +16,9 @@ class CreateInfo extends StatefulWidget {
 }
 
 class _CreateInfoState extends State<CreateInfo> {
+  // ignore: unused_field
   final TextEditingController _username = TextEditingController();
+  // ignore: unused_field
   final TextEditingController _password = TextEditingController();
   final TextEditingController _fullname = TextEditingController();
   final _auth = FirebaseAuth.instance;

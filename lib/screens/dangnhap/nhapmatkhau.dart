@@ -1,7 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:monghoangcung/components/nen_game.dart';
-import 'package:monghoangcung/screens/choidoikhang/components/item_user.dart';
 import 'package:monghoangcung/screens/trangdautien/trangdautien.dart';
 
 class SignInScreen extends StatefulWidget {

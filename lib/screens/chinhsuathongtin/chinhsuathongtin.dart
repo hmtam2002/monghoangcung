@@ -67,9 +67,11 @@ class _EditInfoState extends State<EditInfo> {
                         onPressed: () {
                           setState(() {
                             _num = 'Cập nhật thành công ';
+                            // ignore: unused_local_variable
                             final fullname = _fullname.text;
 
                             UpdateAccounts(fullname: _fullname.text);
+                            // ignore: unused_local_variable
                             final user =
                                 FirebaseAuth.instance.currentUser?.reload();
                           });
@@ -120,8 +122,10 @@ class _EditInfoState extends State<EditInfo> {
     if (snapshot.exists) {
       return AccountObject.fromJson(snapshot.data()!);
     }
+    return null;
   }
 
+  // ignore: non_constant_identifier_names
   Future UpdateAccounts({required String fullname}) async {
     final docAccounts =
         FirebaseFirestore.instance.collection('accounts').doc(accid);
